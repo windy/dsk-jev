@@ -123,6 +123,7 @@ func (s *Server) evaluate(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("X-Request-ID", requestID)
 	ctx, cancel := context.WithTimeout(context.WithValue(r.Context(), requestIDKey{}, requestID), s.config.Timeout)
 	defer cancel()
+	content := userContent(req.State, req.Images)
 	pending := qs
 	answers := map[string]any{}
 	usage := Usage{}
@@ -142,7 +143,7 @@ func (s *Server) evaluate(w http.ResponseWriter, r *http.Request) {
 			last.reason = "request budget exhausted"
 			break
 		}
-		last = s.attempt(ctx, req.State, pending, attempt+1)
+		last = s.attempt(ctx, content, pending, attempt+1)
 		attempts++
 		if attempts == 1 {
 			initialTemplate = last.templateID

@@ -1,0 +1,372 @@
+[
+  {
+    "mode": "standard",
+    "case": "panel-1",
+    "status": 200,
+    "latency_ms": 901.59,
+    "attempts": 1,
+    "request_id": "1f17bd46b628e993288efab17f88c23c",
+    "template": "732eccd9f1f89a1a",
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "circle_color": {
+          "choice": "red",
+          "confidence": 1,
+          "probabilities": {
+            "blue": 0,
+            "other": 0,
+            "red": 1
+          },
+          "type": "choice"
+        },
+        "shape_count": {
+          "confidence": 1,
+          "legend": {
+            "0": "Zero",
+            "1": "One",
+            "2": "Two",
+            "3": "Three",
+            "4": "Four"
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 1,
+            "4": 0
+          },
+          "score": 3,
+          "type": "score"
+        },
+        "two_squares": {
+          "noul": 1,
+          "type": "noul"
+        }
+      },
+      "usage": {
+        "input_tokens": 1202,
+        "output_tokens": 94
+      }
+    },
+    "expected": {
+      "circle_color": "red",
+      "two_squares": true,
+      "shape_count": 3
+    },
+    "checks": [
+      {
+        "question": "circle_color",
+        "expected": "red",
+        "actual": "red",
+        "passed": true
+      },
+      {
+        "question": "two_squares",
+        "expected": true,
+        "actual": true,
+        "passed": true
+      },
+      {
+        "question": "shape_count",
+        "expected": 3,
+        "actual": 3,
+        "passed": true
+      }
+    ]
+  },
+  {
+    "mode": "standard",
+    "case": "panel-2",
+    "status": 200,
+    "latency_ms": 670.71,
+    "attempts": 1,
+    "request_id": "0d5b744600aa3c1fb1e925259c488315",
+    "template": "732eccd9f1f89a1a",
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "circle_color": {
+          "choice": "blue",
+          "confidence": 1,
+          "probabilities": {
+            "blue": 1,
+            "other": 0,
+            "red": 0
+          },
+          "type": "choice"
+        },
+        "shape_count": {
+          "confidence": 1,
+          "legend": {
+            "0": "Zero",
+            "1": "One",
+            "2": "Two",
+            "3": "Three",
+            "4": "Four"
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 1,
+            "4": 0
+          },
+          "score": 3,
+          "type": "score"
+        },
+        "two_squares": {
+          "noul": 1,
+          "type": "noul"
+        }
+      },
+      "usage": {
+        "input_tokens": 1202,
+        "output_tokens": 94
+      }
+    },
+    "expected": {
+      "circle_color": "blue",
+      "two_squares": true,
+      "shape_count": 3
+    },
+    "checks": [
+      {
+        "question": "circle_color",
+        "expected": "blue",
+        "actual": "blue",
+        "passed": true
+      },
+      {
+        "question": "two_squares",
+        "expected": true,
+        "actual": true,
+        "passed": true
+      },
+      {
+        "question": "shape_count",
+        "expected": 3,
+        "actual": 3,
+        "passed": true
+      }
+    ]
+  },
+  {
+    "mode": "standard",
+    "case": "two-images",
+    "status": 200,
+    "latency_ms": 917.03,
+    "attempts": 1,
+    "request_id": "010c767416484e276232c33a83a47921",
+    "template": "93c06026fda4b4b4",
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "changed": {
+          "noul": 1,
+          "type": "noul"
+        }
+      },
+      "usage": {
+        "input_tokens": 1028,
+        "output_tokens": 38
+      }
+    },
+    "expected": {
+      "changed": true
+    },
+    "checks": [
+      {
+        "question": "changed",
+        "expected": true,
+        "actual": true,
+        "passed": true
+      }
+    ]
+  },
+  {
+    "mode": "fast",
+    "case": "panel-1",
+    "status": 200,
+    "latency_ms": 958.41,
+    "attempts": 1,
+    "request_id": "cfbabed3cb9d5c26d882f89d6c9398b2",
+    "template": "0cf4f0c30c14b7c9",
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "circle_color": {
+          "choice": "red",
+          "confidence": 1,
+          "probabilities": {
+            "blue": 0,
+            "other": 0,
+            "red": 1
+          },
+          "type": "choice"
+        },
+        "shape_count": {
+          "confidence": 1,
+          "legend": {
+            "0": "Zero",
+            "1": "One",
+            "2": "Two",
+            "3": "Three",
+            "4": "Four"
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 1,
+            "4": 0
+          },
+          "score": 3,
+          "type": "score"
+        },
+        "two_squares": {
+          "noul": 1,
+          "type": "noul"
+        }
+      },
+      "usage": {
+        "input_tokens": 1012,
+        "output_tokens": 72
+      }
+    },
+    "expected": {
+      "circle_color": "red",
+      "two_squares": true,
+      "shape_count": 3
+    },
+    "checks": [
+      {
+        "question": "circle_color",
+        "expected": "red",
+        "actual": "red",
+        "passed": true
+      },
+      {
+        "question": "two_squares",
+        "expected": true,
+        "actual": true,
+        "passed": true
+      },
+      {
+        "question": "shape_count",
+        "expected": 3,
+        "actual": 3,
+        "passed": true
+      }
+    ]
+  },
+  {
+    "mode": "fast",
+    "case": "panel-2",
+    "status": 200,
+    "latency_ms": 655.95,
+    "attempts": 1,
+    "request_id": "7390d4e9d67b1b3d868f559d84425042",
+    "template": "0cf4f0c30c14b7c9",
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "circle_color": {
+          "choice": "blue",
+          "confidence": 1,
+          "probabilities": {
+            "blue": 1,
+            "other": 0,
+            "red": 0
+          },
+          "type": "choice"
+        },
+        "shape_count": {
+          "confidence": 1,
+          "legend": {
+            "0": "Zero",
+            "1": "One",
+            "2": "Two",
+            "3": "Three",
+            "4": "Four"
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 1,
+            "4": 0
+          },
+          "score": 3,
+          "type": "score"
+        },
+        "two_squares": {
+          "noul": 1,
+          "type": "noul"
+        }
+      },
+      "usage": {
+        "input_tokens": 1012,
+        "output_tokens": 72
+      }
+    },
+    "expected": {
+      "circle_color": "blue",
+      "two_squares": true,
+      "shape_count": 3
+    },
+    "checks": [
+      {
+        "question": "circle_color",
+        "expected": "blue",
+        "actual": "blue",
+        "passed": true
+      },
+      {
+        "question": "two_squares",
+        "expected": true,
+        "actual": true,
+        "passed": true
+      },
+      {
+        "question": "shape_count",
+        "expected": 3,
+        "actual": 3,
+        "passed": true
+      }
+    ]
+  },
+  {
+    "mode": "fast",
+    "case": "two-images",
+    "status": 200,
+    "latency_ms": 701.42,
+    "attempts": 1,
+    "request_id": "031710276c5d2410aaeebdc3f265e25f",
+    "template": "9c1b235642353a8a",
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "changed": {
+          "noul": 1,
+          "type": "noul"
+        }
+      },
+      "usage": {
+        "input_tokens": 898,
+        "output_tokens": 38
+      }
+    },
+    "expected": {
+      "changed": true
+    },
+    "checks": [
+      {
+        "question": "changed",
+        "expected": true,
+        "actual": true,
+        "passed": true
+      }
+    ]
+  }
+]

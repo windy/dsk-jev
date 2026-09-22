@@ -15,6 +15,7 @@ type Question struct {
 	Criteria     json.RawMessage `json:"criteria,omitempty"`
 }
 type Request struct {
+	Images    []ImageInput        `json:"images,omitempty"`
 	Model     string              `json:"model"`
 	State     json.RawMessage     `json:"state"`
 	Questions map[string]Question `json:"questions"`
@@ -52,6 +53,9 @@ func description(v json.RawMessage, nullable bool) bool {
 	return false
 }
 func compile(r Request) ([]compiledQuestion, error) {
+	if err := validateImages(r.Images); err != nil {
+		return nil, err
+	}
 	if !description(r.State, false) {
 		return nil, fmt.Errorf("state must be a string, object or array")
 	}

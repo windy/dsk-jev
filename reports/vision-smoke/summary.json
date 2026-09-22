@@ -1,0 +1,20 @@
+{
+  "requests": 6,
+  "successful_requests": 6,
+  "correct_judgments": 14,
+  "judgments": 14,
+  "upstream_attempts": 6,
+  "upstream_image_counts": [
+    1,
+    1,
+    2,
+    1,
+    1,
+    2
+  ],
+  "fixtures_sha256": [
+    "29bbd27042485daebdfe2e23f0c74d35a785ac2389ef70cbee1b0297f8feabbb",
+    "d313675d9c6ebdde7ecfd22861acef938856202dbff40396c24ad0bb1d0a93e6"
+  ],
+  "scope": "Synthetic visual smoke only: two color-swapped panels and multi-image comparison, both output modes. No evidence of real-world visual accuracy or superiority to another model."
+}

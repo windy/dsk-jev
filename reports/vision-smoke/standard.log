@@ -1,0 +1,4 @@
+2026/09/22 17:44:40 INFO listening addr=127.0.0.1:64298 upstream_model=deepseek-flash
+2026/09/22 17:44:41 INFO upstream attempt attempt=1 template=732eccd9f1f89a1a questions=3 latency_ms=900 reason=success usage_known=true input_tokens=1202 cached_tokens=128 output_tokens=94
+2026/09/22 17:44:42 INFO upstream attempt attempt=1 template=732eccd9f1f89a1a questions=3 latency_ms=669 reason=success usage_known=true input_tokens=1202 cached_tokens=768 output_tokens=94
+2026/09/22 17:44:43 INFO upstream attempt attempt=1 template=93c06026fda4b4b4 questions=1 latency_ms=915 reason=success usage_known=true input_tokens=1028 cached_tokens=384 output_tokens=38

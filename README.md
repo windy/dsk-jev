@@ -2,6 +2,7 @@
 
 Go 实现的 Jev HTTP 协议兼容服务，以 DeepSeek V4.1 Flash 非推理模式为后端。
 客户端使用 Jev 的请求及返回结构，无须添加 mode 或更换题型。
+额外支持图片输入：通过可选 `images` 字段传入图片，用相同的 Choice / Score / Noul 题型做视觉判断。图片是本项目扩展，原生 Jev 不支持该字段。
 
 ## 启动
 
@@ -26,6 +27,52 @@ curl http://127.0.0.1:8080/v1/systemone \
 `DEEPSEEK_API_KEY` 为该代理的访问密钥，`DEEPSEEK_MODEL=dsk-deepseek-flash`。
 根地址会追加 `/chat/completions`。直连默认 `https://api.deepseek.com/beta`，启用严格工具调用。
 自有网关必须转发 `tools[].function.strict` 和 `tool_choice`，并将请求路由到 DeepSeek beta 端点；普通 chat 转发路径未必支持，需先验证。
+
+## 图片输入
+
+在原有请求上添加 `images`，每张图包含 `url` 和可选 `detail`：
+
+```json
+{
+  "model": "jev-latest",
+  "state": "根据图片回答问题。",
+  "images": [
+    {"url": "https://your-host.example/photo.png", "detail": "low"}
+  ],
+  "questions": {
+    "has_damage": {"type": "noul", "instructions": "商品是否有可见的破损？"}
+  }
+}
+```
+
+示例中的外链是占位符，需要换成真实的公开图片地址。`url` 也接受 `data:image/png;base64,...`，支持 PNG、JPEG、GIF、WebP。仓库提供无需上传图片的完整 Base64 示例，可以直接运行：
+
+```sh
+curl http://127.0.0.1:8080/v1/systemone \
+  -H "Authorization: Bearer $PROXY_API_KEY" \
+  -H 'Content-Type: application/json' \
+  --data-binary @examples/vision.json
+```
+
+- `state` 仍然必填，可以用空字符串；没有 `images` 时保持原有文本处理，包括对象和数组，不自动把其中的 URL 解释为图片。
+- 图片按数组顺序送入同一条 user 消息，可在题目中引用“第一张图片”“第二张图片”。图像中文字视为证据，不作为系统指令。
+- `detail` 支持 `auto`（省略时由上游决定）、`low`、`high`、`original`。先用 `low` 测试简单视觉判断；需要读取小字或细节时使用 `original`，并实测效果与用量。
+- 本代理最多接收 **8 张图**；整个 JSON 请求不超过 **4 MiB**，单张内联图解码后不超过 **2 MiB**。多张图片的 Base64 总量仍受请求体限制。超限或非法图片字段返回 422。
+- 内联图片校验 Base64、大小及文件头与 MIME 的一致性；完整图像解码由上游完成。公开 URL 由 DeepSeek 下载，本服务不下载、代理或存储图片；外链图片的可访问性、格式、大小限制由上游检查。外链必须是 HTTP(S)，最多 8192 字节，不接受用户密码或 URL fragment。
+- 继续关闭 thinking，支持 strict 工具调用、标准/精简输出和局部重试。每次重试都会携带原图，相关 token 已包含在累计 usage 中，图片 tokens 不额外重复加算；流水增加 `image_count`，不记录 URL 或 Base64。
+- 该扩展通过 HTTP JSON 调用；原生 TypeSafe SDK 不一定允许传入额外字段。已有纯文本 SDK 调用保持兼容。当前未接入 Files API、图片上传存储或本地图片路径。
+
+可选的真实视觉冒烟测试（产生 DeepSeek API 费用，不需要 Jev key）：
+
+```sh
+go build -o bin/dsk-jev ./cmd/server
+# 在环境中设置 DEEPSEEK_API_KEY
+VISION_EVAL_PREFIX=vision-check-new python3 scripts/vision_smoke.py
+```
+
+测试使用两张确定性的颜色交换图，分别检查圆形颜色、方形数量、总图形数及双图差异，覆盖 standard/fast 两种输出模式。结果保存到 `reports/<VISION_EVAL_PREFIX>/`，前缀必须未使用。它只验证视觉链路，不代表真实业务视觉准确率或领先其他模型。使用 `python3 scripts/vision_smoke.py --fixtures-only` 可重新生成示例，不调用 API。
+
+图片上游格式见 [DeepSeek Vision 文档](https://api-docs.deepseek.com/guides/vision/)。
 
 ## 协议
 
