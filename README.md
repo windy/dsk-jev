@@ -204,3 +204,16 @@ EVAL_PREFIX=comparison-new python3 scripts/compare_eval.py
 go test -race ./...
 python3 -m unittest discover -s scripts -p 'test_accounting.py'
 ```
+
+## 提速实验与网络计时
+
+默认仍为 `OUTPUT_MODE=standard`。设置 `OUTPUT_MODE=fast` 启用实验性的内部输出格式：Choice/Score 使用整数千分数；少于 16 项按固定顺序输出权重数组，16 项及以上输出所有非零项的 `[编号, 权重]` 数组，Go 补齐零项；Noul 保留原始 0～1 小数，再沿用现有的 choice/score/confidence 计算。此模式使用更短提示词，覆盖 `PROMPT_MODE` 的提示词选择。外部响应结构不变，但概率精度及模型输出行为会改变，不能把分类正确率等同于概率校准质量。没有 top-k 截断，也不以 one-hot 分布代替模型概率。非法编号、重复项、空分布、非法数值或不合法总和均会触发既有的局部重试。
+
+两个模式都发送 `thinking: {"type":"disabled"}`，共享进程内 HTTP 客户端，并完整读取正常响应体后复用连接。每个服务器使用独立的 Transport，空闲连接池总计 128、每主机 64（用于并发连接保留，不会让单次推理加快）。用量流水新增 `network.connection_reused`、获取连接时间、首响应字节时间及首字节后时间。非流式首字节可能是服务端保活数据，因此这些数值不是模型首 token 延迟，也无法直接分离排队、预填充、解码与网络传输时间。
+
+```sh
+# 已设置 DEEPSEEK_API_KEY，并重新构建 bin/dsk-jev 后：
+EVAL_PREFIX=speed-new python3 scripts/speed_eval.py
+```
+
+该脚本在相同时间段交替测试 standard/fast，使用持久连接，包含 44 请求回归集与 12 请求历史 holdout，逐次保存成本、耗时、缓存和连接复用证据。首次连接与模板缓存状态也保留在统计中，未声称是严格冷缓存对比。

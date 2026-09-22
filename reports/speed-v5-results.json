@@ -1,0 +1,7572 @@
+[
+  {
+    "mode": "standard",
+    "id": "double_charge",
+    "suite": "cases",
+    "group": "semantic",
+    "questions": 3,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "department": {
+          "choice": "billing",
+          "confidence": 0.9466666666666667,
+          "probabilities": {
+            "billing": 0.96,
+            "other": 0.02,
+            "sales": 0.01,
+            "technical": 0.01
+          },
+          "type": "choice"
+        },
+        "refund": {
+          "noul": 0.03,
+          "type": "noul"
+        },
+        "urgency": {
+          "confidence": 0.865,
+          "legend": {
+            "0": "没有提出处理期限，或明确不急",
+            "1": "希望尽快，但无具体期限",
+            "2": "明确要求今天、立即或指定时间前处理"
+          },
+          "probabilities": {
+            "0": 0.01,
+            "1": 0.07,
+            "2": 0.92
+          },
+          "score": 1.9100000000000001,
+          "type": "score"
+        }
+      },
+      "usage": {
+        "input_tokens": 1049,
+        "output_tokens": 105
+      }
+    },
+    "checks": [
+      {
+        "question": "department",
+        "pass": true,
+        "actual": "billing",
+        "expected": "billing"
+      },
+      {
+        "question": "refund",
+        "pass": true,
+        "actual": false,
+        "expected": false
+      },
+      {
+        "question": "urgency",
+        "pass": true,
+        "actual": 2,
+        "expected": 2
+      }
+    ],
+    "request_id": "a5911c16bd09f9e0f1d4e486ed6efa1c",
+    "attempts": 1,
+    "latency_ms": 879.46
+  },
+  {
+    "mode": "fast",
+    "id": "double_charge",
+    "suite": "cases",
+    "group": "semantic",
+    "questions": 3,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "department": {
+          "choice": "billing",
+          "confidence": 0.9333333333333332,
+          "probabilities": {
+            "billing": 0.95,
+            "other": 0.02,
+            "sales": 0.01,
+            "technical": 0.02
+          },
+          "type": "choice"
+        },
+        "refund": {
+          "noul": 0,
+          "type": "noul"
+        },
+        "urgency": {
+          "confidence": 0.79,
+          "legend": {
+            "0": "没有提出处理期限，或明确不急",
+            "1": "希望尽快，但无具体期限",
+            "2": "明确要求今天、立即或指定时间前处理"
+          },
+          "probabilities": {
+            "0": 0.02,
+            "1": 0.1,
+            "2": 0.88
+          },
+          "score": 1.86,
+          "type": "score"
+        }
+      },
+      "usage": {
+        "input_tokens": 1495,
+        "output_tokens": 149
+      }
+    },
+    "checks": [
+      {
+        "question": "department",
+        "pass": true,
+        "actual": "billing",
+        "expected": "billing"
+      },
+      {
+        "question": "refund",
+        "pass": true,
+        "actual": false,
+        "expected": false
+      },
+      {
+        "question": "urgency",
+        "pass": true,
+        "actual": 2,
+        "expected": 2
+      }
+    ],
+    "request_id": "074eec4893dbee8e7da2d13363cd7878",
+    "attempts": 2,
+    "latency_ms": 2133.86
+  },
+  {
+    "mode": "fast",
+    "id": "refund_yes",
+    "suite": "cases",
+    "group": "semantic",
+    "questions": 3,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "department": {
+          "choice": "billing",
+          "confidence": 0.9333333333333332,
+          "probabilities": {
+            "billing": 0.95,
+            "other": 0.02,
+            "sales": 0.02,
+            "technical": 0.01
+          },
+          "type": "choice"
+        },
+        "refund": {
+          "noul": 0.98,
+          "type": "noul"
+        },
+        "urgency": {
+          "confidence": 0.8200000000000001,
+          "legend": {
+            "0": "没有提出处理期限，或明确不急",
+            "1": "希望尽快，但无具体期限",
+            "2": "明确要求今天、立即或指定时间前处理"
+          },
+          "probabilities": {
+            "0": 0.9,
+            "1": 0.08,
+            "2": 0.02
+          },
+          "score": 0.12,
+          "type": "score"
+        }
+      },
+      "usage": {
+        "input_tokens": 937,
+        "output_tokens": 89
+      }
+    },
+    "checks": [
+      {
+        "question": "department",
+        "pass": true,
+        "actual": "billing",
+        "expected": "billing"
+      },
+      {
+        "question": "refund",
+        "pass": true,
+        "actual": true,
+        "expected": true
+      },
+      {
+        "question": "urgency",
+        "pass": true,
+        "actual": 0,
+        "expected": 0
+      }
+    ],
+    "request_id": "479929cac29ac9c33e2f6fcdf3a59def",
+    "attempts": 1,
+    "latency_ms": 872.74
+  },
+  {
+    "mode": "standard",
+    "id": "refund_yes",
+    "suite": "cases",
+    "group": "semantic",
+    "questions": 3,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "department": {
+          "choice": "billing",
+          "confidence": 1,
+          "probabilities": {
+            "billing": 1,
+            "other": 0,
+            "sales": 0,
+            "technical": 0
+          },
+          "type": "choice"
+        },
+        "refund": {
+          "noul": 1,
+          "type": "noul"
+        },
+        "urgency": {
+          "confidence": 0.85,
+          "legend": {
+            "0": "没有提出处理期限，或明确不急",
+            "1": "希望尽快，但无具体期限",
+            "2": "明确要求今天、立即或指定时间前处理"
+          },
+          "probabilities": {
+            "0": 0.9,
+            "1": 0.1,
+            "2": 0
+          },
+          "score": 0.1,
+          "type": "score"
+        }
+      },
+      "usage": {
+        "input_tokens": 1046,
+        "output_tokens": 93
+      }
+    },
+    "checks": [
+      {
+        "question": "department",
+        "pass": true,
+        "actual": "billing",
+        "expected": "billing"
+      },
+      {
+        "question": "refund",
+        "pass": true,
+        "actual": true,
+        "expected": true
+      },
+      {
+        "question": "urgency",
+        "pass": true,
+        "actual": 0,
+        "expected": 0
+      }
+    ],
+    "request_id": "1d02e4e02edb993fbe0ceabfdb612487",
+    "attempts": 1,
+    "latency_ms": 544.2
+  },
+  {
+    "mode": "standard",
+    "id": "refund_no",
+    "suite": "cases",
+    "group": "semantic",
+    "questions": 3,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "department": {
+          "choice": "billing",
+          "confidence": 0.9199999999999999,
+          "probabilities": {
+            "billing": 0.94,
+            "other": 0.02,
+            "sales": 0.02,
+            "technical": 0.02
+          },
+          "type": "choice"
+        },
+        "refund": {
+          "noul": 0.02,
+          "type": "noul"
+        },
+        "urgency": {
+          "confidence": 0.745,
+          "legend": {
+            "0": "没有提出处理期限，或明确不急",
+            "1": "希望尽快，但无具体期限",
+            "2": "明确要求今天、立即或指定时间前处理"
+          },
+          "probabilities": {
+            "0": 0.86,
+            "1": 0.11,
+            "2": 0.03
+          },
+          "score": 0.16999999999999998,
+          "type": "score"
+        }
+      },
+      "usage": {
+        "input_tokens": 1051,
+        "output_tokens": 105
+      }
+    },
+    "checks": [
+      {
+        "question": "department",
+        "pass": true,
+        "actual": "billing",
+        "expected": "billing"
+      },
+      {
+        "question": "refund",
+        "pass": true,
+        "actual": false,
+        "expected": false
+      },
+      {
+        "question": "urgency",
+        "pass": true,
+        "actual": 0,
+        "expected": 0
+      }
+    ],
+    "request_id": "710efc3682b949d98ac0a4bb3400c405",
+    "attempts": 1,
+    "latency_ms": 851.08
+  },
+  {
+    "mode": "fast",
+    "id": "refund_no",
+    "suite": "cases",
+    "group": "semantic",
+    "questions": 3,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "department": {
+          "choice": "billing",
+          "confidence": 0.8666666666666667,
+          "probabilities": {
+            "billing": 0.9,
+            "other": 0.1,
+            "sales": 0,
+            "technical": 0
+          },
+          "type": "choice"
+        },
+        "refund": {
+          "noul": 0,
+          "type": "noul"
+        },
+        "urgency": {
+          "confidence": 0.925,
+          "legend": {
+            "0": "没有提出处理期限，或明确不急",
+            "1": "希望尽快，但无具体期限",
+            "2": "明确要求今天、立即或指定时间前处理"
+          },
+          "probabilities": {
+            "0": 0.95,
+            "1": 0.05,
+            "2": 0
+          },
+          "score": 0.05,
+          "type": "score"
+        }
+      },
+      "usage": {
+        "input_tokens": 942,
+        "output_tokens": 89
+      }
+    },
+    "checks": [
+      {
+        "question": "department",
+        "pass": true,
+        "actual": "billing",
+        "expected": "billing"
+      },
+      {
+        "question": "refund",
+        "pass": true,
+        "actual": false,
+        "expected": false
+      },
+      {
+        "question": "urgency",
+        "pass": true,
+        "actual": 0,
+        "expected": 0
+      }
+    ],
+    "request_id": "0c3ff72bffdbe07817f2098abdf7ae16",
+    "attempts": 1,
+    "latency_ms": 951.85
+  },
+  {
+    "mode": "fast",
+    "id": "refund_progress",
+    "suite": "cases",
+    "group": "semantic",
+    "questions": 3,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "department": {
+          "choice": "billing",
+          "confidence": 0.9333333333333332,
+          "probabilities": {
+            "billing": 0.95,
+            "other": 0.05,
+            "sales": 0,
+            "technical": 0
+          },
+          "type": "choice"
+        },
+        "refund": {
+          "noul": 0,
+          "type": "noul"
+        },
+        "urgency": {
+          "confidence": 0.925,
+          "legend": {
+            "0": "没有提出处理期限，或明确不急",
+            "1": "希望尽快，但无具体期限",
+            "2": "明确要求今天、立即或指定时间前处理"
+          },
+          "probabilities": {
+            "0": 0.95,
+            "1": 0.05,
+            "2": 0
+          },
+          "score": 0.05,
+          "type": "score"
+        }
+      },
+      "usage": {
+        "input_tokens": 940,
+        "output_tokens": 89
+      }
+    },
+    "checks": [
+      {
+        "question": "department",
+        "pass": true,
+        "actual": "billing",
+        "expected": "billing"
+      },
+      {
+        "question": "refund",
+        "pass": true,
+        "actual": false,
+        "expected": false
+      },
+      {
+        "question": "urgency",
+        "pass": true,
+        "actual": 0,
+        "expected": 0
+      }
+    ],
+    "request_id": "91c79644feba2ac0a116d08f80bbbc05",
+    "attempts": 1,
+    "latency_ms": 765.72
+  },
+  {
+    "mode": "standard",
+    "id": "refund_progress",
+    "suite": "cases",
+    "group": "semantic",
+    "questions": 3,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "department": {
+          "choice": "billing",
+          "confidence": 0.9066666666666667,
+          "probabilities": {
+            "billing": 0.93,
+            "other": 0.02,
+            "sales": 0.02,
+            "technical": 0.03
+          },
+          "type": "choice"
+        },
+        "refund": {
+          "noul": 0.08,
+          "type": "noul"
+        },
+        "urgency": {
+          "confidence": 0.7449999999999999,
+          "legend": {
+            "0": "没有提出处理期限，或明确不急",
+            "1": "希望尽快，但无具体期限",
+            "2": "明确要求今天、立即或指定时间前处理"
+          },
+          "probabilities": {
+            "0": 0.85,
+            "1": 0.13,
+            "2": 0.02
+          },
+          "score": 0.17,
+          "type": "score"
+        }
+      },
+      "usage": {
+        "input_tokens": 1049,
+        "output_tokens": 105
+      }
+    },
+    "checks": [
+      {
+        "question": "department",
+        "pass": true,
+        "actual": "billing",
+        "expected": "billing"
+      },
+      {
+        "question": "refund",
+        "pass": true,
+        "actual": false,
+        "expected": false
+      },
+      {
+        "question": "urgency",
+        "pass": true,
+        "actual": 0,
+        "expected": 0
+      }
+    ],
+    "request_id": "7fecaa1f9c18f2ca11a694d5d20491c6",
+    "attempts": 1,
+    "latency_ms": 921.3
+  },
+  {
+    "mode": "standard",
+    "id": "invoice",
+    "suite": "cases",
+    "group": "semantic",
+    "questions": 3,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "department": {
+          "choice": "billing",
+          "confidence": 0.9066666666666667,
+          "probabilities": {
+            "billing": 0.93,
+            "other": 0.03,
+            "sales": 0.02,
+            "technical": 0.02
+          },
+          "type": "choice"
+        },
+        "refund": {
+          "noul": 0.02,
+          "type": "noul"
+        },
+        "urgency": {
+          "confidence": 0.85,
+          "legend": {
+            "0": "没有提出处理期限，或明确不急",
+            "1": "希望尽快，但无具体期限",
+            "2": "明确要求今天、立即或指定时间前处理"
+          },
+          "probabilities": {
+            "0": 0.05,
+            "1": 0.9,
+            "2": 0.05
+          },
+          "score": 1,
+          "type": "score"
+        }
+      },
+      "usage": {
+        "input_tokens": 1046,
+        "output_tokens": 105
+      }
+    },
+    "checks": [
+      {
+        "question": "department",
+        "pass": true,
+        "actual": "billing",
+        "expected": "billing"
+      },
+      {
+        "question": "refund",
+        "pass": true,
+        "actual": false,
+        "expected": false
+      },
+      {
+        "question": "urgency",
+        "pass": true,
+        "actual": 1,
+        "expected": 1
+      }
+    ],
+    "request_id": "0c9fb1dbd9bf8d311d0903ccdbd53bf2",
+    "attempts": 1,
+    "latency_ms": 669.71
+  },
+  {
+    "mode": "fast",
+    "id": "invoice",
+    "suite": "cases",
+    "group": "semantic",
+    "questions": 3,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "department": {
+          "choice": "billing",
+          "confidence": 0.6000000000000001,
+          "probabilities": {
+            "billing": 0.7000000000000001,
+            "other": 0.20000000000000004,
+            "sales": 0.10000000000000002,
+            "technical": 0
+          },
+          "type": "choice"
+        },
+        "refund": {
+          "noul": 0,
+          "type": "noul"
+        },
+        "urgency": {
+          "confidence": 1,
+          "legend": {
+            "0": "没有提出处理期限，或明确不急",
+            "1": "希望尽快，但无具体期限",
+            "2": "明确要求今天、立即或指定时间前处理"
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 1,
+            "2": 0
+          },
+          "score": 1,
+          "type": "score"
+        }
+      },
+      "usage": {
+        "input_tokens": 937,
+        "output_tokens": 90
+      }
+    },
+    "checks": [
+      {
+        "question": "department",
+        "pass": true,
+        "actual": "billing",
+        "expected": "billing"
+      },
+      {
+        "question": "refund",
+        "pass": true,
+        "actual": false,
+        "expected": false
+      },
+      {
+        "question": "urgency",
+        "pass": true,
+        "actual": 1,
+        "expected": 1
+      }
+    ],
+    "request_id": "1829ef577234eb9b0e4149f664ea807f",
+    "attempts": 1,
+    "latency_ms": 677.88
+  },
+  {
+    "mode": "fast",
+    "id": "outage",
+    "suite": "cases",
+    "group": "semantic",
+    "questions": 3,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "department": {
+          "choice": "technical",
+          "confidence": 1,
+          "probabilities": {
+            "billing": 0,
+            "other": 0,
+            "sales": 0,
+            "technical": 1
+          },
+          "type": "choice"
+        },
+        "refund": {
+          "noul": 0,
+          "type": "noul"
+        },
+        "urgency": {
+          "confidence": 1,
+          "legend": {
+            "0": "没有提出处理期限，或明确不急",
+            "1": "希望尽快，但无具体期限",
+            "2": "明确要求今天、立即或指定时间前处理"
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 1
+          },
+          "score": 2,
+          "type": "score"
+        }
+      },
+      "usage": {
+        "input_tokens": 939,
+        "output_tokens": 91
+      }
+    },
+    "checks": [
+      {
+        "question": "department",
+        "pass": true,
+        "actual": "technical",
+        "expected": "technical"
+      },
+      {
+        "question": "refund",
+        "pass": true,
+        "actual": false,
+        "expected": false
+      },
+      {
+        "question": "urgency",
+        "pass": true,
+        "actual": 2,
+        "expected": 2
+      }
+    ],
+    "request_id": "ca6932a906584df01317e4e305f31bf3",
+    "attempts": 1,
+    "latency_ms": 802.93
+  },
+  {
+    "mode": "standard",
+    "id": "outage",
+    "suite": "cases",
+    "group": "semantic",
+    "questions": 3,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "department": {
+          "choice": "technical",
+          "confidence": 0.9066666666666667,
+          "probabilities": {
+            "billing": 0.02,
+            "other": 0.03,
+            "sales": 0.02,
+            "technical": 0.93
+          },
+          "type": "choice"
+        },
+        "refund": {
+          "noul": 0.02,
+          "type": "noul"
+        },
+        "urgency": {
+          "confidence": 0.475,
+          "legend": {
+            "0": "没有提出处理期限，或明确不急",
+            "1": "希望尽快，但无具体期限",
+            "2": "明确要求今天、立即或指定时间前处理"
+          },
+          "probabilities": {
+            "0": 0.05,
+            "1": 0.25,
+            "2": 0.7
+          },
+          "score": 1.65,
+          "type": "score"
+        }
+      },
+      "usage": {
+        "input_tokens": 1048,
+        "output_tokens": 105
+      }
+    },
+    "checks": [
+      {
+        "question": "department",
+        "pass": true,
+        "actual": "technical",
+        "expected": "technical"
+      },
+      {
+        "question": "refund",
+        "pass": true,
+        "actual": false,
+        "expected": false
+      },
+      {
+        "question": "urgency",
+        "pass": true,
+        "actual": 2,
+        "expected": 2
+      }
+    ],
+    "request_id": "d36a75f6bd0f155d4a4ebd6248fe76b0",
+    "attempts": 1,
+    "latency_ms": 845.01
+  },
+  {
+    "mode": "standard",
+    "id": "bug",
+    "suite": "cases",
+    "group": "semantic",
+    "questions": 3,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "department": {
+          "choice": "technical",
+          "confidence": 0.8933333333333334,
+          "probabilities": {
+            "billing": 0.03,
+            "other": 0.02,
+            "sales": 0.03,
+            "technical": 0.92
+          },
+          "type": "choice"
+        },
+        "refund": {
+          "noul": 0.02,
+          "type": "noul"
+        },
+        "urgency": {
+          "confidence": 0.32500000000000007,
+          "legend": {
+            "0": "没有提出处理期限，或明确不急",
+            "1": "希望尽快，但无具体期限",
+            "2": "明确要求今天、立即或指定时间前处理"
+          },
+          "probabilities": {
+            "0": 0.6,
+            "1": 0.35,
+            "2": 0.05
+          },
+          "score": 0.44999999999999996,
+          "type": "score"
+        }
+      },
+      "usage": {
+        "input_tokens": 1044,
+        "output_tokens": 105
+      }
+    },
+    "checks": [
+      {
+        "question": "department",
+        "pass": true,
+        "actual": "technical",
+        "expected": "technical"
+      },
+      {
+        "question": "refund",
+        "pass": true,
+        "actual": false,
+        "expected": false
+      },
+      {
+        "question": "urgency",
+        "pass": true,
+        "actual": 0,
+        "expected": 0
+      }
+    ],
+    "request_id": "2f67a745eb6b67cf6e8438fe205a96b5",
+    "attempts": 1,
+    "latency_ms": 704.18
+  },
+  {
+    "mode": "fast",
+    "id": "bug",
+    "suite": "cases",
+    "group": "semantic",
+    "questions": 3,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "department": {
+          "choice": "technical",
+          "confidence": 0.9466666666666667,
+          "probabilities": {
+            "billing": 0.01,
+            "other": 0.02,
+            "sales": 0.01,
+            "technical": 0.96
+          },
+          "type": "choice"
+        },
+        "refund": {
+          "noul": 0,
+          "type": "noul"
+        },
+        "urgency": {
+          "confidence": 0.91,
+          "legend": {
+            "0": "没有提出处理期限，或明确不急",
+            "1": "希望尽快，但无具体期限",
+            "2": "明确要求今天、立即或指定时间前处理"
+          },
+          "probabilities": {
+            "0": 0.95,
+            "1": 0.04,
+            "2": 0.01
+          },
+          "score": 0.06,
+          "type": "score"
+        }
+      },
+      "usage": {
+        "input_tokens": 935,
+        "output_tokens": 89
+      }
+    },
+    "checks": [
+      {
+        "question": "department",
+        "pass": true,
+        "actual": "technical",
+        "expected": "technical"
+      },
+      {
+        "question": "refund",
+        "pass": true,
+        "actual": false,
+        "expected": false
+      },
+      {
+        "question": "urgency",
+        "pass": true,
+        "actual": 0,
+        "expected": 0
+      }
+    ],
+    "request_id": "f849cd6b6ebda145715f8327cd75a98a",
+    "attempts": 1,
+    "latency_ms": 1105.16
+  },
+  {
+    "mode": "fast",
+    "id": "upgrade",
+    "suite": "cases",
+    "group": "semantic",
+    "questions": 3,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "department": {
+          "choice": "sales",
+          "confidence": 1,
+          "probabilities": {
+            "billing": 0,
+            "other": 0,
+            "sales": 1,
+            "technical": 0
+          },
+          "type": "choice"
+        },
+        "refund": {
+          "noul": 0,
+          "type": "noul"
+        },
+        "urgency": {
+          "confidence": 1,
+          "legend": {
+            "0": "没有提出处理期限，或明确不急",
+            "1": "希望尽快，但无具体期限",
+            "2": "明确要求今天、立即或指定时间前处理"
+          },
+          "probabilities": {
+            "0": 1,
+            "1": 0,
+            "2": 0
+          },
+          "score": 0,
+          "type": "score"
+        }
+      },
+      "usage": {
+        "input_tokens": 935,
+        "output_tokens": 91
+      }
+    },
+    "checks": [
+      {
+        "question": "department",
+        "pass": true,
+        "actual": "sales",
+        "expected": "sales"
+      },
+      {
+        "question": "refund",
+        "pass": true,
+        "actual": false,
+        "expected": false
+      },
+      {
+        "question": "urgency",
+        "pass": true,
+        "actual": 0,
+        "expected": 0
+      }
+    ],
+    "request_id": "d3ed408b4e1894462c9273c4571207e5",
+    "attempts": 1,
+    "latency_ms": 909.22
+  },
+  {
+    "mode": "standard",
+    "id": "upgrade",
+    "suite": "cases",
+    "group": "semantic",
+    "questions": 3,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "department": {
+          "choice": "sales",
+          "confidence": 0.84,
+          "probabilities": {
+            "billing": 0.05,
+            "other": 0.05,
+            "sales": 0.88,
+            "technical": 0.02
+          },
+          "type": "choice"
+        },
+        "refund": {
+          "noul": 0.02,
+          "type": "noul"
+        },
+        "urgency": {
+          "confidence": 0.5499999999999999,
+          "legend": {
+            "0": "没有提出处理期限，或明确不急",
+            "1": "希望尽快，但无具体期限",
+            "2": "明确要求今天、立即或指定时间前处理"
+          },
+          "probabilities": {
+            "0": 0.75,
+            "1": 0.2,
+            "2": 0.05
+          },
+          "score": 0.30000000000000004,
+          "type": "score"
+        }
+      },
+      "usage": {
+        "input_tokens": 1044,
+        "output_tokens": 105
+      }
+    },
+    "checks": [
+      {
+        "question": "department",
+        "pass": true,
+        "actual": "sales",
+        "expected": "sales"
+      },
+      {
+        "question": "refund",
+        "pass": true,
+        "actual": false,
+        "expected": false
+      },
+      {
+        "question": "urgency",
+        "pass": true,
+        "actual": 0,
+        "expected": 0
+      }
+    ],
+    "request_id": "7b006e48fad63dee27e1ffb9038ee545",
+    "attempts": 1,
+    "latency_ms": 760.14
+  },
+  {
+    "mode": "standard",
+    "id": "demo",
+    "suite": "cases",
+    "group": "semantic",
+    "questions": 3,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "department": {
+          "choice": "sales",
+          "confidence": 0.96,
+          "probabilities": {
+            "billing": 0,
+            "other": 0.02,
+            "sales": 0.97,
+            "technical": 0.01
+          },
+          "type": "choice"
+        },
+        "refund": {
+          "noul": 0,
+          "type": "noul"
+        },
+        "urgency": {
+          "confidence": 0.925,
+          "legend": {
+            "0": "没有提出处理期限，或明确不急",
+            "1": "希望尽快，但无具体期限",
+            "2": "明确要求今天、立即或指定时间前处理"
+          },
+          "probabilities": {
+            "0": 0.02,
+            "1": 0.95,
+            "2": 0.03
+          },
+          "score": 1.01,
+          "type": "score"
+        }
+      },
+      "usage": {
+        "input_tokens": 1044,
+        "output_tokens": 101
+      }
+    },
+    "checks": [
+      {
+        "question": "department",
+        "pass": true,
+        "actual": "sales",
+        "expected": "sales"
+      },
+      {
+        "question": "refund",
+        "pass": true,
+        "actual": false,
+        "expected": false
+      },
+      {
+        "question": "urgency",
+        "pass": true,
+        "actual": 1,
+        "expected": 1
+      }
+    ],
+    "request_id": "6d422a55842ad5cfbcabbd2678bcd150",
+    "attempts": 1,
+    "latency_ms": 749.32
+  },
+  {
+    "mode": "fast",
+    "id": "demo",
+    "suite": "cases",
+    "group": "semantic",
+    "questions": 3,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "department": {
+          "choice": "sales",
+          "confidence": 0.96,
+          "probabilities": {
+            "billing": 0,
+            "other": 0.02,
+            "sales": 0.97,
+            "technical": 0.01
+          },
+          "type": "choice"
+        },
+        "refund": {
+          "noul": 0,
+          "type": "noul"
+        },
+        "urgency": {
+          "confidence": 0.925,
+          "legend": {
+            "0": "没有提出处理期限，或明确不急",
+            "1": "希望尽快，但无具体期限",
+            "2": "明确要求今天、立即或指定时间前处理"
+          },
+          "probabilities": {
+            "0": 0.05,
+            "1": 0.95,
+            "2": 0
+          },
+          "score": 0.95,
+          "type": "score"
+        }
+      },
+      "usage": {
+        "input_tokens": 935,
+        "output_tokens": 89
+      }
+    },
+    "checks": [
+      {
+        "question": "department",
+        "pass": true,
+        "actual": "sales",
+        "expected": "sales"
+      },
+      {
+        "question": "refund",
+        "pass": true,
+        "actual": false,
+        "expected": false
+      },
+      {
+        "question": "urgency",
+        "pass": true,
+        "actual": 1,
+        "expected": 1
+      }
+    ],
+    "request_id": "1d6aac2b6a7529795219eeb18f3d73e6",
+    "attempts": 1,
+    "latency_ms": 921.5
+  },
+  {
+    "mode": "fast",
+    "id": "sales_deadline",
+    "suite": "cases",
+    "group": "semantic",
+    "questions": 3,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "department": {
+          "choice": "sales",
+          "confidence": 1,
+          "probabilities": {
+            "billing": 0,
+            "other": 0,
+            "sales": 1,
+            "technical": 0
+          },
+          "type": "choice"
+        },
+        "refund": {
+          "noul": 0,
+          "type": "noul"
+        },
+        "urgency": {
+          "confidence": 1,
+          "legend": {
+            "0": "没有提出处理期限，或明确不急",
+            "1": "希望尽快，但无具体期限",
+            "2": "明确要求今天、立即或指定时间前处理"
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 1
+          },
+          "score": 2,
+          "type": "score"
+        }
+      },
+      "usage": {
+        "input_tokens": 939,
+        "output_tokens": 91
+      }
+    },
+    "checks": [
+      {
+        "question": "department",
+        "pass": true,
+        "actual": "sales",
+        "expected": "sales"
+      },
+      {
+        "question": "refund",
+        "pass": true,
+        "actual": false,
+        "expected": false
+      },
+      {
+        "question": "urgency",
+        "pass": true,
+        "actual": 2,
+        "expected": 2
+      }
+    ],
+    "request_id": "34ab4ae233885a3443fc373a82a89388",
+    "attempts": 1,
+    "latency_ms": 826.28
+  },
+  {
+    "mode": "standard",
+    "id": "sales_deadline",
+    "suite": "cases",
+    "group": "semantic",
+    "questions": 3,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "department": {
+          "choice": "sales",
+          "confidence": 1,
+          "probabilities": {
+            "billing": 0,
+            "other": 0,
+            "sales": 1,
+            "technical": 0
+          },
+          "type": "choice"
+        },
+        "refund": {
+          "noul": 0,
+          "type": "noul"
+        },
+        "urgency": {
+          "confidence": 1,
+          "legend": {
+            "0": "没有提出处理期限，或明确不急",
+            "1": "希望尽快，但无具体期限",
+            "2": "明确要求今天、立即或指定时间前处理"
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 1
+          },
+          "score": 2,
+          "type": "score"
+        }
+      },
+      "usage": {
+        "input_tokens": 1048,
+        "output_tokens": 89
+      }
+    },
+    "checks": [
+      {
+        "question": "department",
+        "pass": true,
+        "actual": "sales",
+        "expected": "sales"
+      },
+      {
+        "question": "refund",
+        "pass": true,
+        "actual": false,
+        "expected": false
+      },
+      {
+        "question": "urgency",
+        "pass": true,
+        "actual": 2,
+        "expected": 2
+      }
+    ],
+    "request_id": "0026c9cc73a9e28feba57035c792470d",
+    "attempts": 1,
+    "latency_ms": 768.89
+  },
+  {
+    "mode": "standard",
+    "id": "thanks",
+    "suite": "cases",
+    "group": "semantic",
+    "questions": 3,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "department": {
+          "choice": "other",
+          "confidence": 0.8666666666666667,
+          "probabilities": {
+            "billing": 0.05,
+            "other": 0.9,
+            "sales": 0.03,
+            "technical": 0.02
+          },
+          "type": "choice"
+        },
+        "refund": {
+          "noul": 0,
+          "type": "noul"
+        },
+        "urgency": {
+          "confidence": 0.91,
+          "legend": {
+            "0": "没有提出处理期限，或明确不急",
+            "1": "希望尽快，但无具体期限",
+            "2": "明确要求今天、立即或指定时间前处理"
+          },
+          "probabilities": {
+            "0": 0.95,
+            "1": 0.04,
+            "2": 0.01
+          },
+          "score": 0.06,
+          "type": "score"
+        }
+      },
+      "usage": {
+        "input_tokens": 1044,
+        "output_tokens": 103
+      }
+    },
+    "checks": [
+      {
+        "question": "department",
+        "pass": true,
+        "actual": "other",
+        "expected": "other"
+      },
+      {
+        "question": "refund",
+        "pass": true,
+        "actual": false,
+        "expected": false
+      },
+      {
+        "question": "urgency",
+        "pass": true,
+        "actual": 0,
+        "expected": 0
+      }
+    ],
+    "request_id": "ac6134a764a00f5b12833a6bcc4e5236",
+    "attempts": 1,
+    "latency_ms": 706.15
+  },
+  {
+    "mode": "fast",
+    "id": "thanks",
+    "suite": "cases",
+    "group": "semantic",
+    "questions": 3,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "department": {
+          "choice": "other",
+          "confidence": 1,
+          "probabilities": {
+            "billing": 0,
+            "other": 1,
+            "sales": 0,
+            "technical": 0
+          },
+          "type": "choice"
+        },
+        "refund": {
+          "noul": 0,
+          "type": "noul"
+        },
+        "urgency": {
+          "confidence": 1,
+          "legend": {
+            "0": "没有提出处理期限，或明确不急",
+            "1": "希望尽快，但无具体期限",
+            "2": "明确要求今天、立即或指定时间前处理"
+          },
+          "probabilities": {
+            "0": 1,
+            "1": 0,
+            "2": 0
+          },
+          "score": 0,
+          "type": "score"
+        }
+      },
+      "usage": {
+        "input_tokens": 935,
+        "output_tokens": 91
+      }
+    },
+    "checks": [
+      {
+        "question": "department",
+        "pass": true,
+        "actual": "other",
+        "expected": "other"
+      },
+      {
+        "question": "refund",
+        "pass": true,
+        "actual": false,
+        "expected": false
+      },
+      {
+        "question": "urgency",
+        "pass": true,
+        "actual": 0,
+        "expected": 0
+      }
+    ],
+    "request_id": "dbc579ad386f9800222ba37c278d5fea",
+    "attempts": 1,
+    "latency_ms": 578.68
+  },
+  {
+    "mode": "fast",
+    "id": "empty",
+    "suite": "cases",
+    "group": "semantic",
+    "questions": 3,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "department": {
+          "choice": "billing",
+          "confidence": 0,
+          "probabilities": {
+            "billing": 0.25,
+            "other": 0.25,
+            "sales": 0.25,
+            "technical": 0.25
+          },
+          "type": "choice"
+        },
+        "refund": {
+          "noul": 0,
+          "type": "noul"
+        },
+        "urgency": {
+          "confidence": 1,
+          "legend": {
+            "0": "没有提出处理期限，或明确不急",
+            "1": "希望尽快，但无具体期限",
+            "2": "明确要求今天、立即或指定时间前处理"
+          },
+          "probabilities": {
+            "0": 1,
+            "1": 0,
+            "2": 0
+          },
+          "score": 0,
+          "type": "score"
+        }
+      },
+      "usage": {
+        "input_tokens": 933,
+        "output_tokens": 90
+      }
+    },
+    "checks": [
+      {
+        "question": "department",
+        "pass": false,
+        "actual": "billing",
+        "expected": "other"
+      },
+      {
+        "question": "refund",
+        "pass": true,
+        "actual": false,
+        "expected": false
+      },
+      {
+        "question": "urgency",
+        "pass": true,
+        "actual": 0,
+        "expected": 0
+      }
+    ],
+    "request_id": "2f72dd40775df9f2c93f1add7719b180",
+    "attempts": 1,
+    "latency_ms": 836.72
+  },
+  {
+    "mode": "standard",
+    "id": "empty",
+    "suite": "cases",
+    "group": "semantic",
+    "questions": 3,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "department": {
+          "choice": "other",
+          "confidence": 0.6,
+          "probabilities": {
+            "billing": 0.25,
+            "other": 0.7,
+            "sales": 0.025,
+            "technical": 0.025
+          },
+          "type": "choice"
+        },
+        "refund": {
+          "noul": 0.05,
+          "type": "noul"
+        },
+        "urgency": {
+          "confidence": 0.8049999999999999,
+          "legend": {
+            "0": "没有提出处理期限，或明确不急",
+            "1": "希望尽快，但无具体期限",
+            "2": "明确要求今天、立即或指定时间前处理"
+          },
+          "probabilities": {
+            "0": 0.9,
+            "1": 0.07,
+            "2": 0.03
+          },
+          "score": 0.13,
+          "type": "score"
+        }
+      },
+      "usage": {
+        "input_tokens": 1042,
+        "output_tokens": 105
+      }
+    },
+    "checks": [
+      {
+        "question": "department",
+        "pass": true,
+        "actual": "other",
+        "expected": "other"
+      },
+      {
+        "question": "refund",
+        "pass": true,
+        "actual": false,
+        "expected": false
+      },
+      {
+        "question": "urgency",
+        "pass": true,
+        "actual": 0,
+        "expected": 0
+      }
+    ],
+    "request_id": "aad67c33bc0f74f889fd6137bcc96deb",
+    "attempts": 1,
+    "latency_ms": 839.81
+  },
+  {
+    "mode": "standard",
+    "id": "quoted",
+    "suite": "cases",
+    "group": "semantic",
+    "questions": 3,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "department": {
+          "choice": "sales",
+          "confidence": 0.7333333333333334,
+          "probabilities": {
+            "billing": 0.1,
+            "other": 0.05,
+            "sales": 0.8,
+            "technical": 0.05
+          },
+          "type": "choice"
+        },
+        "refund": {
+          "noul": 0.02,
+          "type": "noul"
+        },
+        "urgency": {
+          "confidence": 0.7449999999999999,
+          "legend": {
+            "0": "没有提出处理期限，或明确不急",
+            "1": "希望尽快，但无具体期限",
+            "2": "明确要求今天、立即或指定时间前处理"
+          },
+          "probabilities": {
+            "0": 0.85,
+            "1": 0.13,
+            "2": 0.02
+          },
+          "score": 0.17,
+          "type": "score"
+        }
+      },
+      "usage": {
+        "input_tokens": 1049,
+        "output_tokens": 105
+      }
+    },
+    "checks": [
+      {
+        "question": "department",
+        "pass": true,
+        "actual": "sales",
+        "expected": "sales"
+      },
+      {
+        "question": "refund",
+        "pass": true,
+        "actual": false,
+        "expected": false
+      },
+      {
+        "question": "urgency",
+        "pass": true,
+        "actual": 0,
+        "expected": 0
+      }
+    ],
+    "request_id": "788e068949e2761bbefeebace3bb1138",
+    "attempts": 1,
+    "latency_ms": 772.56
+  },
+  {
+    "mode": "fast",
+    "id": "quoted",
+    "suite": "cases",
+    "group": "semantic",
+    "questions": 3,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "department": {
+          "choice": "sales",
+          "confidence": 0.8666666666666667,
+          "probabilities": {
+            "billing": 0.05,
+            "other": 0.05,
+            "sales": 0.9,
+            "technical": 0
+          },
+          "type": "choice"
+        },
+        "refund": {
+          "noul": 0,
+          "type": "noul"
+        },
+        "urgency": {
+          "confidence": 0.925,
+          "legend": {
+            "0": "没有提出处理期限，或明确不急",
+            "1": "希望尽快，但无具体期限",
+            "2": "明确要求今天、立即或指定时间前处理"
+          },
+          "probabilities": {
+            "0": 0.95,
+            "1": 0.05,
+            "2": 0
+          },
+          "score": 0.05,
+          "type": "score"
+        }
+      },
+      "usage": {
+        "input_tokens": 940,
+        "output_tokens": 89
+      }
+    },
+    "checks": [
+      {
+        "question": "department",
+        "pass": true,
+        "actual": "sales",
+        "expected": "sales"
+      },
+      {
+        "question": "refund",
+        "pass": true,
+        "actual": false,
+        "expected": false
+      },
+      {
+        "question": "urgency",
+        "pass": true,
+        "actual": 0,
+        "expected": 0
+      }
+    ],
+    "request_id": "62c96ee7ff1efb86de1ecf310453338c",
+    "attempts": 1,
+    "latency_ms": 1073.89
+  },
+  {
+    "mode": "fast",
+    "id": "conditional",
+    "suite": "cases",
+    "group": "semantic",
+    "questions": 3,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "department": {
+          "choice": "billing",
+          "confidence": 0.6,
+          "probabilities": {
+            "billing": 0.7,
+            "other": 0.15,
+            "sales": 0.1,
+            "technical": 0.05
+          },
+          "type": "choice"
+        },
+        "refund": {
+          "noul": 0,
+          "type": "noul"
+        },
+        "urgency": {
+          "confidence": 0.925,
+          "legend": {
+            "0": "没有提出处理期限，或明确不急",
+            "1": "希望尽快，但无具体期限",
+            "2": "明确要求今天、立即或指定时间前处理"
+          },
+          "probabilities": {
+            "0": 0.95,
+            "1": 0.05,
+            "2": 0
+          },
+          "score": 0.05,
+          "type": "score"
+        }
+      },
+      "usage": {
+        "input_tokens": 946,
+        "output_tokens": 89
+      }
+    },
+    "checks": [
+      {
+        "question": "department",
+        "pass": true,
+        "actual": "billing",
+        "expected": "billing"
+      },
+      {
+        "question": "refund",
+        "pass": true,
+        "actual": false,
+        "expected": false
+      },
+      {
+        "question": "urgency",
+        "pass": true,
+        "actual": 0,
+        "expected": 0
+      }
+    ],
+    "request_id": "0c24cd8ef95c60e0a663aaa2348e84d3",
+    "attempts": 1,
+    "latency_ms": 985.73
+  },
+  {
+    "mode": "standard",
+    "id": "conditional",
+    "suite": "cases",
+    "group": "semantic",
+    "questions": 3,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "department": {
+          "choice": "billing",
+          "confidence": 0.4000000000000001,
+          "probabilities": {
+            "billing": 0.55,
+            "other": 0.35,
+            "sales": 0.05,
+            "technical": 0.05
+          },
+          "type": "choice"
+        },
+        "refund": {
+          "noul": 0.05,
+          "type": "noul"
+        },
+        "urgency": {
+          "confidence": 0.8200000000000001,
+          "legend": {
+            "0": "没有提出处理期限，或明确不急",
+            "1": "希望尽快，但无具体期限",
+            "2": "明确要求今天、立即或指定时间前处理"
+          },
+          "probabilities": {
+            "0": 0.9,
+            "1": 0.08,
+            "2": 0.02
+          },
+          "score": 0.12,
+          "type": "score"
+        }
+      },
+      "usage": {
+        "input_tokens": 1055,
+        "output_tokens": 105
+      }
+    },
+    "checks": [
+      {
+        "question": "department",
+        "pass": true,
+        "actual": "billing",
+        "expected": "billing"
+      },
+      {
+        "question": "refund",
+        "pass": true,
+        "actual": false,
+        "expected": false
+      },
+      {
+        "question": "urgency",
+        "pass": true,
+        "actual": 0,
+        "expected": 0
+      }
+    ],
+    "request_id": "306f8eb4a5447b2a5d147ca2d705aa50",
+    "attempts": 1,
+    "latency_ms": 776.99
+  },
+  {
+    "mode": "standard",
+    "id": "retracted",
+    "suite": "cases",
+    "group": "semantic",
+    "questions": 3,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "department": {
+          "choice": "billing",
+          "confidence": 0.7999999999999999,
+          "probabilities": {
+            "billing": 0.85,
+            "other": 0.05,
+            "sales": 0.05,
+            "technical": 0.05
+          },
+          "type": "choice"
+        },
+        "refund": {
+          "noul": 0.02,
+          "type": "noul"
+        },
+        "urgency": {
+          "confidence": 0.88,
+          "legend": {
+            "0": "没有提出处理期限，或明确不急",
+            "1": "希望尽快，但无具体期限",
+            "2": "明确要求今天、立即或指定时间前处理"
+          },
+          "probabilities": {
+            "0": 0.05,
+            "1": 0.92,
+            "2": 0.03
+          },
+          "score": 0.98,
+          "type": "score"
+        }
+      },
+      "usage": {
+        "input_tokens": 1052,
+        "output_tokens": 105
+      }
+    },
+    "checks": [
+      {
+        "question": "department",
+        "pass": true,
+        "actual": "billing",
+        "expected": "billing"
+      },
+      {
+        "question": "refund",
+        "pass": true,
+        "actual": false,
+        "expected": false
+      },
+      {
+        "question": "urgency",
+        "pass": true,
+        "actual": 1,
+        "expected": 1
+      }
+    ],
+    "request_id": "2234229f17e0b4381bbde0b34e20005b",
+    "attempts": 1,
+    "latency_ms": 943.46
+  },
+  {
+    "mode": "fast",
+    "id": "retracted",
+    "suite": "cases",
+    "group": "semantic",
+    "questions": 3,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "department": {
+          "choice": "billing",
+          "confidence": 0.7999999999999999,
+          "probabilities": {
+            "billing": 0.85,
+            "other": 0.08,
+            "sales": 0.05,
+            "technical": 0.02
+          },
+          "type": "choice"
+        },
+        "refund": {
+          "noul": 0,
+          "type": "noul"
+        },
+        "urgency": {
+          "confidence": 0.7749999999999999,
+          "legend": {
+            "0": "没有提出处理期限，或明确不急",
+            "1": "希望尽快，但无具体期限",
+            "2": "明确要求今天、立即或指定时间前处理"
+          },
+          "probabilities": {
+            "0": 0.1,
+            "1": 0.85,
+            "2": 0.05
+          },
+          "score": 0.95,
+          "type": "score"
+        }
+      },
+      "usage": {
+        "input_tokens": 943,
+        "output_tokens": 89
+      }
+    },
+    "checks": [
+      {
+        "question": "department",
+        "pass": true,
+        "actual": "billing",
+        "expected": "billing"
+      },
+      {
+        "question": "refund",
+        "pass": true,
+        "actual": false,
+        "expected": false
+      },
+      {
+        "question": "urgency",
+        "pass": true,
+        "actual": 1,
+        "expected": 1
+      }
+    ],
+    "request_id": "f46137079e99b9d7daeb1c8a21ea5337",
+    "attempts": 1,
+    "latency_ms": 776.29
+  },
+  {
+    "mode": "fast",
+    "id": "polite",
+    "suite": "cases",
+    "group": "semantic",
+    "questions": 3,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "department": {
+          "choice": "billing",
+          "confidence": 1,
+          "probabilities": {
+            "billing": 1,
+            "other": 0,
+            "sales": 0,
+            "technical": 0
+          },
+          "type": "choice"
+        },
+        "refund": {
+          "noul": 1,
+          "type": "noul"
+        },
+        "urgency": {
+          "confidence": 1,
+          "legend": {
+            "0": "没有提出处理期限，或明确不急",
+            "1": "希望尽快，但无具体期限",
+            "2": "明确要求今天、立即或指定时间前处理"
+          },
+          "probabilities": {
+            "0": 1,
+            "1": 0,
+            "2": 0
+          },
+          "score": 0,
+          "type": "score"
+        }
+      },
+      "usage": {
+        "input_tokens": 941,
+        "output_tokens": 92
+      }
+    },
+    "checks": [
+      {
+        "question": "department",
+        "pass": true,
+        "actual": "billing",
+        "expected": "billing"
+      },
+      {
+        "question": "refund",
+        "pass": true,
+        "actual": true,
+        "expected": true
+      },
+      {
+        "question": "urgency",
+        "pass": true,
+        "actual": 0,
+        "expected": 0
+      }
+    ],
+    "request_id": "373be41a0b56d57835cf9dc2413dae3f",
+    "attempts": 1,
+    "latency_ms": 820.59
+  },
+  {
+    "mode": "standard",
+    "id": "polite",
+    "suite": "cases",
+    "group": "semantic",
+    "questions": 3,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "department": {
+          "choice": "billing",
+          "confidence": 0.96,
+          "probabilities": {
+            "billing": 0.97,
+            "other": 0.01,
+            "sales": 0.01,
+            "technical": 0.01
+          },
+          "type": "choice"
+        },
+        "refund": {
+          "noul": 0.97,
+          "type": "noul"
+        },
+        "urgency": {
+          "confidence": 0.835,
+          "legend": {
+            "0": "没有提出处理期限，或明确不急",
+            "1": "希望尽快，但无具体期限",
+            "2": "明确要求今天、立即或指定时间前处理"
+          },
+          "probabilities": {
+            "0": 0.9,
+            "1": 0.09,
+            "2": 0.01
+          },
+          "score": 0.11,
+          "type": "score"
+        }
+      },
+      "usage": {
+        "input_tokens": 1050,
+        "output_tokens": 105
+      }
+    },
+    "checks": [
+      {
+        "question": "department",
+        "pass": true,
+        "actual": "billing",
+        "expected": "billing"
+      },
+      {
+        "question": "refund",
+        "pass": true,
+        "actual": true,
+        "expected": true
+      },
+      {
+        "question": "urgency",
+        "pass": true,
+        "actual": 0,
+        "expected": 0
+      }
+    ],
+    "request_id": "adc04fa43cc4840add027d5d7184e6bb",
+    "attempts": 1,
+    "latency_ms": 1147.49
+  },
+  {
+    "mode": "standard",
+    "id": "no_urgency",
+    "suite": "cases",
+    "group": "semantic",
+    "questions": 3,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "department": {
+          "choice": "technical",
+          "confidence": 1,
+          "probabilities": {
+            "billing": 0,
+            "other": 0,
+            "sales": 0,
+            "technical": 1
+          },
+          "type": "choice"
+        },
+        "refund": {
+          "noul": 0,
+          "type": "noul"
+        },
+        "urgency": {
+          "confidence": 1,
+          "legend": {
+            "0": "没有提出处理期限，或明确不急",
+            "1": "希望尽快，但无具体期限",
+            "2": "明确要求今天、立即或指定时间前处理"
+          },
+          "probabilities": {
+            "0": 1,
+            "1": 0,
+            "2": 0
+          },
+          "score": 0,
+          "type": "score"
+        }
+      },
+      "usage": {
+        "input_tokens": 1050,
+        "output_tokens": 89
+      }
+    },
+    "checks": [
+      {
+        "question": "department",
+        "pass": true,
+        "actual": "technical",
+        "expected": "technical"
+      },
+      {
+        "question": "refund",
+        "pass": true,
+        "actual": false,
+        "expected": false
+      },
+      {
+        "question": "urgency",
+        "pass": true,
+        "actual": 0,
+        "expected": 0
+      }
+    ],
+    "request_id": "d71ac6446fcd5218d3c53f79ecaca73b",
+    "attempts": 1,
+    "latency_ms": 723.68
+  },
+  {
+    "mode": "fast",
+    "id": "no_urgency",
+    "suite": "cases",
+    "group": "semantic",
+    "questions": 3,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "department": {
+          "choice": "technical",
+          "confidence": 0.9333333333333332,
+          "probabilities": {
+            "billing": 0.01,
+            "other": 0.02,
+            "sales": 0.02,
+            "technical": 0.95
+          },
+          "type": "choice"
+        },
+        "refund": {
+          "noul": 0,
+          "type": "noul"
+        },
+        "urgency": {
+          "confidence": 0.91,
+          "legend": {
+            "0": "没有提出处理期限，或明确不急",
+            "1": "希望尽快，但无具体期限",
+            "2": "明确要求今天、立即或指定时间前处理"
+          },
+          "probabilities": {
+            "0": 0.95,
+            "1": 0.04,
+            "2": 0.01
+          },
+          "score": 0.06,
+          "type": "score"
+        }
+      },
+      "usage": {
+        "input_tokens": 941,
+        "output_tokens": 89
+      }
+    },
+    "checks": [
+      {
+        "question": "department",
+        "pass": true,
+        "actual": "technical",
+        "expected": "technical"
+      },
+      {
+        "question": "refund",
+        "pass": true,
+        "actual": false,
+        "expected": false
+      },
+      {
+        "question": "urgency",
+        "pass": true,
+        "actual": 0,
+        "expected": 0
+      }
+    ],
+    "request_id": "24001908d67682737bf8a180c9305f05",
+    "attempts": 1,
+    "latency_ms": 793.98
+  },
+  {
+    "mode": "fast",
+    "id": "urgent_refund",
+    "suite": "cases",
+    "group": "semantic",
+    "questions": 3,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "department": {
+          "choice": "billing",
+          "confidence": 0.9333333333333332,
+          "probabilities": {
+            "billing": 0.95,
+            "other": 0.02,
+            "sales": 0.01,
+            "technical": 0.02
+          },
+          "type": "choice"
+        },
+        "refund": {
+          "noul": 1,
+          "type": "noul"
+        },
+        "urgency": {
+          "confidence": 0.925,
+          "legend": {
+            "0": "没有提出处理期限，或明确不急",
+            "1": "希望尽快，但无具体期限",
+            "2": "明确要求今天、立即或指定时间前处理"
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0.05,
+            "2": 0.95
+          },
+          "score": 1.95,
+          "type": "score"
+        }
+      },
+      "usage": {
+        "input_tokens": 940,
+        "output_tokens": 90
+      }
+    },
+    "checks": [
+      {
+        "question": "department",
+        "pass": true,
+        "actual": "billing",
+        "expected": "billing"
+      },
+      {
+        "question": "refund",
+        "pass": true,
+        "actual": true,
+        "expected": true
+      },
+      {
+        "question": "urgency",
+        "pass": true,
+        "actual": 2,
+        "expected": 2
+      }
+    ],
+    "request_id": "f7e3b21ea7b40532fb7ab58632410fd9",
+    "attempts": 1,
+    "latency_ms": 826.21
+  },
+  {
+    "mode": "standard",
+    "id": "urgent_refund",
+    "suite": "cases",
+    "group": "semantic",
+    "questions": 3,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "department": {
+          "choice": "billing",
+          "confidence": 0.8266666666666667,
+          "probabilities": {
+            "billing": 0.87,
+            "other": 0.04,
+            "sales": 0.03,
+            "technical": 0.06
+          },
+          "type": "choice"
+        },
+        "refund": {
+          "noul": 0.97,
+          "type": "noul"
+        },
+        "urgency": {
+          "confidence": 0.835,
+          "legend": {
+            "0": "没有提出处理期限，或明确不急",
+            "1": "希望尽快，但无具体期限",
+            "2": "明确要求今天、立即或指定时间前处理"
+          },
+          "probabilities": {
+            "0": 0.01,
+            "1": 0.09,
+            "2": 0.9
+          },
+          "score": 1.8900000000000001,
+          "type": "score"
+        }
+      },
+      "usage": {
+        "input_tokens": 1049,
+        "output_tokens": 105
+      }
+    },
+    "checks": [
+      {
+        "question": "department",
+        "pass": true,
+        "actual": "billing",
+        "expected": "billing"
+      },
+      {
+        "question": "refund",
+        "pass": true,
+        "actual": true,
+        "expected": true
+      },
+      {
+        "question": "urgency",
+        "pass": true,
+        "actual": 2,
+        "expected": 2
+      }
+    ],
+    "request_id": "814457c2619141b729b623bc998fd23f",
+    "attempts": 1,
+    "latency_ms": 951.38
+  },
+  {
+    "mode": "standard",
+    "id": "question_refund",
+    "suite": "cases",
+    "group": "semantic",
+    "questions": 3,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "department": {
+          "choice": "billing",
+          "confidence": 0.6,
+          "probabilities": {
+            "billing": 0.7,
+            "other": 0.05,
+            "sales": 0.2,
+            "technical": 0.05
+          },
+          "type": "choice"
+        },
+        "refund": {
+          "noul": 1,
+          "type": "noul"
+        },
+        "urgency": {
+          "confidence": 0.5499999999999999,
+          "legend": {
+            "0": "没有提出处理期限，或明确不急",
+            "1": "希望尽快，但无具体期限",
+            "2": "明确要求今天、立即或指定时间前处理"
+          },
+          "probabilities": {
+            "0": 0.75,
+            "1": 0.2,
+            "2": 0.05
+          },
+          "score": 0.30000000000000004,
+          "type": "score"
+        }
+      },
+      "usage": {
+        "input_tokens": 1052,
+        "output_tokens": 103
+      }
+    },
+    "checks": [
+      {
+        "question": "department",
+        "pass": true,
+        "actual": "billing",
+        "expected": "billing"
+      },
+      {
+        "question": "refund",
+        "pass": true,
+        "actual": true,
+        "expected": true
+      },
+      {
+        "question": "urgency",
+        "pass": true,
+        "actual": 0,
+        "expected": 0
+      }
+    ],
+    "request_id": "9f8927df1dbbddd6b5ccb4c765c1ac4d",
+    "attempts": 1,
+    "latency_ms": 840.72
+  },
+  {
+    "mode": "fast",
+    "id": "question_refund",
+    "suite": "cases",
+    "group": "semantic",
+    "questions": 3,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "department": {
+          "choice": "billing",
+          "confidence": 0.8666666666666667,
+          "probabilities": {
+            "billing": 0.9,
+            "other": 0.03,
+            "sales": 0.05,
+            "technical": 0.02
+          },
+          "type": "choice"
+        },
+        "refund": {
+          "noul": 0.95,
+          "type": "noul"
+        },
+        "urgency": {
+          "confidence": 0.5499999999999999,
+          "legend": {
+            "0": "没有提出处理期限，或明确不急",
+            "1": "希望尽快，但无具体期限",
+            "2": "明确要求今天、立即或指定时间前处理"
+          },
+          "probabilities": {
+            "0": 0.75,
+            "1": 0.2,
+            "2": 0.05
+          },
+          "score": 0.30000000000000004,
+          "type": "score"
+        }
+      },
+      "usage": {
+        "input_tokens": 943,
+        "output_tokens": 89
+      }
+    },
+    "checks": [
+      {
+        "question": "department",
+        "pass": true,
+        "actual": "billing",
+        "expected": "billing"
+      },
+      {
+        "question": "refund",
+        "pass": true,
+        "actual": true,
+        "expected": true
+      },
+      {
+        "question": "urgency",
+        "pass": true,
+        "actual": 0,
+        "expected": 0
+      }
+    ],
+    "request_id": "1eeaf65ab88cef03e5b60aa8db1d7d3b",
+    "attempts": 1,
+    "latency_ms": 820.51
+  },
+  {
+    "mode": "fast",
+    "id": "policy",
+    "suite": "cases",
+    "group": "semantic",
+    "questions": 3,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "department": {
+          "choice": "billing",
+          "confidence": 0.6,
+          "probabilities": {
+            "billing": 0.7,
+            "other": 0.25,
+            "sales": 0.05,
+            "technical": 0
+          },
+          "type": "choice"
+        },
+        "refund": {
+          "noul": 0,
+          "type": "noul"
+        },
+        "urgency": {
+          "confidence": 0.85,
+          "legend": {
+            "0": "没有提出处理期限，或明确不急",
+            "1": "希望尽快，但无具体期限",
+            "2": "明确要求今天、立即或指定时间前处理"
+          },
+          "probabilities": {
+            "0": 0.9,
+            "1": 0.1,
+            "2": 0
+          },
+          "score": 0.1,
+          "type": "score"
+        }
+      },
+      "usage": {
+        "input_tokens": 938,
+        "output_tokens": 89
+      }
+    },
+    "checks": [
+      {
+        "question": "department",
+        "pass": true,
+        "actual": "billing",
+        "expected": "billing"
+      },
+      {
+        "question": "refund",
+        "pass": true,
+        "actual": false,
+        "expected": false
+      },
+      {
+        "question": "urgency",
+        "pass": true,
+        "actual": 0,
+        "expected": 0
+      }
+    ],
+    "request_id": "6b92339bd73760d81a13717e76c0f940",
+    "attempts": 1,
+    "latency_ms": 722.96
+  },
+  {
+    "mode": "standard",
+    "id": "policy",
+    "suite": "cases",
+    "group": "semantic",
+    "questions": 3,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "department": {
+          "choice": "billing",
+          "confidence": 0.6,
+          "probabilities": {
+            "billing": 0.7,
+            "other": 0.13,
+            "sales": 0.15,
+            "technical": 0.02
+          },
+          "type": "choice"
+        },
+        "refund": {
+          "noul": 0.03,
+          "type": "noul"
+        },
+        "urgency": {
+          "confidence": 0.88,
+          "legend": {
+            "0": "没有提出处理期限，或明确不急",
+            "1": "希望尽快，但无具体期限",
+            "2": "明确要求今天、立即或指定时间前处理"
+          },
+          "probabilities": {
+            "0": 0.93,
+            "1": 0.06,
+            "2": 0.01
+          },
+          "score": 0.08,
+          "type": "score"
+        }
+      },
+      "usage": {
+        "input_tokens": 1047,
+        "output_tokens": 105
+      }
+    },
+    "checks": [
+      {
+        "question": "department",
+        "pass": true,
+        "actual": "billing",
+        "expected": "billing"
+      },
+      {
+        "question": "refund",
+        "pass": true,
+        "actual": false,
+        "expected": false
+      },
+      {
+        "question": "urgency",
+        "pass": true,
+        "actual": 0,
+        "expected": 0
+      }
+    ],
+    "request_id": "71da5a10caf5c1ac962a41d59904f10c",
+    "attempts": 1,
+    "latency_ms": 860.66
+  },
+  {
+    "mode": "standard",
+    "id": "english",
+    "suite": "cases",
+    "group": "semantic",
+    "questions": 3,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "department": {
+          "choice": "billing",
+          "confidence": 0.9199999999999999,
+          "probabilities": {
+            "billing": 0.94,
+            "other": 0.02,
+            "sales": 0.02,
+            "technical": 0.02
+          },
+          "type": "choice"
+        },
+        "refund": {
+          "noul": 0.97,
+          "type": "noul"
+        },
+        "urgency": {
+          "confidence": 0.8200000000000001,
+          "legend": {
+            "0": "没有提出处理期限，或明确不急",
+            "1": "希望尽快，但无具体期限",
+            "2": "明确要求今天、立即或指定时间前处理"
+          },
+          "probabilities": {
+            "0": 0.02,
+            "1": 0.08,
+            "2": 0.9
+          },
+          "score": 1.8800000000000001,
+          "type": "score"
+        }
+      },
+      "usage": {
+        "input_tokens": 1045,
+        "output_tokens": 105
+      }
+    },
+    "checks": [
+      {
+        "question": "department",
+        "pass": true,
+        "actual": "billing",
+        "expected": "billing"
+      },
+      {
+        "question": "refund",
+        "pass": true,
+        "actual": true,
+        "expected": true
+      },
+      {
+        "question": "urgency",
+        "pass": true,
+        "actual": 2,
+        "expected": 2
+      }
+    ],
+    "request_id": "d89e0067a156f868eb3ee3197e3dff46",
+    "attempts": 1,
+    "latency_ms": 821.43
+  },
+  {
+    "mode": "fast",
+    "id": "english",
+    "suite": "cases",
+    "group": "semantic",
+    "questions": 3,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "department": {
+          "choice": "billing",
+          "confidence": 0.8666666666666667,
+          "probabilities": {
+            "billing": 0.9,
+            "other": 0.03,
+            "sales": 0.02,
+            "technical": 0.05
+          },
+          "type": "choice"
+        },
+        "refund": {
+          "noul": 0.95,
+          "type": "noul"
+        },
+        "urgency": {
+          "confidence": 0.625,
+          "legend": {
+            "0": "没有提出处理期限，或明确不急",
+            "1": "希望尽快，但无具体期限",
+            "2": "明确要求今天、立即或指定时间前处理"
+          },
+          "probabilities": {
+            "0": 0.05,
+            "1": 0.15,
+            "2": 0.8
+          },
+          "score": 1.75,
+          "type": "score"
+        }
+      },
+      "usage": {
+        "input_tokens": 936,
+        "output_tokens": 89
+      }
+    },
+    "checks": [
+      {
+        "question": "department",
+        "pass": true,
+        "actual": "billing",
+        "expected": "billing"
+      },
+      {
+        "question": "refund",
+        "pass": true,
+        "actual": true,
+        "expected": true
+      },
+      {
+        "question": "urgency",
+        "pass": true,
+        "actual": 2,
+        "expected": 2
+      }
+    ],
+    "request_id": "74d5b3559e301e0bd1df48de65d000b7",
+    "attempts": 1,
+    "latency_ms": 1026.75
+  },
+  {
+    "mode": "fast",
+    "id": "mixed",
+    "suite": "cases",
+    "group": "semantic",
+    "questions": 3,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "department": {
+          "choice": "technical",
+          "confidence": 0.9333333333333332,
+          "probabilities": {
+            "billing": 0,
+            "other": 0.05,
+            "sales": 0,
+            "technical": 0.95
+          },
+          "type": "choice"
+        },
+        "refund": {
+          "noul": 0,
+          "type": "noul"
+        },
+        "urgency": {
+          "confidence": 0.7749999999999999,
+          "legend": {
+            "0": "没有提出处理期限，或明确不急",
+            "1": "希望尽快，但无具体期限",
+            "2": "明确要求今天、立即或指定时间前处理"
+          },
+          "probabilities": {
+            "0": 0.1,
+            "1": 0.85,
+            "2": 0.05
+          },
+          "score": 0.95,
+          "type": "score"
+        }
+      },
+      "usage": {
+        "input_tokens": 938,
+        "output_tokens": 89
+      }
+    },
+    "checks": [
+      {
+        "question": "department",
+        "pass": true,
+        "actual": "technical",
+        "expected": "technical"
+      },
+      {
+        "question": "refund",
+        "pass": true,
+        "actual": false,
+        "expected": false
+      },
+      {
+        "question": "urgency",
+        "pass": true,
+        "actual": 1,
+        "expected": 1
+      }
+    ],
+    "request_id": "edf3447d950ddb24122b1b4e7df337a0",
+    "attempts": 1,
+    "latency_ms": 555.5
+  },
+  {
+    "mode": "standard",
+    "id": "mixed",
+    "suite": "cases",
+    "group": "semantic",
+    "questions": 3,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "department": {
+          "choice": "technical",
+          "confidence": 0.9199999999999999,
+          "probabilities": {
+            "billing": 0.02,
+            "other": 0.03,
+            "sales": 0.01,
+            "technical": 0.94
+          },
+          "type": "choice"
+        },
+        "refund": {
+          "noul": 0.02,
+          "type": "noul"
+        },
+        "urgency": {
+          "confidence": 0.85,
+          "legend": {
+            "0": "没有提出处理期限，或明确不急",
+            "1": "希望尽快，但无具体期限",
+            "2": "明确要求今天、立即或指定时间前处理"
+          },
+          "probabilities": {
+            "0": 0.05,
+            "1": 0.9,
+            "2": 0.05
+          },
+          "score": 1,
+          "type": "score"
+        }
+      },
+      "usage": {
+        "input_tokens": 1047,
+        "output_tokens": 105
+      }
+    },
+    "checks": [
+      {
+        "question": "department",
+        "pass": true,
+        "actual": "technical",
+        "expected": "technical"
+      },
+      {
+        "question": "refund",
+        "pass": true,
+        "actual": false,
+        "expected": false
+      },
+      {
+        "question": "urgency",
+        "pass": true,
+        "actual": 1,
+        "expected": 1
+      }
+    ],
+    "request_id": "6072bd184214056b5ab951b9e8d797ba",
+    "attempts": 1,
+    "latency_ms": 767.45
+  },
+  {
+    "mode": "standard",
+    "id": "negated_deadline",
+    "suite": "cases",
+    "group": "semantic",
+    "questions": 3,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "department": {
+          "choice": "billing",
+          "confidence": 0.8666666666666667,
+          "probabilities": {
+            "billing": 0.9,
+            "other": 0.06,
+            "sales": 0.03,
+            "technical": 0.01
+          },
+          "type": "choice"
+        },
+        "refund": {
+          "noul": 0.02,
+          "type": "noul"
+        },
+        "urgency": {
+          "confidence": 0.925,
+          "legend": {
+            "0": "没有提出处理期限，或明确不急",
+            "1": "希望尽快，但无具体期限",
+            "2": "明确要求今天、立即或指定时间前处理"
+          },
+          "probabilities": {
+            "0": 0.96,
+            "1": 0.03,
+            "2": 0.01
+          },
+          "score": 0.05,
+          "type": "score"
+        }
+      },
+      "usage": {
+        "input_tokens": 1049,
+        "output_tokens": 105
+      }
+    },
+    "checks": [
+      {
+        "question": "department",
+        "pass": true,
+        "actual": "billing",
+        "expected": "billing"
+      },
+      {
+        "question": "refund",
+        "pass": true,
+        "actual": false,
+        "expected": false
+      },
+      {
+        "question": "urgency",
+        "pass": true,
+        "actual": 0,
+        "expected": 0
+      }
+    ],
+    "request_id": "4ae377a03fc80451392bb92fe5979fb4",
+    "attempts": 1,
+    "latency_ms": 1067.44
+  },
+  {
+    "mode": "fast",
+    "id": "negated_deadline",
+    "suite": "cases",
+    "group": "semantic",
+    "questions": 3,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "department": {
+          "choice": "billing",
+          "confidence": 0.6,
+          "probabilities": {
+            "billing": 0.7,
+            "other": 0.05,
+            "sales": 0.2,
+            "technical": 0.05
+          },
+          "type": "choice"
+        },
+        "refund": {
+          "noul": 0.03,
+          "type": "noul"
+        },
+        "urgency": {
+          "confidence": 0.7,
+          "legend": {
+            "0": "没有提出处理期限，或明确不急",
+            "1": "希望尽快，但无具体期限",
+            "2": "明确要求今天、立即或指定时间前处理"
+          },
+          "probabilities": {
+            "0": 0.85,
+            "1": 0.1,
+            "2": 0.05
+          },
+          "score": 0.2,
+          "type": "score"
+        }
+      },
+      "usage": {
+        "input_tokens": 940,
+        "output_tokens": 89
+      }
+    },
+    "checks": [
+      {
+        "question": "department",
+        "pass": true,
+        "actual": "billing",
+        "expected": "billing"
+      },
+      {
+        "question": "refund",
+        "pass": true,
+        "actual": false,
+        "expected": false
+      },
+      {
+        "question": "urgency",
+        "pass": true,
+        "actual": 0,
+        "expected": 0
+      }
+    ],
+    "request_id": "7efc1d0f063b46cb0eb9e1fbcbd0ab36",
+    "attempts": 1,
+    "latency_ms": 1079.98
+  },
+  {
+    "mode": "fast",
+    "id": "injection",
+    "suite": "cases",
+    "group": "semantic",
+    "questions": 3,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "department": {
+          "choice": "billing",
+          "confidence": 0.9733333333333333,
+          "probabilities": {
+            "billing": 0.98,
+            "other": 0.02,
+            "sales": 0,
+            "technical": 0
+          },
+          "type": "choice"
+        },
+        "refund": {
+          "noul": 0,
+          "type": "noul"
+        },
+        "urgency": {
+          "confidence": 0.85,
+          "legend": {
+            "0": "没有提出处理期限，或明确不急",
+            "1": "希望尽快，但无具体期限",
+            "2": "明确要求今天、立即或指定时间前处理"
+          },
+          "probabilities": {
+            "0": 0.9,
+            "1": 0.1,
+            "2": 0
+          },
+          "score": 0.1,
+          "type": "score"
+        }
+      },
+      "usage": {
+        "input_tokens": 957,
+        "output_tokens": 89
+      }
+    },
+    "checks": [
+      {
+        "question": "department",
+        "pass": true,
+        "actual": "billing",
+        "expected": "billing"
+      },
+      {
+        "question": "refund",
+        "pass": true,
+        "actual": false,
+        "expected": false
+      },
+      {
+        "question": "urgency",
+        "pass": true,
+        "actual": 0,
+        "expected": 0
+      }
+    ],
+    "request_id": "0a85d5cad9f13fd6303aa7a42c05b43b",
+    "attempts": 1,
+    "latency_ms": 765.63
+  },
+  {
+    "mode": "standard",
+    "id": "injection",
+    "suite": "cases",
+    "group": "semantic",
+    "questions": 3,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "department": {
+          "choice": "billing",
+          "confidence": 0.9333333333333332,
+          "probabilities": {
+            "billing": 0.95,
+            "other": 0.02,
+            "sales": 0.02,
+            "technical": 0.01
+          },
+          "type": "choice"
+        },
+        "refund": {
+          "noul": 0.02,
+          "type": "noul"
+        },
+        "urgency": {
+          "confidence": 0.8200000000000001,
+          "legend": {
+            "0": "没有提出处理期限，或明确不急",
+            "1": "希望尽快，但无具体期限",
+            "2": "明确要求今天、立即或指定时间前处理"
+          },
+          "probabilities": {
+            "0": 0.9,
+            "1": 0.08,
+            "2": 0.02
+          },
+          "score": 0.12,
+          "type": "score"
+        }
+      },
+      "usage": {
+        "input_tokens": 1066,
+        "output_tokens": 105
+      }
+    },
+    "checks": [
+      {
+        "question": "department",
+        "pass": true,
+        "actual": "billing",
+        "expected": "billing"
+      },
+      {
+        "question": "refund",
+        "pass": true,
+        "actual": false,
+        "expected": false
+      },
+      {
+        "question": "urgency",
+        "pass": true,
+        "actual": 0,
+        "expected": 0
+      }
+    ],
+    "request_id": "78f298687025252bd7c91d27d0d1ec65",
+    "attempts": 1,
+    "latency_ms": 726.61
+  },
+  {
+    "mode": "standard",
+    "id": "original_refund_regression",
+    "suite": "cases",
+    "group": "regression",
+    "questions": 3,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "department": {
+          "choice": "billing",
+          "confidence": 0.9249999999999999,
+          "probabilities": {
+            "billing": 0.95,
+            "sales": 0.02,
+            "technical": 0.03
+          },
+          "type": "choice"
+        },
+        "explicit_refund": {
+          "noul": 0.06,
+          "type": "noul"
+        },
+        "urgency": {
+          "confidence": 0.6699999999999999,
+          "legend": {
+            "0": "没有处理期限",
+            "1": "希望尽快处理",
+            "2": "明确要求今天或立即处理"
+          },
+          "probabilities": {
+            "0": 0.02,
+            "1": 0.18,
+            "2": 0.8
+          },
+          "score": 1.78,
+          "type": "score"
+        }
+      },
+      "usage": {
+        "input_tokens": 944,
+        "output_tokens": 97
+      }
+    },
+    "checks": [
+      {
+        "question": "department",
+        "pass": true,
+        "actual": "billing",
+        "expected": "billing"
+      },
+      {
+        "question": "explicit_refund",
+        "pass": true,
+        "actual": false,
+        "expected": false
+      },
+      {
+        "question": "urgency",
+        "pass": true,
+        "actual": 2,
+        "expected": 2
+      }
+    ],
+    "request_id": "43616c4f7af5dcdd8178e441c8042a27",
+    "attempts": 1,
+    "latency_ms": 1304.63
+  },
+  {
+    "mode": "fast",
+    "id": "original_refund_regression",
+    "suite": "cases",
+    "group": "regression",
+    "questions": 3,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "department": {
+          "choice": "billing",
+          "confidence": 0.9249999999999999,
+          "probabilities": {
+            "billing": 0.95,
+            "sales": 0.02,
+            "technical": 0.03
+          },
+          "type": "choice"
+        },
+        "explicit_refund": {
+          "noul": 0,
+          "type": "noul"
+        },
+        "urgency": {
+          "confidence": 0.5499999999999999,
+          "legend": {
+            "0": "没有处理期限",
+            "1": "希望尽快处理",
+            "2": "明确要求今天或立即处理"
+          },
+          "probabilities": {
+            "0": 0.05,
+            "1": 0.2,
+            "2": 0.75
+          },
+          "score": 1.7,
+          "type": "score"
+        }
+      },
+      "usage": {
+        "input_tokens": 1345,
+        "output_tokens": 125
+      }
+    },
+    "checks": [
+      {
+        "question": "department",
+        "pass": true,
+        "actual": "billing",
+        "expected": "billing"
+      },
+      {
+        "question": "explicit_refund",
+        "pass": true,
+        "actual": false,
+        "expected": false
+      },
+      {
+        "question": "urgency",
+        "pass": true,
+        "actual": 2,
+        "expected": 2
+      }
+    ],
+    "request_id": "c521f8d685154c0a067a9ec9f93a7dd3",
+    "attempts": 2,
+    "latency_ms": 1726.95
+  },
+  {
+    "mode": "fast",
+    "id": "choice_null",
+    "suite": "cases",
+    "group": "boundary",
+    "questions": 1,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "x": {
+          "choice": "猫",
+          "confidence": 1,
+          "probabilities": {
+            "狗": 0,
+            "猫": 1
+          },
+          "type": "choice"
+        }
+      },
+      "usage": {
+        "input_tokens": 552,
+        "output_tokens": 48
+      }
+    },
+    "checks": [
+      {
+        "question": "x",
+        "pass": true,
+        "actual": "猫",
+        "expected": "猫"
+      }
+    ],
+    "request_id": "8774acffa356a3fe8359c435f2396100",
+    "attempts": 1,
+    "latency_ms": 464.07
+  },
+  {
+    "mode": "standard",
+    "id": "choice_null",
+    "suite": "cases",
+    "group": "boundary",
+    "questions": 1,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "x": {
+          "choice": "猫",
+          "confidence": 1,
+          "probabilities": {
+            "狗": 0,
+            "猫": 1
+          },
+          "type": "choice"
+        }
+      },
+      "usage": {
+        "input_tokens": 679,
+        "output_tokens": 51
+      }
+    },
+    "checks": [
+      {
+        "question": "x",
+        "pass": true,
+        "actual": "猫",
+        "expected": "猫"
+      }
+    ],
+    "request_id": "8cf98c8a3324c8e77d4f8710d5b264b0",
+    "attempts": 1,
+    "latency_ms": 595.86
+  },
+  {
+    "mode": "standard",
+    "id": "choice_one",
+    "suite": "cases",
+    "group": "boundary",
+    "questions": 1,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "x": {
+          "choice": "only",
+          "confidence": 1,
+          "probabilities": {
+            "only": 1
+          },
+          "type": "choice"
+        }
+      },
+      "usage": {
+        "input_tokens": 649,
+        "output_tokens": 43
+      }
+    },
+    "checks": [
+      {
+        "question": "x",
+        "pass": true,
+        "actual": "only",
+        "expected": "only"
+      }
+    ],
+    "request_id": "2948d2115444c7286c4e1cf54d1f3850",
+    "attempts": 1,
+    "latency_ms": 589.19
+  },
+  {
+    "mode": "fast",
+    "id": "choice_one",
+    "suite": "cases",
+    "group": "boundary",
+    "questions": 1,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "x": {
+          "choice": "only",
+          "confidence": 1,
+          "probabilities": {
+            "only": 1
+          },
+          "type": "choice"
+        }
+      },
+      "usage": {
+        "input_tokens": 521,
+        "output_tokens": 42
+      }
+    },
+    "checks": [
+      {
+        "question": "x",
+        "pass": true,
+        "actual": "only",
+        "expected": "only"
+      }
+    ],
+    "request_id": "afbe9851724c80157324902ec86d031d",
+    "attempts": 1,
+    "latency_ms": 623.55
+  },
+  {
+    "mode": "fast",
+    "id": "structured",
+    "suite": "cases",
+    "group": "boundary",
+    "questions": 1,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "x": {
+          "noul": 1,
+          "type": "noul"
+        }
+      },
+      "usage": {
+        "input_tokens": 532,
+        "output_tokens": 39
+      }
+    },
+    "checks": [
+      {
+        "question": "x",
+        "pass": true,
+        "actual": true,
+        "expected": true
+      }
+    ],
+    "request_id": "b04f076db83a3fb6682fc934ff0b332d",
+    "attempts": 1,
+    "latency_ms": 707.69
+  },
+  {
+    "mode": "standard",
+    "id": "structured",
+    "suite": "cases",
+    "group": "boundary",
+    "questions": 1,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "x": {
+          "noul": 1,
+          "type": "noul"
+        }
+      },
+      "usage": {
+        "input_tokens": 653,
+        "output_tokens": 38
+      }
+    },
+    "checks": [
+      {
+        "question": "x",
+        "pass": true,
+        "actual": true,
+        "expected": true
+      }
+    ],
+    "request_id": "1a665b22426490e34a8e06e62b341712",
+    "attempts": 1,
+    "latency_ms": 1322.15
+  },
+  {
+    "mode": "standard",
+    "id": "array_state",
+    "suite": "cases",
+    "group": "boundary",
+    "questions": 1,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "x": {
+          "noul": 1,
+          "type": "noul"
+        }
+      },
+      "usage": {
+        "input_tokens": 676,
+        "output_tokens": 38
+      }
+    },
+    "checks": [
+      {
+        "question": "x",
+        "pass": true,
+        "actual": true,
+        "expected": true
+      }
+    ],
+    "request_id": "e2f6e7297f43518dd3169f58812ef9e2",
+    "attempts": 1,
+    "latency_ms": 875.86
+  },
+  {
+    "mode": "fast",
+    "id": "array_state",
+    "suite": "cases",
+    "group": "boundary",
+    "questions": 1,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "x": {
+          "noul": 1,
+          "type": "noul"
+        }
+      },
+      "usage": {
+        "input_tokens": 556,
+        "output_tokens": 39
+      }
+    },
+    "checks": [
+      {
+        "question": "x",
+        "pass": true,
+        "actual": true,
+        "expected": true
+      }
+    ],
+    "request_id": "be2347aeb3b37d91a36a060229cc4183",
+    "attempts": 1,
+    "latency_ms": 443.0
+  },
+  {
+    "mode": "fast",
+    "id": "object_state",
+    "suite": "cases",
+    "group": "boundary",
+    "questions": 3,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "department": {
+          "choice": "sales",
+          "confidence": 0.7999999999999999,
+          "probabilities": {
+            "billing": 0.05,
+            "other": 0.05,
+            "sales": 0.85,
+            "technical": 0.05
+          },
+          "type": "choice"
+        },
+        "refund": {
+          "noul": 0,
+          "type": "noul"
+        },
+        "urgency": {
+          "confidence": 1,
+          "legend": {
+            "0": "没有提出处理期限，或明确不急",
+            "1": "希望尽快，但无具体期限",
+            "2": "明确要求今天、立即或指定时间前处理"
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 1
+          },
+          "score": 2,
+          "type": "score"
+        }
+      },
+      "usage": {
+        "input_tokens": 938,
+        "output_tokens": 90
+      }
+    },
+    "checks": [
+      {
+        "question": "department",
+        "pass": true,
+        "actual": "sales",
+        "expected": "sales"
+      },
+      {
+        "question": "refund",
+        "pass": true,
+        "actual": false,
+        "expected": false
+      },
+      {
+        "question": "urgency",
+        "pass": true,
+        "actual": 2,
+        "expected": 2
+      }
+    ],
+    "request_id": "c12bac9b06ab35f2027fa4d337f0691f",
+    "attempts": 1,
+    "latency_ms": 871.19
+  },
+  {
+    "mode": "standard",
+    "id": "object_state",
+    "suite": "cases",
+    "group": "boundary",
+    "questions": 3,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "department": {
+          "choice": "sales",
+          "confidence": 0.84,
+          "probabilities": {
+            "billing": 0.05,
+            "other": 0.05,
+            "sales": 0.88,
+            "technical": 0.02
+          },
+          "type": "choice"
+        },
+        "refund": {
+          "noul": 0,
+          "type": "noul"
+        },
+        "urgency": {
+          "confidence": 0.8200000000000001,
+          "legend": {
+            "0": "没有提出处理期限，或明确不急",
+            "1": "希望尽快，但无具体期限",
+            "2": "明确要求今天、立即或指定时间前处理"
+          },
+          "probabilities": {
+            "0": 0.02,
+            "1": 0.08,
+            "2": 0.9
+          },
+          "score": 1.8800000000000001,
+          "type": "score"
+        }
+      },
+      "usage": {
+        "input_tokens": 1047,
+        "output_tokens": 103
+      }
+    },
+    "checks": [
+      {
+        "question": "department",
+        "pass": true,
+        "actual": "sales",
+        "expected": "sales"
+      },
+      {
+        "question": "refund",
+        "pass": true,
+        "actual": false,
+        "expected": false
+      },
+      {
+        "question": "urgency",
+        "pass": true,
+        "actual": 2,
+        "expected": 2
+      }
+    ],
+    "request_id": "730ef3627eba89e33ca48e0529f1bdeb",
+    "attempts": 1,
+    "latency_ms": 624.47
+  },
+  {
+    "mode": "standard",
+    "id": "unicode_ids",
+    "suite": "cases",
+    "group": "boundary",
+    "questions": 1,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "题目/特殊~\"": {
+          "choice": "选项/苹果",
+          "confidence": 1,
+          "probabilities": {
+            "选项/苹果": 1,
+            "选项~香蕉": 0
+          },
+          "type": "choice"
+        }
+      },
+      "usage": {
+        "input_tokens": 689,
+        "output_tokens": 51
+      }
+    },
+    "checks": [
+      {
+        "question": "题目/特殊~\"",
+        "pass": true,
+        "actual": "选项/苹果",
+        "expected": "选项/苹果"
+      }
+    ],
+    "request_id": "0c59efed909b01eb5bcdd2d4aa8d24b9",
+    "attempts": 1,
+    "latency_ms": 636.71
+  },
+  {
+    "mode": "fast",
+    "id": "unicode_ids",
+    "suite": "cases",
+    "group": "boundary",
+    "questions": 1,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "题目/特殊~\"": {
+          "choice": "选项/苹果",
+          "confidence": 1,
+          "probabilities": {
+            "选项/苹果": 1,
+            "选项~香蕉": 0
+          },
+          "type": "choice"
+        }
+      },
+      "usage": {
+        "input_tokens": 562,
+        "output_tokens": 52
+      }
+    },
+    "checks": [
+      {
+        "question": "题目/特殊~\"",
+        "pass": true,
+        "actual": "选项/苹果",
+        "expected": "选项/苹果"
+      }
+    ],
+    "request_id": "00a4f2d23cbea54260861e77d917d745",
+    "attempts": 1,
+    "latency_ms": 799.69
+  },
+  {
+    "mode": "fast",
+    "id": "score_ten",
+    "suite": "cases",
+    "group": "boundary",
+    "questions": 1,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "x": {
+          "confidence": 1,
+          "legend": {
+            "0": "第0级",
+            "1": "第1级",
+            "2": "第2级",
+            "3": "第3级",
+            "4": "第4级",
+            "5": "第5级",
+            "6": "第6级",
+            "7": "第7级",
+            "8": "第8级",
+            "9": "第9级"
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 0,
+            "6": 0,
+            "7": 1,
+            "8": 0,
+            "9": 0
+          },
+          "score": 7,
+          "type": "score"
+        }
+      },
+      "usage": {
+        "input_tokens": 848,
+        "output_tokens": 96
+      }
+    },
+    "checks": [
+      {
+        "question": "x",
+        "pass": true,
+        "actual": 7,
+        "expected": 7
+      }
+    ],
+    "request_id": "55c9add02129825ef14ee27ca985e830",
+    "attempts": 1,
+    "latency_ms": 684.71
+  },
+  {
+    "mode": "standard",
+    "id": "score_ten",
+    "suite": "cases",
+    "group": "boundary",
+    "questions": 1,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "x": {
+          "confidence": 1,
+          "legend": {
+            "0": "第0级",
+            "1": "第1级",
+            "2": "第2级",
+            "3": "第3级",
+            "4": "第4级",
+            "5": "第5级",
+            "6": "第6级",
+            "7": "第7级",
+            "8": "第8级",
+            "9": "第9级"
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 0,
+            "6": 0,
+            "7": 1,
+            "8": 0,
+            "9": 0
+          },
+          "score": 7,
+          "type": "score"
+        }
+      },
+      "usage": {
+        "input_tokens": 967,
+        "output_tokens": 95
+      }
+    },
+    "checks": [
+      {
+        "question": "x",
+        "pass": true,
+        "actual": 7,
+        "expected": 7
+      }
+    ],
+    "request_id": "b90aae516d365b853701747286e1653b",
+    "attempts": 1,
+    "latency_ms": 856.35
+  },
+  {
+    "mode": "standard",
+    "id": "choice_32",
+    "suite": "cases",
+    "group": "boundary",
+    "questions": 1,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "x": {
+          "choice": "id017",
+          "confidence": 1,
+          "probabilities": {
+            "id000": 0,
+            "id001": 0,
+            "id002": 0,
+            "id003": 0,
+            "id004": 0,
+            "id005": 0,
+            "id006": 0,
+            "id007": 0,
+            "id008": 0,
+            "id009": 0,
+            "id010": 0,
+            "id011": 0,
+            "id012": 0,
+            "id013": 0,
+            "id014": 0,
+            "id015": 0,
+            "id016": 0,
+            "id017": 1,
+            "id018": 0,
+            "id019": 0,
+            "id020": 0,
+            "id021": 0,
+            "id022": 0,
+            "id023": 0,
+            "id024": 0,
+            "id025": 0,
+            "id026": 0,
+            "id027": 0,
+            "id028": 0,
+            "id029": 0,
+            "id030": 0,
+            "id031": 0
+          },
+          "type": "choice"
+        }
+      },
+      "usage": {
+        "input_tokens": 1744,
+        "output_tokens": 323
+      }
+    },
+    "checks": [
+      {
+        "question": "x",
+        "pass": true,
+        "actual": "id017",
+        "expected": "id017"
+      }
+    ],
+    "request_id": "d6b0d9ab1f6879c8660f34f0c81c9e08",
+    "attempts": 1,
+    "latency_ms": 1240.85
+  },
+  {
+    "mode": "fast",
+    "id": "choice_32",
+    "suite": "cases",
+    "group": "boundary",
+    "questions": 1,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "x": {
+          "choice": "id017",
+          "confidence": 1,
+          "probabilities": {
+            "id000": 0,
+            "id001": 0,
+            "id002": 0,
+            "id003": 0,
+            "id004": 0,
+            "id005": 0,
+            "id006": 0,
+            "id007": 0,
+            "id008": 0,
+            "id009": 0,
+            "id010": 0,
+            "id011": 0,
+            "id012": 0,
+            "id013": 0,
+            "id014": 0,
+            "id015": 0,
+            "id016": 0,
+            "id017": 1,
+            "id018": 0,
+            "id019": 0,
+            "id020": 0,
+            "id021": 0,
+            "id022": 0,
+            "id023": 0,
+            "id024": 0,
+            "id025": 0,
+            "id026": 0,
+            "id027": 0,
+            "id028": 0,
+            "id029": 0,
+            "id030": 0,
+            "id031": 0
+          },
+          "type": "choice"
+        }
+      },
+      "usage": {
+        "input_tokens": 940,
+        "output_tokens": 51
+      }
+    },
+    "checks": [
+      {
+        "question": "x",
+        "pass": true,
+        "actual": "id017",
+        "expected": "id017"
+      }
+    ],
+    "request_id": "bc2b6c7246247cd77c7327ee6329e24c",
+    "attempts": 1,
+    "latency_ms": 928.23
+  },
+  {
+    "mode": "fast",
+    "id": "choice_255",
+    "suite": "cases",
+    "group": "boundary",
+    "questions": 1,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "x": {
+          "choice": "id017",
+          "confidence": 1,
+          "probabilities": {
+            "id000": 0,
+            "id001": 0,
+            "id002": 0,
+            "id003": 0,
+            "id004": 0,
+            "id005": 0,
+            "id006": 0,
+            "id007": 0,
+            "id008": 0,
+            "id009": 0,
+            "id010": 0,
+            "id011": 0,
+            "id012": 0,
+            "id013": 0,
+            "id014": 0,
+            "id015": 0,
+            "id016": 0,
+            "id017": 1,
+            "id018": 0,
+            "id019": 0,
+            "id020": 0,
+            "id021": 0,
+            "id022": 0,
+            "id023": 0,
+            "id024": 0,
+            "id025": 0,
+            "id026": 0,
+            "id027": 0,
+            "id028": 0,
+            "id029": 0,
+            "id030": 0,
+            "id031": 0,
+            "id032": 0,
+            "id033": 0,
+            "id034": 0,
+            "id035": 0,
+            "id036": 0,
+            "id037": 0,
+            "id038": 0,
+            "id039": 0,
+            "id040": 0,
+            "id041": 0,
+            "id042": 0,
+            "id043": 0,
+            "id044": 0,
+            "id045": 0,
+            "id046": 0,
+            "id047": 0,
+            "id048": 0,
+            "id049": 0,
+            "id050": 0,
+            "id051": 0,
+            "id052": 0,
+            "id053": 0,
+            "id054": 0,
+            "id055": 0,
+            "id056": 0,
+            "id057": 0,
+            "id058": 0,
+            "id059": 0,
+            "id060": 0,
+            "id061": 0,
+            "id062": 0,
+            "id063": 0,
+            "id064": 0,
+            "id065": 0,
+            "id066": 0,
+            "id067": 0,
+            "id068": 0,
+            "id069": 0,
+            "id070": 0,
+            "id071": 0,
+            "id072": 0,
+            "id073": 0,
+            "id074": 0,
+            "id075": 0,
+            "id076": 0,
+            "id077": 0,
+            "id078": 0,
+            "id079": 0,
+            "id080": 0,
+            "id081": 0,
+            "id082": 0,
+            "id083": 0,
+            "id084": 0,
+            "id085": 0,
+            "id086": 0,
+            "id087": 0,
+            "id088": 0,
+            "id089": 0,
+            "id090": 0,
+            "id091": 0,
+            "id092": 0,
+            "id093": 0,
+            "id094": 0,
+            "id095": 0,
+            "id096": 0,
+            "id097": 0,
+            "id098": 0,
+            "id099": 0,
+            "id100": 0,
+            "id101": 0,
+            "id102": 0,
+            "id103": 0,
+            "id104": 0,
+            "id105": 0,
+            "id106": 0,
+            "id107": 0,
+            "id108": 0,
+            "id109": 0,
+            "id110": 0,
+            "id111": 0,
+            "id112": 0,
+            "id113": 0,
+            "id114": 0,
+            "id115": 0,
+            "id116": 0,
+            "id117": 0,
+            "id118": 0,
+            "id119": 0,
+            "id120": 0,
+            "id121": 0,
+            "id122": 0,
+            "id123": 0,
+            "id124": 0,
+            "id125": 0,
+            "id126": 0,
+            "id127": 0,
+            "id128": 0,
+            "id129": 0,
+            "id130": 0,
+            "id131": 0,
+            "id132": 0,
+            "id133": 0,
+            "id134": 0,
+            "id135": 0,
+            "id136": 0,
+            "id137": 0,
+            "id138": 0,
+            "id139": 0,
+            "id140": 0,
+            "id141": 0,
+            "id142": 0,
+            "id143": 0,
+            "id144": 0,
+            "id145": 0,
+            "id146": 0,
+            "id147": 0,
+            "id148": 0,
+            "id149": 0,
+            "id150": 0,
+            "id151": 0,
+            "id152": 0,
+            "id153": 0,
+            "id154": 0,
+            "id155": 0,
+            "id156": 0,
+            "id157": 0,
+            "id158": 0,
+            "id159": 0,
+            "id160": 0,
+            "id161": 0,
+            "id162": 0,
+            "id163": 0,
+            "id164": 0,
+            "id165": 0,
+            "id166": 0,
+            "id167": 0,
+            "id168": 0,
+            "id169": 0,
+            "id170": 0,
+            "id171": 0,
+            "id172": 0,
+            "id173": 0,
+            "id174": 0,
+            "id175": 0,
+            "id176": 0,
+            "id177": 0,
+            "id178": 0,
+            "id179": 0,
+            "id180": 0,
+            "id181": 0,
+            "id182": 0,
+            "id183": 0,
+            "id184": 0,
+            "id185": 0,
+            "id186": 0,
+            "id187": 0,
+            "id188": 0,
+            "id189": 0,
+            "id190": 0,
+            "id191": 0,
+            "id192": 0,
+            "id193": 0,
+            "id194": 0,
+            "id195": 0,
+            "id196": 0,
+            "id197": 0,
+            "id198": 0,
+            "id199": 0,
+            "id200": 0,
+            "id201": 0,
+            "id202": 0,
+            "id203": 0,
+            "id204": 0,
+            "id205": 0,
+            "id206": 0,
+            "id207": 0,
+            "id208": 0,
+            "id209": 0,
+            "id210": 0,
+            "id211": 0,
+            "id212": 0,
+            "id213": 0,
+            "id214": 0,
+            "id215": 0,
+            "id216": 0,
+            "id217": 0,
+            "id218": 0,
+            "id219": 0,
+            "id220": 0,
+            "id221": 0,
+            "id222": 0,
+            "id223": 0,
+            "id224": 0,
+            "id225": 0,
+            "id226": 0,
+            "id227": 0,
+            "id228": 0,
+            "id229": 0,
+            "id230": 0,
+            "id231": 0,
+            "id232": 0,
+            "id233": 0,
+            "id234": 0,
+            "id235": 0,
+            "id236": 0,
+            "id237": 0,
+            "id238": 0,
+            "id239": 0,
+            "id240": 0,
+            "id241": 0,
+            "id242": 0,
+            "id243": 0,
+            "id244": 0,
+            "id245": 0,
+            "id246": 0,
+            "id247": 0,
+            "id248": 0,
+            "id249": 0,
+            "id250": 0,
+            "id251": 0,
+            "id252": 0,
+            "id253": 0,
+            "id254": 0
+          },
+          "type": "choice"
+        }
+      },
+      "usage": {
+        "input_tokens": 3616,
+        "output_tokens": 51
+      }
+    },
+    "checks": [
+      {
+        "question": "x",
+        "pass": true,
+        "actual": "id017",
+        "expected": "id017"
+      }
+    ],
+    "request_id": "746640b91178919cd1101702af9b8e33",
+    "attempts": 1,
+    "latency_ms": 1034.35
+  },
+  {
+    "mode": "standard",
+    "id": "choice_255",
+    "suite": "cases",
+    "group": "boundary",
+    "questions": 1,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "x": {
+          "choice": "id017",
+          "confidence": 1,
+          "probabilities": {
+            "id000": 0,
+            "id001": 0,
+            "id002": 0,
+            "id003": 0,
+            "id004": 0,
+            "id005": 0,
+            "id006": 0,
+            "id007": 0,
+            "id008": 0,
+            "id009": 0,
+            "id010": 0,
+            "id011": 0,
+            "id012": 0,
+            "id013": 0,
+            "id014": 0,
+            "id015": 0,
+            "id016": 0,
+            "id017": 1,
+            "id018": 0,
+            "id019": 0,
+            "id020": 0,
+            "id021": 0,
+            "id022": 0,
+            "id023": 0,
+            "id024": 0,
+            "id025": 0,
+            "id026": 0,
+            "id027": 0,
+            "id028": 0,
+            "id029": 0,
+            "id030": 0,
+            "id031": 0,
+            "id032": 0,
+            "id033": 0,
+            "id034": 0,
+            "id035": 0,
+            "id036": 0,
+            "id037": 0,
+            "id038": 0,
+            "id039": 0,
+            "id040": 0,
+            "id041": 0,
+            "id042": 0,
+            "id043": 0,
+            "id044": 0,
+            "id045": 0,
+            "id046": 0,
+            "id047": 0,
+            "id048": 0,
+            "id049": 0,
+            "id050": 0,
+            "id051": 0,
+            "id052": 0,
+            "id053": 0,
+            "id054": 0,
+            "id055": 0,
+            "id056": 0,
+            "id057": 0,
+            "id058": 0,
+            "id059": 0,
+            "id060": 0,
+            "id061": 0,
+            "id062": 0,
+            "id063": 0,
+            "id064": 0,
+            "id065": 0,
+            "id066": 0,
+            "id067": 0,
+            "id068": 0,
+            "id069": 0,
+            "id070": 0,
+            "id071": 0,
+            "id072": 0,
+            "id073": 0,
+            "id074": 0,
+            "id075": 0,
+            "id076": 0,
+            "id077": 0,
+            "id078": 0,
+            "id079": 0,
+            "id080": 0,
+            "id081": 0,
+            "id082": 0,
+            "id083": 0,
+            "id084": 0,
+            "id085": 0,
+            "id086": 0,
+            "id087": 0,
+            "id088": 0,
+            "id089": 0,
+            "id090": 0,
+            "id091": 0,
+            "id092": 0,
+            "id093": 0,
+            "id094": 0,
+            "id095": 0,
+            "id096": 0,
+            "id097": 0,
+            "id098": 0,
+            "id099": 0,
+            "id100": 0,
+            "id101": 0,
+            "id102": 0,
+            "id103": 0,
+            "id104": 0,
+            "id105": 0,
+            "id106": 0,
+            "id107": 0,
+            "id108": 0,
+            "id109": 0,
+            "id110": 0,
+            "id111": 0,
+            "id112": 0,
+            "id113": 0,
+            "id114": 0,
+            "id115": 0,
+            "id116": 0,
+            "id117": 0,
+            "id118": 0,
+            "id119": 0,
+            "id120": 0,
+            "id121": 0,
+            "id122": 0,
+            "id123": 0,
+            "id124": 0,
+            "id125": 0,
+            "id126": 0,
+            "id127": 0,
+            "id128": 0,
+            "id129": 0,
+            "id130": 0,
+            "id131": 0,
+            "id132": 0,
+            "id133": 0,
+            "id134": 0,
+            "id135": 0,
+            "id136": 0,
+            "id137": 0,
+            "id138": 0,
+            "id139": 0,
+            "id140": 0,
+            "id141": 0,
+            "id142": 0,
+            "id143": 0,
+            "id144": 0,
+            "id145": 0,
+            "id146": 0,
+            "id147": 0,
+            "id148": 0,
+            "id149": 0,
+            "id150": 0,
+            "id151": 0,
+            "id152": 0,
+            "id153": 0,
+            "id154": 0,
+            "id155": 0,
+            "id156": 0,
+            "id157": 0,
+            "id158": 0,
+            "id159": 0,
+            "id160": 0,
+            "id161": 0,
+            "id162": 0,
+            "id163": 0,
+            "id164": 0,
+            "id165": 0,
+            "id166": 0,
+            "id167": 0,
+            "id168": 0,
+            "id169": 0,
+            "id170": 0,
+            "id171": 0,
+            "id172": 0,
+            "id173": 0,
+            "id174": 0,
+            "id175": 0,
+            "id176": 0,
+            "id177": 0,
+            "id178": 0,
+            "id179": 0,
+            "id180": 0,
+            "id181": 0,
+            "id182": 0,
+            "id183": 0,
+            "id184": 0,
+            "id185": 0,
+            "id186": 0,
+            "id187": 0,
+            "id188": 0,
+            "id189": 0,
+            "id190": 0,
+            "id191": 0,
+            "id192": 0,
+            "id193": 0,
+            "id194": 0,
+            "id195": 0,
+            "id196": 0,
+            "id197": 0,
+            "id198": 0,
+            "id199": 0,
+            "id200": 0,
+            "id201": 0,
+            "id202": 0,
+            "id203": 0,
+            "id204": 0,
+            "id205": 0,
+            "id206": 0,
+            "id207": 0,
+            "id208": 0,
+            "id209": 0,
+            "id210": 0,
+            "id211": 0,
+            "id212": 0,
+            "id213": 0,
+            "id214": 0,
+            "id215": 0,
+            "id216": 0,
+            "id217": 0,
+            "id218": 0,
+            "id219": 0,
+            "id220": 0,
+            "id221": 0,
+            "id222": 0,
+            "id223": 0,
+            "id224": 0,
+            "id225": 0,
+            "id226": 0,
+            "id227": 0,
+            "id228": 0,
+            "id229": 0,
+            "id230": 0,
+            "id231": 0,
+            "id232": 0,
+            "id233": 0,
+            "id234": 0,
+            "id235": 0,
+            "id236": 0,
+            "id237": 0,
+            "id238": 0,
+            "id239": 0,
+            "id240": 0,
+            "id241": 0,
+            "id242": 0,
+            "id243": 0,
+            "id244": 0,
+            "id245": 0,
+            "id246": 0,
+            "id247": 0,
+            "id248": 0,
+            "id249": 0,
+            "id250": 0,
+            "id251": 0,
+            "id252": 0,
+            "id253": 0,
+            "id254": 0
+          },
+          "type": "choice"
+        }
+      },
+      "usage": {
+        "input_tokens": 19098,
+        "output_tokens": 6189
+      }
+    },
+    "checks": [
+      {
+        "question": "x",
+        "pass": true,
+        "actual": "id017",
+        "expected": "id017"
+      }
+    ],
+    "request_id": "e33be7faa4c6050d87090ea37d7de5d6",
+    "attempts": 2,
+    "latency_ms": 15928.01
+  },
+  {
+    "mode": "standard",
+    "id": "long_state",
+    "suite": "cases",
+    "group": "boundary",
+    "questions": 3,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "department": {
+          "choice": "billing",
+          "confidence": 0.8933333333333334,
+          "probabilities": {
+            "billing": 0.92,
+            "other": 0.03,
+            "sales": 0.02,
+            "technical": 0.03
+          },
+          "type": "choice"
+        },
+        "refund": {
+          "noul": 0.97,
+          "type": "noul"
+        },
+        "urgency": {
+          "confidence": 0.895,
+          "legend": {
+            "0": "没有提出处理期限，或明确不急",
+            "1": "希望尽快，但无具体期限",
+            "2": "明确要求今天、立即或指定时间前处理"
+          },
+          "probabilities": {
+            "0": 0.02,
+            "1": 0.03,
+            "2": 0.95
+          },
+          "score": 1.93,
+          "type": "score"
+        }
+      },
+      "usage": {
+        "input_tokens": 4649,
+        "output_tokens": 105
+      }
+    },
+    "checks": [
+      {
+        "question": "department",
+        "pass": true,
+        "actual": "billing",
+        "expected": "billing"
+      },
+      {
+        "question": "refund",
+        "pass": true,
+        "actual": true,
+        "expected": true
+      },
+      {
+        "question": "urgency",
+        "pass": true,
+        "actual": 2,
+        "expected": 2
+      }
+    ],
+    "request_id": "a038877f9e4ed99d8c9e0adb20e16852",
+    "attempts": 1,
+    "latency_ms": 958.02
+  },
+  {
+    "mode": "fast",
+    "id": "long_state",
+    "suite": "cases",
+    "group": "boundary",
+    "questions": 3,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "department": {
+          "choice": "billing",
+          "confidence": 0.9466666666666667,
+          "probabilities": {
+            "billing": 0.96,
+            "other": 0.02,
+            "sales": 0.01,
+            "technical": 0.01
+          },
+          "type": "choice"
+        },
+        "refund": {
+          "noul": 1,
+          "type": "noul"
+        },
+        "urgency": {
+          "confidence": 1,
+          "legend": {
+            "0": "没有提出处理期限，或明确不急",
+            "1": "希望尽快，但无具体期限",
+            "2": "明确要求今天、立即或指定时间前处理"
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 1
+          },
+          "score": 2,
+          "type": "score"
+        }
+      },
+      "usage": {
+        "input_tokens": 4540,
+        "output_tokens": 91
+      }
+    },
+    "checks": [
+      {
+        "question": "department",
+        "pass": true,
+        "actual": "billing",
+        "expected": "billing"
+      },
+      {
+        "question": "refund",
+        "pass": true,
+        "actual": true,
+        "expected": true
+      },
+      {
+        "question": "urgency",
+        "pass": true,
+        "actual": 2,
+        "expected": 2
+      }
+    ],
+    "request_id": "d19e8df924d14ccf82b63be1869d5588",
+    "attempts": 1,
+    "latency_ms": 1008.14
+  },
+  {
+    "mode": "fast",
+    "id": "batch_1",
+    "suite": "cases",
+    "group": "batch",
+    "questions": 1,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "q00": {
+          "noul": 1,
+          "type": "noul"
+        }
+      },
+      "usage": {
+        "input_tokens": 502,
+        "output_tokens": 39
+      }
+    },
+    "checks": [
+      {
+        "question": "q00",
+        "pass": true,
+        "actual": true,
+        "expected": true
+      }
+    ],
+    "request_id": "e2070144aecfbdda46a6f73a15d3fe90",
+    "attempts": 1,
+    "latency_ms": 346.48
+  },
+  {
+    "mode": "standard",
+    "id": "batch_1",
+    "suite": "cases",
+    "group": "batch",
+    "questions": 1,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "q00": {
+          "noul": 1,
+          "type": "noul"
+        }
+      },
+      "usage": {
+        "input_tokens": 623,
+        "output_tokens": 38
+      }
+    },
+    "checks": [
+      {
+        "question": "q00",
+        "pass": true,
+        "actual": true,
+        "expected": true
+      }
+    ],
+    "request_id": "c3af887862725c04caf8bb957090ffc6",
+    "attempts": 1,
+    "latency_ms": 748.19
+  },
+  {
+    "mode": "standard",
+    "id": "batch_5",
+    "suite": "cases",
+    "group": "batch",
+    "questions": 5,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "q00": {
+          "noul": 1,
+          "type": "noul"
+        },
+        "q01": {
+          "noul": 0,
+          "type": "noul"
+        },
+        "q02": {
+          "noul": 1,
+          "type": "noul"
+        },
+        "q03": {
+          "noul": 0,
+          "type": "noul"
+        },
+        "q04": {
+          "noul": 1,
+          "type": "noul"
+        }
+      },
+      "usage": {
+        "input_tokens": 847,
+        "output_tokens": 66
+      }
+    },
+    "checks": [
+      {
+        "question": "q00",
+        "pass": true,
+        "actual": true,
+        "expected": true
+      },
+      {
+        "question": "q01",
+        "pass": true,
+        "actual": false,
+        "expected": false
+      },
+      {
+        "question": "q02",
+        "pass": true,
+        "actual": true,
+        "expected": true
+      },
+      {
+        "question": "q03",
+        "pass": true,
+        "actual": false,
+        "expected": false
+      },
+      {
+        "question": "q04",
+        "pass": true,
+        "actual": true,
+        "expected": true
+      }
+    ],
+    "request_id": "4efe94e92ddbcd56dc2681aed997cd48",
+    "attempts": 1,
+    "latency_ms": 652.22
+  },
+  {
+    "mode": "fast",
+    "id": "batch_5",
+    "suite": "cases",
+    "group": "batch",
+    "questions": 5,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "q00": {
+          "noul": 1,
+          "type": "noul"
+        },
+        "q01": {
+          "noul": 0,
+          "type": "noul"
+        },
+        "q02": {
+          "noul": 1,
+          "type": "noul"
+        },
+        "q03": {
+          "noul": 0,
+          "type": "noul"
+        },
+        "q04": {
+          "noul": 1,
+          "type": "noul"
+        }
+      },
+      "usage": {
+        "input_tokens": 766,
+        "output_tokens": 69
+      }
+    },
+    "checks": [
+      {
+        "question": "q00",
+        "pass": true,
+        "actual": true,
+        "expected": true
+      },
+      {
+        "question": "q01",
+        "pass": true,
+        "actual": false,
+        "expected": false
+      },
+      {
+        "question": "q02",
+        "pass": true,
+        "actual": true,
+        "expected": true
+      },
+      {
+        "question": "q03",
+        "pass": true,
+        "actual": false,
+        "expected": false
+      },
+      {
+        "question": "q04",
+        "pass": true,
+        "actual": true,
+        "expected": true
+      }
+    ],
+    "request_id": "cbaa3cd99173ffdbc8d8a13579fd43e7",
+    "attempts": 1,
+    "latency_ms": 598.4
+  },
+  {
+    "mode": "fast",
+    "id": "batch_10",
+    "suite": "cases",
+    "group": "batch",
+    "questions": 10,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "q00": {
+          "noul": 1,
+          "type": "noul"
+        },
+        "q01": {
+          "noul": 0,
+          "type": "noul"
+        },
+        "q02": {
+          "noul": 1,
+          "type": "noul"
+        },
+        "q03": {
+          "noul": 0,
+          "type": "noul"
+        },
+        "q04": {
+          "noul": 1,
+          "type": "noul"
+        },
+        "q05": {
+          "noul": 0,
+          "type": "noul"
+        },
+        "q06": {
+          "noul": 1,
+          "type": "noul"
+        },
+        "q07": {
+          "noul": 0,
+          "type": "noul"
+        },
+        "q08": {
+          "noul": 1,
+          "type": "noul"
+        },
+        "q09": {
+          "noul": 0,
+          "type": "noul"
+        }
+      },
+      "usage": {
+        "input_tokens": 1096,
+        "output_tokens": 106
+      }
+    },
+    "checks": [
+      {
+        "question": "q00",
+        "pass": true,
+        "actual": true,
+        "expected": true
+      },
+      {
+        "question": "q01",
+        "pass": true,
+        "actual": false,
+        "expected": false
+      },
+      {
+        "question": "q02",
+        "pass": true,
+        "actual": true,
+        "expected": true
+      },
+      {
+        "question": "q03",
+        "pass": true,
+        "actual": false,
+        "expected": false
+      },
+      {
+        "question": "q04",
+        "pass": true,
+        "actual": true,
+        "expected": true
+      },
+      {
+        "question": "q05",
+        "pass": true,
+        "actual": false,
+        "expected": false
+      },
+      {
+        "question": "q06",
+        "pass": true,
+        "actual": true,
+        "expected": true
+      },
+      {
+        "question": "q07",
+        "pass": true,
+        "actual": false,
+        "expected": false
+      },
+      {
+        "question": "q08",
+        "pass": true,
+        "actual": true,
+        "expected": true
+      },
+      {
+        "question": "q09",
+        "pass": true,
+        "actual": false,
+        "expected": false
+      }
+    ],
+    "request_id": "5dd5c484a432868e17966193f8309626",
+    "attempts": 1,
+    "latency_ms": 809.62
+  },
+  {
+    "mode": "standard",
+    "id": "batch_10",
+    "suite": "cases",
+    "group": "batch",
+    "questions": 10,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "q00": {
+          "noul": 1,
+          "type": "noul"
+        },
+        "q01": {
+          "noul": 0,
+          "type": "noul"
+        },
+        "q02": {
+          "noul": 1,
+          "type": "noul"
+        },
+        "q03": {
+          "noul": 0,
+          "type": "noul"
+        },
+        "q04": {
+          "noul": 1,
+          "type": "noul"
+        },
+        "q05": {
+          "noul": 0,
+          "type": "noul"
+        },
+        "q06": {
+          "noul": 1,
+          "type": "noul"
+        },
+        "q07": {
+          "noul": 0,
+          "type": "noul"
+        },
+        "q08": {
+          "noul": 1,
+          "type": "noul"
+        },
+        "q09": {
+          "noul": 0,
+          "type": "noul"
+        }
+      },
+      "usage": {
+        "input_tokens": 1127,
+        "output_tokens": 101
+      }
+    },
+    "checks": [
+      {
+        "question": "q00",
+        "pass": true,
+        "actual": true,
+        "expected": true
+      },
+      {
+        "question": "q01",
+        "pass": true,
+        "actual": false,
+        "expected": false
+      },
+      {
+        "question": "q02",
+        "pass": true,
+        "actual": true,
+        "expected": true
+      },
+      {
+        "question": "q03",
+        "pass": true,
+        "actual": false,
+        "expected": false
+      },
+      {
+        "question": "q04",
+        "pass": true,
+        "actual": true,
+        "expected": true
+      },
+      {
+        "question": "q05",
+        "pass": true,
+        "actual": false,
+        "expected": false
+      },
+      {
+        "question": "q06",
+        "pass": true,
+        "actual": true,
+        "expected": true
+      },
+      {
+        "question": "q07",
+        "pass": true,
+        "actual": false,
+        "expected": false
+      },
+      {
+        "question": "q08",
+        "pass": true,
+        "actual": true,
+        "expected": true
+      },
+      {
+        "question": "q09",
+        "pass": true,
+        "actual": false,
+        "expected": false
+      }
+    ],
+    "request_id": "2d0963fe3cdcf5929dc7c2a6b211c2a6",
+    "attempts": 1,
+    "latency_ms": 1110.09
+  },
+  {
+    "mode": "standard",
+    "id": "batch_20",
+    "suite": "cases",
+    "group": "batch",
+    "questions": 20,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "q00": {
+          "noul": 1,
+          "type": "noul"
+        },
+        "q01": {
+          "noul": 0,
+          "type": "noul"
+        },
+        "q02": {
+          "noul": 1,
+          "type": "noul"
+        },
+        "q03": {
+          "noul": 0,
+          "type": "noul"
+        },
+        "q04": {
+          "noul": 1,
+          "type": "noul"
+        },
+        "q05": {
+          "noul": 0,
+          "type": "noul"
+        },
+        "q06": {
+          "noul": 1,
+          "type": "noul"
+        },
+        "q07": {
+          "noul": 0,
+          "type": "noul"
+        },
+        "q08": {
+          "noul": 1,
+          "type": "noul"
+        },
+        "q09": {
+          "noul": 0,
+          "type": "noul"
+        },
+        "q10": {
+          "noul": 1,
+          "type": "noul"
+        },
+        "q11": {
+          "noul": 0,
+          "type": "noul"
+        },
+        "q12": {
+          "noul": 1,
+          "type": "noul"
+        },
+        "q13": {
+          "noul": 0,
+          "type": "noul"
+        },
+        "q14": {
+          "noul": 1,
+          "type": "noul"
+        },
+        "q15": {
+          "noul": 0,
+          "type": "noul"
+        },
+        "q16": {
+          "noul": 1,
+          "type": "noul"
+        },
+        "q17": {
+          "noul": 0,
+          "type": "noul"
+        },
+        "q18": {
+          "noul": 1,
+          "type": "noul"
+        },
+        "q19": {
+          "noul": 0,
+          "type": "noul"
+        }
+      },
+      "usage": {
+        "input_tokens": 1687,
+        "output_tokens": 171
+      }
+    },
+    "checks": [
+      {
+        "question": "q00",
+        "pass": true,
+        "actual": true,
+        "expected": true
+      },
+      {
+        "question": "q01",
+        "pass": true,
+        "actual": false,
+        "expected": false
+      },
+      {
+        "question": "q02",
+        "pass": true,
+        "actual": true,
+        "expected": true
+      },
+      {
+        "question": "q03",
+        "pass": true,
+        "actual": false,
+        "expected": false
+      },
+      {
+        "question": "q04",
+        "pass": true,
+        "actual": true,
+        "expected": true
+      },
+      {
+        "question": "q05",
+        "pass": true,
+        "actual": false,
+        "expected": false
+      },
+      {
+        "question": "q06",
+        "pass": true,
+        "actual": true,
+        "expected": true
+      },
+      {
+        "question": "q07",
+        "pass": true,
+        "actual": false,
+        "expected": false
+      },
+      {
+        "question": "q08",
+        "pass": true,
+        "actual": true,
+        "expected": true
+      },
+      {
+        "question": "q09",
+        "pass": true,
+        "actual": false,
+        "expected": false
+      },
+      {
+        "question": "q10",
+        "pass": true,
+        "actual": true,
+        "expected": true
+      },
+      {
+        "question": "q11",
+        "pass": true,
+        "actual": false,
+        "expected": false
+      },
+      {
+        "question": "q12",
+        "pass": true,
+        "actual": true,
+        "expected": true
+      },
+      {
+        "question": "q13",
+        "pass": true,
+        "actual": false,
+        "expected": false
+      },
+      {
+        "question": "q14",
+        "pass": true,
+        "actual": true,
+        "expected": true
+      },
+      {
+        "question": "q15",
+        "pass": true,
+        "actual": false,
+        "expected": false
+      },
+      {
+        "question": "q16",
+        "pass": true,
+        "actual": true,
+        "expected": true
+      },
+      {
+        "question": "q17",
+        "pass": true,
+        "actual": false,
+        "expected": false
+      },
+      {
+        "question": "q18",
+        "pass": true,
+        "actual": true,
+        "expected": true
+      },
+      {
+        "question": "q19",
+        "pass": true,
+        "actual": false,
+        "expected": false
+      }
+    ],
+    "request_id": "dddf734c2ac65973f19d94cb4a10ffd5",
+    "attempts": 1,
+    "latency_ms": 1381.56
+  },
+  {
+    "mode": "fast",
+    "id": "batch_20",
+    "suite": "cases",
+    "group": "batch",
+    "questions": 20,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "q00": {
+          "noul": 1,
+          "type": "noul"
+        },
+        "q01": {
+          "noul": 0,
+          "type": "noul"
+        },
+        "q02": {
+          "noul": 1,
+          "type": "noul"
+        },
+        "q03": {
+          "noul": 0,
+          "type": "noul"
+        },
+        "q04": {
+          "noul": 1,
+          "type": "noul"
+        },
+        "q05": {
+          "noul": 0,
+          "type": "noul"
+        },
+        "q06": {
+          "noul": 1,
+          "type": "noul"
+        },
+        "q07": {
+          "noul": 0,
+          "type": "noul"
+        },
+        "q08": {
+          "noul": 1,
+          "type": "noul"
+        },
+        "q09": {
+          "noul": 0,
+          "type": "noul"
+        },
+        "q10": {
+          "noul": 1,
+          "type": "noul"
+        },
+        "q11": {
+          "noul": 0,
+          "type": "noul"
+        },
+        "q12": {
+          "noul": 1,
+          "type": "noul"
+        },
+        "q13": {
+          "noul": 0,
+          "type": "noul"
+        },
+        "q14": {
+          "noul": 1,
+          "type": "noul"
+        },
+        "q15": {
+          "noul": 0,
+          "type": "noul"
+        },
+        "q16": {
+          "noul": 1,
+          "type": "noul"
+        },
+        "q17": {
+          "noul": 0,
+          "type": "noul"
+        },
+        "q18": {
+          "noul": 1,
+          "type": "noul"
+        },
+        "q19": {
+          "noul": 0,
+          "type": "noul"
+        }
+      },
+      "usage": {
+        "input_tokens": 1756,
+        "output_tokens": 181
+      }
+    },
+    "checks": [
+      {
+        "question": "q00",
+        "pass": true,
+        "actual": true,
+        "expected": true
+      },
+      {
+        "question": "q01",
+        "pass": true,
+        "actual": false,
+        "expected": false
+      },
+      {
+        "question": "q02",
+        "pass": true,
+        "actual": true,
+        "expected": true
+      },
+      {
+        "question": "q03",
+        "pass": true,
+        "actual": false,
+        "expected": false
+      },
+      {
+        "question": "q04",
+        "pass": true,
+        "actual": true,
+        "expected": true
+      },
+      {
+        "question": "q05",
+        "pass": true,
+        "actual": false,
+        "expected": false
+      },
+      {
+        "question": "q06",
+        "pass": true,
+        "actual": true,
+        "expected": true
+      },
+      {
+        "question": "q07",
+        "pass": true,
+        "actual": false,
+        "expected": false
+      },
+      {
+        "question": "q08",
+        "pass": true,
+        "actual": true,
+        "expected": true
+      },
+      {
+        "question": "q09",
+        "pass": true,
+        "actual": false,
+        "expected": false
+      },
+      {
+        "question": "q10",
+        "pass": true,
+        "actual": true,
+        "expected": true
+      },
+      {
+        "question": "q11",
+        "pass": true,
+        "actual": false,
+        "expected": false
+      },
+      {
+        "question": "q12",
+        "pass": true,
+        "actual": true,
+        "expected": true
+      },
+      {
+        "question": "q13",
+        "pass": true,
+        "actual": false,
+        "expected": false
+      },
+      {
+        "question": "q14",
+        "pass": true,
+        "actual": true,
+        "expected": true
+      },
+      {
+        "question": "q15",
+        "pass": true,
+        "actual": false,
+        "expected": false
+      },
+      {
+        "question": "q16",
+        "pass": true,
+        "actual": true,
+        "expected": true
+      },
+      {
+        "question": "q17",
+        "pass": true,
+        "actual": false,
+        "expected": false
+      },
+      {
+        "question": "q18",
+        "pass": true,
+        "actual": true,
+        "expected": true
+      },
+      {
+        "question": "q19",
+        "pass": true,
+        "actual": false,
+        "expected": false
+      }
+    ],
+    "request_id": "ae6d2f75a9cab34c1533a94b7200dc1c",
+    "attempts": 1,
+    "latency_ms": 1019.88
+  },
+  {
+    "mode": "fast",
+    "id": "repeat_1",
+    "suite": "cases",
+    "group": "repeat",
+    "questions": 3,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "department": {
+          "choice": "billing",
+          "confidence": 0.9249999999999999,
+          "probabilities": {
+            "billing": 0.95,
+            "sales": 0.025,
+            "technical": 0.025
+          },
+          "type": "choice"
+        },
+        "explicit_refund": {
+          "noul": 0.3,
+          "type": "noul"
+        },
+        "urgency": {
+          "confidence": 0.565,
+          "legend": {
+            "0": "没有处理期限",
+            "1": "希望尽快处理",
+            "2": "明确要求今天或立即处理"
+          },
+          "probabilities": {
+            "0": 0.02,
+            "1": 0.25,
+            "2": 0.73
+          },
+          "score": 1.71,
+          "type": "score"
+        }
+      },
+      "usage": {
+        "input_tokens": 1345,
+        "output_tokens": 137
+      }
+    },
+    "checks": [
+      {
+        "question": "department",
+        "pass": true,
+        "actual": "billing",
+        "expected": "billing"
+      },
+      {
+        "question": "explicit_refund",
+        "pass": true,
+        "actual": false,
+        "expected": false
+      },
+      {
+        "question": "urgency",
+        "pass": true,
+        "actual": 2,
+        "expected": 2
+      }
+    ],
+    "request_id": "c63931690bedbc504d00eec25568181b",
+    "attempts": 2,
+    "latency_ms": 1399.29
+  },
+  {
+    "mode": "standard",
+    "id": "repeat_1",
+    "suite": "cases",
+    "group": "repeat",
+    "questions": 3,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "department": {
+          "choice": "billing",
+          "confidence": 0.94,
+          "probabilities": {
+            "billing": 0.96,
+            "sales": 0.01,
+            "technical": 0.03
+          },
+          "type": "choice"
+        },
+        "explicit_refund": {
+          "noul": 0.12,
+          "type": "noul"
+        },
+        "urgency": {
+          "confidence": 0.7449999999999999,
+          "legend": {
+            "0": "没有处理期限",
+            "1": "希望尽快处理",
+            "2": "明确要求今天或立即处理"
+          },
+          "probabilities": {
+            "0": 0.02,
+            "1": 0.13,
+            "2": 0.85
+          },
+          "score": 1.83,
+          "type": "score"
+        }
+      },
+      "usage": {
+        "input_tokens": 944,
+        "output_tokens": 97
+      }
+    },
+    "checks": [
+      {
+        "question": "department",
+        "pass": true,
+        "actual": "billing",
+        "expected": "billing"
+      },
+      {
+        "question": "explicit_refund",
+        "pass": true,
+        "actual": false,
+        "expected": false
+      },
+      {
+        "question": "urgency",
+        "pass": true,
+        "actual": 2,
+        "expected": 2
+      }
+    ],
+    "request_id": "cb6bd6c68178a5991ed7da840542da71",
+    "attempts": 1,
+    "latency_ms": 784.92
+  },
+  {
+    "mode": "standard",
+    "id": "repeat_2",
+    "suite": "cases",
+    "group": "repeat",
+    "questions": 3,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "department": {
+          "choice": "billing",
+          "confidence": 0.955,
+          "probabilities": {
+            "billing": 0.97,
+            "sales": 0.02,
+            "technical": 0.01
+          },
+          "type": "choice"
+        },
+        "explicit_refund": {
+          "noul": 0.08,
+          "type": "noul"
+        },
+        "urgency": {
+          "confidence": 0.52,
+          "legend": {
+            "0": "没有处理期限",
+            "1": "希望尽快处理",
+            "2": "明确要求今天或立即处理"
+          },
+          "probabilities": {
+            "0": 0.02,
+            "1": 0.28,
+            "2": 0.7
+          },
+          "score": 1.68,
+          "type": "score"
+        }
+      },
+      "usage": {
+        "input_tokens": 944,
+        "output_tokens": 97
+      }
+    },
+    "checks": [
+      {
+        "question": "department",
+        "pass": true,
+        "actual": "billing",
+        "expected": "billing"
+      },
+      {
+        "question": "explicit_refund",
+        "pass": true,
+        "actual": false,
+        "expected": false
+      },
+      {
+        "question": "urgency",
+        "pass": true,
+        "actual": 2,
+        "expected": 2
+      }
+    ],
+    "request_id": "f3ef50ae9d3a390a11835337f62a49bd",
+    "attempts": 1,
+    "latency_ms": 681.75
+  },
+  {
+    "mode": "fast",
+    "id": "repeat_2",
+    "suite": "cases",
+    "group": "repeat",
+    "questions": 3,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "department": {
+          "choice": "billing",
+          "confidence": 0.9249999999999999,
+          "probabilities": {
+            "billing": 0.95,
+            "sales": 0.02,
+            "technical": 0.03
+          },
+          "type": "choice"
+        },
+        "explicit_refund": {
+          "noul": 0,
+          "type": "noul"
+        },
+        "urgency": {
+          "confidence": 0.85,
+          "legend": {
+            "0": "没有处理期限",
+            "1": "希望尽快处理",
+            "2": "明确要求今天或立即处理"
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0.1,
+            "2": 0.9
+          },
+          "score": 1.9000000000000001,
+          "type": "score"
+        }
+      },
+      "usage": {
+        "input_tokens": 1345,
+        "output_tokens": 125
+      }
+    },
+    "checks": [
+      {
+        "question": "department",
+        "pass": true,
+        "actual": "billing",
+        "expected": "billing"
+      },
+      {
+        "question": "explicit_refund",
+        "pass": true,
+        "actual": false,
+        "expected": false
+      },
+      {
+        "question": "urgency",
+        "pass": true,
+        "actual": 2,
+        "expected": 2
+      }
+    ],
+    "request_id": "f4051ccc729c07c4cc96aa8939afd046",
+    "attempts": 2,
+    "latency_ms": 2411.4
+  },
+  {
+    "mode": "fast",
+    "id": "repeat_3",
+    "suite": "cases",
+    "group": "repeat",
+    "questions": 3,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "department": {
+          "choice": "billing",
+          "confidence": 0.9249999999999999,
+          "probabilities": {
+            "billing": 0.95,
+            "sales": 0.01,
+            "technical": 0.04
+          },
+          "type": "choice"
+        },
+        "explicit_refund": {
+          "noul": 0.25,
+          "type": "noul"
+        },
+        "urgency": {
+          "confidence": 0.655,
+          "legend": {
+            "0": "没有处理期限",
+            "1": "希望尽快处理",
+            "2": "明确要求今天或立即处理"
+          },
+          "probabilities": {
+            "0": 0.03,
+            "1": 0.17,
+            "2": 0.8
+          },
+          "score": 1.77,
+          "type": "score"
+        }
+      },
+      "usage": {
+        "input_tokens": 1345,
+        "output_tokens": 125
+      }
+    },
+    "checks": [
+      {
+        "question": "department",
+        "pass": true,
+        "actual": "billing",
+        "expected": "billing"
+      },
+      {
+        "question": "explicit_refund",
+        "pass": true,
+        "actual": false,
+        "expected": false
+      },
+      {
+        "question": "urgency",
+        "pass": true,
+        "actual": 2,
+        "expected": 2
+      }
+    ],
+    "request_id": "628df852dcc7f340df5503cadba01bd2",
+    "attempts": 2,
+    "latency_ms": 1786.57
+  },
+  {
+    "mode": "standard",
+    "id": "repeat_3",
+    "suite": "cases",
+    "group": "repeat",
+    "questions": 3,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "department": {
+          "choice": "billing",
+          "confidence": 0.94,
+          "probabilities": {
+            "billing": 0.96,
+            "sales": 0.01,
+            "technical": 0.03
+          },
+          "type": "choice"
+        },
+        "explicit_refund": {
+          "noul": 0.12,
+          "type": "noul"
+        },
+        "urgency": {
+          "confidence": 0.73,
+          "legend": {
+            "0": "没有处理期限",
+            "1": "希望尽快处理",
+            "2": "明确要求今天或立即处理"
+          },
+          "probabilities": {
+            "0": 0.03,
+            "1": 0.12,
+            "2": 0.85
+          },
+          "score": 1.8199999999999998,
+          "type": "score"
+        }
+      },
+      "usage": {
+        "input_tokens": 944,
+        "output_tokens": 97
+      }
+    },
+    "checks": [
+      {
+        "question": "department",
+        "pass": true,
+        "actual": "billing",
+        "expected": "billing"
+      },
+      {
+        "question": "explicit_refund",
+        "pass": true,
+        "actual": false,
+        "expected": false
+      },
+      {
+        "question": "urgency",
+        "pass": true,
+        "actual": 2,
+        "expected": 2
+      }
+    ],
+    "request_id": "1b8715b94965823b6fb6d8b17a10e9f8",
+    "attempts": 1,
+    "latency_ms": 808.47
+  },
+  {
+    "mode": "standard",
+    "id": "repeat_4",
+    "suite": "cases",
+    "group": "repeat",
+    "questions": 3,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "department": {
+          "choice": "billing",
+          "confidence": 0.955,
+          "probabilities": {
+            "billing": 0.97,
+            "sales": 0.01,
+            "technical": 0.02
+          },
+          "type": "choice"
+        },
+        "explicit_refund": {
+          "noul": 0.12,
+          "type": "noul"
+        },
+        "urgency": {
+          "confidence": 0.7449999999999999,
+          "legend": {
+            "0": "没有处理期限",
+            "1": "希望尽快处理",
+            "2": "明确要求今天或立即处理"
+          },
+          "probabilities": {
+            "0": 0.02,
+            "1": 0.13,
+            "2": 0.85
+          },
+          "score": 1.83,
+          "type": "score"
+        }
+      },
+      "usage": {
+        "input_tokens": 944,
+        "output_tokens": 97
+      }
+    },
+    "checks": [
+      {
+        "question": "department",
+        "pass": true,
+        "actual": "billing",
+        "expected": "billing"
+      },
+      {
+        "question": "explicit_refund",
+        "pass": true,
+        "actual": false,
+        "expected": false
+      },
+      {
+        "question": "urgency",
+        "pass": true,
+        "actual": 2,
+        "expected": 2
+      }
+    ],
+    "request_id": "fd75d6a75745fff1de9029b8ecc71406",
+    "attempts": 1,
+    "latency_ms": 891.13
+  },
+  {
+    "mode": "fast",
+    "id": "repeat_4",
+    "suite": "cases",
+    "group": "repeat",
+    "questions": 3,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "department": {
+          "choice": "billing",
+          "confidence": 0.8499999999999999,
+          "probabilities": {
+            "billing": 0.9,
+            "sales": 0.05,
+            "technical": 0.05
+          },
+          "type": "choice"
+        },
+        "explicit_refund": {
+          "noul": 0.06,
+          "type": "noul"
+        },
+        "urgency": {
+          "confidence": 0.55,
+          "legend": {
+            "0": "没有处理期限",
+            "1": "希望尽快处理",
+            "2": "明确要求今天或立即处理"
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0.3,
+            "2": 0.7
+          },
+          "score": 1.7,
+          "type": "score"
+        }
+      },
+      "usage": {
+        "input_tokens": 1345,
+        "output_tokens": 137
+      }
+    },
+    "checks": [
+      {
+        "question": "department",
+        "pass": true,
+        "actual": "billing",
+        "expected": "billing"
+      },
+      {
+        "question": "explicit_refund",
+        "pass": true,
+        "actual": false,
+        "expected": false
+      },
+      {
+        "question": "urgency",
+        "pass": true,
+        "actual": 2,
+        "expected": 2
+      }
+    ],
+    "request_id": "686567a170b2ee82a4b3a83bed483e36",
+    "attempts": 2,
+    "latency_ms": 1752.77
+  },
+  {
+    "mode": "fast",
+    "id": "repeat_5",
+    "suite": "cases",
+    "group": "repeat",
+    "questions": 3,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "department": {
+          "choice": "billing",
+          "confidence": 1,
+          "probabilities": {
+            "billing": 1,
+            "sales": 0,
+            "technical": 0
+          },
+          "type": "choice"
+        },
+        "explicit_refund": {
+          "noul": 0,
+          "type": "noul"
+        },
+        "urgency": {
+          "confidence": 1,
+          "legend": {
+            "0": "没有处理期限",
+            "1": "希望尽快处理",
+            "2": "明确要求今天或立即处理"
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 1
+          },
+          "score": 2,
+          "type": "score"
+        }
+      },
+      "usage": {
+        "input_tokens": 1345,
+        "output_tokens": 126
+      }
+    },
+    "checks": [
+      {
+        "question": "department",
+        "pass": true,
+        "actual": "billing",
+        "expected": "billing"
+      },
+      {
+        "question": "explicit_refund",
+        "pass": true,
+        "actual": false,
+        "expected": false
+      },
+      {
+        "question": "urgency",
+        "pass": true,
+        "actual": 2,
+        "expected": 2
+      }
+    ],
+    "request_id": "2b4469d38a4f05f86ea805a409a17c0d",
+    "attempts": 2,
+    "latency_ms": 1902.61
+  },
+  {
+    "mode": "standard",
+    "id": "repeat_5",
+    "suite": "cases",
+    "group": "repeat",
+    "questions": 3,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "department": {
+          "choice": "billing",
+          "confidence": 0.955,
+          "probabilities": {
+            "billing": 0.97,
+            "sales": 0.01,
+            "technical": 0.02
+          },
+          "type": "choice"
+        },
+        "explicit_refund": {
+          "noul": 0.12,
+          "type": "noul"
+        },
+        "urgency": {
+          "confidence": 0.7449999999999999,
+          "legend": {
+            "0": "没有处理期限",
+            "1": "希望尽快处理",
+            "2": "明确要求今天或立即处理"
+          },
+          "probabilities": {
+            "0": 0.02,
+            "1": 0.13,
+            "2": 0.85
+          },
+          "score": 1.83,
+          "type": "score"
+        }
+      },
+      "usage": {
+        "input_tokens": 944,
+        "output_tokens": 97
+      }
+    },
+    "checks": [
+      {
+        "question": "department",
+        "pass": true,
+        "actual": "billing",
+        "expected": "billing"
+      },
+      {
+        "question": "explicit_refund",
+        "pass": true,
+        "actual": false,
+        "expected": false
+      },
+      {
+        "question": "urgency",
+        "pass": true,
+        "actual": 2,
+        "expected": 2
+      }
+    ],
+    "request_id": "66df1fb506c6ecd57115d14262ee9a5d",
+    "attempts": 1,
+    "latency_ms": 779.06
+  },
+  {
+    "mode": "standard",
+    "id": "travel_cancel",
+    "suite": "holdout",
+    "group": "holdout",
+    "questions": 2,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "action": {
+          "choice": "cancel",
+          "confidence": 1,
+          "probabilities": {
+            "cancel": 1,
+            "change": 0,
+            "inquiry": 0
+          },
+          "type": "choice"
+        },
+        "cancel": {
+          "noul": 1,
+          "type": "noul"
+        }
+      },
+      "usage": {
+        "input_tokens": 791,
+        "output_tokens": 61
+      }
+    },
+    "checks": [
+      {
+        "question": "action",
+        "pass": true,
+        "actual": "cancel",
+        "expected": "cancel"
+      },
+      {
+        "question": "cancel",
+        "pass": true,
+        "actual": true,
+        "expected": true
+      }
+    ],
+    "request_id": "041be582ae8bdaf3440ed3b6c17a0a0e",
+    "attempts": 1,
+    "latency_ms": 900.03
+  },
+  {
+    "mode": "fast",
+    "id": "travel_cancel",
+    "suite": "holdout",
+    "group": "holdout",
+    "questions": 2,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "action": {
+          "choice": "cancel",
+          "confidence": 1,
+          "probabilities": {
+            "cancel": 1,
+            "change": 0,
+            "inquiry": 0
+          },
+          "type": "choice"
+        },
+        "cancel": {
+          "noul": 1,
+          "type": "noul"
+        }
+      },
+      "usage": {
+        "input_tokens": 675,
+        "output_tokens": 63
+      }
+    },
+    "checks": [
+      {
+        "question": "action",
+        "pass": true,
+        "actual": "cancel",
+        "expected": "cancel"
+      },
+      {
+        "question": "cancel",
+        "pass": true,
+        "actual": true,
+        "expected": true
+      }
+    ],
+    "request_id": "4ded90e460d012a8b3b68fd4148eea34",
+    "attempts": 1,
+    "latency_ms": 1226.72
+  },
+  {
+    "mode": "fast",
+    "id": "travel_negate",
+    "suite": "holdout",
+    "group": "holdout",
+    "questions": 2,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "action": {
+          "choice": "change",
+          "confidence": 1,
+          "probabilities": {
+            "cancel": 0,
+            "change": 1,
+            "inquiry": 0
+          },
+          "type": "choice"
+        },
+        "cancel": {
+          "noul": 0,
+          "type": "noul"
+        }
+      },
+      "usage": {
+        "input_tokens": 680,
+        "output_tokens": 62
+      }
+    },
+    "checks": [
+      {
+        "question": "action",
+        "pass": true,
+        "actual": "change",
+        "expected": "change"
+      },
+      {
+        "question": "cancel",
+        "pass": true,
+        "actual": false,
+        "expected": false
+      }
+    ],
+    "request_id": "96ff07e12411f9b12da5dcaebad9ff84",
+    "attempts": 1,
+    "latency_ms": 660.28
+  },
+  {
+    "mode": "standard",
+    "id": "travel_negate",
+    "suite": "holdout",
+    "group": "holdout",
+    "questions": 2,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "action": {
+          "choice": "change",
+          "confidence": 1,
+          "probabilities": {
+            "cancel": 0,
+            "change": 1,
+            "inquiry": 0
+          },
+          "type": "choice"
+        },
+        "cancel": {
+          "noul": 0,
+          "type": "noul"
+        }
+      },
+      "usage": {
+        "input_tokens": 796,
+        "output_tokens": 61
+      }
+    },
+    "checks": [
+      {
+        "question": "action",
+        "pass": true,
+        "actual": "change",
+        "expected": "change"
+      },
+      {
+        "question": "cancel",
+        "pass": true,
+        "actual": false,
+        "expected": false
+      }
+    ],
+    "request_id": "4c00232f7d889688a48ae68d54c0a6e2",
+    "attempts": 1,
+    "latency_ms": 597.02
+  },
+  {
+    "mode": "standard",
+    "id": "travel_quote",
+    "suite": "holdout",
+    "group": "holdout",
+    "questions": 2,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "action": {
+          "choice": "inquiry",
+          "confidence": 0.7749999999999998,
+          "probabilities": {
+            "cancel": 0.1,
+            "change": 0.05,
+            "inquiry": 0.85
+          },
+          "type": "choice"
+        },
+        "cancel": {
+          "noul": 0.08,
+          "type": "noul"
+        }
+      },
+      "usage": {
+        "input_tokens": 795,
+        "output_tokens": 69
+      }
+    },
+    "checks": [
+      {
+        "question": "action",
+        "pass": true,
+        "actual": "inquiry",
+        "expected": "inquiry"
+      },
+      {
+        "question": "cancel",
+        "pass": true,
+        "actual": false,
+        "expected": false
+      }
+    ],
+    "request_id": "729f840f2944a163ce2b721cf7b4ad38",
+    "attempts": 1,
+    "latency_ms": 937.36
+  },
+  {
+    "mode": "fast",
+    "id": "travel_quote",
+    "suite": "holdout",
+    "group": "holdout",
+    "questions": 2,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "action": {
+          "choice": "inquiry",
+          "confidence": 0.955,
+          "probabilities": {
+            "cancel": 0.03,
+            "change": 0,
+            "inquiry": 0.97
+          },
+          "type": "choice"
+        },
+        "cancel": {
+          "noul": 0.02,
+          "type": "noul"
+        }
+      },
+      "usage": {
+        "input_tokens": 679,
+        "output_tokens": 61
+      }
+    },
+    "checks": [
+      {
+        "question": "action",
+        "pass": true,
+        "actual": "inquiry",
+        "expected": "inquiry"
+      },
+      {
+        "question": "cancel",
+        "pass": true,
+        "actual": false,
+        "expected": false
+      }
+    ],
+    "request_id": "06d5edbfdaf56d37fc2fdf0ef38d475a",
+    "attempts": 1,
+    "latency_ms": 860.05
+  },
+  {
+    "mode": "fast",
+    "id": "travel_hypothetical",
+    "suite": "holdout",
+    "group": "holdout",
+    "questions": 2,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "action": {
+          "choice": "inquiry",
+          "confidence": 1,
+          "probabilities": {
+            "cancel": 0,
+            "change": 0,
+            "inquiry": 1
+          },
+          "type": "choice"
+        },
+        "cancel": {
+          "noul": 0,
+          "type": "noul"
+        }
+      },
+      "usage": {
+        "input_tokens": 683,
+        "output_tokens": 62
+      }
+    },
+    "checks": [
+      {
+        "question": "action",
+        "pass": true,
+        "actual": "inquiry",
+        "expected": "inquiry"
+      },
+      {
+        "question": "cancel",
+        "pass": true,
+        "actual": false,
+        "expected": false
+      }
+    ],
+    "request_id": "69342db99d85f45032a74cdee29d3eaa",
+    "attempts": 1,
+    "latency_ms": 1110.83
+  },
+  {
+    "mode": "standard",
+    "id": "travel_hypothetical",
+    "suite": "holdout",
+    "group": "holdout",
+    "questions": 2,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "action": {
+          "choice": "inquiry",
+          "confidence": 0.8499999999999999,
+          "probabilities": {
+            "cancel": 0.05,
+            "change": 0.05,
+            "inquiry": 0.9
+          },
+          "type": "choice"
+        },
+        "cancel": {
+          "noul": 0.08,
+          "type": "noul"
+        }
+      },
+      "usage": {
+        "input_tokens": 799,
+        "output_tokens": 69
+      }
+    },
+    "checks": [
+      {
+        "question": "action",
+        "pass": true,
+        "actual": "inquiry",
+        "expected": "inquiry"
+      },
+      {
+        "question": "cancel",
+        "pass": true,
+        "actual": false,
+        "expected": false
+      }
+    ],
+    "request_id": "f4eb7db6cc6a432e0ea64f7e347173cc",
+    "attempts": 1,
+    "latency_ms": 1001.85
+  },
+  {
+    "mode": "standard",
+    "id": "severity_cosmetic",
+    "suite": "holdout",
+    "group": "holdout",
+    "questions": 1,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "priority": {
+          "confidence": 0.9625,
+          "legend": {
+            "0": "只有外观问题，功能正常",
+            "1": "功能异常，但有可用替代办法",
+            "2": "功能异常且无法继续工作，没有替代办法"
+          },
+          "probabilities": {
+            "0": 0.98,
+            "1": 0.015,
+            "2": 0.005
+          },
+          "score": 0.025,
+          "type": "score"
+        }
+      },
+      "usage": {
+        "input_tokens": 751,
+        "output_tokens": 59
+      }
+    },
+    "checks": [
+      {
+        "question": "priority",
+        "pass": true,
+        "actual": 0,
+        "expected": 0
+      }
+    ],
+    "request_id": "f12a1cc477d263888a3c139393fa9388",
+    "attempts": 1,
+    "latency_ms": 585.95
+  },
+  {
+    "mode": "fast",
+    "id": "severity_cosmetic",
+    "suite": "holdout",
+    "group": "holdout",
+    "questions": 1,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "priority": {
+          "confidence": 0.8200000000000001,
+          "legend": {
+            "0": "只有外观问题，功能正常",
+            "1": "功能异常，但有可用替代办法",
+            "2": "功能异常且无法继续工作，没有替代办法"
+          },
+          "probabilities": {
+            "0": 0.9,
+            "1": 0.08,
+            "2": 0.02
+          },
+          "score": 0.12,
+          "type": "score"
+        }
+      },
+      "usage": {
+        "input_tokens": 625,
+        "output_tokens": 53
+      }
+    },
+    "checks": [
+      {
+        "question": "priority",
+        "pass": true,
+        "actual": 0,
+        "expected": 0
+      }
+    ],
+    "request_id": "859664169fd4c9feb3a98e56aaa6ec51",
+    "attempts": 1,
+    "latency_ms": 647.29
+  },
+  {
+    "mode": "fast",
+    "id": "severity_workaround",
+    "suite": "holdout",
+    "group": "holdout",
+    "questions": 1,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "priority": {
+          "confidence": 0.85,
+          "legend": {
+            "0": "只有外观问题，功能正常",
+            "1": "功能异常，但有可用替代办法",
+            "2": "功能异常且无法继续工作，没有替代办法"
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0.9,
+            "2": 0.1
+          },
+          "score": 1.1,
+          "type": "score"
+        }
+      },
+      "usage": {
+        "input_tokens": 627,
+        "output_tokens": 53
+      }
+    },
+    "checks": [
+      {
+        "question": "priority",
+        "pass": true,
+        "actual": 1,
+        "expected": 1
+      }
+    ],
+    "request_id": "eca3aac2e449ca1e75fabc11b152d53e",
+    "attempts": 1,
+    "latency_ms": 955.38
+  },
+  {
+    "mode": "standard",
+    "id": "severity_workaround",
+    "suite": "holdout",
+    "group": "holdout",
+    "questions": 1,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "priority": {
+          "confidence": 0.925,
+          "legend": {
+            "0": "只有外观问题，功能正常",
+            "1": "功能异常，但有可用替代办法",
+            "2": "功能异常且无法继续工作，没有替代办法"
+          },
+          "probabilities": {
+            "0": 0.02,
+            "1": 0.95,
+            "2": 0.03
+          },
+          "score": 1.01,
+          "type": "score"
+        }
+      },
+      "usage": {
+        "input_tokens": 753,
+        "output_tokens": 59
+      }
+    },
+    "checks": [
+      {
+        "question": "priority",
+        "pass": true,
+        "actual": 1,
+        "expected": 1
+      }
+    ],
+    "request_id": "1f66d65cae69495cf7fc5108ac8faa71",
+    "attempts": 1,
+    "latency_ms": 589.56
+  },
+  {
+    "mode": "standard",
+    "id": "severity_blocked",
+    "suite": "holdout",
+    "group": "holdout",
+    "questions": 1,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "priority": {
+          "confidence": 0.97,
+          "legend": {
+            "0": "只有外观问题，功能正常",
+            "1": "功能异常，但有可用替代办法",
+            "2": "功能异常且无法继续工作，没有替代办法"
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0.02,
+            "2": 0.98
+          },
+          "score": 1.98,
+          "type": "score"
+        }
+      },
+      "usage": {
+        "input_tokens": 754,
+        "output_tokens": 59
+      }
+    },
+    "checks": [
+      {
+        "question": "priority",
+        "pass": true,
+        "actual": 2,
+        "expected": 2
+      }
+    ],
+    "request_id": "175844622e5cb521f690b736bd5a0ac2",
+    "attempts": 1,
+    "latency_ms": 713.51
+  },
+  {
+    "mode": "fast",
+    "id": "severity_blocked",
+    "suite": "holdout",
+    "group": "holdout",
+    "questions": 1,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "priority": {
+          "confidence": 0.97,
+          "legend": {
+            "0": "只有外观问题，功能正常",
+            "1": "功能异常，但有可用替代办法",
+            "2": "功能异常且无法继续工作，没有替代办法"
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0.02,
+            "2": 0.98
+          },
+          "score": 1.98,
+          "type": "score"
+        }
+      },
+      "usage": {
+        "input_tokens": 628,
+        "output_tokens": 53
+      }
+    },
+    "checks": [
+      {
+        "question": "priority",
+        "pass": true,
+        "actual": 2,
+        "expected": 2
+      }
+    ],
+    "request_id": "6babed99c151122bef06a336f048ec36",
+    "attempts": 1,
+    "latency_ms": 781.54
+  },
+  {
+    "mode": "fast",
+    "id": "inventory",
+    "suite": "holdout",
+    "group": "holdout",
+    "questions": 1,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "available": {
+          "noul": 0,
+          "type": "noul"
+        }
+      },
+      "usage": {
+        "input_tokens": 510,
+        "output_tokens": 38
+      }
+    },
+    "checks": [
+      {
+        "question": "available",
+        "pass": true,
+        "actual": false,
+        "expected": false
+      }
+    ],
+    "request_id": "8b1b2fedae02e1966ac9e9192032f0b4",
+    "attempts": 1,
+    "latency_ms": 867.88
+  },
+  {
+    "mode": "standard",
+    "id": "inventory",
+    "suite": "holdout",
+    "group": "holdout",
+    "questions": 1,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "available": {
+          "noul": 0,
+          "type": "noul"
+        }
+      },
+      "usage": {
+        "input_tokens": 631,
+        "output_tokens": 38
+      }
+    },
+    "checks": [
+      {
+        "question": "available",
+        "pass": true,
+        "actual": false,
+        "expected": false
+      }
+    ],
+    "request_id": "816ccd207f62ff877dab5cc9dc374d13",
+    "attempts": 1,
+    "latency_ms": 607.2
+  },
+  {
+    "mode": "standard",
+    "id": "languages",
+    "suite": "holdout",
+    "group": "holdout",
+    "questions": 1,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "language": {
+          "choice": "es",
+          "confidence": 0.8499999999999999,
+          "probabilities": {
+            "en": 0.05,
+            "es": 0.9,
+            "fr": 0.05
+          },
+          "type": "choice"
+        }
+      },
+      "usage": {
+        "input_tokens": 723,
+        "output_tokens": 59
+      }
+    },
+    "checks": [
+      {
+        "question": "language",
+        "pass": true,
+        "actual": "es",
+        "expected": "es"
+      }
+    ],
+    "request_id": "cbe82d9ce7e677ffd4f1cfa996a0118f",
+    "attempts": 1,
+    "latency_ms": 942.01
+  },
+  {
+    "mode": "fast",
+    "id": "languages",
+    "suite": "holdout",
+    "group": "holdout",
+    "questions": 1,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "language": {
+          "choice": "es",
+          "confidence": 1,
+          "probabilities": {
+            "en": 0,
+            "es": 1,
+            "fr": 0
+          },
+          "type": "choice"
+        }
+      },
+      "usage": {
+        "input_tokens": 597,
+        "output_tokens": 54
+      }
+    },
+    "checks": [
+      {
+        "question": "language",
+        "pass": true,
+        "actual": "es",
+        "expected": "es"
+      }
+    ],
+    "request_id": "c3962b7ccca10e7b368659b0958ddf47",
+    "attempts": 1,
+    "latency_ms": 746.93
+  },
+  {
+    "mode": "fast",
+    "id": "nested",
+    "suite": "holdout",
+    "group": "holdout",
+    "questions": 2,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "refund": {
+          "noul": 0,
+          "type": "noul"
+        },
+        "route": {
+          "choice": "address",
+          "confidence": 1,
+          "probabilities": {
+            "address": 1,
+            "other": 0,
+            "refund": 0
+          },
+          "type": "choice"
+        }
+      },
+      "usage": {
+        "input_tokens": 682,
+        "output_tokens": 62
+      }
+    },
+    "checks": [
+      {
+        "question": "route",
+        "pass": true,
+        "actual": "address",
+        "expected": "address"
+      },
+      {
+        "question": "refund",
+        "pass": true,
+        "actual": false,
+        "expected": false
+      }
+    ],
+    "request_id": "eb0e54cfe8d5c4e5ed7c7976c8a31458",
+    "attempts": 1,
+    "latency_ms": 826.89
+  },
+  {
+    "mode": "standard",
+    "id": "nested",
+    "suite": "holdout",
+    "group": "holdout",
+    "questions": 2,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "refund": {
+          "noul": 0,
+          "type": "noul"
+        },
+        "route": {
+          "choice": "address",
+          "confidence": 1,
+          "probabilities": {
+            "address": 1,
+            "other": 0,
+            "refund": 0
+          },
+          "type": "choice"
+        }
+      },
+      "usage": {
+        "input_tokens": 798,
+        "output_tokens": 61
+      }
+    },
+    "checks": [
+      {
+        "question": "route",
+        "pass": true,
+        "actual": "address",
+        "expected": "address"
+      },
+      {
+        "question": "refund",
+        "pass": true,
+        "actual": false,
+        "expected": false
+      }
+    ],
+    "request_id": "4c235c28d1cbf5964dc3d47654208fe9",
+    "attempts": 1,
+    "latency_ms": 524.05
+  },
+  {
+    "mode": "standard",
+    "id": "injected_review",
+    "suite": "holdout",
+    "group": "holdout",
+    "questions": 1,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "sentiment": {
+          "choice": "negative",
+          "confidence": 0.955,
+          "probabilities": {
+            "negative": 0.97,
+            "neutral": 0.02,
+            "positive": 0.01
+          },
+          "type": "choice"
+        }
+      },
+      "usage": {
+        "input_tokens": 743,
+        "output_tokens": 59
+      }
+    },
+    "checks": [
+      {
+        "question": "sentiment",
+        "pass": true,
+        "actual": "negative",
+        "expected": "negative"
+      }
+    ],
+    "request_id": "2eb877203cb11b7885140223f0863a10",
+    "attempts": 1,
+    "latency_ms": 911.18
+  },
+  {
+    "mode": "fast",
+    "id": "injected_review",
+    "suite": "holdout",
+    "group": "holdout",
+    "questions": 1,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "sentiment": {
+          "choice": "negative",
+          "confidence": 0.985,
+          "probabilities": {
+            "negative": 0.99,
+            "neutral": 0.008,
+            "positive": 0.002
+          },
+          "type": "choice"
+        }
+      },
+      "usage": {
+        "input_tokens": 617,
+        "output_tokens": 53
+      }
+    },
+    "checks": [
+      {
+        "question": "sentiment",
+        "pass": true,
+        "actual": "negative",
+        "expected": "negative"
+      }
+    ],
+    "request_id": "621366b6cf73a21eaba5fb55470bce54",
+    "attempts": 1,
+    "latency_ms": 716.09
+  },
+  {
+    "mode": "fast",
+    "id": "unknown",
+    "suite": "holdout",
+    "group": "holdout",
+    "questions": 1,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "payment": {
+          "choice": "unknown",
+          "confidence": 1,
+          "probabilities": {
+            "card": 0,
+            "cash": 0,
+            "unknown": 1
+          },
+          "type": "choice"
+        }
+      },
+      "usage": {
+        "input_tokens": 600,
+        "output_tokens": 54
+      }
+    },
+    "checks": [
+      {
+        "question": "payment",
+        "pass": true,
+        "actual": "unknown",
+        "expected": "unknown"
+      }
+    ],
+    "request_id": "de26e54162eab3b78edeacb127c90450",
+    "attempts": 1,
+    "latency_ms": 668.82
+  },
+  {
+    "mode": "standard",
+    "id": "unknown",
+    "suite": "holdout",
+    "group": "holdout",
+    "questions": 1,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "payment": {
+          "choice": "unknown",
+          "confidence": 1,
+          "probabilities": {
+            "card": 0,
+            "cash": 0,
+            "unknown": 1
+          },
+          "type": "choice"
+        }
+      },
+      "usage": {
+        "input_tokens": 726,
+        "output_tokens": 53
+      }
+    },
+    "checks": [
+      {
+        "question": "payment",
+        "pass": true,
+        "actual": "unknown",
+        "expected": "unknown"
+      }
+    ],
+    "request_id": "125691e09d5fbea95bac3e0cb9c8bd84",
+    "attempts": 1,
+    "latency_ms": 842.72
+  }
+]

@@ -11,6 +11,7 @@ import (
 	"log/slog"
 	"math/rand/v2"
 	"net/http"
+	"net/http/httptrace"
 	"strconv"
 	"strings"
 	"time"
@@ -45,6 +46,8 @@ func outputBudget(qs []compiledQuestion) int {
 func (s *Server) attempt(ctx context.Context, state json.RawMessage, qs []compiledQuestion, number int) (result attemptResult) {
 	start := time.Now()
 	known := false
+	timing, trace := newAttemptTrace(start)
+	ctx = httptrace.WithClientTrace(ctx, trace)
 	event := AttemptUsage{Provider: "deepseek", Model: s.config.UpstreamModel, StartedAt: start.UTC(), Attempt: number}
 	event.RequestID, _ = ctx.Value(requestIDKey{}).(string)
 	result.status = 502
@@ -52,6 +55,7 @@ func (s *Server) attempt(ctx context.Context, state json.RawMessage, qs []compil
 	defer func() {
 		event.TemplateID, event.LatencyMS, event.Outcome = result.templateID, time.Since(start).Milliseconds(), result.reason
 		event.UsageKnown = known
+		event.Network = timing.snapshot()
 		if s.config.RecordAttempt != nil {
 			if err := s.config.RecordAttempt(event); err != nil {
 				slog.Error("usage ledger write failed", "request_id", event.RequestID, "error", err)
@@ -64,6 +68,10 @@ func (s *Server) attempt(ctx context.Context, state json.RawMessage, qs []compil
 		prompt = compactPrompt
 	}
 	schema := outputSchema(qs)
+	if s.config.FastOutput {
+		prompt = fastPrompt
+		schema = fastSchema(qs)
+	}
 	stable, _ := json.Marshal([]any{s.config.UpstreamModel, prompt, schema})
 	digest := sha256.Sum256(stable)
 	result.templateID = fmt.Sprintf("%x", digest[:8])
@@ -95,6 +103,7 @@ func (s *Server) attempt(ctx context.Context, state json.RawMessage, qs []compil
 	}
 	defer resp.Body.Close()
 	event.HTTPStatus = resp.StatusCode
+	event.HTTPProtocol = resp.Proto
 	result.retryAfter = resp.Header.Get("Retry-After")
 	if resp.StatusCode != 200 {
 		// Drain a bounded error body to allow connection reuse, never log its contents.
@@ -161,7 +170,11 @@ func (s *Server) attempt(ctx context.Context, state json.RawMessage, qs []compil
 		result.reason = "invalid_tool_call"
 		return
 	}
-	result.answers, result.pending, err = decodePartial(calls[0].Function.Arguments, qs)
+	if s.config.FastOutput {
+		result.answers, result.pending, err = decodeFastPartial(calls[0].Function.Arguments, qs)
+	} else {
+		result.answers, result.pending, err = decodePartial(calls[0].Function.Arguments, qs)
+	}
 	if err != nil {
 		result.reason = err.Error()
 		return

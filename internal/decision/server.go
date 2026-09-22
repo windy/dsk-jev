@@ -19,6 +19,7 @@ type Config struct {
 	MaxRetries                                  int
 	RetryBaseDelay                              time.Duration
 	CompactPrompt                               bool
+	FastOutput                                  bool
 	RecordAttempt                               func(AttemptUsage) error
 }
 type Server struct {
@@ -36,7 +37,10 @@ func New(c Config) *Server {
 	if c.MaxRetries < 0 {
 		c.MaxRetries = 0
 	}
-	return &Server{c, &http.Client{Timeout: c.Timeout}}
+	transport := http.DefaultTransport.(*http.Transport).Clone()
+	transport.MaxIdleConns = 128
+	transport.MaxIdleConnsPerHost = 64
+	return &Server{c, &http.Client{Timeout: c.Timeout, Transport: transport}}
 }
 func write(w http.ResponseWriter, status int, v any) {
 	w.Header().Set("Content-Type", "application/json")

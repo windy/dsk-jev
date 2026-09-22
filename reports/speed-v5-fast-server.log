@@ -1,0 +1,64 @@
+2026/09/22 16:25:30 INFO listening addr=127.0.0.1:53731 upstream_model=deepseek-flash
+2026/09/22 16:25:32 INFO upstream attempt attempt=1 template=a4eb02c180f0bc36 questions=3 latency_ms=1146 reason="invalid noul probability" usage_known=true input_tokens=940 cached_tokens=0 output_tokens=111
+2026/09/22 16:25:33 INFO upstream attempt attempt=2 template=f9b92625f46550fc questions=1 latency_ms=864 reason=success usage_known=true input_tokens=555 cached_tokens=256 output_tokens=38
+2026/09/22 16:25:34 INFO upstream attempt attempt=1 template=a4eb02c180f0bc36 questions=3 latency_ms=872 reason=success usage_known=true input_tokens=937 cached_tokens=768 output_tokens=89
+2026/09/22 16:25:36 INFO upstream attempt attempt=1 template=a4eb02c180f0bc36 questions=3 latency_ms=950 reason=success usage_known=true input_tokens=942 cached_tokens=768 output_tokens=89
+2026/09/22 16:25:37 INFO upstream attempt attempt=1 template=a4eb02c180f0bc36 questions=3 latency_ms=764 reason=success usage_known=true input_tokens=940 cached_tokens=768 output_tokens=89
+2026/09/22 16:25:39 INFO upstream attempt attempt=1 template=a4eb02c180f0bc36 questions=3 latency_ms=675 reason=success usage_known=true input_tokens=937 cached_tokens=768 output_tokens=90
+2026/09/22 16:25:40 INFO upstream attempt attempt=1 template=a4eb02c180f0bc36 questions=3 latency_ms=801 reason=success usage_known=true input_tokens=939 cached_tokens=768 output_tokens=91
+2026/09/22 16:25:43 INFO upstream attempt attempt=1 template=a4eb02c180f0bc36 questions=3 latency_ms=1103 reason=success usage_known=true input_tokens=935 cached_tokens=768 output_tokens=89
+2026/09/22 16:25:44 INFO upstream attempt attempt=1 template=a4eb02c180f0bc36 questions=3 latency_ms=907 reason=success usage_known=true input_tokens=935 cached_tokens=768 output_tokens=91
+2026/09/22 16:25:46 INFO upstream attempt attempt=1 template=a4eb02c180f0bc36 questions=3 latency_ms=920 reason=success usage_known=true input_tokens=935 cached_tokens=768 output_tokens=89
+2026/09/22 16:25:47 INFO upstream attempt attempt=1 template=a4eb02c180f0bc36 questions=3 latency_ms=825 reason=success usage_known=true input_tokens=939 cached_tokens=768 output_tokens=91
+2026/09/22 16:25:49 INFO upstream attempt attempt=1 template=a4eb02c180f0bc36 questions=3 latency_ms=577 reason=success usage_known=true input_tokens=935 cached_tokens=768 output_tokens=91
+2026/09/22 16:25:50 INFO upstream attempt attempt=1 template=a4eb02c180f0bc36 questions=3 latency_ms=835 reason=success usage_known=true input_tokens=933 cached_tokens=768 output_tokens=90
+2026/09/22 16:25:53 INFO upstream attempt attempt=1 template=a4eb02c180f0bc36 questions=3 latency_ms=1072 reason=success usage_known=true input_tokens=940 cached_tokens=768 output_tokens=89
+2026/09/22 16:25:54 INFO upstream attempt attempt=1 template=a4eb02c180f0bc36 questions=3 latency_ms=984 reason=success usage_known=true input_tokens=946 cached_tokens=768 output_tokens=89
+2026/09/22 16:25:56 INFO upstream attempt attempt=1 template=a4eb02c180f0bc36 questions=3 latency_ms=775 reason=success usage_known=true input_tokens=943 cached_tokens=768 output_tokens=89
+2026/09/22 16:25:57 INFO upstream attempt attempt=1 template=a4eb02c180f0bc36 questions=3 latency_ms=819 reason=success usage_known=true input_tokens=941 cached_tokens=768 output_tokens=92
+2026/09/22 16:26:00 INFO upstream attempt attempt=1 template=a4eb02c180f0bc36 questions=3 latency_ms=792 reason=success usage_known=true input_tokens=941 cached_tokens=768 output_tokens=89
+2026/09/22 16:26:00 INFO upstream attempt attempt=1 template=a4eb02c180f0bc36 questions=3 latency_ms=825 reason=success usage_known=true input_tokens=940 cached_tokens=768 output_tokens=90
+2026/09/22 16:26:03 INFO upstream attempt attempt=1 template=a4eb02c180f0bc36 questions=3 latency_ms=819 reason=success usage_known=true input_tokens=943 cached_tokens=768 output_tokens=89
+2026/09/22 16:26:04 INFO upstream attempt attempt=1 template=a4eb02c180f0bc36 questions=3 latency_ms=721 reason=success usage_known=true input_tokens=938 cached_tokens=768 output_tokens=89
+2026/09/22 16:26:06 INFO upstream attempt attempt=1 template=a4eb02c180f0bc36 questions=3 latency_ms=1025 reason=success usage_known=true input_tokens=936 cached_tokens=768 output_tokens=89
+2026/09/22 16:26:07 INFO upstream attempt attempt=1 template=a4eb02c180f0bc36 questions=3 latency_ms=554 reason=success usage_known=true input_tokens=938 cached_tokens=768 output_tokens=89
+2026/09/22 16:26:10 INFO upstream attempt attempt=1 template=a4eb02c180f0bc36 questions=3 latency_ms=1078 reason=success usage_known=true input_tokens=940 cached_tokens=768 output_tokens=89
+2026/09/22 16:26:11 INFO upstream attempt attempt=1 template=a4eb02c180f0bc36 questions=3 latency_ms=764 reason=success usage_known=true input_tokens=957 cached_tokens=768 output_tokens=89
+2026/09/22 16:26:14 INFO upstream attempt attempt=1 template=1c664d3f6d779a8e questions=3 latency_ms=939 reason="invalid noul probability" usage_known=true input_tokens=833 cached_tokens=256 output_tokens=87
+2026/09/22 16:26:14 INFO upstream attempt attempt=2 template=dd7bf3a1832db7d1 questions=1 latency_ms=683 reason=success usage_known=true input_tokens=512 cached_tokens=256 output_tokens=38
+2026/09/22 16:26:15 INFO upstream attempt attempt=1 template=f81586c880636fe9 questions=1 latency_ms=463 reason=success usage_known=true input_tokens=552 cached_tokens=384 output_tokens=48
+2026/09/22 16:26:17 INFO upstream attempt attempt=1 template=79628278b565017d questions=1 latency_ms=622 reason=success usage_known=true input_tokens=521 cached_tokens=384 output_tokens=42
+2026/09/22 16:26:17 INFO upstream attempt attempt=1 template=0428d93007732fab questions=1 latency_ms=706 reason=success usage_known=true input_tokens=532 cached_tokens=384 output_tokens=39
+2026/09/22 16:26:20 INFO upstream attempt attempt=1 template=f06cfc5fd8324ec3 questions=1 latency_ms=441 reason=success usage_known=true input_tokens=556 cached_tokens=384 output_tokens=39
+2026/09/22 16:26:21 INFO upstream attempt attempt=1 template=a4eb02c180f0bc36 questions=3 latency_ms=870 reason=success usage_known=true input_tokens=938 cached_tokens=768 output_tokens=90
+2026/09/22 16:26:23 INFO upstream attempt attempt=1 template=566874366191fc02 questions=1 latency_ms=798 reason=success usage_known=true input_tokens=562 cached_tokens=384 output_tokens=52
+2026/09/22 16:26:24 INFO upstream attempt attempt=1 template=6c769882b6aad897 questions=1 latency_ms=683 reason=success usage_known=true input_tokens=848 cached_tokens=384 output_tokens=96
+2026/09/22 16:26:27 INFO upstream attempt attempt=1 template=0a292ffd24006f7f questions=1 latency_ms=926 reason=success usage_known=true input_tokens=940 cached_tokens=384 output_tokens=51
+2026/09/22 16:26:28 INFO upstream attempt attempt=1 template=ae8ec59f7af2b7b5 questions=1 latency_ms=1031 reason=success usage_known=true input_tokens=3616 cached_tokens=384 output_tokens=51
+2026/09/22 16:26:46 INFO upstream attempt attempt=1 template=a4eb02c180f0bc36 questions=3 latency_ms=1006 reason=success usage_known=true input_tokens=4540 cached_tokens=896 output_tokens=91
+2026/09/22 16:26:46 INFO upstream attempt attempt=1 template=b49dd558c981878d questions=1 latency_ms=345 reason=success usage_known=true input_tokens=502 cached_tokens=256 output_tokens=39
+2026/09/22 16:26:48 INFO upstream attempt attempt=1 template=21a85e521b69ee38 questions=5 latency_ms=597 reason=success usage_known=true input_tokens=766 cached_tokens=384 output_tokens=69
+2026/09/22 16:26:49 INFO upstream attempt attempt=1 template=24eeb0b6ee28bb1b questions=10 latency_ms=808 reason=success usage_known=true input_tokens=1096 cached_tokens=640 output_tokens=106
+2026/09/22 16:26:52 INFO upstream attempt attempt=1 template=0065285eca5fb79e questions=20 latency_ms=1018 reason=success usage_known=true input_tokens=1756 cached_tokens=384 output_tokens=181
+2026/09/22 16:26:53 INFO upstream attempt attempt=1 template=1c664d3f6d779a8e questions=3 latency_ms=712 reason="invalid noul probability" usage_known=true input_tokens=833 cached_tokens=640 output_tokens=99
+2026/09/22 16:26:54 INFO upstream attempt attempt=2 template=dd7bf3a1832db7d1 questions=1 latency_ms=554 reason=success usage_known=true input_tokens=512 cached_tokens=256 output_tokens=38
+2026/09/22 16:26:56 INFO upstream attempt attempt=1 template=1c664d3f6d779a8e questions=3 latency_ms=1188 reason="invalid noul probability" usage_known=true input_tokens=833 cached_tokens=640 output_tokens=87
+2026/09/22 16:26:58 INFO upstream attempt attempt=2 template=dd7bf3a1832db7d1 questions=1 latency_ms=1074 reason=success usage_known=true input_tokens=512 cached_tokens=256 output_tokens=38
+2026/09/22 16:26:59 INFO upstream attempt attempt=1 template=1c664d3f6d779a8e questions=3 latency_ms=1034 reason="invalid noul probability" usage_known=true input_tokens=833 cached_tokens=640 output_tokens=87
+2026/09/22 16:26:59 INFO upstream attempt attempt=2 template=dd7bf3a1832db7d1 questions=1 latency_ms=650 reason=success usage_known=true input_tokens=512 cached_tokens=256 output_tokens=38
+2026/09/22 16:27:02 INFO upstream attempt attempt=1 template=1c664d3f6d779a8e questions=3 latency_ms=868 reason="invalid noul probability" usage_known=true input_tokens=833 cached_tokens=640 output_tokens=99
+2026/09/22 16:27:03 INFO upstream attempt attempt=2 template=dd7bf3a1832db7d1 questions=1 latency_ms=741 reason=success usage_known=true input_tokens=512 cached_tokens=256 output_tokens=38
+2026/09/22 16:27:04 INFO upstream attempt attempt=1 template=1c664d3f6d779a8e questions=3 latency_ms=1196 reason="invalid noul probability" usage_known=true input_tokens=833 cached_tokens=640 output_tokens=88
+2026/09/22 16:27:05 INFO upstream attempt attempt=2 template=dd7bf3a1832db7d1 questions=1 latency_ms=559 reason=success usage_known=true input_tokens=512 cached_tokens=256 output_tokens=38
+2026/09/22 16:27:08 INFO upstream attempt attempt=1 template=6af2dddf089d1cae questions=2 latency_ms=1226 reason=success usage_known=true input_tokens=675 cached_tokens=384 output_tokens=63
+2026/09/22 16:27:08 INFO upstream attempt attempt=1 template=6af2dddf089d1cae questions=2 latency_ms=659 reason=success usage_known=true input_tokens=680 cached_tokens=512 output_tokens=62
+2026/09/22 16:27:11 INFO upstream attempt attempt=1 template=6af2dddf089d1cae questions=2 latency_ms=859 reason=success usage_known=true input_tokens=679 cached_tokens=512 output_tokens=61
+2026/09/22 16:27:12 INFO upstream attempt attempt=1 template=6af2dddf089d1cae questions=2 latency_ms=1109 reason=success usage_known=true input_tokens=683 cached_tokens=512 output_tokens=62
+2026/09/22 16:27:14 INFO upstream attempt attempt=1 template=738559503a4063a0 questions=1 latency_ms=645 reason=success usage_known=true input_tokens=625 cached_tokens=384 output_tokens=53
+2026/09/22 16:27:15 INFO upstream attempt attempt=1 template=738559503a4063a0 questions=1 latency_ms=954 reason=success usage_known=true input_tokens=627 cached_tokens=384 output_tokens=53
+2026/09/22 16:27:17 INFO upstream attempt attempt=1 template=738559503a4063a0 questions=1 latency_ms=780 reason=success usage_known=true input_tokens=628 cached_tokens=384 output_tokens=53
+2026/09/22 16:27:18 INFO upstream attempt attempt=1 template=45476a6ef18cbc42 questions=1 latency_ms=866 reason=success usage_known=true input_tokens=510 cached_tokens=256 output_tokens=38
+2026/09/22 16:27:20 INFO upstream attempt attempt=1 template=a6f1411658745735 questions=1 latency_ms=746 reason=success usage_known=true input_tokens=597 cached_tokens=384 output_tokens=54
+2026/09/22 16:27:21 INFO upstream attempt attempt=1 template=fe889d6330dc2ec3 questions=2 latency_ms=825 reason=success usage_known=true input_tokens=682 cached_tokens=384 output_tokens=62
+2026/09/22 16:27:23 INFO upstream attempt attempt=1 template=fe6a8cb8620fe115 questions=1 latency_ms=714 reason=success usage_known=true input_tokens=617 cached_tokens=384 output_tokens=53
+2026/09/22 16:27:24 INFO upstream attempt attempt=1 template=b209249affc0dbe0 questions=1 latency_ms=667 reason=success usage_known=true input_tokens=600 cached_tokens=384 output_tokens=54

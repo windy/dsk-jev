@@ -1,0 +1,306 @@
+{
+  "started_at": "2026-09-22T08:25:29.702430+00:00",
+  "finished_at": "2026-09-22T08:27:25.190019+00:00",
+  "cases_sha256": {
+    "cases": "a3c6d790abbb10a3117329e0ba87eb57d6a8bd64f1f0048df7cdd1f1d4474831",
+    "holdout": "538732006ce8974a915190d6821ffc3465744569a46768d4524e71582ae12caf"
+  },
+  "methodology": "Interleaved sequential A/B on same host, persistent connections, standard vs fast encoding (also shorter prompt). 3 retries/30s upstream budget. Warm cache not flushed. Existing regression and historical holdout, not unseen blind tests. USD costs are public peak/offpeak estimates. First-byte timings are HTTP bytes, not generated-token TTFT.",
+  "standard": {
+    "requests": 56,
+    "successful_requests": 56,
+    "judgments": 157,
+    "correct_judgments": 157,
+    "effective_accuracy": 1.0,
+    "upstream_attempts": 57,
+    "retried_requests": 1,
+    "usage_known_subtotals": {
+      "input_tokens": 75025,
+      "output_tokens": 11169,
+      "cached_tokens": 65152
+    },
+    "unknown_usage_attempts": 0,
+    "cache_hit_ratio": 0.8684038653782072,
+    "latency_ms": {
+      "all_requests": {
+        "p50": 808.47,
+        "p95": 1322.15
+      },
+      "successful_requests": {
+        "p50": 808.47,
+        "p95": 1322.15
+      }
+    },
+    "cost": {
+      "deepseek_peak": {
+        "known_estimated_usd": "0.016755612",
+        "unknown_cost_attempts": 0,
+        "total_estimated_usd": "0.016755612",
+        "usd_per_1000_requests": 0.2992073571428571,
+        "usd_per_1000_correct_judgments": 0.1067236433121019
+      },
+      "deepseek_offpeak": {
+        "known_estimated_usd": "0.008377806",
+        "unknown_cost_attempts": 0,
+        "total_estimated_usd": "0.008377806",
+        "usd_per_1000_requests": 0.14960367857142856,
+        "usd_per_1000_correct_judgments": 0.05336182165605095
+      }
+    },
+    "by_suite": {
+      "cases": {
+        "requests": 44,
+        "successful_requests": 44,
+        "judgments": 140,
+        "correct_judgments": 140,
+        "effective_accuracy": 1.0,
+        "upstream_attempts": 45,
+        "retried_requests": 1,
+        "usage_known_subtotals": {
+          "input_tokens": 65965,
+          "output_tokens": 10462,
+          "cached_tokens": 58496
+        },
+        "unknown_usage_attempts": 0,
+        "cache_hit_ratio": 0.8867732888653074,
+        "latency_ms": {
+          "all_requests": {
+            "p50": 808.47,
+            "p95": 1322.15
+          },
+          "successful_requests": {
+            "p50": 808.47,
+            "p95": 1322.15
+          }
+        },
+        "cost": {
+          "deepseek_peak": {
+            "known_estimated_usd": "0.015146076",
+            "unknown_cost_attempts": 0,
+            "total_estimated_usd": "0.015146076",
+            "usd_per_1000_requests": 0.34422899999999995,
+            "usd_per_1000_correct_judgments": 0.10818625714285714
+          },
+          "deepseek_offpeak": {
+            "known_estimated_usd": "0.007573038",
+            "unknown_cost_attempts": 0,
+            "total_estimated_usd": "0.007573038",
+            "usd_per_1000_requests": 0.17211449999999998,
+            "usd_per_1000_correct_judgments": 0.05409312857142857
+          }
+        }
+      },
+      "holdout": {
+        "requests": 12,
+        "successful_requests": 12,
+        "judgments": 17,
+        "correct_judgments": 17,
+        "effective_accuracy": 1.0,
+        "upstream_attempts": 12,
+        "retried_requests": 0,
+        "usage_known_subtotals": {
+          "input_tokens": 9060,
+          "output_tokens": 707,
+          "cached_tokens": 6656
+        },
+        "unknown_usage_attempts": 0,
+        "cache_hit_ratio": 0.7346578366445916,
+        "latency_ms": {
+          "all_requests": {
+            "p50": 713.51,
+            "p95": 1001.85
+          },
+          "successful_requests": {
+            "p50": 713.51,
+            "p95": 1001.85
+          }
+        },
+        "cost": {
+          "deepseek_peak": {
+            "known_estimated_usd": "0.001609536",
+            "unknown_cost_attempts": 0,
+            "total_estimated_usd": "0.001609536",
+            "usd_per_1000_requests": 0.134128,
+            "usd_per_1000_correct_judgments": 0.09467858823529411
+          },
+          "deepseek_offpeak": {
+            "known_estimated_usd": "0.000804768",
+            "unknown_cost_attempts": 0,
+            "total_estimated_usd": "0.000804768",
+            "usd_per_1000_requests": 0.067064,
+            "usd_per_1000_correct_judgments": 0.047339294117647056
+          }
+        }
+      }
+    },
+    "network": {
+      "reused_connections": 56,
+      "observed_connections": 57,
+      "get_connection_ms": {
+        "p50": 0,
+        "p95": 0
+      },
+      "first_byte_ms": {
+        "p50": 100,
+        "p95": 371
+      },
+      "after_first_byte_ms": {
+        "p50": 686,
+        "p95": 1146
+      }
+    },
+    "reasoning_tokens": 0,
+    "reasoning_tokens_field_present_attempts": 0
+  },
+  "fast": {
+    "requests": 56,
+    "successful_requests": 56,
+    "judgments": 157,
+    "correct_judgments": 156,
+    "effective_accuracy": 0.9936305732484076,
+    "upstream_attempts": 63,
+    "retried_requests": 7,
+    "usage_known_subtotals": {
+      "input_tokens": 56503,
+      "output_tokens": 4647,
+      "cached_tokens": 34176
+    },
+    "unknown_usage_attempts": 0,
+    "cache_hit_ratio": 0.6048528396722298,
+    "latency_ms": {
+      "all_requests": {
+        "p50": 826.28,
+        "p95": 1902.61
+      },
+      "successful_requests": {
+        "p50": 826.28,
+        "p95": 1902.61
+      }
+    },
+    "cost": {
+      "deepseek_peak": {
+        "known_estimated_usd": "0.012479556",
+        "unknown_cost_attempts": 0,
+        "total_estimated_usd": "0.012479556",
+        "usd_per_1000_requests": 0.22284921428571428,
+        "usd_per_1000_correct_judgments": 0.07999715384615384
+      },
+      "deepseek_offpeak": {
+        "known_estimated_usd": "0.006239778",
+        "unknown_cost_attempts": 0,
+        "total_estimated_usd": "0.006239778",
+        "usd_per_1000_requests": 0.11142460714285714,
+        "usd_per_1000_correct_judgments": 0.03999857692307692
+      }
+    },
+    "by_suite": {
+      "cases": {
+        "requests": 44,
+        "successful_requests": 44,
+        "judgments": 140,
+        "correct_judgments": 139,
+        "effective_accuracy": 0.9928571428571429,
+        "upstream_attempts": 51,
+        "retried_requests": 7,
+        "usage_known_subtotals": {
+          "input_tokens": 48900,
+          "output_tokens": 3979,
+          "cached_tokens": 29312
+        },
+        "unknown_usage_attempts": 0,
+        "cache_hit_ratio": 0.5994274028629857,
+        "latency_ms": {
+          "all_requests": {
+            "p50": 826.28,
+            "p95": 1902.61
+          },
+          "successful_requests": {
+            "p50": 826.28,
+            "p95": 1902.61
+          }
+        },
+        "cost": {
+          "deepseek_peak": {
+            "known_estimated_usd": "0.010827072",
+            "unknown_cost_attempts": 0,
+            "total_estimated_usd": "0.010827072",
+            "usd_per_1000_requests": 0.24606981818181817,
+            "usd_per_1000_correct_judgments": 0.07789260431654675
+          },
+          "deepseek_offpeak": {
+            "known_estimated_usd": "0.005413536",
+            "unknown_cost_attempts": 0,
+            "total_estimated_usd": "0.005413536",
+            "usd_per_1000_requests": 0.12303490909090908,
+            "usd_per_1000_correct_judgments": 0.038946302158273376
+          }
+        }
+      },
+      "holdout": {
+        "requests": 12,
+        "successful_requests": 12,
+        "judgments": 17,
+        "correct_judgments": 17,
+        "effective_accuracy": 1.0,
+        "upstream_attempts": 12,
+        "retried_requests": 0,
+        "usage_known_subtotals": {
+          "input_tokens": 7603,
+          "output_tokens": 668,
+          "cached_tokens": 4864
+        },
+        "unknown_usage_attempts": 0,
+        "cache_hit_ratio": 0.6397474681046955,
+        "latency_ms": {
+          "all_requests": {
+            "p50": 781.54,
+            "p95": 1226.72
+          },
+          "successful_requests": {
+            "p50": 781.54,
+            "p95": 1226.72
+          }
+        },
+        "cost": {
+          "deepseek_peak": {
+            "known_estimated_usd": "0.001652484",
+            "unknown_cost_attempts": 0,
+            "total_estimated_usd": "0.001652484",
+            "usd_per_1000_requests": 0.137707,
+            "usd_per_1000_correct_judgments": 0.09720494117647059
+          },
+          "deepseek_offpeak": {
+            "known_estimated_usd": "0.000826242",
+            "unknown_cost_attempts": 0,
+            "total_estimated_usd": "0.000826242",
+            "usd_per_1000_requests": 0.0688535,
+            "usd_per_1000_correct_judgments": 0.048602470588235296
+          }
+        }
+      }
+    },
+    "network": {
+      "reused_connections": 62,
+      "observed_connections": 63,
+      "get_connection_ms": {
+        "p50": 0,
+        "p95": 0
+      },
+      "first_byte_ms": {
+        "p50": 100,
+        "p95": 339
+      },
+      "after_first_byte_ms": {
+        "p50": 688,
+        "p95": 980
+      }
+    },
+    "reasoning_tokens": 0,
+    "reasoning_tokens_field_present_attempts": 0
+  },
+  "paired_latency_delta_ms": {
+    "median": 39.01999999999998,
+    "fast_wins": 24,
+    "pairs": 56
+  }
+}

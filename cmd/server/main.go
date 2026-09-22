@@ -47,6 +47,12 @@ func main() {
 		os.Exit(1)
 	}
 	c.CompactPrompt = mode == "compact"
+	outputMode := env("OUTPUT_MODE", "standard")
+	if outputMode != "standard" && outputMode != "fast" {
+		slog.Error("OUTPUT_MODE must be standard or fast")
+		os.Exit(1)
+	}
+	c.FastOutput = outputMode == "fast"
 	if path := os.Getenv("USAGE_LEDGER_PATH"); path != "" {
 		ledger, err := decision.OpenUsageLedger(path)
 		if err != nil {

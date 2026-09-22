@@ -12,6 +12,8 @@ type requestIDKey struct{}
 // AttemptUsage contains metering facts, never a claimed invoice amount.
 // Nil token counts mean unknown, not zero. Payloads and credentials are omitted.
 type AttemptUsage struct {
+	Network      NetworkTiming   `json:"network"`
+	HTTPProtocol string          `json:"http_protocol,omitempty"`
 	RequestID    string          `json:"request_id"`
 	Provider     string          `json:"provider"`
 	Model        string          `json:"model"`
