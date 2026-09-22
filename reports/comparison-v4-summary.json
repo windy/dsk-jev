@@ -1,0 +1,712 @@
+{
+  "started_at": "2026-09-22T08:15:20.870792+00:00",
+  "finished_at": "2026-09-22T08:16:20.890957+00:00",
+  "cases_sha256": "a3c6d790abbb10a3117329e0ba87eb57d6a8bd64f1f0048df7cdd1f1d4474831",
+  "pricing": {
+    "version": "2026-09-22",
+    "currency": "USD",
+    "unit": "per_million_tokens",
+    "sources": [
+      "https://docs.typesafe.ai/models",
+      "https://api-docs.deepseek.com/quick_start/pricing/"
+    ],
+    "note": "Public list-price estimates, not invoices. DeepSeek peak/offpeak scenarios shown separately; excludes credits, negotiated prices, tax and proxy hosting.",
+    "jev": {
+      "input": "0.042",
+      "output": "0"
+    },
+    "deepseek_peak": {
+      "input": "0.30",
+      "cached": "0.006",
+      "output": "1.20"
+    },
+    "deepseek_offpeak": {
+      "input": "0.15",
+      "cached": "0.003",
+      "output": "0.60"
+    }
+  },
+  "methodology": "Frozen synthetic regression set (previously used for tuning), sequential paired calls with alternating order, persistent connections, same host/time window, max3 retries/30s upstream budget. DeepSeek includes local proxy overhead. Warm cache not flushed; results are not cold-start or load-test measurements. Peak/offpeak are cost scenarios, not actual debit. All attempts including failures billed when usage is available.",
+  "jev": {
+    "requests": 44,
+    "successful_requests": 44,
+    "judgments": 140,
+    "correct_judgments": 139,
+    "effective_accuracy": 0.9928571428571429,
+    "upstream_attempts": 44,
+    "retried_requests": 0,
+    "usage_known_subtotals": {
+      "input_tokens": 32802,
+      "output_tokens": 6140,
+      "cached_tokens": 0
+    },
+    "unknown_usage_attempts": 0,
+    "cache_hit_ratio": null,
+    "latency_ms": {
+      "all_requests": {
+        "p50": 318.19,
+        "p95": 374.11
+      },
+      "successful_requests": {
+        "p50": 318.19,
+        "p95": 374.11
+      }
+    },
+    "cost": {
+      "jev": {
+        "known_estimated_usd": "0.001377684",
+        "unknown_cost_attempts": 0,
+        "total_estimated_usd": "0.001377684",
+        "usd_per_1000_requests": 0.031311,
+        "usd_per_1000_correct_judgments": 0.009911395683453237
+      }
+    },
+    "by_group": {
+      "batch": {
+        "requests": 4,
+        "successful_requests": 4,
+        "judgments": 36,
+        "correct_judgments": 36,
+        "effective_accuracy": 1.0,
+        "upstream_attempts": 4,
+        "retried_requests": 0,
+        "usage_known_subtotals": {
+          "input_tokens": 2201,
+          "output_tokens": 664,
+          "cached_tokens": 0
+        },
+        "unknown_usage_attempts": 0,
+        "cache_hit_ratio": null,
+        "latency_ms": {
+          "all_requests": {
+            "p50": 302.39,
+            "p95": 331.31
+          },
+          "successful_requests": {
+            "p50": 302.39,
+            "p95": 331.31
+          }
+        },
+        "cost": {
+          "jev": {
+            "known_estimated_usd": "0.000092442",
+            "unknown_cost_attempts": 0,
+            "total_estimated_usd": "0.000092442",
+            "usd_per_1000_requests": 0.0231105,
+            "usd_per_1000_correct_judgments": 0.0025678333333333334
+          }
+        }
+      },
+      "boundary": {
+        "requests": 10,
+        "successful_requests": 10,
+        "judgments": 14,
+        "correct_judgments": 14,
+        "effective_accuracy": 1.0,
+        "upstream_attempts": 10,
+        "retried_requests": 0,
+        "usage_known_subtotals": {
+          "input_tokens": 14262,
+          "output_tokens": 3226,
+          "cached_tokens": 0
+        },
+        "unknown_usage_attempts": 0,
+        "cache_hit_ratio": null,
+        "latency_ms": {
+          "all_requests": {
+            "p50": 319.49,
+            "p95": 364.65
+          },
+          "successful_requests": {
+            "p50": 319.49,
+            "p95": 364.65
+          }
+        },
+        "cost": {
+          "jev": {
+            "known_estimated_usd": "0.000599004",
+            "unknown_cost_attempts": 0,
+            "total_estimated_usd": "0.000599004",
+            "usd_per_1000_requests": 0.0599004,
+            "usd_per_1000_correct_judgments": 0.042786
+          }
+        }
+      },
+      "regression": {
+        "requests": 1,
+        "successful_requests": 1,
+        "judgments": 3,
+        "correct_judgments": 3,
+        "effective_accuracy": 1.0,
+        "upstream_attempts": 1,
+        "retried_requests": 0,
+        "usage_known_subtotals": {
+          "input_tokens": 440,
+          "output_tokens": 71,
+          "cached_tokens": 0
+        },
+        "unknown_usage_attempts": 0,
+        "cache_hit_ratio": null,
+        "latency_ms": {
+          "all_requests": {
+            "p50": 280.23,
+            "p95": 280.23
+          },
+          "successful_requests": {
+            "p50": 280.23,
+            "p95": 280.23
+          }
+        },
+        "cost": {
+          "jev": {
+            "known_estimated_usd": "0.00001848",
+            "unknown_cost_attempts": 0,
+            "total_estimated_usd": "0.00001848",
+            "usd_per_1000_requests": 0.01848,
+            "usd_per_1000_correct_judgments": 0.00616
+          }
+        }
+      },
+      "repeat": {
+        "requests": 5,
+        "successful_requests": 5,
+        "judgments": 15,
+        "correct_judgments": 15,
+        "effective_accuracy": 1.0,
+        "upstream_attempts": 5,
+        "retried_requests": 0,
+        "usage_known_subtotals": {
+          "input_tokens": 2200,
+          "output_tokens": 355,
+          "cached_tokens": 0
+        },
+        "unknown_usage_attempts": 0,
+        "cache_hit_ratio": null,
+        "latency_ms": {
+          "all_requests": {
+            "p50": 353.73,
+            "p95": 394.61
+          },
+          "successful_requests": {
+            "p50": 353.73,
+            "p95": 394.61
+          }
+        },
+        "cost": {
+          "jev": {
+            "known_estimated_usd": "0.00009240",
+            "unknown_cost_attempts": 0,
+            "total_estimated_usd": "0.00009240",
+            "usd_per_1000_requests": 0.01848,
+            "usd_per_1000_correct_judgments": 0.00616
+          }
+        }
+      },
+      "semantic": {
+        "requests": 24,
+        "successful_requests": 24,
+        "judgments": 72,
+        "correct_judgments": 71,
+        "effective_accuracy": 0.9861111111111112,
+        "upstream_attempts": 24,
+        "retried_requests": 0,
+        "usage_known_subtotals": {
+          "input_tokens": 13699,
+          "output_tokens": 1824,
+          "cached_tokens": 0
+        },
+        "unknown_usage_attempts": 0,
+        "cache_hit_ratio": null,
+        "latency_ms": {
+          "all_requests": {
+            "p50": 305.81,
+            "p95": 370.26
+          },
+          "successful_requests": {
+            "p50": 305.81,
+            "p95": 370.26
+          }
+        },
+        "cost": {
+          "jev": {
+            "known_estimated_usd": "0.000575358",
+            "unknown_cost_attempts": 0,
+            "total_estimated_usd": "0.000575358",
+            "usd_per_1000_requests": 0.02397325,
+            "usd_per_1000_correct_judgments": 0.008103633802816902
+          }
+        }
+      }
+    }
+  },
+  "deepseek": {
+    "requests": 44,
+    "successful_requests": 44,
+    "judgments": 140,
+    "correct_judgments": 138,
+    "effective_accuracy": 0.9857142857142858,
+    "upstream_attempts": 44,
+    "retried_requests": 0,
+    "usage_known_subtotals": {
+      "input_tokens": 56416,
+      "output_tokens": 6003,
+      "cached_tokens": 49152
+    },
+    "unknown_usage_attempts": 0,
+    "cache_hit_ratio": 0.871242200794101,
+    "latency_ms": {
+      "all_requests": {
+        "p50": 909.39,
+        "p95": 1231.04
+      },
+      "successful_requests": {
+        "p50": 909.39,
+        "p95": 1231.04
+      }
+    },
+    "cost": {
+      "deepseek_peak": {
+        "known_estimated_usd": "0.009677712",
+        "unknown_cost_attempts": 0,
+        "total_estimated_usd": "0.009677712",
+        "usd_per_1000_requests": 0.219948,
+        "usd_per_1000_correct_judgments": 0.07012834782608696
+      },
+      "deepseek_offpeak": {
+        "known_estimated_usd": "0.004838856",
+        "unknown_cost_attempts": 0,
+        "total_estimated_usd": "0.004838856",
+        "usd_per_1000_requests": 0.109974,
+        "usd_per_1000_correct_judgments": 0.03506417391304348
+      }
+    },
+    "by_group": {
+      "batch": {
+        "requests": 4,
+        "successful_requests": 4,
+        "judgments": 36,
+        "correct_judgments": 36,
+        "effective_accuracy": 1.0,
+        "upstream_attempts": 4,
+        "retried_requests": 0,
+        "usage_known_subtotals": {
+          "input_tokens": 4284,
+          "output_tokens": 376,
+          "cached_tokens": 3456
+        },
+        "unknown_usage_attempts": 0,
+        "cache_hit_ratio": 0.8067226890756303,
+        "latency_ms": {
+          "all_requests": {
+            "p50": 906.47,
+            "p95": 1231.04
+          },
+          "successful_requests": {
+            "p50": 906.47,
+            "p95": 1231.04
+          }
+        },
+        "cost": {
+          "deepseek_peak": {
+            "known_estimated_usd": "0.000720336",
+            "unknown_cost_attempts": 0,
+            "total_estimated_usd": "0.000720336",
+            "usd_per_1000_requests": 0.180084,
+            "usd_per_1000_correct_judgments": 0.020009333333333334
+          },
+          "deepseek_offpeak": {
+            "known_estimated_usd": "0.000360168",
+            "unknown_cost_attempts": 0,
+            "total_estimated_usd": "0.000360168",
+            "usd_per_1000_requests": 0.090042,
+            "usd_per_1000_correct_judgments": 0.010004666666666667
+          }
+        }
+      },
+      "boundary": {
+        "requests": 10,
+        "successful_requests": 10,
+        "judgments": 14,
+        "correct_judgments": 14,
+        "effective_accuracy": 1.0,
+        "upstream_attempts": 10,
+        "retried_requests": 0,
+        "usage_known_subtotals": {
+          "input_tokens": 21302,
+          "output_tokens": 2601,
+          "cached_tokens": 19584
+        },
+        "unknown_usage_attempts": 0,
+        "cache_hit_ratio": 0.9193502957468782,
+        "latency_ms": {
+          "all_requests": {
+            "p50": 855.76,
+            "p95": 4999.66
+          },
+          "successful_requests": {
+            "p50": 855.76,
+            "p95": 4999.66
+          }
+        },
+        "cost": {
+          "deepseek_peak": {
+            "known_estimated_usd": "0.003754104",
+            "unknown_cost_attempts": 0,
+            "total_estimated_usd": "0.003754104",
+            "usd_per_1000_requests": 0.3754104,
+            "usd_per_1000_correct_judgments": 0.26815028571428573
+          },
+          "deepseek_offpeak": {
+            "known_estimated_usd": "0.001877052",
+            "unknown_cost_attempts": 0,
+            "total_estimated_usd": "0.001877052",
+            "usd_per_1000_requests": 0.1877052,
+            "usd_per_1000_correct_judgments": 0.13407514285714286
+          }
+        }
+      },
+      "regression": {
+        "requests": 1,
+        "successful_requests": 1,
+        "judgments": 3,
+        "correct_judgments": 3,
+        "effective_accuracy": 1.0,
+        "upstream_attempts": 1,
+        "retried_requests": 0,
+        "usage_known_subtotals": {
+          "input_tokens": 944,
+          "output_tokens": 97,
+          "cached_tokens": 768
+        },
+        "unknown_usage_attempts": 0,
+        "cache_hit_ratio": 0.8135593220338984,
+        "latency_ms": {
+          "all_requests": {
+            "p50": 936.79,
+            "p95": 936.79
+          },
+          "successful_requests": {
+            "p50": 936.79,
+            "p95": 936.79
+          }
+        },
+        "cost": {
+          "deepseek_peak": {
+            "known_estimated_usd": "0.000173808",
+            "unknown_cost_attempts": 0,
+            "total_estimated_usd": "0.000173808",
+            "usd_per_1000_requests": 0.173808,
+            "usd_per_1000_correct_judgments": 0.057935999999999994
+          },
+          "deepseek_offpeak": {
+            "known_estimated_usd": "0.000086904",
+            "unknown_cost_attempts": 0,
+            "total_estimated_usd": "0.000086904",
+            "usd_per_1000_requests": 0.086904,
+            "usd_per_1000_correct_judgments": 0.028967999999999997
+          }
+        }
+      },
+      "repeat": {
+        "requests": 5,
+        "successful_requests": 5,
+        "judgments": 15,
+        "correct_judgments": 15,
+        "effective_accuracy": 1.0,
+        "upstream_attempts": 5,
+        "retried_requests": 0,
+        "usage_known_subtotals": {
+          "input_tokens": 4720,
+          "output_tokens": 485,
+          "cached_tokens": 3840
+        },
+        "unknown_usage_attempts": 0,
+        "cache_hit_ratio": 0.8135593220338984,
+        "latency_ms": {
+          "all_requests": {
+            "p50": 961.36,
+            "p95": 1231.75
+          },
+          "successful_requests": {
+            "p50": 961.36,
+            "p95": 1231.75
+          }
+        },
+        "cost": {
+          "deepseek_peak": {
+            "known_estimated_usd": "0.000869040",
+            "unknown_cost_attempts": 0,
+            "total_estimated_usd": "0.000869040",
+            "usd_per_1000_requests": 0.173808,
+            "usd_per_1000_correct_judgments": 0.057935999999999994
+          },
+          "deepseek_offpeak": {
+            "known_estimated_usd": "0.000434520",
+            "unknown_cost_attempts": 0,
+            "total_estimated_usd": "0.000434520",
+            "usd_per_1000_requests": 0.086904,
+            "usd_per_1000_correct_judgments": 0.028967999999999997
+          }
+        }
+      },
+      "semantic": {
+        "requests": 24,
+        "successful_requests": 24,
+        "judgments": 72,
+        "correct_judgments": 70,
+        "effective_accuracy": 0.9722222222222222,
+        "upstream_attempts": 24,
+        "retried_requests": 0,
+        "usage_known_subtotals": {
+          "input_tokens": 25166,
+          "output_tokens": 2444,
+          "cached_tokens": 21504
+        },
+        "unknown_usage_attempts": 0,
+        "cache_hit_ratio": 0.8544862115552729,
+        "latency_ms": {
+          "all_requests": {
+            "p50": 902.86,
+            "p95": 1141.57
+          },
+          "successful_requests": {
+            "p50": 902.86,
+            "p95": 1141.57
+          }
+        },
+        "cost": {
+          "deepseek_peak": {
+            "known_estimated_usd": "0.004160424",
+            "unknown_cost_attempts": 0,
+            "total_estimated_usd": "0.004160424",
+            "usd_per_1000_requests": 0.173351,
+            "usd_per_1000_correct_judgments": 0.05943462857142857
+          },
+          "deepseek_offpeak": {
+            "known_estimated_usd": "0.002080212",
+            "unknown_cost_attempts": 0,
+            "total_estimated_usd": "0.002080212",
+            "usd_per_1000_requests": 0.0866755,
+            "usd_per_1000_correct_judgments": 0.029717314285714284
+          }
+        }
+      }
+    },
+    "cache_reuse_by_template": [
+      {
+        "template_id": "71dcb41ebc7492d0",
+        "calls": 26,
+        "longest_consecutive_calls_with_any_cache_hit": 26,
+        "cached_tokens_sequence": [
+          896,
+          896,
+          896,
+          896,
+          896,
+          896,
+          896,
+          896,
+          896,
+          896,
+          896,
+          896,
+          896,
+          896,
+          896,
+          896,
+          896,
+          896,
+          896,
+          896,
+          896,
+          896,
+          896,
+          896,
+          896,
+          4480
+        ],
+        "input_tokens_sequence": [
+          1049,
+          1046,
+          1051,
+          1049,
+          1046,
+          1048,
+          1044,
+          1044,
+          1044,
+          1048,
+          1044,
+          1042,
+          1049,
+          1055,
+          1052,
+          1050,
+          1050,
+          1049,
+          1052,
+          1047,
+          1045,
+          1047,
+          1049,
+          1066,
+          1047,
+          4649
+        ]
+      },
+      {
+        "template_id": "1abfb382cb140200",
+        "calls": 6,
+        "longest_consecutive_calls_with_any_cache_hit": 6,
+        "cached_tokens_sequence": [
+          768,
+          768,
+          768,
+          768,
+          768,
+          768
+        ],
+        "input_tokens_sequence": [
+          944,
+          944,
+          944,
+          944,
+          944,
+          944
+        ]
+      },
+      {
+        "template_id": "f9a8e4183bec978f",
+        "calls": 1,
+        "longest_consecutive_calls_with_any_cache_hit": 1,
+        "cached_tokens_sequence": [
+          512
+        ],
+        "input_tokens_sequence": [
+          679
+        ]
+      },
+      {
+        "template_id": "94df63852948af5d",
+        "calls": 1,
+        "longest_consecutive_calls_with_any_cache_hit": 1,
+        "cached_tokens_sequence": [
+          512
+        ],
+        "input_tokens_sequence": [
+          649
+        ]
+      },
+      {
+        "template_id": "e59f9082e015e372",
+        "calls": 1,
+        "longest_consecutive_calls_with_any_cache_hit": 1,
+        "cached_tokens_sequence": [
+          512
+        ],
+        "input_tokens_sequence": [
+          653
+        ]
+      },
+      {
+        "template_id": "f48d01890d13e3c9",
+        "calls": 1,
+        "longest_consecutive_calls_with_any_cache_hit": 1,
+        "cached_tokens_sequence": [
+          512
+        ],
+        "input_tokens_sequence": [
+          676
+        ]
+      },
+      {
+        "template_id": "06e315b2817f29ec",
+        "calls": 1,
+        "longest_consecutive_calls_with_any_cache_hit": 1,
+        "cached_tokens_sequence": [
+          512
+        ],
+        "input_tokens_sequence": [
+          689
+        ]
+      },
+      {
+        "template_id": "717008c1a9329338",
+        "calls": 1,
+        "longest_consecutive_calls_with_any_cache_hit": 1,
+        "cached_tokens_sequence": [
+          768
+        ],
+        "input_tokens_sequence": [
+          967
+        ]
+      },
+      {
+        "template_id": "688f8e041d9ddc19",
+        "calls": 1,
+        "longest_consecutive_calls_with_any_cache_hit": 1,
+        "cached_tokens_sequence": [
+          1536
+        ],
+        "input_tokens_sequence": [
+          1744
+        ]
+      },
+      {
+        "template_id": "0dedf8e3e5403050",
+        "calls": 1,
+        "longest_consecutive_calls_with_any_cache_hit": 1,
+        "cached_tokens_sequence": [
+          9344
+        ],
+        "input_tokens_sequence": [
+          9549
+        ]
+      },
+      {
+        "template_id": "aa9bec14e1e99346",
+        "calls": 1,
+        "longest_consecutive_calls_with_any_cache_hit": 1,
+        "cached_tokens_sequence": [
+          384
+        ],
+        "input_tokens_sequence": [
+          623
+        ]
+      },
+      {
+        "template_id": "4620784df53b8794",
+        "calls": 1,
+        "longest_consecutive_calls_with_any_cache_hit": 1,
+        "cached_tokens_sequence": [
+          640
+        ],
+        "input_tokens_sequence": [
+          847
+        ]
+      },
+      {
+        "template_id": "c500bb8b7ad4d887",
+        "calls": 1,
+        "longest_consecutive_calls_with_any_cache_hit": 1,
+        "cached_tokens_sequence": [
+          896
+        ],
+        "input_tokens_sequence": [
+          1127
+        ]
+      },
+      {
+        "template_id": "882a2f3b3a9b2072",
+        "calls": 1,
+        "longest_consecutive_calls_with_any_cache_hit": 1,
+        "cached_tokens_sequence": [
+          1536
+        ],
+        "input_tokens_sequence": [
+          1687
+        ]
+      }
+    ]
+  }
+}

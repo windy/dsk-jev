@@ -1,0 +1,58 @@
+{
+  "requests": 44,
+  "successful_requests": 44,
+  "judgments": 140,
+  "correct_judgments": 139,
+  "completed_judgments": 140,
+  "latency_ms": {
+    "p50": 959.62,
+    "p95": 1371.86
+  },
+  "usage": {
+    "input_tokens": 57065,
+    "output_tokens": 6064
+  },
+  "by_type": {
+    "choice": {
+      "correct": 37,
+      "total": 37
+    },
+    "score": {
+      "correct": 32,
+      "total": 33
+    },
+    "noul": {
+      "correct": 70,
+      "total": 70
+    }
+  },
+  "failures": [
+    {
+      "id": "question_refund",
+      "status": 200,
+      "checks": [
+        {
+          "question": "urgency",
+          "type": "score",
+          "expected": 0,
+          "actual": 1,
+          "pass": false
+        }
+      ]
+    }
+  ],
+  "successful_cached_input_tokens": 49664,
+  "total_upstream_attempts": 45,
+  "retried_requests": 1,
+  "retry_config": {
+    "max_retries": "3",
+    "prompt_mode": "standard"
+  },
+  "upstream_usage_all_parsed_responses": {
+    "input_tokens": 57065,
+    "cached_tokens": 49664,
+    "output_tokens": 6064
+  },
+  "usage_scope": "Response usage is cumulative across attempts for successful requests; upstream_usage_all_parsed_responses includes all logged attempts (zero tokens when usage unknown).",
+  "unknown_usage_attempts": 0
+}

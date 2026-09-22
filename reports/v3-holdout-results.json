@@ -1,0 +1,510 @@
+[
+  {
+    "id": "travel_cancel",
+    "group": "holdout",
+    "questions": 2,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "action": {
+          "choice": "cancel",
+          "confidence": 0.985,
+          "probabilities": {
+            "cancel": 0.99,
+            "change": 0.01,
+            "inquiry": 0
+          },
+          "type": "choice"
+        },
+        "cancel": {
+          "noul": 0.99,
+          "type": "noul"
+        }
+      },
+      "usage": {
+        "input_tokens": 791,
+        "output_tokens": 69
+      }
+    },
+    "upstream_attempts": 1,
+    "cached_input_tokens": 640,
+    "latency_ms": 799.96,
+    "checks": [
+      {
+        "question": "action",
+        "type": "choice",
+        "expected": "cancel",
+        "actual": "cancel",
+        "pass": true
+      },
+      {
+        "question": "cancel",
+        "type": "noul",
+        "expected": true,
+        "actual": true,
+        "pass": true
+      }
+    ]
+  },
+  {
+    "id": "travel_negate",
+    "group": "holdout",
+    "questions": 2,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "action": {
+          "choice": "change",
+          "confidence": 0.955,
+          "probabilities": {
+            "cancel": 0.02,
+            "change": 0.97,
+            "inquiry": 0.01
+          },
+          "type": "choice"
+        },
+        "cancel": {
+          "noul": 0.01,
+          "type": "noul"
+        }
+      },
+      "usage": {
+        "input_tokens": 796,
+        "output_tokens": 69
+      }
+    },
+    "upstream_attempts": 1,
+    "cached_input_tokens": 640,
+    "latency_ms": 1363.03,
+    "checks": [
+      {
+        "question": "action",
+        "type": "choice",
+        "expected": "change",
+        "actual": "change",
+        "pass": true
+      },
+      {
+        "question": "cancel",
+        "type": "noul",
+        "expected": false,
+        "actual": false,
+        "pass": true
+      }
+    ]
+  },
+  {
+    "id": "travel_quote",
+    "group": "holdout",
+    "questions": 2,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "action": {
+          "choice": "inquiry",
+          "confidence": 1,
+          "probabilities": {
+            "cancel": 0,
+            "change": 0,
+            "inquiry": 1
+          },
+          "type": "choice"
+        },
+        "cancel": {
+          "noul": 0,
+          "type": "noul"
+        }
+      },
+      "usage": {
+        "input_tokens": 795,
+        "output_tokens": 61
+      }
+    },
+    "upstream_attempts": 1,
+    "cached_input_tokens": 640,
+    "latency_ms": 842.28,
+    "checks": [
+      {
+        "question": "action",
+        "type": "choice",
+        "expected": "inquiry",
+        "actual": "inquiry",
+        "pass": true
+      },
+      {
+        "question": "cancel",
+        "type": "noul",
+        "expected": false,
+        "actual": false,
+        "pass": true
+      }
+    ]
+  },
+  {
+    "id": "travel_hypothetical",
+    "group": "holdout",
+    "questions": 2,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "action": {
+          "choice": "inquiry",
+          "confidence": 0.8949999999999999,
+          "probabilities": {
+            "cancel": 0.05,
+            "change": 0.02,
+            "inquiry": 0.93
+          },
+          "type": "choice"
+        },
+        "cancel": {
+          "noul": 0.03,
+          "type": "noul"
+        }
+      },
+      "usage": {
+        "input_tokens": 799,
+        "output_tokens": 69
+      }
+    },
+    "upstream_attempts": 1,
+    "cached_input_tokens": 640,
+    "latency_ms": 1065.23,
+    "checks": [
+      {
+        "question": "action",
+        "type": "choice",
+        "expected": "inquiry",
+        "actual": "inquiry",
+        "pass": true
+      },
+      {
+        "question": "cancel",
+        "type": "noul",
+        "expected": false,
+        "actual": false,
+        "pass": true
+      }
+    ]
+  },
+  {
+    "id": "severity_cosmetic",
+    "group": "holdout",
+    "questions": 1,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "priority": {
+          "confidence": 1,
+          "legend": {
+            "0": "只有外观问题，功能正常",
+            "1": "功能异常，但有可用替代办法",
+            "2": "功能异常且无法继续工作，没有替代办法"
+          },
+          "probabilities": {
+            "0": 1,
+            "1": 0,
+            "2": 0
+          },
+          "score": 0,
+          "type": "score"
+        }
+      },
+      "usage": {
+        "input_tokens": 751,
+        "output_tokens": 53
+      }
+    },
+    "upstream_attempts": 1,
+    "cached_input_tokens": 512,
+    "latency_ms": 1215.51,
+    "checks": [
+      {
+        "question": "priority",
+        "type": "score",
+        "expected": 0,
+        "actual": 0,
+        "pass": true
+      }
+    ]
+  },
+  {
+    "id": "severity_workaround",
+    "group": "holdout",
+    "questions": 1,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "priority": {
+          "confidence": 0.85,
+          "legend": {
+            "0": "只有外观问题，功能正常",
+            "1": "功能异常，但有可用替代办法",
+            "2": "功能异常且无法继续工作，没有替代办法"
+          },
+          "probabilities": {
+            "0": 0.05,
+            "1": 0.9,
+            "2": 0.05
+          },
+          "score": 1,
+          "type": "score"
+        }
+      },
+      "usage": {
+        "input_tokens": 753,
+        "output_tokens": 59
+      }
+    },
+    "upstream_attempts": 1,
+    "cached_input_tokens": 512,
+    "latency_ms": 700.91,
+    "checks": [
+      {
+        "question": "priority",
+        "type": "score",
+        "expected": 1,
+        "actual": 1,
+        "pass": true
+      }
+    ]
+  },
+  {
+    "id": "severity_blocked",
+    "group": "holdout",
+    "questions": 1,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "priority": {
+          "confidence": 0.925,
+          "legend": {
+            "0": "只有外观问题，功能正常",
+            "1": "功能异常，但有可用替代办法",
+            "2": "功能异常且无法继续工作，没有替代办法"
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0.05,
+            "2": 0.95
+          },
+          "score": 1.95,
+          "type": "score"
+        }
+      },
+      "usage": {
+        "input_tokens": 754,
+        "output_tokens": 59
+      }
+    },
+    "upstream_attempts": 1,
+    "cached_input_tokens": 512,
+    "latency_ms": 874.17,
+    "checks": [
+      {
+        "question": "priority",
+        "type": "score",
+        "expected": 2,
+        "actual": 2,
+        "pass": true
+      }
+    ]
+  },
+  {
+    "id": "inventory",
+    "group": "holdout",
+    "questions": 1,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "available": {
+          "noul": 0,
+          "type": "noul"
+        }
+      },
+      "usage": {
+        "input_tokens": 631,
+        "output_tokens": 38
+      }
+    },
+    "upstream_attempts": 1,
+    "cached_input_tokens": 384,
+    "latency_ms": 557.68,
+    "checks": [
+      {
+        "question": "available",
+        "type": "noul",
+        "expected": false,
+        "actual": false,
+        "pass": true
+      }
+    ]
+  },
+  {
+    "id": "languages",
+    "group": "holdout",
+    "questions": 1,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "language": {
+          "choice": "es",
+          "confidence": 1,
+          "probabilities": {
+            "en": 0,
+            "es": 1,
+            "fr": 0
+          },
+          "type": "choice"
+        }
+      },
+      "usage": {
+        "input_tokens": 723,
+        "output_tokens": 53
+      }
+    },
+    "upstream_attempts": 1,
+    "cached_input_tokens": 512,
+    "latency_ms": 845.37,
+    "checks": [
+      {
+        "question": "language",
+        "type": "choice",
+        "expected": "es",
+        "actual": "es",
+        "pass": true
+      }
+    ]
+  },
+  {
+    "id": "nested",
+    "group": "holdout",
+    "questions": 2,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "refund": {
+          "noul": 0,
+          "type": "noul"
+        },
+        "route": {
+          "choice": "address",
+          "confidence": 1,
+          "probabilities": {
+            "address": 1,
+            "other": 0,
+            "refund": 0
+          },
+          "type": "choice"
+        }
+      },
+      "usage": {
+        "input_tokens": 798,
+        "output_tokens": 61
+      }
+    },
+    "upstream_attempts": 1,
+    "cached_input_tokens": 640,
+    "latency_ms": 903.0,
+    "checks": [
+      {
+        "question": "route",
+        "type": "choice",
+        "expected": "address",
+        "actual": "address",
+        "pass": true
+      },
+      {
+        "question": "refund",
+        "type": "noul",
+        "expected": false,
+        "actual": false,
+        "pass": true
+      }
+    ]
+  },
+  {
+    "id": "injected_review",
+    "group": "holdout",
+    "questions": 1,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "sentiment": {
+          "choice": "negative",
+          "confidence": 0.955,
+          "probabilities": {
+            "negative": 0.97,
+            "neutral": 0.02,
+            "positive": 0.01
+          },
+          "type": "choice"
+        }
+      },
+      "usage": {
+        "input_tokens": 743,
+        "output_tokens": 59
+      }
+    },
+    "upstream_attempts": 1,
+    "cached_input_tokens": 512,
+    "latency_ms": 1092.67,
+    "checks": [
+      {
+        "question": "sentiment",
+        "type": "choice",
+        "expected": "negative",
+        "actual": "negative",
+        "pass": true
+      }
+    ]
+  },
+  {
+    "id": "unknown",
+    "group": "holdout",
+    "questions": 1,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "payment": {
+          "choice": "unknown",
+          "confidence": 1,
+          "probabilities": {
+            "card": 0,
+            "cash": 0,
+            "unknown": 1
+          },
+          "type": "choice"
+        }
+      },
+      "usage": {
+        "input_tokens": 726,
+        "output_tokens": 53
+      }
+    },
+    "upstream_attempts": 1,
+    "cached_input_tokens": 512,
+    "latency_ms": 905.72,
+    "checks": [
+      {
+        "question": "payment",
+        "type": "choice",
+        "expected": "unknown",
+        "actual": "unknown",
+        "pass": true
+      }
+    ]
+  }
+]

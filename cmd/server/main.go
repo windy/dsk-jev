@@ -9,6 +9,7 @@ import (
 	"net/url"
 	"os"
 	"os/signal"
+	"strconv"
 	"syscall"
 	"time"
 )
@@ -34,6 +35,26 @@ func main() {
 	if e != nil || c.Timeout <= 0 {
 		slog.Error("invalid UPSTREAM_TIMEOUT")
 		os.Exit(1)
+	}
+	c.MaxRetries, e = strconv.Atoi(env("MAX_RETRIES", "3"))
+	if e != nil || c.MaxRetries < 0 || c.MaxRetries > 10 {
+		slog.Error("MAX_RETRIES must be 0..10")
+		os.Exit(1)
+	}
+	mode := env("PROMPT_MODE", "standard")
+	if mode != "compact" && mode != "standard" {
+		slog.Error("PROMPT_MODE must be compact or standard")
+		os.Exit(1)
+	}
+	c.CompactPrompt = mode == "compact"
+	if path := os.Getenv("USAGE_LEDGER_PATH"); path != "" {
+		ledger, err := decision.OpenUsageLedger(path)
+		if err != nil {
+			slog.Error("cannot open usage ledger", "error", err)
+			os.Exit(1)
+		}
+		defer ledger.Close()
+		c.RecordAttempt = ledger.Record
 	}
 	srv := &http.Server{Addr: env("LISTEN_ADDR", "127.0.0.1:8080"), Handler: decision.New(c), ReadHeaderTimeout: 5 * time.Second, ReadTimeout: 15 * time.Second, WriteTimeout: c.Timeout + 10*time.Second, IdleTimeout: 60 * time.Second}
 	ctx, stop := signal.NotifyContext(context.Background(), os.Interrupt, syscall.SIGTERM)

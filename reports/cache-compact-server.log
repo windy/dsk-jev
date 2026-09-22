@@ -1,0 +1,13 @@
+2026/09/22 15:59:29 INFO listening addr=127.0.0.1:50676 upstream_model=deepseek-flash
+2026/09/22 15:59:29 INFO upstream attempt attempt=1 template=b7bb9e3ddecf96c9 questions=3 latency_ms=733 reason=success usage_known=true input_tokens=804 cached_tokens=128 output_tokens=96
+2026/09/22 15:59:30 INFO upstream attempt attempt=1 template=b7bb9e3ddecf96c9 questions=3 latency_ms=761 reason=success usage_known=true input_tokens=803 cached_tokens=640 output_tokens=84
+2026/09/22 15:59:31 INFO upstream attempt attempt=1 template=b7bb9e3ddecf96c9 questions=3 latency_ms=1050 reason=success usage_known=true input_tokens=803 cached_tokens=640 output_tokens=84
+2026/09/22 15:59:32 INFO upstream attempt attempt=1 template=b7bb9e3ddecf96c9 questions=3 latency_ms=655 reason=success usage_known=true input_tokens=804 cached_tokens=640 output_tokens=84
+2026/09/22 15:59:33 INFO upstream attempt attempt=1 template=b7bb9e3ddecf96c9 questions=3 latency_ms=774 reason=success usage_known=true input_tokens=803 cached_tokens=640 output_tokens=90
+2026/09/22 15:59:34 INFO upstream attempt attempt=1 template=b7bb9e3ddecf96c9 questions=3 latency_ms=1207 reason=success usage_known=true input_tokens=803 cached_tokens=640 output_tokens=84
+2026/09/22 15:59:35 INFO upstream attempt attempt=1 template=b7bb9e3ddecf96c9 questions=3 latency_ms=688 reason=success usage_known=true input_tokens=804 cached_tokens=640 output_tokens=84
+2026/09/22 15:59:35 INFO upstream attempt attempt=1 template=b7bb9e3ddecf96c9 questions=3 latency_ms=615 reason=success usage_known=true input_tokens=803 cached_tokens=640 output_tokens=90
+2026/09/22 15:59:36 INFO upstream attempt attempt=1 template=b7bb9e3ddecf96c9 questions=3 latency_ms=757 reason=success usage_known=true input_tokens=803 cached_tokens=640 output_tokens=84
+2026/09/22 15:59:37 INFO upstream attempt attempt=1 template=b7bb9e3ddecf96c9 questions=3 latency_ms=984 reason=success usage_known=true input_tokens=804 cached_tokens=640 output_tokens=84
+2026/09/22 15:59:38 INFO upstream attempt attempt=1 template=b7bb9e3ddecf96c9 questions=3 latency_ms=853 reason=success usage_known=true input_tokens=803 cached_tokens=640 output_tokens=84
+2026/09/22 15:59:39 INFO upstream attempt attempt=1 template=b7bb9e3ddecf96c9 questions=3 latency_ms=844 reason=success usage_known=true input_tokens=803 cached_tokens=640 output_tokens=90

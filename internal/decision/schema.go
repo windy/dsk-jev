@@ -1,6 +1,7 @@
 package decision
 
 import (
+	"bytes"
 	"encoding/json"
 	"fmt"
 	"math"
@@ -71,7 +72,7 @@ func compile(r Request) ([]compiledQuestion, error) {
 		if !description(q.Instructions, false) {
 			return fail()
 		}
-		c := compiledQuestion{ID: id, Key: fmt.Sprintf("q%d", len(out)), Type: q.Type, Instructions: q.Instructions}
+		c := compiledQuestion{ID: id, Key: fmt.Sprintf("q%d", len(out)), Type: q.Type, Instructions: canonicalJSON(q.Instructions)}
 		switch q.Type {
 		case "choice":
 			var m map[string]json.RawMessage
@@ -85,6 +86,9 @@ func compile(r Request) ([]compiledQuestion, error) {
 				c.Labels = append(c.Labels, k)
 			}
 			sort.Strings(c.Labels)
+			for k, v := range m {
+				m[k] = canonicalJSON(v)
+			}
 			c.Criteria = m
 		case "score":
 			var levels []json.RawMessage
@@ -100,7 +104,7 @@ func compile(r Request) ([]compiledQuestion, error) {
 				c.Labels = append(c.Labels, k)
 				var s string
 				if json.Unmarshal(v, &s) != nil {
-					b, _ := json.Marshal(v)
+					b, _ := json.Marshal(canonicalJSON(v))
 					s = string(b)
 				}
 				c.Legend[k] = s
@@ -116,6 +120,9 @@ func compile(r Request) ([]compiledQuestion, error) {
 					if (k != "true" && k != "false") || !description(v, false) {
 						return fail()
 					}
+				}
+				for k, v := range m {
+					m[k] = canonicalJSON(v)
 				}
 				c.Criteria = m
 			}
@@ -275,4 +282,20 @@ func outputSchema(qs []compiledQuestion) map[string]any {
 		keys = append(keys, q.Key)
 	}
 	return object(map[string]any{"answers": object(props, keys)}, []string{"answers"})
+}
+
+// Canonicalize descriptions so whitespace and object-key order from callers do
+// not unnecessarily change the stable upstream prefix. Preserve JSON numbers.
+func canonicalJSON(raw json.RawMessage) json.RawMessage {
+	dec := json.NewDecoder(bytes.NewReader(raw))
+	dec.UseNumber()
+	var value any
+	if dec.Decode(&value) != nil {
+		return raw
+	}
+	b, err := json.Marshal(value)
+	if err != nil {
+		return raw
+	}
+	return b
 }

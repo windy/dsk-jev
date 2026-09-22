@@ -1,0 +1,10 @@
+{
+  "version": "2026-09-22",
+  "currency": "USD",
+  "unit": "per_million_tokens",
+  "sources": ["https://docs.typesafe.ai/models", "https://api-docs.deepseek.com/quick_start/pricing/"],
+  "note": "Public list-price estimates, not invoices. DeepSeek peak/offpeak scenarios shown separately; excludes credits, negotiated prices, tax and proxy hosting.",
+  "jev": {"input": "0.042", "output": "0"},
+  "deepseek_peak": {"input": "0.30", "cached": "0.006", "output": "1.20"},
+  "deepseek_offpeak": {"input": "0.15", "cached": "0.003", "output": "0.60"}
+}

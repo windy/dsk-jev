@@ -1,0 +1,17 @@
+2026/09/22 15:59:17 INFO listening addr=127.0.0.1:50606 upstream_model=deepseek-flash
+2026/09/22 15:59:18 INFO upstream attempt attempt=1 template=4f623f4a1e362500 questions=3 latency_ms=947 reason=success usage_known=true input_tokens=969 cached_tokens=512 output_tokens=84
+2026/09/22 15:59:19 INFO upstream attempt attempt=1 template=4f623f4a1e362500 questions=3 latency_ms=926 reason=success usage_known=true input_tokens=968 cached_tokens=768 output_tokens=90
+2026/09/22 15:59:21 INFO upstream attempt attempt=1 template=4f623f4a1e362500 questions=3 latency_ms=1900 reason=success usage_known=true input_tokens=968 cached_tokens=768 output_tokens=98
+2026/09/22 15:59:22 INFO upstream attempt attempt=1 template=4f623f4a1e362500 questions=3 latency_ms=822 reason=success usage_known=true input_tokens=969 cached_tokens=768 output_tokens=98
+2026/09/22 15:59:23 INFO upstream attempt attempt=1 template=4f623f4a1e362500 questions=3 latency_ms=1135 reason=success usage_known=true input_tokens=968 cached_tokens=768 output_tokens=90
+2026/09/22 15:59:24 INFO upstream attempt attempt=1 template=4f623f4a1e362500 questions=3 latency_ms=1012 reason=success usage_known=true input_tokens=968 cached_tokens=768 output_tokens=84
+2026/09/22 15:59:25 INFO upstream attempt attempt=1 template=4f623f4a1e362500 questions=3 latency_ms=702 reason=success usage_known=true input_tokens=969 cached_tokens=768 output_tokens=84
+2026/09/22 15:59:25 INFO upstream attempt attempt=1 template=4f623f4a1e362500 questions=3 latency_ms=530 reason=success usage_known=true input_tokens=968 cached_tokens=768 output_tokens=90
+2026/09/22 15:59:26 INFO upstream attempt attempt=1 template=4f623f4a1e362500 questions=3 latency_ms=624 reason=success usage_known=true input_tokens=968 cached_tokens=768 output_tokens=84
+2026/09/22 15:59:27 INFO upstream attempt attempt=1 template=4f623f4a1e362500 questions=3 latency_ms=1048 reason=success usage_known=true input_tokens=969 cached_tokens=768 output_tokens=84
+2026/09/22 15:59:28 INFO upstream attempt attempt=1 template=4f623f4a1e362500 questions=3 latency_ms=888 reason=success usage_known=true input_tokens=968 cached_tokens=768 output_tokens=98
+2026/09/22 15:59:29 INFO upstream attempt attempt=1 template=4f623f4a1e362500 questions=3 latency_ms=779 reason=success usage_known=true input_tokens=968 cached_tokens=768 output_tokens=98
+2026/09/22 15:59:39 INFO upstream attempt attempt=1 template=4f623f4a1e362500 questions=3 latency_ms=747 reason=success usage_known=true input_tokens=969 cached_tokens=768 output_tokens=96
+2026/09/22 15:59:41 INFO upstream attempt attempt=1 template=4f623f4a1e362500 questions=3 latency_ms=1177 reason=success usage_known=true input_tokens=968 cached_tokens=768 output_tokens=90
+2026/09/22 15:59:41 INFO upstream attempt attempt=1 template=4f623f4a1e362500 questions=3 latency_ms=665 reason=success usage_known=true input_tokens=968 cached_tokens=768 output_tokens=84
+2026/09/22 15:59:43 INFO upstream attempt attempt=1 template=4f623f4a1e362500 questions=3 latency_ms=1360 reason=success usage_known=true input_tokens=969 cached_tokens=768 output_tokens=84

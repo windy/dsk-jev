@@ -1,0 +1,1542 @@
+[
+  {
+    "phase": "standard-continuous",
+    "sequence": 1,
+    "state": {
+      "order_id": "ORDER-0000",
+      "product": "智能手机",
+      "paid": true,
+      "shipping": "普通发货即可，不急"
+    },
+    "status": 200,
+    "template": "4f623f4a1e362500",
+    "attempts": 1,
+    "cached_tokens": 512,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "paid": {
+          "noul": 1,
+          "type": "noul"
+        },
+        "priority": {
+          "confidence": 1,
+          "legend": {
+            "0": "不着急，普通发货",
+            "1": "希望尽快，但无确定期限",
+            "2": "明确要求今天发货"
+          },
+          "probabilities": {
+            "0": 1,
+            "1": 0,
+            "2": 0
+          },
+          "score": 0,
+          "type": "score"
+        },
+        "product": {
+          "choice": "phone",
+          "confidence": 1,
+          "probabilities": {
+            "camera": 0,
+            "laptop": 0,
+            "phone": 1
+          },
+          "type": "choice"
+        }
+      },
+      "usage": {
+        "input_tokens": 969,
+        "output_tokens": 84
+      }
+    },
+    "hit_ratio": 0.5283797729618163,
+    "estimated_peak_usd": 0.00024097199999999997,
+    "latency_ms": 949.08
+  },
+  {
+    "phase": "standard-continuous",
+    "sequence": 2,
+    "state": {
+      "order_id": "ORDER-0001",
+      "product": "笔记本电脑",
+      "paid": false,
+      "shipping": "请尽快安排发货"
+    },
+    "status": 200,
+    "template": "4f623f4a1e362500",
+    "attempts": 1,
+    "cached_tokens": 768,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "paid": {
+          "noul": 0,
+          "type": "noul"
+        },
+        "priority": {
+          "confidence": 0.7749999999999999,
+          "legend": {
+            "0": "不着急，普通发货",
+            "1": "希望尽快，但无确定期限",
+            "2": "明确要求今天发货"
+          },
+          "probabilities": {
+            "0": 0.1,
+            "1": 0.85,
+            "2": 0.05
+          },
+          "score": 0.95,
+          "type": "score"
+        },
+        "product": {
+          "choice": "laptop",
+          "confidence": 1,
+          "probabilities": {
+            "camera": 0,
+            "laptop": 1,
+            "phone": 0
+          },
+          "type": "choice"
+        }
+      },
+      "usage": {
+        "input_tokens": 968,
+        "output_tokens": 90
+      }
+    },
+    "hit_ratio": 0.7933884297520661,
+    "estimated_peak_usd": 0.000172608,
+    "latency_ms": 929.71
+  },
+  {
+    "phase": "standard-continuous",
+    "sequence": 3,
+    "state": {
+      "order_id": "ORDER-0002",
+      "product": "数码相机",
+      "paid": true,
+      "shipping": "请今天发货"
+    },
+    "status": 200,
+    "template": "4f623f4a1e362500",
+    "attempts": 1,
+    "cached_tokens": 768,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "paid": {
+          "noul": 1,
+          "type": "noul"
+        },
+        "priority": {
+          "confidence": 1,
+          "legend": {
+            "0": "不着急，普通发货",
+            "1": "希望尽快，但无确定期限",
+            "2": "明确要求今天发货"
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 1
+          },
+          "score": 2,
+          "type": "score"
+        },
+        "product": {
+          "choice": "camera",
+          "confidence": 1,
+          "probabilities": {
+            "camera": 1,
+            "laptop": 0,
+            "phone": 0
+          },
+          "type": "choice"
+        }
+      },
+      "usage": {
+        "input_tokens": 968,
+        "output_tokens": 98
+      }
+    },
+    "hit_ratio": 0.7933884297520661,
+    "estimated_peak_usd": 0.000182208,
+    "latency_ms": 1903.68
+  },
+  {
+    "phase": "standard-continuous",
+    "sequence": 4,
+    "state": {
+      "order_id": "ORDER-0003",
+      "product": "智能手机",
+      "paid": false,
+      "shipping": "普通发货即可，不急"
+    },
+    "status": 200,
+    "template": "4f623f4a1e362500",
+    "attempts": 1,
+    "cached_tokens": 768,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "paid": {
+          "noul": 0,
+          "type": "noul"
+        },
+        "priority": {
+          "confidence": 1,
+          "legend": {
+            "0": "不着急，普通发货",
+            "1": "希望尽快，但无确定期限",
+            "2": "明确要求今天发货"
+          },
+          "probabilities": {
+            "0": 1,
+            "1": 0,
+            "2": 0
+          },
+          "score": 0,
+          "type": "score"
+        },
+        "product": {
+          "choice": "phone",
+          "confidence": 1,
+          "probabilities": {
+            "camera": 0,
+            "laptop": 0,
+            "phone": 1
+          },
+          "type": "choice"
+        }
+      },
+      "usage": {
+        "input_tokens": 969,
+        "output_tokens": 98
+      }
+    },
+    "hit_ratio": 0.7925696594427245,
+    "estimated_peak_usd": 0.00018250799999999998,
+    "latency_ms": 826.66
+  },
+  {
+    "phase": "standard-continuous",
+    "sequence": 5,
+    "state": {
+      "order_id": "ORDER-0004",
+      "product": "笔记本电脑",
+      "paid": true,
+      "shipping": "请尽快安排发货"
+    },
+    "status": 200,
+    "template": "4f623f4a1e362500",
+    "attempts": 1,
+    "cached_tokens": 768,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "paid": {
+          "noul": 1,
+          "type": "noul"
+        },
+        "priority": {
+          "confidence": 0.7749999999999999,
+          "legend": {
+            "0": "不着急，普通发货",
+            "1": "希望尽快，但无确定期限",
+            "2": "明确要求今天发货"
+          },
+          "probabilities": {
+            "0": 0.1,
+            "1": 0.85,
+            "2": 0.05
+          },
+          "score": 0.95,
+          "type": "score"
+        },
+        "product": {
+          "choice": "laptop",
+          "confidence": 1,
+          "probabilities": {
+            "camera": 0,
+            "laptop": 1,
+            "phone": 0
+          },
+          "type": "choice"
+        }
+      },
+      "usage": {
+        "input_tokens": 968,
+        "output_tokens": 90
+      }
+    },
+    "hit_ratio": 0.7933884297520661,
+    "estimated_peak_usd": 0.000172608,
+    "latency_ms": 1137.42
+  },
+  {
+    "phase": "standard-continuous",
+    "sequence": 6,
+    "state": {
+      "order_id": "ORDER-0005",
+      "product": "数码相机",
+      "paid": false,
+      "shipping": "请今天发货"
+    },
+    "status": 200,
+    "template": "4f623f4a1e362500",
+    "attempts": 1,
+    "cached_tokens": 768,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "paid": {
+          "noul": 0,
+          "type": "noul"
+        },
+        "priority": {
+          "confidence": 1,
+          "legend": {
+            "0": "不着急，普通发货",
+            "1": "希望尽快，但无确定期限",
+            "2": "明确要求今天发货"
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 1
+          },
+          "score": 2,
+          "type": "score"
+        },
+        "product": {
+          "choice": "camera",
+          "confidence": 1,
+          "probabilities": {
+            "camera": 1,
+            "laptop": 0,
+            "phone": 0
+          },
+          "type": "choice"
+        }
+      },
+      "usage": {
+        "input_tokens": 968,
+        "output_tokens": 84
+      }
+    },
+    "hit_ratio": 0.7933884297520661,
+    "estimated_peak_usd": 0.00016540800000000003,
+    "latency_ms": 1014.28
+  },
+  {
+    "phase": "standard-continuous",
+    "sequence": 7,
+    "state": {
+      "order_id": "ORDER-0006",
+      "product": "智能手机",
+      "paid": true,
+      "shipping": "普通发货即可，不急"
+    },
+    "status": 200,
+    "template": "4f623f4a1e362500",
+    "attempts": 1,
+    "cached_tokens": 768,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "paid": {
+          "noul": 1,
+          "type": "noul"
+        },
+        "priority": {
+          "confidence": 1,
+          "legend": {
+            "0": "不着急，普通发货",
+            "1": "希望尽快，但无确定期限",
+            "2": "明确要求今天发货"
+          },
+          "probabilities": {
+            "0": 1,
+            "1": 0,
+            "2": 0
+          },
+          "score": 0,
+          "type": "score"
+        },
+        "product": {
+          "choice": "phone",
+          "confidence": 1,
+          "probabilities": {
+            "camera": 0,
+            "laptop": 0,
+            "phone": 1
+          },
+          "type": "choice"
+        }
+      },
+      "usage": {
+        "input_tokens": 969,
+        "output_tokens": 84
+      }
+    },
+    "hit_ratio": 0.7925696594427245,
+    "estimated_peak_usd": 0.000165708,
+    "latency_ms": 703.88
+  },
+  {
+    "phase": "standard-continuous",
+    "sequence": 8,
+    "state": {
+      "order_id": "ORDER-0007",
+      "product": "笔记本电脑",
+      "paid": false,
+      "shipping": "请尽快安排发货"
+    },
+    "status": 200,
+    "template": "4f623f4a1e362500",
+    "attempts": 1,
+    "cached_tokens": 768,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "paid": {
+          "noul": 0,
+          "type": "noul"
+        },
+        "priority": {
+          "confidence": 0.85,
+          "legend": {
+            "0": "不着急，普通发货",
+            "1": "希望尽快，但无确定期限",
+            "2": "明确要求今天发货"
+          },
+          "probabilities": {
+            "0": 0.05,
+            "1": 0.9,
+            "2": 0.05
+          },
+          "score": 1,
+          "type": "score"
+        },
+        "product": {
+          "choice": "laptop",
+          "confidence": 1,
+          "probabilities": {
+            "camera": 0,
+            "laptop": 1,
+            "phone": 0
+          },
+          "type": "choice"
+        }
+      },
+      "usage": {
+        "input_tokens": 968,
+        "output_tokens": 90
+      }
+    },
+    "hit_ratio": 0.7933884297520661,
+    "estimated_peak_usd": 0.000172608,
+    "latency_ms": 531.5
+  },
+  {
+    "phase": "standard-continuous",
+    "sequence": 9,
+    "state": {
+      "order_id": "ORDER-0008",
+      "product": "数码相机",
+      "paid": true,
+      "shipping": "请今天发货"
+    },
+    "status": 200,
+    "template": "4f623f4a1e362500",
+    "attempts": 1,
+    "cached_tokens": 768,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "paid": {
+          "noul": 1,
+          "type": "noul"
+        },
+        "priority": {
+          "confidence": 1,
+          "legend": {
+            "0": "不着急，普通发货",
+            "1": "希望尽快，但无确定期限",
+            "2": "明确要求今天发货"
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 1
+          },
+          "score": 2,
+          "type": "score"
+        },
+        "product": {
+          "choice": "camera",
+          "confidence": 1,
+          "probabilities": {
+            "camera": 1,
+            "laptop": 0,
+            "phone": 0
+          },
+          "type": "choice"
+        }
+      },
+      "usage": {
+        "input_tokens": 968,
+        "output_tokens": 84
+      }
+    },
+    "hit_ratio": 0.7933884297520661,
+    "estimated_peak_usd": 0.00016540800000000003,
+    "latency_ms": 627.06
+  },
+  {
+    "phase": "standard-continuous",
+    "sequence": 10,
+    "state": {
+      "order_id": "ORDER-0009",
+      "product": "智能手机",
+      "paid": false,
+      "shipping": "普通发货即可，不急"
+    },
+    "status": 200,
+    "template": "4f623f4a1e362500",
+    "attempts": 1,
+    "cached_tokens": 768,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "paid": {
+          "noul": 0,
+          "type": "noul"
+        },
+        "priority": {
+          "confidence": 1,
+          "legend": {
+            "0": "不着急，普通发货",
+            "1": "希望尽快，但无确定期限",
+            "2": "明确要求今天发货"
+          },
+          "probabilities": {
+            "0": 1,
+            "1": 0,
+            "2": 0
+          },
+          "score": 0,
+          "type": "score"
+        },
+        "product": {
+          "choice": "phone",
+          "confidence": 1,
+          "probabilities": {
+            "camera": 0,
+            "laptop": 0,
+            "phone": 1
+          },
+          "type": "choice"
+        }
+      },
+      "usage": {
+        "input_tokens": 969,
+        "output_tokens": 84
+      }
+    },
+    "hit_ratio": 0.7925696594427245,
+    "estimated_peak_usd": 0.000165708,
+    "latency_ms": 1049.16
+  },
+  {
+    "phase": "standard-continuous",
+    "sequence": 11,
+    "state": {
+      "order_id": "ORDER-0010",
+      "product": "笔记本电脑",
+      "paid": true,
+      "shipping": "请尽快安排发货"
+    },
+    "status": 200,
+    "template": "4f623f4a1e362500",
+    "attempts": 1,
+    "cached_tokens": 768,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "paid": {
+          "noul": 1,
+          "type": "noul"
+        },
+        "priority": {
+          "confidence": 0.85,
+          "legend": {
+            "0": "不着急，普通发货",
+            "1": "希望尽快，但无确定期限",
+            "2": "明确要求今天发货"
+          },
+          "probabilities": {
+            "0": 0.05,
+            "1": 0.9,
+            "2": 0.05
+          },
+          "score": 1,
+          "type": "score"
+        },
+        "product": {
+          "choice": "laptop",
+          "confidence": 1,
+          "probabilities": {
+            "camera": 0,
+            "laptop": 1,
+            "phone": 0
+          },
+          "type": "choice"
+        }
+      },
+      "usage": {
+        "input_tokens": 968,
+        "output_tokens": 98
+      }
+    },
+    "hit_ratio": 0.7933884297520661,
+    "estimated_peak_usd": 0.000182208,
+    "latency_ms": 889.73
+  },
+  {
+    "phase": "standard-continuous",
+    "sequence": 12,
+    "state": {
+      "order_id": "ORDER-0011",
+      "product": "数码相机",
+      "paid": false,
+      "shipping": "请今天发货"
+    },
+    "status": 200,
+    "template": "4f623f4a1e362500",
+    "attempts": 1,
+    "cached_tokens": 768,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "paid": {
+          "noul": 0,
+          "type": "noul"
+        },
+        "priority": {
+          "confidence": 1,
+          "legend": {
+            "0": "不着急，普通发货",
+            "1": "希望尽快，但无确定期限",
+            "2": "明确要求今天发货"
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 1
+          },
+          "score": 2,
+          "type": "score"
+        },
+        "product": {
+          "choice": "camera",
+          "confidence": 1,
+          "probabilities": {
+            "camera": 1,
+            "laptop": 0,
+            "phone": 0
+          },
+          "type": "choice"
+        }
+      },
+      "usage": {
+        "input_tokens": 968,
+        "output_tokens": 98
+      }
+    },
+    "hit_ratio": 0.7933884297520661,
+    "estimated_peak_usd": 0.000182208,
+    "latency_ms": 780.71
+  },
+  {
+    "phase": "compact-continuous",
+    "sequence": 1,
+    "state": {
+      "order_id": "ORDER-0012",
+      "product": "智能手机",
+      "paid": true,
+      "shipping": "普通发货即可，不急"
+    },
+    "status": 200,
+    "template": "b7bb9e3ddecf96c9",
+    "attempts": 1,
+    "cached_tokens": 128,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "paid": {
+          "noul": 1,
+          "type": "noul"
+        },
+        "priority": {
+          "confidence": 0.925,
+          "legend": {
+            "0": "不着急，普通发货",
+            "1": "希望尽快，但无确定期限",
+            "2": "明确要求今天发货"
+          },
+          "probabilities": {
+            "0": 0.96,
+            "1": 0.03,
+            "2": 0.01
+          },
+          "score": 0.05,
+          "type": "score"
+        },
+        "product": {
+          "choice": "phone",
+          "confidence": 0.94,
+          "probabilities": {
+            "camera": 0.02,
+            "laptop": 0.02,
+            "phone": 0.96
+          },
+          "type": "choice"
+        }
+      },
+      "usage": {
+        "input_tokens": 804,
+        "output_tokens": 96
+      }
+    },
+    "hit_ratio": 0.15920398009950248,
+    "estimated_peak_usd": 0.000318768,
+    "latency_ms": 734.53
+  },
+  {
+    "phase": "compact-continuous",
+    "sequence": 2,
+    "state": {
+      "order_id": "ORDER-0013",
+      "product": "笔记本电脑",
+      "paid": false,
+      "shipping": "请尽快安排发货"
+    },
+    "status": 200,
+    "template": "b7bb9e3ddecf96c9",
+    "attempts": 1,
+    "cached_tokens": 640,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "paid": {
+          "noul": 0,
+          "type": "noul"
+        },
+        "priority": {
+          "confidence": 1,
+          "legend": {
+            "0": "不着急，普通发货",
+            "1": "希望尽快，但无确定期限",
+            "2": "明确要求今天发货"
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 1,
+            "2": 0
+          },
+          "score": 1,
+          "type": "score"
+        },
+        "product": {
+          "choice": "laptop",
+          "confidence": 1,
+          "probabilities": {
+            "camera": 0,
+            "laptop": 1,
+            "phone": 0
+          },
+          "type": "choice"
+        }
+      },
+      "usage": {
+        "input_tokens": 803,
+        "output_tokens": 84
+      }
+    },
+    "hit_ratio": 0.797011207970112,
+    "estimated_peak_usd": 0.00015354,
+    "latency_ms": 763.46
+  },
+  {
+    "phase": "compact-continuous",
+    "sequence": 3,
+    "state": {
+      "order_id": "ORDER-0014",
+      "product": "数码相机",
+      "paid": true,
+      "shipping": "请今天发货"
+    },
+    "status": 200,
+    "template": "b7bb9e3ddecf96c9",
+    "attempts": 1,
+    "cached_tokens": 640,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "paid": {
+          "noul": 1,
+          "type": "noul"
+        },
+        "priority": {
+          "confidence": 1,
+          "legend": {
+            "0": "不着急，普通发货",
+            "1": "希望尽快，但无确定期限",
+            "2": "明确要求今天发货"
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 1
+          },
+          "score": 2,
+          "type": "score"
+        },
+        "product": {
+          "choice": "camera",
+          "confidence": 1,
+          "probabilities": {
+            "camera": 1,
+            "laptop": 0,
+            "phone": 0
+          },
+          "type": "choice"
+        }
+      },
+      "usage": {
+        "input_tokens": 803,
+        "output_tokens": 84
+      }
+    },
+    "hit_ratio": 0.797011207970112,
+    "estimated_peak_usd": 0.00015354,
+    "latency_ms": 1051.71
+  },
+  {
+    "phase": "compact-continuous",
+    "sequence": 4,
+    "state": {
+      "order_id": "ORDER-0015",
+      "product": "智能手机",
+      "paid": false,
+      "shipping": "普通发货即可，不急"
+    },
+    "status": 200,
+    "template": "b7bb9e3ddecf96c9",
+    "attempts": 1,
+    "cached_tokens": 640,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "paid": {
+          "noul": 0,
+          "type": "noul"
+        },
+        "priority": {
+          "confidence": 1,
+          "legend": {
+            "0": "不着急，普通发货",
+            "1": "希望尽快，但无确定期限",
+            "2": "明确要求今天发货"
+          },
+          "probabilities": {
+            "0": 1,
+            "1": 0,
+            "2": 0
+          },
+          "score": 0,
+          "type": "score"
+        },
+        "product": {
+          "choice": "phone",
+          "confidence": 1,
+          "probabilities": {
+            "camera": 0,
+            "laptop": 0,
+            "phone": 1
+          },
+          "type": "choice"
+        }
+      },
+      "usage": {
+        "input_tokens": 804,
+        "output_tokens": 84
+      }
+    },
+    "hit_ratio": 0.7960199004975125,
+    "estimated_peak_usd": 0.00015383999999999998,
+    "latency_ms": 656.78
+  },
+  {
+    "phase": "compact-continuous",
+    "sequence": 5,
+    "state": {
+      "order_id": "ORDER-0016",
+      "product": "笔记本电脑",
+      "paid": true,
+      "shipping": "请尽快安排发货"
+    },
+    "status": 200,
+    "template": "b7bb9e3ddecf96c9",
+    "attempts": 1,
+    "cached_tokens": 640,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "paid": {
+          "noul": 1,
+          "type": "noul"
+        },
+        "priority": {
+          "confidence": 0.925,
+          "legend": {
+            "0": "不着急，普通发货",
+            "1": "希望尽快，但无确定期限",
+            "2": "明确要求今天发货"
+          },
+          "probabilities": {
+            "0": 0.02,
+            "1": 0.95,
+            "2": 0.03
+          },
+          "score": 1.01,
+          "type": "score"
+        },
+        "product": {
+          "choice": "laptop",
+          "confidence": 1,
+          "probabilities": {
+            "camera": 0,
+            "laptop": 1,
+            "phone": 0
+          },
+          "type": "choice"
+        }
+      },
+      "usage": {
+        "input_tokens": 803,
+        "output_tokens": 90
+      }
+    },
+    "hit_ratio": 0.797011207970112,
+    "estimated_peak_usd": 0.00016074,
+    "latency_ms": 775.93
+  },
+  {
+    "phase": "compact-continuous",
+    "sequence": 6,
+    "state": {
+      "order_id": "ORDER-0017",
+      "product": "数码相机",
+      "paid": false,
+      "shipping": "请今天发货"
+    },
+    "status": 200,
+    "template": "b7bb9e3ddecf96c9",
+    "attempts": 1,
+    "cached_tokens": 640,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "paid": {
+          "noul": 0,
+          "type": "noul"
+        },
+        "priority": {
+          "confidence": 1,
+          "legend": {
+            "0": "不着急，普通发货",
+            "1": "希望尽快，但无确定期限",
+            "2": "明确要求今天发货"
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 1
+          },
+          "score": 2,
+          "type": "score"
+        },
+        "product": {
+          "choice": "camera",
+          "confidence": 1,
+          "probabilities": {
+            "camera": 1,
+            "laptop": 0,
+            "phone": 0
+          },
+          "type": "choice"
+        }
+      },
+      "usage": {
+        "input_tokens": 803,
+        "output_tokens": 84
+      }
+    },
+    "hit_ratio": 0.797011207970112,
+    "estimated_peak_usd": 0.00015354,
+    "latency_ms": 1208.98
+  },
+  {
+    "phase": "compact-continuous",
+    "sequence": 7,
+    "state": {
+      "order_id": "ORDER-0018",
+      "product": "智能手机",
+      "paid": true,
+      "shipping": "普通发货即可，不急"
+    },
+    "status": 200,
+    "template": "b7bb9e3ddecf96c9",
+    "attempts": 1,
+    "cached_tokens": 640,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "paid": {
+          "noul": 1,
+          "type": "noul"
+        },
+        "priority": {
+          "confidence": 1,
+          "legend": {
+            "0": "不着急，普通发货",
+            "1": "希望尽快，但无确定期限",
+            "2": "明确要求今天发货"
+          },
+          "probabilities": {
+            "0": 1,
+            "1": 0,
+            "2": 0
+          },
+          "score": 0,
+          "type": "score"
+        },
+        "product": {
+          "choice": "phone",
+          "confidence": 1,
+          "probabilities": {
+            "camera": 0,
+            "laptop": 0,
+            "phone": 1
+          },
+          "type": "choice"
+        }
+      },
+      "usage": {
+        "input_tokens": 804,
+        "output_tokens": 84
+      }
+    },
+    "hit_ratio": 0.7960199004975125,
+    "estimated_peak_usd": 0.00015383999999999998,
+    "latency_ms": 690.22
+  },
+  {
+    "phase": "compact-continuous",
+    "sequence": 8,
+    "state": {
+      "order_id": "ORDER-0019",
+      "product": "笔记本电脑",
+      "paid": false,
+      "shipping": "请尽快安排发货"
+    },
+    "status": 200,
+    "template": "b7bb9e3ddecf96c9",
+    "attempts": 1,
+    "cached_tokens": 640,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "paid": {
+          "noul": 0,
+          "type": "noul"
+        },
+        "priority": {
+          "confidence": 0.88,
+          "legend": {
+            "0": "不着急，普通发货",
+            "1": "希望尽快，但无确定期限",
+            "2": "明确要求今天发货"
+          },
+          "probabilities": {
+            "0": 0.05,
+            "1": 0.92,
+            "2": 0.03
+          },
+          "score": 0.98,
+          "type": "score"
+        },
+        "product": {
+          "choice": "laptop",
+          "confidence": 1,
+          "probabilities": {
+            "camera": 0,
+            "laptop": 1,
+            "phone": 0
+          },
+          "type": "choice"
+        }
+      },
+      "usage": {
+        "input_tokens": 803,
+        "output_tokens": 90
+      }
+    },
+    "hit_ratio": 0.797011207970112,
+    "estimated_peak_usd": 0.00016074,
+    "latency_ms": 617.45
+  },
+  {
+    "phase": "compact-continuous",
+    "sequence": 9,
+    "state": {
+      "order_id": "ORDER-0020",
+      "product": "数码相机",
+      "paid": true,
+      "shipping": "请今天发货"
+    },
+    "status": 200,
+    "template": "b7bb9e3ddecf96c9",
+    "attempts": 1,
+    "cached_tokens": 640,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "paid": {
+          "noul": 1,
+          "type": "noul"
+        },
+        "priority": {
+          "confidence": 1,
+          "legend": {
+            "0": "不着急，普通发货",
+            "1": "希望尽快，但无确定期限",
+            "2": "明确要求今天发货"
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 1
+          },
+          "score": 2,
+          "type": "score"
+        },
+        "product": {
+          "choice": "camera",
+          "confidence": 1,
+          "probabilities": {
+            "camera": 1,
+            "laptop": 0,
+            "phone": 0
+          },
+          "type": "choice"
+        }
+      },
+      "usage": {
+        "input_tokens": 803,
+        "output_tokens": 84
+      }
+    },
+    "hit_ratio": 0.797011207970112,
+    "estimated_peak_usd": 0.00015354,
+    "latency_ms": 759.3
+  },
+  {
+    "phase": "compact-continuous",
+    "sequence": 10,
+    "state": {
+      "order_id": "ORDER-0021",
+      "product": "智能手机",
+      "paid": false,
+      "shipping": "普通发货即可，不急"
+    },
+    "status": 200,
+    "template": "b7bb9e3ddecf96c9",
+    "attempts": 1,
+    "cached_tokens": 640,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "paid": {
+          "noul": 0,
+          "type": "noul"
+        },
+        "priority": {
+          "confidence": 1,
+          "legend": {
+            "0": "不着急，普通发货",
+            "1": "希望尽快，但无确定期限",
+            "2": "明确要求今天发货"
+          },
+          "probabilities": {
+            "0": 1,
+            "1": 0,
+            "2": 0
+          },
+          "score": 0,
+          "type": "score"
+        },
+        "product": {
+          "choice": "phone",
+          "confidence": 1,
+          "probabilities": {
+            "camera": 0,
+            "laptop": 0,
+            "phone": 1
+          },
+          "type": "choice"
+        }
+      },
+      "usage": {
+        "input_tokens": 804,
+        "output_tokens": 84
+      }
+    },
+    "hit_ratio": 0.7960199004975125,
+    "estimated_peak_usd": 0.00015383999999999998,
+    "latency_ms": 986.16
+  },
+  {
+    "phase": "compact-continuous",
+    "sequence": 11,
+    "state": {
+      "order_id": "ORDER-0022",
+      "product": "笔记本电脑",
+      "paid": true,
+      "shipping": "请尽快安排发货"
+    },
+    "status": 200,
+    "template": "b7bb9e3ddecf96c9",
+    "attempts": 1,
+    "cached_tokens": 640,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "paid": {
+          "noul": 1,
+          "type": "noul"
+        },
+        "priority": {
+          "confidence": 1,
+          "legend": {
+            "0": "不着急，普通发货",
+            "1": "希望尽快，但无确定期限",
+            "2": "明确要求今天发货"
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 1,
+            "2": 0
+          },
+          "score": 1,
+          "type": "score"
+        },
+        "product": {
+          "choice": "laptop",
+          "confidence": 1,
+          "probabilities": {
+            "camera": 0,
+            "laptop": 1,
+            "phone": 0
+          },
+          "type": "choice"
+        }
+      },
+      "usage": {
+        "input_tokens": 803,
+        "output_tokens": 84
+      }
+    },
+    "hit_ratio": 0.797011207970112,
+    "estimated_peak_usd": 0.00015354,
+    "latency_ms": 854.79
+  },
+  {
+    "phase": "compact-continuous",
+    "sequence": 12,
+    "state": {
+      "order_id": "ORDER-0023",
+      "product": "数码相机",
+      "paid": false,
+      "shipping": "请今天发货"
+    },
+    "status": 200,
+    "template": "b7bb9e3ddecf96c9",
+    "attempts": 1,
+    "cached_tokens": 640,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "paid": {
+          "noul": 0,
+          "type": "noul"
+        },
+        "priority": {
+          "confidence": 0.895,
+          "legend": {
+            "0": "不着急，普通发货",
+            "1": "希望尽快，但无确定期限",
+            "2": "明确要求今天发货"
+          },
+          "probabilities": {
+            "0": 0.02,
+            "1": 0.03,
+            "2": 0.95
+          },
+          "score": 1.93,
+          "type": "score"
+        },
+        "product": {
+          "choice": "camera",
+          "confidence": 1,
+          "probabilities": {
+            "camera": 1,
+            "laptop": 0,
+            "phone": 0
+          },
+          "type": "choice"
+        }
+      },
+      "usage": {
+        "input_tokens": 803,
+        "output_tokens": 90
+      }
+    },
+    "hit_ratio": 0.797011207970112,
+    "estimated_peak_usd": 0.00016074,
+    "latency_ms": 845.55
+  },
+  {
+    "phase": "standard-revisit",
+    "sequence": 1,
+    "state": {
+      "order_id": "ORDER-0024",
+      "product": "智能手机",
+      "paid": true,
+      "shipping": "普通发货即可，不急"
+    },
+    "status": 200,
+    "template": "4f623f4a1e362500",
+    "attempts": 1,
+    "cached_tokens": 768,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "paid": {
+          "noul": 1,
+          "type": "noul"
+        },
+        "priority": {
+          "confidence": 0.8200000000000001,
+          "legend": {
+            "0": "不着急，普通发货",
+            "1": "希望尽快，但无确定期限",
+            "2": "明确要求今天发货"
+          },
+          "probabilities": {
+            "0": 0.9,
+            "1": 0.08,
+            "2": 0.02
+          },
+          "score": 0.12,
+          "type": "score"
+        },
+        "product": {
+          "choice": "phone",
+          "confidence": 0.97,
+          "probabilities": {
+            "camera": 0.01,
+            "laptop": 0.01,
+            "phone": 0.98
+          },
+          "type": "choice"
+        }
+      },
+      "usage": {
+        "input_tokens": 969,
+        "output_tokens": 96
+      }
+    },
+    "hit_ratio": 0.7925696594427245,
+    "estimated_peak_usd": 0.000180108,
+    "latency_ms": 749.1
+  },
+  {
+    "phase": "standard-revisit",
+    "sequence": 2,
+    "state": {
+      "order_id": "ORDER-0025",
+      "product": "笔记本电脑",
+      "paid": false,
+      "shipping": "请尽快安排发货"
+    },
+    "status": 200,
+    "template": "4f623f4a1e362500",
+    "attempts": 1,
+    "cached_tokens": 768,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "paid": {
+          "noul": 0,
+          "type": "noul"
+        },
+        "priority": {
+          "confidence": 0.85,
+          "legend": {
+            "0": "不着急，普通发货",
+            "1": "希望尽快，但无确定期限",
+            "2": "明确要求今天发货"
+          },
+          "probabilities": {
+            "0": 0.05,
+            "1": 0.9,
+            "2": 0.05
+          },
+          "score": 1,
+          "type": "score"
+        },
+        "product": {
+          "choice": "laptop",
+          "confidence": 1,
+          "probabilities": {
+            "camera": 0,
+            "laptop": 1,
+            "phone": 0
+          },
+          "type": "choice"
+        }
+      },
+      "usage": {
+        "input_tokens": 968,
+        "output_tokens": 90
+      }
+    },
+    "hit_ratio": 0.7933884297520661,
+    "estimated_peak_usd": 0.000172608,
+    "latency_ms": 1179.96
+  },
+  {
+    "phase": "standard-revisit",
+    "sequence": 3,
+    "state": {
+      "order_id": "ORDER-0026",
+      "product": "数码相机",
+      "paid": true,
+      "shipping": "请今天发货"
+    },
+    "status": 200,
+    "template": "4f623f4a1e362500",
+    "attempts": 1,
+    "cached_tokens": 768,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "paid": {
+          "noul": 1,
+          "type": "noul"
+        },
+        "priority": {
+          "confidence": 1,
+          "legend": {
+            "0": "不着急，普通发货",
+            "1": "希望尽快，但无确定期限",
+            "2": "明确要求今天发货"
+          },
+          "probabilities": {
+            "0": 0,
+            "1": 0,
+            "2": 1
+          },
+          "score": 2,
+          "type": "score"
+        },
+        "product": {
+          "choice": "camera",
+          "confidence": 1,
+          "probabilities": {
+            "camera": 1,
+            "laptop": 0,
+            "phone": 0
+          },
+          "type": "choice"
+        }
+      },
+      "usage": {
+        "input_tokens": 968,
+        "output_tokens": 84
+      }
+    },
+    "hit_ratio": 0.7933884297520661,
+    "estimated_peak_usd": 0.00016540800000000003,
+    "latency_ms": 666.87
+  },
+  {
+    "phase": "standard-revisit",
+    "sequence": 4,
+    "state": {
+      "order_id": "ORDER-0027",
+      "product": "智能手机",
+      "paid": false,
+      "shipping": "普通发货即可，不急"
+    },
+    "status": 200,
+    "template": "4f623f4a1e362500",
+    "attempts": 1,
+    "cached_tokens": 768,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "paid": {
+          "noul": 0,
+          "type": "noul"
+        },
+        "priority": {
+          "confidence": 1,
+          "legend": {
+            "0": "不着急，普通发货",
+            "1": "希望尽快，但无确定期限",
+            "2": "明确要求今天发货"
+          },
+          "probabilities": {
+            "0": 1,
+            "1": 0,
+            "2": 0
+          },
+          "score": 0,
+          "type": "score"
+        },
+        "product": {
+          "choice": "phone",
+          "confidence": 1,
+          "probabilities": {
+            "camera": 0,
+            "laptop": 0,
+            "phone": 1
+          },
+          "type": "choice"
+        }
+      },
+      "usage": {
+        "input_tokens": 969,
+        "output_tokens": 84
+      }
+    },
+    "hit_ratio": 0.7925696594427245,
+    "estimated_peak_usd": 0.000165708,
+    "latency_ms": 1363.0
+  }
+]

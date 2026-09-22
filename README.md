@@ -39,10 +39,10 @@ curl http://127.0.0.1:8080/v1/systemone \
 - Score：2–10 个等级，返回 score / probabilities / confidence / legend；从 0 编号。
 - Noul：返回 noul 概率，不添加 confidence。
 - 支持字符串、对象、数组形式的 instructions / 描述；Choice 描述可为 null。
-- `usage.input_tokens/output_tokens` 为实际 DeepSeek 用量，而非模拟 Jev 的 token 数。
+- `usage.input_tokens/output_tokens` 累计该请求所有尝试的实际 DeepSeek 用量（包括被拒绝的输出），而非模拟 Jev 的 token 数。
 
 实现保留完整概率输出。模型生成按问题 ID、选项 ID 对应的概率对象，Go 恢复客户端 ID、选项名称、
-等级说明并计算加权分数。客户端问题 ID 映射成 q0/q1 等内部 ID；固定问题定义位于 system 前缀，动态 state 在 user 消息。
+等级说明并计算加权分数。客户端问题 ID 映射成 q0/q1 等内部 ID；固定规则放在 system、问题定义放在工具 Schema，动态 state 在 user 消息。
 Choice 选项排序稳定，平局按排序后的首个选项处理。
 
 置信度公式参考 TypeSafe 官方开源适配器：Choice 将最高概率从均匀分布基线线性缩放；
@@ -55,11 +55,11 @@ DeepSeek 生成的概率尚未通过独立校准，接口兼容不代表与 Jev 
 - 上游 429 → 429；503/529 → 529，保留 Retry-After。
 - 上游鉴权失败、其他非成功状态、非法概率或截断 → 502；请求超时 → 504。
 - 不向客户端透传上游错误正文或密钥；不记录输入内容。校验失败日志记录具体原因；成功及校验失败的已解析上游响应均记录 token 用量。
-- 不自动重试，避免隐藏费用。SDK 可能自行重试，应按应用需要配置。
+- 默认最多 3 次重试（首次＋重试最多 4 次），`MAX_RETRIES=0` 可禁用。仅重试临时错误/格式校验失败；不会因某个语义答案与预期不符而重试。SDK 也可能重试，调用方需避免叠加放大请求数。
 - 概率须落在 [0,1]，总和只容忍 0.02 的舍入误差并归一化；不把非法数据补成确定答案。
 - 请求体上限 4 MiB，估算输出预算上限 32768 tokens，超出返回 422。
   这些是本实现的资源限制，不等同于 Jev 原生 token 限制。
-- 一个批次调用一次 DeepSeek；概率仍然顺序生成，不具备 Jev 原生并行模型特性。
+- 每次尝试调用一次 DeepSeek；部分题目有效时只补算失败题目。概率仍然顺序生成，不具备 Jev 原生并行模型特性。
 - 当前未实现多租户、计费存储和网关限流。
 
 ## 验证
@@ -124,7 +124,7 @@ python3 scripts/live_eval.py
 输出到 `reports/live-results.json` 和 `reports/live-summary.json`，会覆盖上次结果。
 必要时通过 `DSK_JEV_BINARY` 指定已构建的可执行文件。
 首轮结果及失败明细见 [评测报告](reports/live-evaluation.md)。
-本评测包含真实 API 费用；没有自动重试。
+本评测包含真实 API 费用；当前默认启用最多 3 次服务端重试，结果含尝试次数及累计用量。
 
 使用相同固定用例评测官方 Jev：
 
@@ -136,15 +136,15 @@ python3 scripts/jev_eval.py
 写入 `reports/jev-results.json` 和 `reports/jev-summary.json`，不覆盖 DeepSeek 数据。
 首轮同集对比见 [Jev 对比报告](reports/jev-comparison.md)。
 
-### v2 优化评测
+### v2 历史优化评测
 
 外部 Jev 协议不变。内部概率通过显式问题/选项键绑定，使用 DeepSeek beta 的 strict 工具调用，Schema 声明所有字段必填、禁止额外字段、概率数字范围为 [0,1]。Go 继续检查键、概率范围和总和，拒绝不合法响应。
-保持单次请求、不重试以及原有概率校验，不靠放宽校验提高成功率。结构约束并不保证语义正确或概率校准。
+v2 历史报告使用单次请求、不重试及原有概率校验。结构约束并不保证语义正确或概率校准。
 参考：https://api-docs.deepseek.com/guides/tool_calls/#strict-mode-beta
 
 ```sh
-EVAL_PREFIX=v2-strict python3 scripts/live_eval.py
-EVAL_PREFIX=v2-strict-holdout EVAL_CASES=evals/holdout.json python3 scripts/live_eval.py
+MAX_RETRIES=0 PROMPT_MODE=standard EVAL_PREFIX=v2-recheck python3 scripts/live_eval.py
+MAX_RETRIES=0 PROMPT_MODE=standard EVAL_PREFIX=v2-holdout-recheck EVAL_CASES=evals/holdout.json python3 scripts/live_eval.py
 ```
 
 前者复用原始 44 个请求，后者使用优化后首次评测前固定的 12 个新请求。
@@ -152,3 +152,55 @@ EVAL_PREFIX=v2-strict-holdout EVAL_CASES=evals/holdout.json python3 scripts/live
 网络中断或非 JSON 错误仍可能无法取得实际用量。留出集仍为手工合成，不能替代真实业务评测。
 
 本次优化的完整结果和限制见 [v2 评测报告](reports/v2-evaluation.md)。
+
+### v3 重试与开销优化
+
+- `MAX_RETRIES=3`（默认）：首次加最多三次重试，范围 0–10。
+- `UPSTREAM_TIMEOUT=30s`：整个逻辑请求的总预算，包括全部尝试和退避；预算耗尽可以早于第 4 次返回 504。
+- `PROMPT_MODE=standard`（默认）：保留 v2 提示词。`compact` 为实验性精简版本；当前整轮成本更高，因此没有设为默认。
+- 对 408、429、5xx、网络错误、截断/格式/概率校验失败重试。400、401、403、422 等永久错误不重试。
+- 指数退避从 100ms 开始并加随机抖动；尊重 Retry-After 秒数或 HTTP 日期；客户端取消立即停止。
+- 多问题批次保留已通过校验的答案，只重试失败问题。不会把缺失概率填成 0，也不会放宽概率总和校验。
+- 外部 Jev JSON 结构不变；额外响应头 `X-Upstream-Attempts`、`X-Upstream-Input-Tokens`、`X-Upstream-Output-Tokens`、`X-Upstream-Cached-Tokens` 提供诊断，包括失败请求。
+- 每次尝试记录耗时、题数、原因、token 用量及 `usage_known`。网络中断等拿不到用量的调用不能据此确认实际费用为零。
+- 没有增加结果缓存；每个请求均实际调用上游，缓存数字仍指 DeepSeek 自动前缀缓存。
+
+```sh
+MAX_RETRIES=3 PROMPT_MODE=standard EVAL_PREFIX=v3-standard python3 scripts/live_eval.py
+MAX_RETRIES=3 PROMPT_MODE=compact EVAL_PREFIX=v3-compact python3 scripts/live_eval.py
+MAX_RETRIES=3 PROMPT_MODE=compact EVAL_PREFIX=v3-holdout EVAL_CASES=evals/holdout.json python3 scripts/live_eval.py
+```
+
+运行这些命令会覆盖对应报告。固定用例已被多轮测试，留出集是历史留出集，不能当作独立盲测。
+
+同模板连续复用测试（28 次真实请求，不使用本地结果缓存）：
+
+```sh
+DSK_JEV_BINARY="$PWD/bin/dsk-jev" python3 scripts/cache_reuse_eval.py
+python3 scripts/report_v3.py
+```
+
+模型＋system＋Schema 的稳定指纹可在 `X-Upstream-Template` 和日志中查看。
+结构化描述已规范化，避免空白或对象键顺序变化破坏固定前缀。
+完整结果见 [v3 重试与缓存报告](reports/v3-evaluation.md)。
+
+## 用量流水与公平对比
+
+设置 `USAGE_LEDGER_PATH` 开启逐次上游调用 JSONL 流水（新文件权限 0600）；每条包含内部 `request_id`、实际模型、模板指纹、UTC 时间、尝试序号、延迟、状态和原始 usage，不记录请求正文或密钥。响应的 `X-Request-ID` 可关联所有重试。流水写入失败会记录错误日志，当前不会阻断业务响应；这是观测用途，尚非具备事务持久性与对账保证的收费账本。
+
+Jev 返回 `usage.input_tokens/output_tokens`；DeepSeek 返回 `prompt_tokens/completion_tokens` 和缓存命中字段。两者均不是实际扣款金额。`config/pricing.json` 保存带日期的美元公开报价，`scripts/accounting.py` 用十进制计算估算费用。DeepSeek 输入总量已包含缓存输入，计费时只计算一次；输出包含其中的 reasoning tokens，不额外累加。缺失/矛盾的缓存数或用量视为未知，总费用返回 null 并单列已知费用。失败、无效输出及重试全部进入用量流水。余额、赠金、税费、合约折扣和中转服务器费用不在估算内。
+
+用同一份固定回归集交替测试两家（默认 44 请求/140 判断，每家最多 3 次重试，30 秒上游预算，持久连接、并发 1）：
+
+```sh
+go build -o bin/dsk-jev ./cmd/server
+# 在环境中设置 DEEPSEEK_API_KEY 和 JEV_API_KEY 后运行；仅依赖 Python 标准库。
+EVAL_PREFIX=comparison-new python3 scripts/compare_eval.py
+```
+
+每次选择新的 `EVAL_PREFIX`，防止旧流水混入新统计。产物包括两家逐次用量 JSONL、逐请求答案/耗时、JSON 汇总及 Markdown 对比。包含成功率、正确判断/全部预期判断、所有请求及成功请求 P50/P95、重试数、缓存比例、峰/谷估算美元、每千请求及每千正确判断成本，并按测试组细分。缓存未清空，不应把结果解释为冷启动；该数据集曾用于优化，不属于独立盲测。此运行方式不测满负载吞吐量。
+
+```sh
+go test -race ./...
+python3 -m unittest discover -s scripts -p 'test_accounting.py'
+```

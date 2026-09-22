@@ -144,3 +144,18 @@ func TestOutputSchemaRequiredFields(t *testing.T) {
 	}
 	visit(outputSchema(qs))
 }
+
+func TestCanonicalSchemaCachePrefix(t *testing.T) {
+	a := `{"state":"one","questions":{"x":{"type":"choice","instructions":{"b":2,"a":"pick"},"criteria":{"yes":{"z":0,"a":"true"},"no":null}}}}`
+	b := `{"state":"two","questions":{"x":{"criteria":{"no":null,"yes":{"a":"true","z":0}},"instructions":{ "a":"pick", "b":2 },"type":"choice"}}}`
+	var x, y Request
+	_ = json.Unmarshal([]byte(a), &x)
+	_ = json.Unmarshal([]byte(b), &y)
+	qx, _ := compile(x)
+	qy, _ := compile(y)
+	sx, _ := json.Marshal(outputSchema(qx))
+	sy, _ := json.Marshal(outputSchema(qy))
+	if string(sx) != string(sy) {
+		t.Fatalf("semantically identical descriptions changed cache prefix: %s vs %s", sx, sy)
+	}
+}

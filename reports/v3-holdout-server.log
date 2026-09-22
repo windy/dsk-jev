@@ -1,0 +1,13 @@
+2026/09/22 16:00:13 INFO listening addr=127.0.0.1:50722 upstream_model=deepseek-flash
+2026/09/22 16:00:14 INFO upstream attempt attempt=1 template=464aadbfdd497614 questions=2 latency_ms=796 reason=success usage_known=true input_tokens=791 cached_tokens=640 output_tokens=69
+2026/09/22 16:00:14 INFO upstream attempt attempt=1 template=464aadbfdd497614 questions=2 latency_ms=839 reason=success usage_known=true input_tokens=795 cached_tokens=640 output_tokens=61
+2026/09/22 16:00:14 INFO upstream attempt attempt=1 template=464aadbfdd497614 questions=2 latency_ms=1360 reason=success usage_known=true input_tokens=796 cached_tokens=640 output_tokens=69
+2026/09/22 16:00:15 INFO upstream attempt attempt=1 template=464aadbfdd497614 questions=2 latency_ms=1062 reason=success usage_known=true input_tokens=799 cached_tokens=640 output_tokens=69
+2026/09/22 16:00:15 INFO upstream attempt attempt=1 template=593e1895a691810c questions=1 latency_ms=1214 reason=success usage_known=true input_tokens=751 cached_tokens=512 output_tokens=53
+2026/09/22 16:00:15 INFO upstream attempt attempt=1 template=593e1895a691810c questions=1 latency_ms=699 reason=success usage_known=true input_tokens=753 cached_tokens=512 output_tokens=59
+2026/09/22 16:00:15 INFO upstream attempt attempt=1 template=8fc3d6ab5e8d0e5a questions=1 latency_ms=556 reason=success usage_known=true input_tokens=631 cached_tokens=384 output_tokens=38
+2026/09/22 16:00:15 INFO upstream attempt attempt=1 template=593e1895a691810c questions=1 latency_ms=871 reason=success usage_known=true input_tokens=754 cached_tokens=512 output_tokens=59
+2026/09/22 16:00:16 INFO upstream attempt attempt=1 template=4f11c1893a9b5a11 questions=1 latency_ms=843 reason=success usage_known=true input_tokens=723 cached_tokens=512 output_tokens=53
+2026/09/22 16:00:16 INFO upstream attempt attempt=1 template=873afca86114ff3a questions=2 latency_ms=900 reason=success usage_known=true input_tokens=798 cached_tokens=640 output_tokens=61
+2026/09/22 16:00:17 INFO upstream attempt attempt=1 template=5b7a8ef70901635f questions=1 latency_ms=901 reason=success usage_known=true input_tokens=726 cached_tokens=512 output_tokens=53
+2026/09/22 16:00:17 INFO upstream attempt attempt=1 template=a81c3fd168ca97eb questions=1 latency_ms=1089 reason=success usage_known=true input_tokens=743 cached_tokens=512 output_tokens=59

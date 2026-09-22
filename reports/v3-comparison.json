@@ -1,0 +1,111 @@
+{
+  "pricing_source": "https://api-docs.deepseek.com/quick_start/pricing/",
+  "pricing_checked": "2026-09-22",
+  "cost_note": "Token-based estimate, not account invoice. Peak and off-peak rates shown separately; excludes hosting/network. All v3 runs reported known usage for every attempt.",
+  "runs": {
+    "v2-strict": {
+      "requests": 44,
+      "success": 42,
+      "correct": 133,
+      "judgments": 140,
+      "attempts": 44,
+      "latency_ms": {
+        "p50": 829.89,
+        "p95": 1814.57
+      },
+      "tokens": {
+        "input_tokens": 56416,
+        "cached_tokens": 32640,
+        "output_tokens": 6064
+      },
+      "estimated_peak_usd": 0.01460544,
+      "estimated_off_peak_usd": 0.00730272
+    },
+    "v3-standard": {
+      "requests": 44,
+      "success": 44,
+      "correct": 139,
+      "judgments": 140,
+      "attempts": 45,
+      "latency_ms": {
+        "p50": 959.62,
+        "p95": 1371.86
+      },
+      "tokens": {
+        "input_tokens": 57065,
+        "cached_tokens": 49664,
+        "output_tokens": 6064
+      },
+      "estimated_peak_usd": 0.009795083999999999,
+      "estimated_off_peak_usd": 0.0048975419999999995
+    },
+    "v3-compact": {
+      "requests": 44,
+      "success": 44,
+      "correct": 140,
+      "judgments": 140,
+      "attempts": 45,
+      "latency_ms": {
+        "p50": 912.42,
+        "p95": 1297.91
+      },
+      "tokens": {
+        "input_tokens": 58540,
+        "cached_tokens": 29824,
+        "output_tokens": 8600
+      },
+      "estimated_peak_usd": 0.019113744,
+      "estimated_off_peak_usd": 0.009556872
+    },
+    "v3-holdout": {
+      "requests": 12,
+      "success": 12,
+      "correct": 17,
+      "judgments": 17,
+      "attempts": 12,
+      "latency_ms": {
+        "p50": 874.17,
+        "p95": 1363.03
+      },
+      "tokens": {
+        "input_tokens": 9060,
+        "cached_tokens": 6656,
+        "output_tokens": 703
+      },
+      "estimated_peak_usd": 0.0016047359999999998,
+      "estimated_off_peak_usd": 0.0008023679999999999
+    }
+  },
+  "continuous_cache": {
+    "standard-continuous": {
+      "requests": 12,
+      "steady_sample_size": 11,
+      "template": "4f623f4a1e362500",
+      "steady_input_hit_ratio": 0.7931649610365223,
+      "steady_mean_peak_usd": 0.0001735625454545455,
+      "steady_p50_ms": 889.73,
+      "saved_vs_same_tokens_all_uncached": 0.5653923376357303,
+      "output_cost_share": 0.6272823839244744
+    },
+    "compact-continuous": {
+      "requests": 12,
+      "steady_sample_size": 11,
+      "template": "b7bb9e3ddecf96c9",
+      "steady_input_hit_ratio": 0.7967406066093254,
+      "steady_mean_peak_usd": 0.00015558545454545452,
+      "steady_p50_ms": 775.93,
+      "saved_vs_same_tokens_all_uncached": 0.5473817835607744,
+      "output_cost_share": 0.6604964240639463
+    },
+    "standard-revisit": {
+      "requests": 4,
+      "steady_sample_size": 4,
+      "template": "4f623f4a1e362500",
+      "steady_input_hit_ratio": 0.7929788332472896,
+      "steady_mean_peak_usd": 0.000170958,
+      "steady_p50_ms": 964.53,
+      "saved_vs_same_tokens_all_uncached": 0.5691039697542533,
+      "output_cost_share": 0.6212052082967747
+    }
+  }
+}
