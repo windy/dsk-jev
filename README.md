@@ -26,6 +26,25 @@ flowchart LR
   D -->|Retry invalid questions only| B
 ```
 
+## Benchmark: Jev vs dsk-jev
+
+Measured September 22, 2026: **44 requests / 140 judgments per provider**, same host and time window, alternating calls, persistent connections, concurrency 1. dsk-jev uses the default standard mode with thinking disabled. Both allow up to 3 retries; neither needed one in this run.
+
+| Metric | Jev | dsk-jev / DeepSeek |
+|---|---:|---:|
+| Successful requests | 44/44 (100%) | 44/44 (100%) |
+| Correct judgments | 139/140 (99.29%) | 138/140 (98.57%) |
+| P50 end-to-end latency | **318 ms** | 909 ms |
+| P95 end-to-end latency | **374 ms** | 1,231 ms |
+| Estimated USD / 1,000 requests | **$0.0313** | $0.2199 peak / $0.1100 offpeak |
+| Input cache-hit fraction | Not reported | 87.1% |
+
+**Jev was faster and cheaper in this text benchmark.** These are small synthetic regression cases already used during development, not an independent blind test. Cache state was not reset. Costs use a dated public-price snapshot, not actual invoice debits; they exclude hosting, tax and credits. Accuracy here measures decisions, not confidence calibration.
+
+**Vision is a separate capability check:** dsk-jev passed 14/14 judgments across 6 live requests using synthetic images, taking 0.66–0.96 seconds. Jev does not natively accept images, so this is not a head-to-head visual-accuracy comparison. More complex visual and reasoning tasks remain unbenchmarked.
+
+[Raw comparison data](reports/comparison-v4-summary.json) · [Vision results](reports/vision-smoke/summary.json) · [Full methodology and compact-output experiments](docs/benchmarks.md)
+
 ## Run in minutes
 
 Bring a DeepSeek API key. Requests incur upstream API charges.
