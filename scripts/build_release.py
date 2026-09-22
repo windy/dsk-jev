@@ -6,6 +6,8 @@ def main():
  p=argparse.ArgumentParser();p.add_argument('version');p.add_argument('--output',default='dist');args=p.parse_args()
  if not re.fullmatch(r'v\d+\.\d+\.\d+(?:-[A-Za-z0-9.-]+)?',args.version):raise SystemExit('Expected a version such as v0.1.0')
  dest=Path(args.output).resolve();dest.mkdir(parents=True,exist_ok=True);sums=[]
+ assets=subprocess.check_output(['git','ls-files','-z','--','README.md','README.zh-CN.md','LICENSE','THIRD_PARTY_NOTICES','CHANGELOG.md','.env.example','SECURITY.md','CONTRIBUTING.md','docs','examples','config','reports'],cwd=ROOT).decode().split('\0')
+ assets=[name for name in assets if name]
  for system in ('linux','darwin'):
   for arch in ('amd64','arm64'):
    name=f'dsk-jev_{args.version}_{system}_{arch}'
@@ -15,7 +17,7 @@ def main():
     archive=dest/f'{name}.tar.gz'
     with tarfile.open(archive,'w:gz') as tar:
      tar.add(binary,arcname=f'{name}/dsk-jev')
-     for path in ('README.md','README.zh-CN.md','LICENSE','THIRD_PARTY_NOTICES','CHANGELOG.md','.env.example','SECURITY.md','CONTRIBUTING.md','docs','examples','config','reports'):
+     for path in assets:
       tar.add(ROOT/path,arcname=f'{name}/{path}')
     sums.append(f'{hashlib.sha256(archive.read_bytes()).hexdigest()}  {archive.name}')
     print(archive.name,flush=True)
