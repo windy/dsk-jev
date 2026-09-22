@@ -62,3 +62,7 @@ VISION_EVAL_PREFIX=my-new-vision-test python3 scripts/vision_smoke.py
 ## Historical archive
 
 [Report index](../reports/README.md). Historical files stay at their original paths so scripts and dataset provenance remain usable. Some old scripts overwrite report names; prefer the unique-prefix commands above. Paid evaluation scripts are never run by CI. More difficult reasoning, calibrated probabilities, realistic vision tasks and repeated controlled latency measurements remain future work.
+
+## Development diagnosis: low thinking
+
+[40-question, five-arm diagnostic and 20-question overlapping controls](../reports/bbh-diagnostic-v1/README.md). On the development subset, replaying the current proxy payload scored 24/40; a neutral prompt with low thinking and probability tools scored 37/40, with one invalid truncated response. P50 rose from 889 to 1,601 ms and estimated peak cost rose about 5.7×. A response took 42.3 seconds, exceeding the product default deadline. These are direct-upstream experiments with a 60-second timeout; they are not shipped behavior or a same-set Jev comparison.

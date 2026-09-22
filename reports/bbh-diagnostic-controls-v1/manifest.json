@@ -1,0 +1,33 @@
+{
+  "started_at": "2026-09-22T12:17:12.228268+00:00",
+  "cases": [
+    "bbh/logical_deduction_three_objects/29",
+    "bbh/sports_understanding/227",
+    "bbh/tracking_shuffled_objects_seven_objects/218",
+    "bbh/tracking_shuffled_objects_seven_objects/247",
+    "bbh/causal_judgement/73",
+    "bbh/date_understanding/149",
+    "bbh/date_understanding/28",
+    "bbh/logical_deduction_three_objects/68",
+    "bbh/boolean_expressions/45",
+    "bbh/causal_judgement/55",
+    "bbh/tracking_shuffled_objects_three_objects/77",
+    "bbh/disambiguation_qa/52",
+    "bbh/logical_deduction_seven_objects/52",
+    "bbh/tracking_shuffled_objects_three_objects/152",
+    "bbh/sports_understanding/215",
+    "bbh/disambiguation_qa/57",
+    "bbh/boolean_expressions/32",
+    "bbh/logical_deduction_seven_objects/130",
+    "bbh/web_of_lies/53",
+    "bbh/web_of_lies/5"
+  ],
+  "dev_sha256": "09c7e9941be61463ae534a9cbedac4d62fb25e535b311740019122727dea95e1",
+  "arms": [
+    "neutral_tool_auto_off",
+    "direct_off_long",
+    "baseline_tool_low"
+  ],
+  "per_task": 2,
+  "methodology": "20 dev cases, first 2 per task in frozen dev-file order; 3 arms rotated by case index; sequential persistent HTTPS, no retries, 60s timeout each. Baseline payload captured from actual Go proxy then replayed directly. Gold labels never submitted. Low thinking uses 8192-token cap and tool auto where applicable; forced tool unsupported with thinking. Latency is direct upstream, not proxy end-to-end. Public data and single-run diagnostic, not held-out proof. Raw reasoning text omitted; completion usage includes reasoning."
+}

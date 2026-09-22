@@ -1,0 +1,98 @@
+{
+  "neutral_tool_auto_off": {
+    "requests": 20,
+    "valid": 20,
+    "correct": 13,
+    "p50_ms": 897.03,
+    "p95_ms": 2123.0,
+    "cost": {
+      "deepseek_peak": {
+        "known_estimated_usd": "0.004181520",
+        "unknown_cost_attempts": 0,
+        "total_estimated_usd": "0.004181520"
+      },
+      "deepseek_offpeak": {
+        "known_estimated_usd": "0.002090760",
+        "unknown_cost_attempts": 0,
+        "total_estimated_usd": "0.002090760"
+      }
+    },
+    "output_tokens_known": 2429,
+    "by_group": {
+      "boolean_expressions": 2,
+      "causal_judgement": 0,
+      "date_understanding": 1,
+      "disambiguation_qa": 2,
+      "logical_deduction_seven_objects": 2,
+      "logical_deduction_three_objects": 2,
+      "sports_understanding": 2,
+      "tracking_shuffled_objects_seven_objects": 0,
+      "tracking_shuffled_objects_three_objects": 2,
+      "web_of_lies": 0
+    }
+  },
+  "direct_off_long": {
+    "requests": 20,
+    "valid": 18,
+    "correct": 11,
+    "p50_ms": 681.39,
+    "p95_ms": 1495.09,
+    "cost": {
+      "deepseek_peak": {
+        "known_estimated_usd": "0.001402698",
+        "unknown_cost_attempts": 0,
+        "total_estimated_usd": "0.001402698"
+      },
+      "deepseek_offpeak": {
+        "known_estimated_usd": "0.000701349",
+        "unknown_cost_attempts": 0,
+        "total_estimated_usd": "0.000701349"
+      }
+    },
+    "output_tokens_known": 530,
+    "by_group": {
+      "boolean_expressions": 2,
+      "causal_judgement": 1,
+      "date_understanding": 1,
+      "disambiguation_qa": 1,
+      "logical_deduction_seven_objects": 0,
+      "logical_deduction_three_objects": 2,
+      "sports_understanding": 2,
+      "tracking_shuffled_objects_seven_objects": 0,
+      "tracking_shuffled_objects_three_objects": 1,
+      "web_of_lies": 1
+    }
+  },
+  "baseline_tool_low": {
+    "requests": 20,
+    "valid": 18,
+    "correct": 17,
+    "p50_ms": 1296.32,
+    "p95_ms": 3965.66,
+    "cost": {
+      "deepseek_peak": {
+        "known_estimated_usd": "0.015562416",
+        "unknown_cost_attempts": 0,
+        "total_estimated_usd": "0.015562416"
+      },
+      "deepseek_offpeak": {
+        "known_estimated_usd": "0.007781208",
+        "unknown_cost_attempts": 0,
+        "total_estimated_usd": "0.007781208"
+      }
+    },
+    "output_tokens_known": 10539,
+    "by_group": {
+      "boolean_expressions": 2,
+      "causal_judgement": 1,
+      "date_understanding": 2,
+      "disambiguation_qa": 1,
+      "logical_deduction_seven_objects": 2,
+      "logical_deduction_three_objects": 2,
+      "sports_understanding": 2,
+      "tracking_shuffled_objects_seven_objects": 2,
+      "tracking_shuffled_objects_three_objects": 2,
+      "web_of_lies": 1
+    }
+  }
+}

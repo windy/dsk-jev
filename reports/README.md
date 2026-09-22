@@ -13,3 +13,5 @@ Original paths are preserved for reproducibility. Logs and fixture answers are s
 ## Public benchmark evaluation
 
 [BBH subset v1 protocol](../evals/public-bbh/README.md): 300 paired evaluation questions plus 100 reserved development questions, from author-published sources. Kept separate from the historical synthetic regression reports.
+
+[BBH development diagnosis](bbh-diagnostic-v1/README.md): 260 calls across five primary arms and three follow-up controls, covering 40 unique development questions. Includes reasoning, output-format and budget tradeoffs.

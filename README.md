@@ -64,6 +64,8 @@ Measured September 22, 2026: **44 requests / 140 judgments per provider**, same 
 [All 10 task results](reports/public-bbh-v1-analysis.md) · [Latency and costs](reports/public-bbh-v1.md) · [Dataset and reproduction](evals/public-bbh/README.md) · [Source research](docs/benchmark-sources.md)
 
 
+[Follow-up diagnosis](reports/bbh-diagnostic-v1/README.md): low thinking improved a separate development subset, with latency, cost and structured-output tradeoffs. Product defaults remain unchanged.
+
 ## Run in minutes
 
 Bring a DeepSeek API key. Requests incur upstream API charges.

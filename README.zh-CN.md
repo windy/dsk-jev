@@ -45,6 +45,8 @@
 
 [全部 10 类结果](reports/public-bbh-v1-analysis.md) · [速度与费用](reports/public-bbh-v1.md) · [数据来源与复现](evals/public-bbh/README.md) · [评测来源调研](docs/benchmark-sources.md)
 
+[后续原因诊断](reports/bbh-diagnostic-v1/README.md)：独立开发子集显示低档推理能改善准确率，但增加延迟、费用和结构化输出风险；详见完整对照，尚未变更产品默认行为。
+
 ## 快速启动
 
 自备 DeepSeek API Key；实际调用产生上游费用。源码运行需要 Go 1.26.1 或更新版本。
