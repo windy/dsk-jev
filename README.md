@@ -24,7 +24,8 @@ curl http://127.0.0.1:8080/v1/systemone \
 
 可接现有 llm_proxy：设置 `DEEPSEEK_BASE_URL` 为其 OpenAI 兼容 API 根地址，
 `DEEPSEEK_API_KEY` 为该代理的访问密钥，`DEEPSEEK_MODEL=dsk-deepseek-flash`。
-根地址会追加 `/chat/completions`；如网关路径含 `/v1`，根地址需包含 `/v1`。
+根地址会追加 `/chat/completions`。直连默认 `https://api.deepseek.com/beta`，启用严格工具调用。
+自有网关必须转发 `tools[].function.strict` 和 `tool_choice`，并将请求路由到 DeepSeek beta 端点；普通 chat 转发路径未必支持，需先验证。
 
 ## 协议
 
@@ -40,8 +41,8 @@ curl http://127.0.0.1:8080/v1/systemone \
 - 支持字符串、对象、数组形式的 instructions / 描述；Choice 描述可为 null。
 - `usage.input_tokens/output_tokens` 为实际 DeepSeek 用量，而非模拟 Jev 的 token 数。
 
-实现保留完整概率输出。模型只生成按固定顺序排列的概率数组，Go 恢复客户端 ID、选项名称、
-等级说明并计算加权分数。问题 ID 不传入模型；固定问题定义位于 system 前缀，动态 state 在 user 消息。
+实现保留完整概率输出。模型生成按问题 ID、选项 ID 对应的概率对象，Go 恢复客户端 ID、选项名称、
+等级说明并计算加权分数。客户端问题 ID 映射成 q0/q1 等内部 ID；固定问题定义位于 system 前缀，动态 state 在 user 消息。
 Choice 选项排序稳定，平局按排序后的首个选项处理。
 
 置信度公式参考 TypeSafe 官方开源适配器：Choice 将最高概率从均匀分布基线线性缩放；
@@ -53,7 +54,7 @@ DeepSeek 生成的概率尚未通过独立校准，接口兼容不代表与 Jev 
 - 401：客户端鉴权失败；422：请求验证失败。
 - 上游 429 → 429；503/529 → 529，保留 Retry-After。
 - 上游鉴权失败、其他非成功状态、非法概率或截断 → 502；请求超时 → 504。
-- 不向客户端透传上游错误正文或密钥；不记录输入内容。
+- 不向客户端透传上游错误正文或密钥；不记录输入内容。校验失败日志记录具体原因；成功及校验失败的已解析上游响应均记录 token 用量。
 - 不自动重试，避免隐藏费用。SDK 可能自行重试，应按应用需要配置。
 - 概率须落在 [0,1]，总和只容忍 0.02 的舍入误差并归一化；不把非法数据补成确定答案。
 - 请求体上限 4 MiB，估算输出预算上限 32768 tokens，超出返回 422。
@@ -124,3 +125,30 @@ python3 scripts/live_eval.py
 必要时通过 `DSK_JEV_BINARY` 指定已构建的可执行文件。
 首轮结果及失败明细见 [评测报告](reports/live-evaluation.md)。
 本评测包含真实 API 费用；没有自动重试。
+
+使用相同固定用例评测官方 Jev：
+
+```sh
+export JEV_API_KEY='your-typesafe-key'
+python3 scripts/jev_eval.py
+```
+
+写入 `reports/jev-results.json` 和 `reports/jev-summary.json`，不覆盖 DeepSeek 数据。
+首轮同集对比见 [Jev 对比报告](reports/jev-comparison.md)。
+
+### v2 优化评测
+
+外部 Jev 协议不变。内部概率通过显式问题/选项键绑定，使用 DeepSeek beta 的 strict 工具调用，Schema 声明所有字段必填、禁止额外字段、概率数字范围为 [0,1]。Go 继续检查键、概率范围和总和，拒绝不合法响应。
+保持单次请求、不重试以及原有概率校验，不靠放宽校验提高成功率。结构约束并不保证语义正确或概率校准。
+参考：https://api-docs.deepseek.com/guides/tool_calls/#strict-mode-beta
+
+```sh
+EVAL_PREFIX=v2-strict python3 scripts/live_eval.py
+EVAL_PREFIX=v2-strict-holdout EVAL_CASES=evals/holdout.json python3 scripts/live_eval.py
+```
+
+前者复用原始 44 个请求，后者使用优化后首次评测前固定的 12 个新请求。
+报告包含 `upstream_usage_all_parsed_responses`，涵盖能解析的上游成功响应，即使决策校验失败。
+网络中断或非 JSON 错误仍可能无法取得实际用量。留出集仍为手工合成，不能替代真实业务评测。
+
+本次优化的完整结果和限制见 [v2 评测报告](reports/v2-evaluation.md)。

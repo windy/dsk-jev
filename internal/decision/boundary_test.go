@@ -58,7 +58,7 @@ func TestStructuredCriteriaAndIDs(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	out, err := decodeAnswers(`{"answers":[[0.1,0.9]]}`, qs)
+	out, err := decodeOrderedAnswers(`{"answers":[[0.1,0.9]]}`, qs)
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -77,7 +77,7 @@ func TestRoundingAndTies(t *testing.T) {
 	var req Request
 	_ = json.Unmarshal([]byte(fixture), &req)
 	qs, _ := compile(req)
-	a, err := decodeAnswers(`{"answers":[[0.499,0.499],[0.333,0.333,0.333],0]}`, qs)
+	a, err := decodeOrderedAnswers(`{"answers":[[0.499,0.499],[0.333,0.333,0.333],0]}`, qs)
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -87,4 +87,60 @@ func TestRoundingAndTies(t *testing.T) {
 	if confidence([]float64{1}, false) != 1 {
 		t.Fatal("single choice")
 	}
+}
+
+func TestKeyedAnswers(t *testing.T) {
+	var req Request
+	_ = json.Unmarshal([]byte(fixture), &req)
+	qs, _ := compile(req)
+	valid := `{"answers":{"q2":0.2,"q1":{"2":0.85,"0":0.05,"1":0.1},"q0":{"sales":0.1,"billing":0.9}}}`
+	out, err := decodeAnswers(valid, qs)
+	if err != nil {
+		t.Fatal(err)
+	}
+	if out["a"].(map[string]any)["choice"] != "billing" {
+		t.Fatal(out)
+	}
+	for _, v := range []string{
+		strings.Replace(valid, `"q2"`, `"wrong"`, 1),
+		strings.Replace(valid, `"sales"`, `"unknown"`, 1),
+		strings.Replace(valid, `"sales":0.1,`, "", 1),
+		strings.Replace(valid, `"sales":0.1`, `"extra":0,"sales":0.1`, 1),
+		`{"answers":[[0.9,0.1],[0.05,0.1,0.85],0.2]}`,
+	} {
+		if _, err := decodeAnswers(v, qs); err == nil {
+			t.Fatal("accepted mismatched IDs", v)
+		}
+	}
+}
+
+func TestOutputSchemaRequiredFields(t *testing.T) {
+	var req Request
+	_ = json.Unmarshal([]byte(fixture), &req)
+	qs, _ := compile(req)
+	var visit func(map[string]any)
+	visit = func(s map[string]any) {
+		if s["type"] == "number" {
+			if s["minimum"] != 0 || s["maximum"] != 1 {
+				t.Fatal(s)
+			}
+			return
+		}
+		if s["type"] != "object" || s["additionalProperties"] != false {
+			t.Fatal(s)
+		}
+		props := s["properties"].(map[string]any)
+		required := s["required"].([]string)
+		if len(props) != len(required) {
+			t.Fatal("optional schema fields")
+		}
+		for _, key := range required {
+			child, ok := props[key]
+			if !ok {
+				t.Fatal(key)
+			}
+			visit(child.(map[string]any))
+		}
+	}
+	visit(outputSchema(qs))
 }

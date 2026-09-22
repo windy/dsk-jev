@@ -1,0 +1,1355 @@
+[
+  {
+    "id": "refund_yes",
+    "question_order": [
+      "department",
+      "refund",
+      "urgency"
+    ],
+    "compiled_questions": [
+      {
+        "type": "choice",
+        "instructions": "应该由哪个部门处理？",
+        "criteria": [
+          {
+            "description": "扣款、账单、退款",
+            "label": "billing"
+          },
+          {
+            "description": "其他，或信息不足",
+            "label": "other"
+          },
+          {
+            "description": "购买咨询",
+            "label": "sales"
+          },
+          {
+            "description": "软件故障",
+            "label": "technical"
+          }
+        ]
+      },
+      {
+        "type": "noul",
+        "instructions": "用户是否明确要求退钱或退款？不要将投诉扣款、查询退款进度、引用别人的话或否定退款当作明确申请。",
+        "criteria": {
+          "true": "用户本人当前明确请求退钱或退款",
+          "false": "没有本人当前明确退款请求"
+        }
+      },
+      {
+        "type": "score",
+        "instructions": "用户当前要求的处理期限是哪一级？以明确表述为准，不从问题严重性推断。",
+        "criteria": [
+          "没有提出处理期限，或明确不急",
+          "希望尽快，但无具体期限",
+          "明确要求今天、立即或指定时间前处理"
+        ]
+      }
+    ],
+    "content": "{\"answers\":[[0.95,0.01,0.02,0.02],0.97,[0.9,0.08,0.02]]}",
+    "issues": [],
+    "usage": {
+      "prompt_tokens": 359,
+      "completion_tokens": 37,
+      "total_tokens": 396,
+      "prompt_tokens_details": {
+        "cached_tokens": 128
+      },
+      "prompt_cache_hit_tokens": 128,
+      "prompt_cache_miss_tokens": 231
+    }
+  },
+  {
+    "id": "outage",
+    "question_order": [
+      "department",
+      "refund",
+      "urgency"
+    ],
+    "compiled_questions": [
+      {
+        "type": "choice",
+        "instructions": "应该由哪个部门处理？",
+        "criteria": [
+          {
+            "description": "扣款、账单、退款",
+            "label": "billing"
+          },
+          {
+            "description": "其他，或信息不足",
+            "label": "other"
+          },
+          {
+            "description": "购买咨询",
+            "label": "sales"
+          },
+          {
+            "description": "软件故障",
+            "label": "technical"
+          }
+        ]
+      },
+      {
+        "type": "noul",
+        "instructions": "用户是否明确要求退钱或退款？不要将投诉扣款、查询退款进度、引用别人的话或否定退款当作明确申请。",
+        "criteria": {
+          "true": "用户本人当前明确请求退钱或退款",
+          "false": "没有本人当前明确退款请求"
+        }
+      },
+      {
+        "type": "score",
+        "instructions": "用户当前要求的处理期限是哪一级？以明确表述为准，不从问题严重性推断。",
+        "criteria": [
+          "没有提出处理期限，或明确不急",
+          "希望尽快，但无具体期限",
+          "明确要求今天、立即或指定时间前处理"
+        ]
+      }
+    ],
+    "content": "{\"answers\":[[0.02,0.06,0.02,0.9],0.05,[0.03,0.12,0.85]]}",
+    "issues": [],
+    "usage": {
+      "prompt_tokens": 361,
+      "completion_tokens": 37,
+      "total_tokens": 398,
+      "prompt_tokens_details": {
+        "cached_tokens": 128
+      },
+      "prompt_cache_hit_tokens": 128,
+      "prompt_cache_miss_tokens": 233
+    }
+  },
+  {
+    "id": "bug",
+    "question_order": [
+      "department",
+      "refund",
+      "urgency"
+    ],
+    "compiled_questions": [
+      {
+        "type": "choice",
+        "instructions": "应该由哪个部门处理？",
+        "criteria": [
+          {
+            "description": "扣款、账单、退款",
+            "label": "billing"
+          },
+          {
+            "description": "其他，或信息不足",
+            "label": "other"
+          },
+          {
+            "description": "购买咨询",
+            "label": "sales"
+          },
+          {
+            "description": "软件故障",
+            "label": "technical"
+          }
+        ]
+      },
+      {
+        "type": "noul",
+        "instructions": "用户是否明确要求退钱或退款？不要将投诉扣款、查询退款进度、引用别人的话或否定退款当作明确申请。",
+        "criteria": {
+          "true": "用户本人当前明确请求退钱或退款",
+          "false": "没有本人当前明确退款请求"
+        }
+      },
+      {
+        "type": "score",
+        "instructions": "用户当前要求的处理期限是哪一级？以明确表述为准，不从问题严重性推断。",
+        "criteria": [
+          "没有提出处理期限，或明确不急",
+          "希望尽快，但无具体期限",
+          "明确要求今天、立即或指定时间前处理"
+        ]
+      }
+    ],
+    "content": "{\"answers\":[[0.02,0.13,0.02,0.83],0.01,[0.88,0.1,0.02]]}",
+    "issues": [],
+    "usage": {
+      "prompt_tokens": 357,
+      "completion_tokens": 37,
+      "total_tokens": 394,
+      "prompt_tokens_details": {
+        "cached_tokens": 128
+      },
+      "prompt_cache_hit_tokens": 128,
+      "prompt_cache_miss_tokens": 229
+    }
+  },
+  {
+    "id": "demo",
+    "question_order": [
+      "department",
+      "refund",
+      "urgency"
+    ],
+    "compiled_questions": [
+      {
+        "type": "choice",
+        "instructions": "应该由哪个部门处理？",
+        "criteria": [
+          {
+            "description": "扣款、账单、退款",
+            "label": "billing"
+          },
+          {
+            "description": "其他，或信息不足",
+            "label": "other"
+          },
+          {
+            "description": "购买咨询",
+            "label": "sales"
+          },
+          {
+            "description": "软件故障",
+            "label": "technical"
+          }
+        ]
+      },
+      {
+        "type": "noul",
+        "instructions": "用户是否明确要求退钱或退款？不要将投诉扣款、查询退款进度、引用别人的话或否定退款当作明确申请。",
+        "criteria": {
+          "true": "用户本人当前明确请求退钱或退款",
+          "false": "没有本人当前明确退款请求"
+        }
+      },
+      {
+        "type": "score",
+        "instructions": "用户当前要求的处理期限是哪一级？以明确表述为准，不从问题严重性推断。",
+        "criteria": [
+          "没有提出处理期限，或明确不急",
+          "希望尽快，但无具体期限",
+          "明确要求今天、立即或指定时间前处理"
+        ]
+      }
+    ],
+    "content": "{\"answers\":[[0.05,0.7,0.2,0.05],0.02,[0.15,0.8,0.05]]}",
+    "issues": [],
+    "usage": {
+      "prompt_tokens": 357,
+      "completion_tokens": 37,
+      "total_tokens": 394,
+      "prompt_tokens_details": {
+        "cached_tokens": 128
+      },
+      "prompt_cache_hit_tokens": 128,
+      "prompt_cache_miss_tokens": 229
+    }
+  },
+  {
+    "id": "sales_deadline",
+    "question_order": [
+      "department",
+      "refund",
+      "urgency"
+    ],
+    "compiled_questions": [
+      {
+        "type": "choice",
+        "instructions": "应该由哪个部门处理？",
+        "criteria": [
+          {
+            "description": "扣款、账单、退款",
+            "label": "billing"
+          },
+          {
+            "description": "其他，或信息不足",
+            "label": "other"
+          },
+          {
+            "description": "购买咨询",
+            "label": "sales"
+          },
+          {
+            "description": "软件故障",
+            "label": "technical"
+          }
+        ]
+      },
+      {
+        "type": "noul",
+        "instructions": "用户是否明确要求退钱或退款？不要将投诉扣款、查询退款进度、引用别人的话或否定退款当作明确申请。",
+        "criteria": {
+          "true": "用户本人当前明确请求退钱或退款",
+          "false": "没有本人当前明确退款请求"
+        }
+      },
+      {
+        "type": "score",
+        "instructions": "用户当前要求的处理期限是哪一级？以明确表述为准，不从问题严重性推断。",
+        "criteria": [
+          "没有提出处理期限，或明确不急",
+          "希望尽快，但无具体期限",
+          "明确要求今天、立即或指定时间前处理"
+        ]
+      }
+    ],
+    "content": "{\"answers\":[[0.05,0.05,0.85,0.05],0.02,[0.05,0.05,0.9]]}",
+    "issues": [],
+    "usage": {
+      "prompt_tokens": 361,
+      "completion_tokens": 37,
+      "total_tokens": 398,
+      "prompt_tokens_details": {
+        "cached_tokens": 128
+      },
+      "prompt_cache_hit_tokens": 128,
+      "prompt_cache_miss_tokens": 233
+    }
+  },
+  {
+    "id": "choice_255",
+    "question_order": [
+      "x"
+    ],
+    "compiled_questions": [
+      {
+        "type": "choice",
+        "instructions": "选择与目标编号完全相同的选项",
+        "criteria": [
+          {
+            "description": "编号000",
+            "label": "id000"
+          },
+          {
+            "description": "编号001",
+            "label": "id001"
+          },
+          {
+            "description": "编号002",
+            "label": "id002"
+          },
+          {
+            "description": "编号003",
+            "label": "id003"
+          },
+          {
+            "description": "编号004",
+            "label": "id004"
+          },
+          {
+            "description": "编号005",
+            "label": "id005"
+          },
+          {
+            "description": "编号006",
+            "label": "id006"
+          },
+          {
+            "description": "编号007",
+            "label": "id007"
+          },
+          {
+            "description": "编号008",
+            "label": "id008"
+          },
+          {
+            "description": "编号009",
+            "label": "id009"
+          },
+          {
+            "description": "编号010",
+            "label": "id010"
+          },
+          {
+            "description": "编号011",
+            "label": "id011"
+          },
+          {
+            "description": "编号012",
+            "label": "id012"
+          },
+          {
+            "description": "编号013",
+            "label": "id013"
+          },
+          {
+            "description": "编号014",
+            "label": "id014"
+          },
+          {
+            "description": "编号015",
+            "label": "id015"
+          },
+          {
+            "description": "编号016",
+            "label": "id016"
+          },
+          {
+            "description": "编号017",
+            "label": "id017"
+          },
+          {
+            "description": "编号018",
+            "label": "id018"
+          },
+          {
+            "description": "编号019",
+            "label": "id019"
+          },
+          {
+            "description": "编号020",
+            "label": "id020"
+          },
+          {
+            "description": "编号021",
+            "label": "id021"
+          },
+          {
+            "description": "编号022",
+            "label": "id022"
+          },
+          {
+            "description": "编号023",
+            "label": "id023"
+          },
+          {
+            "description": "编号024",
+            "label": "id024"
+          },
+          {
+            "description": "编号025",
+            "label": "id025"
+          },
+          {
+            "description": "编号026",
+            "label": "id026"
+          },
+          {
+            "description": "编号027",
+            "label": "id027"
+          },
+          {
+            "description": "编号028",
+            "label": "id028"
+          },
+          {
+            "description": "编号029",
+            "label": "id029"
+          },
+          {
+            "description": "编号030",
+            "label": "id030"
+          },
+          {
+            "description": "编号031",
+            "label": "id031"
+          },
+          {
+            "description": "编号032",
+            "label": "id032"
+          },
+          {
+            "description": "编号033",
+            "label": "id033"
+          },
+          {
+            "description": "编号034",
+            "label": "id034"
+          },
+          {
+            "description": "编号035",
+            "label": "id035"
+          },
+          {
+            "description": "编号036",
+            "label": "id036"
+          },
+          {
+            "description": "编号037",
+            "label": "id037"
+          },
+          {
+            "description": "编号038",
+            "label": "id038"
+          },
+          {
+            "description": "编号039",
+            "label": "id039"
+          },
+          {
+            "description": "编号040",
+            "label": "id040"
+          },
+          {
+            "description": "编号041",
+            "label": "id041"
+          },
+          {
+            "description": "编号042",
+            "label": "id042"
+          },
+          {
+            "description": "编号043",
+            "label": "id043"
+          },
+          {
+            "description": "编号044",
+            "label": "id044"
+          },
+          {
+            "description": "编号045",
+            "label": "id045"
+          },
+          {
+            "description": "编号046",
+            "label": "id046"
+          },
+          {
+            "description": "编号047",
+            "label": "id047"
+          },
+          {
+            "description": "编号048",
+            "label": "id048"
+          },
+          {
+            "description": "编号049",
+            "label": "id049"
+          },
+          {
+            "description": "编号050",
+            "label": "id050"
+          },
+          {
+            "description": "编号051",
+            "label": "id051"
+          },
+          {
+            "description": "编号052",
+            "label": "id052"
+          },
+          {
+            "description": "编号053",
+            "label": "id053"
+          },
+          {
+            "description": "编号054",
+            "label": "id054"
+          },
+          {
+            "description": "编号055",
+            "label": "id055"
+          },
+          {
+            "description": "编号056",
+            "label": "id056"
+          },
+          {
+            "description": "编号057",
+            "label": "id057"
+          },
+          {
+            "description": "编号058",
+            "label": "id058"
+          },
+          {
+            "description": "编号059",
+            "label": "id059"
+          },
+          {
+            "description": "编号060",
+            "label": "id060"
+          },
+          {
+            "description": "编号061",
+            "label": "id061"
+          },
+          {
+            "description": "编号062",
+            "label": "id062"
+          },
+          {
+            "description": "编号063",
+            "label": "id063"
+          },
+          {
+            "description": "编号064",
+            "label": "id064"
+          },
+          {
+            "description": "编号065",
+            "label": "id065"
+          },
+          {
+            "description": "编号066",
+            "label": "id066"
+          },
+          {
+            "description": "编号067",
+            "label": "id067"
+          },
+          {
+            "description": "编号068",
+            "label": "id068"
+          },
+          {
+            "description": "编号069",
+            "label": "id069"
+          },
+          {
+            "description": "编号070",
+            "label": "id070"
+          },
+          {
+            "description": "编号071",
+            "label": "id071"
+          },
+          {
+            "description": "编号072",
+            "label": "id072"
+          },
+          {
+            "description": "编号073",
+            "label": "id073"
+          },
+          {
+            "description": "编号074",
+            "label": "id074"
+          },
+          {
+            "description": "编号075",
+            "label": "id075"
+          },
+          {
+            "description": "编号076",
+            "label": "id076"
+          },
+          {
+            "description": "编号077",
+            "label": "id077"
+          },
+          {
+            "description": "编号078",
+            "label": "id078"
+          },
+          {
+            "description": "编号079",
+            "label": "id079"
+          },
+          {
+            "description": "编号080",
+            "label": "id080"
+          },
+          {
+            "description": "编号081",
+            "label": "id081"
+          },
+          {
+            "description": "编号082",
+            "label": "id082"
+          },
+          {
+            "description": "编号083",
+            "label": "id083"
+          },
+          {
+            "description": "编号084",
+            "label": "id084"
+          },
+          {
+            "description": "编号085",
+            "label": "id085"
+          },
+          {
+            "description": "编号086",
+            "label": "id086"
+          },
+          {
+            "description": "编号087",
+            "label": "id087"
+          },
+          {
+            "description": "编号088",
+            "label": "id088"
+          },
+          {
+            "description": "编号089",
+            "label": "id089"
+          },
+          {
+            "description": "编号090",
+            "label": "id090"
+          },
+          {
+            "description": "编号091",
+            "label": "id091"
+          },
+          {
+            "description": "编号092",
+            "label": "id092"
+          },
+          {
+            "description": "编号093",
+            "label": "id093"
+          },
+          {
+            "description": "编号094",
+            "label": "id094"
+          },
+          {
+            "description": "编号095",
+            "label": "id095"
+          },
+          {
+            "description": "编号096",
+            "label": "id096"
+          },
+          {
+            "description": "编号097",
+            "label": "id097"
+          },
+          {
+            "description": "编号098",
+            "label": "id098"
+          },
+          {
+            "description": "编号099",
+            "label": "id099"
+          },
+          {
+            "description": "编号100",
+            "label": "id100"
+          },
+          {
+            "description": "编号101",
+            "label": "id101"
+          },
+          {
+            "description": "编号102",
+            "label": "id102"
+          },
+          {
+            "description": "编号103",
+            "label": "id103"
+          },
+          {
+            "description": "编号104",
+            "label": "id104"
+          },
+          {
+            "description": "编号105",
+            "label": "id105"
+          },
+          {
+            "description": "编号106",
+            "label": "id106"
+          },
+          {
+            "description": "编号107",
+            "label": "id107"
+          },
+          {
+            "description": "编号108",
+            "label": "id108"
+          },
+          {
+            "description": "编号109",
+            "label": "id109"
+          },
+          {
+            "description": "编号110",
+            "label": "id110"
+          },
+          {
+            "description": "编号111",
+            "label": "id111"
+          },
+          {
+            "description": "编号112",
+            "label": "id112"
+          },
+          {
+            "description": "编号113",
+            "label": "id113"
+          },
+          {
+            "description": "编号114",
+            "label": "id114"
+          },
+          {
+            "description": "编号115",
+            "label": "id115"
+          },
+          {
+            "description": "编号116",
+            "label": "id116"
+          },
+          {
+            "description": "编号117",
+            "label": "id117"
+          },
+          {
+            "description": "编号118",
+            "label": "id118"
+          },
+          {
+            "description": "编号119",
+            "label": "id119"
+          },
+          {
+            "description": "编号120",
+            "label": "id120"
+          },
+          {
+            "description": "编号121",
+            "label": "id121"
+          },
+          {
+            "description": "编号122",
+            "label": "id122"
+          },
+          {
+            "description": "编号123",
+            "label": "id123"
+          },
+          {
+            "description": "编号124",
+            "label": "id124"
+          },
+          {
+            "description": "编号125",
+            "label": "id125"
+          },
+          {
+            "description": "编号126",
+            "label": "id126"
+          },
+          {
+            "description": "编号127",
+            "label": "id127"
+          },
+          {
+            "description": "编号128",
+            "label": "id128"
+          },
+          {
+            "description": "编号129",
+            "label": "id129"
+          },
+          {
+            "description": "编号130",
+            "label": "id130"
+          },
+          {
+            "description": "编号131",
+            "label": "id131"
+          },
+          {
+            "description": "编号132",
+            "label": "id132"
+          },
+          {
+            "description": "编号133",
+            "label": "id133"
+          },
+          {
+            "description": "编号134",
+            "label": "id134"
+          },
+          {
+            "description": "编号135",
+            "label": "id135"
+          },
+          {
+            "description": "编号136",
+            "label": "id136"
+          },
+          {
+            "description": "编号137",
+            "label": "id137"
+          },
+          {
+            "description": "编号138",
+            "label": "id138"
+          },
+          {
+            "description": "编号139",
+            "label": "id139"
+          },
+          {
+            "description": "编号140",
+            "label": "id140"
+          },
+          {
+            "description": "编号141",
+            "label": "id141"
+          },
+          {
+            "description": "编号142",
+            "label": "id142"
+          },
+          {
+            "description": "编号143",
+            "label": "id143"
+          },
+          {
+            "description": "编号144",
+            "label": "id144"
+          },
+          {
+            "description": "编号145",
+            "label": "id145"
+          },
+          {
+            "description": "编号146",
+            "label": "id146"
+          },
+          {
+            "description": "编号147",
+            "label": "id147"
+          },
+          {
+            "description": "编号148",
+            "label": "id148"
+          },
+          {
+            "description": "编号149",
+            "label": "id149"
+          },
+          {
+            "description": "编号150",
+            "label": "id150"
+          },
+          {
+            "description": "编号151",
+            "label": "id151"
+          },
+          {
+            "description": "编号152",
+            "label": "id152"
+          },
+          {
+            "description": "编号153",
+            "label": "id153"
+          },
+          {
+            "description": "编号154",
+            "label": "id154"
+          },
+          {
+            "description": "编号155",
+            "label": "id155"
+          },
+          {
+            "description": "编号156",
+            "label": "id156"
+          },
+          {
+            "description": "编号157",
+            "label": "id157"
+          },
+          {
+            "description": "编号158",
+            "label": "id158"
+          },
+          {
+            "description": "编号159",
+            "label": "id159"
+          },
+          {
+            "description": "编号160",
+            "label": "id160"
+          },
+          {
+            "description": "编号161",
+            "label": "id161"
+          },
+          {
+            "description": "编号162",
+            "label": "id162"
+          },
+          {
+            "description": "编号163",
+            "label": "id163"
+          },
+          {
+            "description": "编号164",
+            "label": "id164"
+          },
+          {
+            "description": "编号165",
+            "label": "id165"
+          },
+          {
+            "description": "编号166",
+            "label": "id166"
+          },
+          {
+            "description": "编号167",
+            "label": "id167"
+          },
+          {
+            "description": "编号168",
+            "label": "id168"
+          },
+          {
+            "description": "编号169",
+            "label": "id169"
+          },
+          {
+            "description": "编号170",
+            "label": "id170"
+          },
+          {
+            "description": "编号171",
+            "label": "id171"
+          },
+          {
+            "description": "编号172",
+            "label": "id172"
+          },
+          {
+            "description": "编号173",
+            "label": "id173"
+          },
+          {
+            "description": "编号174",
+            "label": "id174"
+          },
+          {
+            "description": "编号175",
+            "label": "id175"
+          },
+          {
+            "description": "编号176",
+            "label": "id176"
+          },
+          {
+            "description": "编号177",
+            "label": "id177"
+          },
+          {
+            "description": "编号178",
+            "label": "id178"
+          },
+          {
+            "description": "编号179",
+            "label": "id179"
+          },
+          {
+            "description": "编号180",
+            "label": "id180"
+          },
+          {
+            "description": "编号181",
+            "label": "id181"
+          },
+          {
+            "description": "编号182",
+            "label": "id182"
+          },
+          {
+            "description": "编号183",
+            "label": "id183"
+          },
+          {
+            "description": "编号184",
+            "label": "id184"
+          },
+          {
+            "description": "编号185",
+            "label": "id185"
+          },
+          {
+            "description": "编号186",
+            "label": "id186"
+          },
+          {
+            "description": "编号187",
+            "label": "id187"
+          },
+          {
+            "description": "编号188",
+            "label": "id188"
+          },
+          {
+            "description": "编号189",
+            "label": "id189"
+          },
+          {
+            "description": "编号190",
+            "label": "id190"
+          },
+          {
+            "description": "编号191",
+            "label": "id191"
+          },
+          {
+            "description": "编号192",
+            "label": "id192"
+          },
+          {
+            "description": "编号193",
+            "label": "id193"
+          },
+          {
+            "description": "编号194",
+            "label": "id194"
+          },
+          {
+            "description": "编号195",
+            "label": "id195"
+          },
+          {
+            "description": "编号196",
+            "label": "id196"
+          },
+          {
+            "description": "编号197",
+            "label": "id197"
+          },
+          {
+            "description": "编号198",
+            "label": "id198"
+          },
+          {
+            "description": "编号199",
+            "label": "id199"
+          },
+          {
+            "description": "编号200",
+            "label": "id200"
+          },
+          {
+            "description": "编号201",
+            "label": "id201"
+          },
+          {
+            "description": "编号202",
+            "label": "id202"
+          },
+          {
+            "description": "编号203",
+            "label": "id203"
+          },
+          {
+            "description": "编号204",
+            "label": "id204"
+          },
+          {
+            "description": "编号205",
+            "label": "id205"
+          },
+          {
+            "description": "编号206",
+            "label": "id206"
+          },
+          {
+            "description": "编号207",
+            "label": "id207"
+          },
+          {
+            "description": "编号208",
+            "label": "id208"
+          },
+          {
+            "description": "编号209",
+            "label": "id209"
+          },
+          {
+            "description": "编号210",
+            "label": "id210"
+          },
+          {
+            "description": "编号211",
+            "label": "id211"
+          },
+          {
+            "description": "编号212",
+            "label": "id212"
+          },
+          {
+            "description": "编号213",
+            "label": "id213"
+          },
+          {
+            "description": "编号214",
+            "label": "id214"
+          },
+          {
+            "description": "编号215",
+            "label": "id215"
+          },
+          {
+            "description": "编号216",
+            "label": "id216"
+          },
+          {
+            "description": "编号217",
+            "label": "id217"
+          },
+          {
+            "description": "编号218",
+            "label": "id218"
+          },
+          {
+            "description": "编号219",
+            "label": "id219"
+          },
+          {
+            "description": "编号220",
+            "label": "id220"
+          },
+          {
+            "description": "编号221",
+            "label": "id221"
+          },
+          {
+            "description": "编号222",
+            "label": "id222"
+          },
+          {
+            "description": "编号223",
+            "label": "id223"
+          },
+          {
+            "description": "编号224",
+            "label": "id224"
+          },
+          {
+            "description": "编号225",
+            "label": "id225"
+          },
+          {
+            "description": "编号226",
+            "label": "id226"
+          },
+          {
+            "description": "编号227",
+            "label": "id227"
+          },
+          {
+            "description": "编号228",
+            "label": "id228"
+          },
+          {
+            "description": "编号229",
+            "label": "id229"
+          },
+          {
+            "description": "编号230",
+            "label": "id230"
+          },
+          {
+            "description": "编号231",
+            "label": "id231"
+          },
+          {
+            "description": "编号232",
+            "label": "id232"
+          },
+          {
+            "description": "编号233",
+            "label": "id233"
+          },
+          {
+            "description": "编号234",
+            "label": "id234"
+          },
+          {
+            "description": "编号235",
+            "label": "id235"
+          },
+          {
+            "description": "编号236",
+            "label": "id236"
+          },
+          {
+            "description": "编号237",
+            "label": "id237"
+          },
+          {
+            "description": "编号238",
+            "label": "id238"
+          },
+          {
+            "description": "编号239",
+            "label": "id239"
+          },
+          {
+            "description": "编号240",
+            "label": "id240"
+          },
+          {
+            "description": "编号241",
+            "label": "id241"
+          },
+          {
+            "description": "编号242",
+            "label": "id242"
+          },
+          {
+            "description": "编号243",
+            "label": "id243"
+          },
+          {
+            "description": "编号244",
+            "label": "id244"
+          },
+          {
+            "description": "编号245",
+            "label": "id245"
+          },
+          {
+            "description": "编号246",
+            "label": "id246"
+          },
+          {
+            "description": "编号247",
+            "label": "id247"
+          },
+          {
+            "description": "编号248",
+            "label": "id248"
+          },
+          {
+            "description": "编号249",
+            "label": "id249"
+          },
+          {
+            "description": "编号250",
+            "label": "id250"
+          },
+          {
+            "description": "编号251",
+            "label": "id251"
+          },
+          {
+            "description": "编号252",
+            "label": "id252"
+          },
+          {
+            "description": "编号253",
+            "label": "id253"
+          },
+          {
+            "description": "编号254",
+            "label": "id254"
+          }
+        ]
+      }
+    ],
+    "content": "{\"answers\":[[0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]]}",
+    "issues": [
+      "q0: expected 255 probabilities, got 274"
+    ],
+    "usage": {
+      "prompt_tokens": 2991,
+      "completion_tokens": 553,
+      "total_tokens": 3544,
+      "prompt_tokens_details": {
+        "cached_tokens": 2816
+      },
+      "prompt_cache_hit_tokens": 2816,
+      "prompt_cache_miss_tokens": 175
+    }
+  }
+]

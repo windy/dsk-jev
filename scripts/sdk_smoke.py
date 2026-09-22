@@ -18,11 +18,11 @@ class Upstream(BaseHTTPRequestHandler):
     def do_POST(self):
         body = json.loads(self.rfile.read(int(self.headers["Content-Length"])))
         assert body["thinking"] == {"type": "disabled"}
-        questions = json.loads(body["messages"][0]["content"].split("\nQuestions:\n")[1])
-        answers = []
-        for q in questions:
-            answers.append(0.25 if q["type"] == "noul" else [1.0] + [0.0] * (len(q["criteria"]) - 1))
-        payload = json.dumps({"choices": [{"finish_reason": "stop", "message": {"content": json.dumps({"answers": answers})}}], "usage": {"prompt_tokens": 100, "completion_tokens": 20}}).encode()
+        questions = body["tools"][0]["function"]["parameters"]["properties"]["answers"]["properties"]
+        answers = {}
+        for key, q in questions.items():
+            answers[key] = 0.25 if q["type"] == "number" else {k: (1.0 if i == 0 else 0.0) for i, k in enumerate(q["properties"])}
+        payload = json.dumps({"choices": [{"finish_reason": "tool_calls", "message": {"tool_calls": [{"type":"function", "function":{"name":"submit_decisions", "arguments":json.dumps({"answers": answers})}}]}}], "usage": {"prompt_tokens": 100, "completion_tokens": 20}}).encode()
         self.send_response(200)
         self.send_header("Content-Type", "application/json")
         self.end_headers()

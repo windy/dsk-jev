@@ -27,19 +27,24 @@ func TestEndToEnd(t *testing.T) {
 			t.Error("wrong upstream routing/auth")
 		}
 		var body struct {
-			Model          string
-			Thinking       struct{ Type string }
-			Messages       []struct{ Role, Content string }
-			ResponseFormat map[string]string `json:"response_format"`
+			Model    string
+			Thinking struct{ Type string }
+			Messages []struct{ Role, Content string }
+			Tools    []struct {
+				Function struct {
+					Strict     bool
+					Parameters map[string]any
+				}
+			}
 		}
 		_ = json.NewDecoder(r.Body).Decode(&body)
-		if body.Model != "deepseek-flash" || body.Thinking.Type != "disabled" || body.ResponseFormat["type"] != "json_object" {
+		if body.Model != "deepseek-flash" || body.Thinking.Type != "disabled" || len(body.Tools) != 1 || !body.Tools[0].Function.Strict {
 			t.Errorf("bad upstream request: %+v", body)
 		}
 		if len(body.Messages) != 2 || strings.Contains(body.Messages[0].Content, "重复扣款") {
 			t.Error("state leaked into stable prefix")
 		}
-		write(w, 200, map[string]any{"choices": []any{map[string]any{"finish_reason": "stop", "message": map[string]string{"content": `{"answers":[[0.9,0.1],[0.05,0.1,0.85],0.2]}`}}}, "usage": map[string]int{"prompt_tokens": 200, "completion_tokens": 25}})
+		write(w, 200, map[string]any{"choices": []any{map[string]any{"finish_reason": "tool_calls", "message": map[string]any{"tool_calls": []any{map[string]any{"type": "function", "function": map[string]string{"name": "submit_decisions", "arguments": `{"answers":{"q0":{"billing":0.9,"sales":0.1},"q1":{"0":0.05,"1":0.1,"2":0.85},"q2":0.2}}`}}}}}}, "usage": map[string]int{"prompt_tokens": 200, "completion_tokens": 25}})
 	}))
 	defer upstream.Close()
 	s := New(Config{APIKey: "local", UpstreamKey: "upstream", BaseURL: upstream.URL, UpstreamModel: "deepseek-flash"})
@@ -103,7 +108,7 @@ func TestProbabilityValidation(t *testing.T) {
 	_ = json.Unmarshal([]byte(fixture), &r)
 	qs, _ := compile(r)
 	for _, s := range []string{`{"answers":[[0,0],[0,0,1],0.5]}`, `{"answers":[[1.1,-0.1],[0,0,1],0.5]}`, `{"answers":[[null,1],[0,0,1],0.5]}`, `{"answers":[[0,1],[0,0,1],null]}`, `{"answers":[[0,1],[0,0,1],true]}`, `{"answers":[[0,1],[0,0,1],2]}`, `{"answers":[[0,1],[0,1],0.5]}`} {
-		if _, err := decodeAnswers(s, qs); err == nil {
+		if _, err := decodeOrderedAnswers(s, qs); err == nil {
 			t.Error("accepted", s)
 		}
 	}

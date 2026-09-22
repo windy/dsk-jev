@@ -1,0 +1,56 @@
+2026/09/22 15:31:19 INFO listening addr=127.0.0.1:62093 upstream_model=deepseek-flash
+2026/09/22 15:31:22 WARN decision rejected reason=question_0_option_count_mismatch
+2026/09/22 15:31:22 INFO upstream usage outcome=invalid_output latency_ms=2683 questions=3 input_tokens=496 cached_tokens=0 output_tokens=19
+2026/09/22 15:31:23 WARN decision rejected reason="invalid noul probability"
+2026/09/22 15:31:23 INFO upstream usage outcome=invalid_output latency_ms=2992 questions=3 input_tokens=494 cached_tokens=0 output_tokens=69
+2026/09/22 15:31:23 WARN decision rejected reason="probabilities must sum to one"
+2026/09/22 15:31:23 INFO upstream usage outcome=invalid_output latency_ms=3048 questions=3 input_tokens=491 cached_tokens=0 output_tokens=44
+2026/09/22 15:31:23 INFO upstream usage outcome=success latency_ms=717 questions=3 input_tokens=494 cached_tokens=256 output_tokens=50
+2026/09/22 15:31:23 WARN decision rejected reason=question_0_option_count_mismatch
+2026/09/22 15:31:23 INFO upstream usage outcome=invalid_output latency_ms=595 questions=3 input_tokens=491 cached_tokens=256 output_tokens=19
+2026/09/22 15:31:23 INFO upstream usage outcome=success latency_ms=803 questions=3 input_tokens=493 cached_tokens=256 output_tokens=44
+2026/09/22 15:31:24 INFO upstream usage outcome=success latency_ms=604 questions=3 input_tokens=489 cached_tokens=256 output_tokens=44
+2026/09/22 15:31:24 INFO upstream usage outcome=success latency_ms=679 questions=3 input_tokens=489 cached_tokens=256 output_tokens=56
+2026/09/22 15:31:24 INFO upstream usage outcome=success latency_ms=855 questions=3 input_tokens=489 cached_tokens=256 output_tokens=44
+2026/09/22 15:31:25 INFO upstream usage outcome=success latency_ms=763 questions=3 input_tokens=489 cached_tokens=256 output_tokens=83
+2026/09/22 15:31:25 WARN decision rejected reason=question_0_option_count_mismatch
+2026/09/22 15:31:25 INFO upstream usage outcome=invalid_output latency_ms=1108 questions=3 input_tokens=493 cached_tokens=256 output_tokens=33
+2026/09/22 15:31:25 INFO upstream usage outcome=success latency_ms=805 questions=3 input_tokens=487 cached_tokens=256 output_tokens=44
+2026/09/22 15:31:25 INFO upstream usage outcome=success latency_ms=842 questions=3 input_tokens=494 cached_tokens=256 output_tokens=58
+2026/09/22 15:31:25 WARN decision rejected reason=question_0_option_count_mismatch
+2026/09/22 15:31:25 INFO upstream usage outcome=invalid_output latency_ms=810 questions=3 input_tokens=500 cached_tokens=256 output_tokens=19
+2026/09/22 15:31:26 INFO upstream usage outcome=success latency_ms=510 questions=3 input_tokens=495 cached_tokens=256 output_tokens=44
+2026/09/22 15:31:26 INFO upstream usage outcome=success latency_ms=717 questions=3 input_tokens=495 cached_tokens=256 output_tokens=44
+2026/09/22 15:31:26 WARN decision rejected reason=question_0_option_count_mismatch
+2026/09/22 15:31:26 INFO upstream usage outcome=invalid_output latency_ms=1094 questions=3 input_tokens=497 cached_tokens=256 output_tokens=19
+2026/09/22 15:31:27 WARN decision rejected reason=question_0_option_count_mismatch
+2026/09/22 15:31:27 INFO upstream usage outcome=invalid_output latency_ms=609 questions=3 input_tokens=492 cached_tokens=256 output_tokens=19
+2026/09/22 15:31:27 INFO upstream usage outcome=success latency_ms=929 questions=3 input_tokens=494 cached_tokens=256 output_tokens=83
+2026/09/22 15:31:27 INFO upstream usage outcome=success latency_ms=1044 questions=3 input_tokens=497 cached_tokens=256 output_tokens=44
+2026/09/22 15:31:28 INFO upstream usage outcome=success latency_ms=705 questions=3 input_tokens=492 cached_tokens=256 output_tokens=60
+2026/09/22 15:31:28 INFO upstream usage outcome=success latency_ms=869 questions=3 input_tokens=490 cached_tokens=256 output_tokens=44
+2026/09/22 15:31:28 WARN decision rejected reason=question_0_option_count_mismatch
+2026/09/22 15:31:28 INFO upstream usage outcome=invalid_output latency_ms=879 questions=3 input_tokens=494 cached_tokens=256 output_tokens=55
+2026/09/22 15:31:28 INFO upstream usage outcome=success latency_ms=419 questions=1 input_tokens=324 cached_tokens=128 output_tokens=14
+2026/09/22 15:31:29 INFO upstream usage outcome=success latency_ms=908 questions=3 input_tokens=417 cached_tokens=128 output_tokens=54
+2026/09/22 15:31:29 WARN decision rejected reason="invalid noul probability"
+2026/09/22 15:31:29 INFO upstream usage outcome=invalid_output latency_ms=954 questions=3 input_tokens=511 cached_tokens=256 output_tokens=69
+2026/09/22 15:31:29 INFO upstream usage outcome=success latency_ms=908 questions=1 input_tokens=320 cached_tokens=128 output_tokens=10
+2026/09/22 15:31:29 INFO upstream usage outcome=success latency_ms=856 questions=1 input_tokens=346 cached_tokens=128 output_tokens=10
+2026/09/22 15:31:29 INFO upstream usage outcome=success latency_ms=897 questions=1 input_tokens=374 cached_tokens=128 output_tokens=8
+2026/09/22 15:31:30 INFO upstream usage outcome=success latency_ms=468 questions=1 input_tokens=327 cached_tokens=128 output_tokens=18
+2026/09/22 15:31:30 WARN decision rejected reason=question_0_option_count_mismatch
+2026/09/22 15:31:30 INFO upstream usage outcome=invalid_output latency_ms=493 questions=3 input_tokens=492 cached_tokens=256 output_tokens=19
+2026/09/22 15:31:30 INFO upstream usage outcome=success latency_ms=646 questions=1 input_tokens=385 cached_tokens=128 output_tokens=46
+2026/09/22 15:31:31 INFO upstream usage outcome=success latency_ms=766 questions=3 input_tokens=4094 cached_tokens=384 output_tokens=44
+2026/09/22 15:31:31 INFO upstream usage outcome=success latency_ms=1243 questions=1 input_tokens=514 cached_tokens=256 output_tokens=166
+2026/09/22 15:31:33 INFO upstream usage outcome=success latency_ms=3366 questions=1 input_tokens=1852 cached_tokens=256 output_tokens=1281
+2026/09/22 15:31:34 INFO upstream usage outcome=success latency_ms=614 questions=1 input_tokens=321 cached_tokens=128 output_tokens=8
+2026/09/22 15:31:35 INFO upstream usage outcome=success latency_ms=718 questions=5 input_tokens=433 cached_tokens=256 output_tokens=28
+2026/09/22 15:31:36 INFO upstream usage outcome=success latency_ms=1159 questions=10 input_tokens=573 cached_tokens=256 output_tokens=53
+2026/09/22 15:31:37 INFO upstream usage outcome=success latency_ms=938 questions=20 input_tokens=853 cached_tokens=256 output_tokens=103
+2026/09/22 15:31:38 INFO upstream usage outcome=success latency_ms=923 questions=3 input_tokens=417 cached_tokens=256 output_tokens=40
+2026/09/22 15:31:38 INFO upstream usage outcome=success latency_ms=876 questions=3 input_tokens=417 cached_tokens=256 output_tokens=40
+2026/09/22 15:31:39 INFO upstream usage outcome=success latency_ms=858 questions=3 input_tokens=417 cached_tokens=256 output_tokens=40
+2026/09/22 15:31:40 INFO upstream usage outcome=success latency_ms=577 questions=3 input_tokens=417 cached_tokens=256 output_tokens=54
+2026/09/22 15:31:41 INFO upstream usage outcome=success latency_ms=605 questions=3 input_tokens=417 cached_tokens=256 output_tokens=40

@@ -1,0 +1,61 @@
+{
+  "requests": 44,
+  "successful_requests": 42,
+  "judgments": 140,
+  "correct_judgments": 133,
+  "completed_judgments": 134,
+  "latency_ms": {
+    "p50": 829.89,
+    "p95": 1814.57
+  },
+  "usage": {
+    "input_tokens": 54528,
+    "output_tokens": 5871
+  },
+  "by_type": {
+    "choice": {
+      "correct": 34,
+      "total": 35
+    },
+    "score": {
+      "correct": 31,
+      "total": 31
+    },
+    "noul": {
+      "correct": 68,
+      "total": 68
+    }
+  },
+  "failures": [
+    {
+      "id": "question_refund",
+      "status": 200,
+      "checks": [
+        {
+          "question": "department",
+          "type": "choice",
+          "expected": "billing",
+          "actual": "sales",
+          "pass": false
+        }
+      ]
+    },
+    {
+      "id": "repeat_3",
+      "status": 502,
+      "checks": []
+    },
+    {
+      "id": "repeat_4",
+      "status": 502,
+      "checks": []
+    }
+  ],
+  "successful_cached_input_tokens": 31104,
+  "upstream_usage_all_parsed_responses": {
+    "input_tokens": 56416,
+    "cached_tokens": 32640,
+    "output_tokens": 6064
+  },
+  "usage_scope": "Response usage includes successful requests only; upstream_usage_all_parsed_responses also includes rejected parsed upstream responses."
+}

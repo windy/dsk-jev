@@ -20,7 +20,7 @@ func env(key, fallback string) string {
 	return fallback
 }
 func main() {
-	c := decision.Config{APIKey: os.Getenv("PROXY_API_KEY"), UpstreamKey: os.Getenv("DEEPSEEK_API_KEY"), BaseURL: env("DEEPSEEK_BASE_URL", "https://api.deepseek.com"), UpstreamModel: env("DEEPSEEK_MODEL", "deepseek-flash")}
+	c := decision.Config{APIKey: os.Getenv("PROXY_API_KEY"), UpstreamKey: os.Getenv("DEEPSEEK_API_KEY"), BaseURL: env("DEEPSEEK_BASE_URL", "https://api.deepseek.com/beta"), UpstreamModel: env("DEEPSEEK_MODEL", "deepseek-flash")}
 	if c.APIKey == "" || c.UpstreamKey == "" {
 		slog.Error("PROXY_API_KEY and DEEPSEEK_API_KEY are required")
 		os.Exit(1)

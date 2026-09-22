@@ -1,0 +1,37 @@
+{
+  "requests": 1,
+  "successful_requests": 1,
+  "judgments": 3,
+  "correct_judgments": 3,
+  "completed_judgments": 3,
+  "latency_ms": {
+    "p50": 1034.92,
+    "p95": 1034.92
+  },
+  "usage": {
+    "input_tokens": 1049,
+    "output_tokens": 105
+  },
+  "by_type": {
+    "choice": {
+      "correct": 1,
+      "total": 1
+    },
+    "score": {
+      "correct": 1,
+      "total": 1
+    },
+    "noul": {
+      "correct": 1,
+      "total": 1
+    }
+  },
+  "failures": [],
+  "successful_cached_input_tokens": 0,
+  "upstream_usage_all_parsed_responses": {
+    "input_tokens": 1049,
+    "cached_tokens": 0,
+    "output_tokens": 105
+  },
+  "usage_scope": "Response usage includes successful requests only; upstream_usage_all_parsed_responses also includes rejected parsed upstream responses."
+}

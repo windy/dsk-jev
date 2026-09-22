@@ -1,0 +1,71 @@
+[
+  {
+    "id": "double_charge",
+    "group": "semantic",
+    "questions": 3,
+    "status": 200,
+    "response": {
+      "model": "jev-1.13.0",
+      "answers": {
+        "department": {
+          "choice": "billing",
+          "confidence": 0.9333333333333332,
+          "probabilities": {
+            "billing": 0.95,
+            "other": 0.02,
+            "sales": 0.01,
+            "technical": 0.02
+          },
+          "type": "choice"
+        },
+        "refund": {
+          "noul": 0.2,
+          "type": "noul"
+        },
+        "urgency": {
+          "confidence": 0.7449999999999999,
+          "legend": {
+            "0": "没有提出处理期限，或明确不急",
+            "1": "希望尽快，但无具体期限",
+            "2": "明确要求今天、立即或指定时间前处理"
+          },
+          "probabilities": {
+            "0": 0.02,
+            "1": 0.13,
+            "2": 0.85
+          },
+          "score": 1.83,
+          "type": "score"
+        }
+      },
+      "usage": {
+        "input_tokens": 1049,
+        "output_tokens": 105
+      }
+    },
+    "latency_ms": 1034.92,
+    "checks": [
+      {
+        "question": "department",
+        "type": "choice",
+        "expected": "billing",
+        "actual": "billing",
+        "pass": true
+      },
+      {
+        "question": "refund",
+        "type": "noul",
+        "expected": false,
+        "actual": false,
+        "pass": true
+      },
+      {
+        "question": "urgency",
+        "type": "score",
+        "expected": 2,
+        "actual": 2,
+        "pass": true
+      }
+    ]
+  }
+]

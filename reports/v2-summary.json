@@ -1,0 +1,106 @@
+{
+  "requests": 44,
+  "successful_requests": 33,
+  "judgments": 140,
+  "correct_judgments": 106,
+  "completed_judgments": 107,
+  "latency_ms": {
+    "p50": 807.25,
+    "p95": 1245.04
+  },
+  "usage": {
+    "input_tokens": 20105,
+    "output_tokens": 2799
+  },
+  "by_type": {
+    "choice": {
+      "correct": 26,
+      "total": 26
+    },
+    "score": {
+      "correct": 21,
+      "total": 22
+    },
+    "noul": {
+      "correct": 59,
+      "total": 59
+    }
+  },
+  "failures": [
+    {
+      "id": "double_charge",
+      "status": 502,
+      "checks": []
+    },
+    {
+      "id": "refund_yes",
+      "status": 502,
+      "checks": []
+    },
+    {
+      "id": "refund_no",
+      "status": 502,
+      "checks": []
+    },
+    {
+      "id": "invoice",
+      "status": 502,
+      "checks": []
+    },
+    {
+      "id": "sales_deadline",
+      "status": 502,
+      "checks": []
+    },
+    {
+      "id": "conditional",
+      "status": 502,
+      "checks": []
+    },
+    {
+      "id": "retracted",
+      "status": 502,
+      "checks": []
+    },
+    {
+      "id": "question_refund",
+      "status": 200,
+      "checks": [
+        {
+          "question": "urgency",
+          "type": "score",
+          "expected": 0,
+          "actual": 2,
+          "pass": false
+        }
+      ]
+    },
+    {
+      "id": "policy",
+      "status": 502,
+      "checks": []
+    },
+    {
+      "id": "negated_deadline",
+      "status": 502,
+      "checks": []
+    },
+    {
+      "id": "injection",
+      "status": 502,
+      "checks": []
+    },
+    {
+      "id": "object_state",
+      "status": 502,
+      "checks": []
+    }
+  ],
+  "successful_cached_input_tokens": 7552,
+  "upstream_usage_all_parsed_responses": {
+    "input_tokens": 25556,
+    "cached_tokens": 9600,
+    "output_tokens": 3183
+  },
+  "usage_scope": "Response usage includes successful requests only; upstream_usage_all_parsed_responses also includes rejected parsed upstream responses."
+}

@@ -1,0 +1,13 @@
+2026/09/22 15:34:09 INFO listening addr=127.0.0.1:62932 upstream_model=deepseek-flash
+2026/09/22 15:34:09 INFO upstream usage outcome=success latency_ms=768 questions=2 input_tokens=795 cached_tokens=512 output_tokens=69
+2026/09/22 15:34:10 INFO upstream usage outcome=success latency_ms=914 questions=2 input_tokens=796 cached_tokens=512 output_tokens=61
+2026/09/22 15:34:10 INFO upstream usage outcome=success latency_ms=1288 questions=2 input_tokens=791 cached_tokens=640 output_tokens=61
+2026/09/22 15:34:10 INFO upstream usage outcome=success latency_ms=702 questions=2 input_tokens=799 cached_tokens=640 output_tokens=69
+2026/09/22 15:34:10 INFO upstream usage outcome=success latency_ms=842 questions=1 input_tokens=751 cached_tokens=512 output_tokens=59
+2026/09/22 15:34:11 INFO upstream usage outcome=success latency_ms=697 questions=1 input_tokens=753 cached_tokens=512 output_tokens=59
+2026/09/22 15:34:11 INFO upstream usage outcome=success latency_ms=848 questions=1 input_tokens=754 cached_tokens=512 output_tokens=59
+2026/09/22 15:34:11 INFO upstream usage outcome=success latency_ms=883 questions=1 input_tokens=631 cached_tokens=384 output_tokens=38
+2026/09/22 15:34:11 INFO upstream usage outcome=success latency_ms=711 questions=1 input_tokens=723 cached_tokens=512 output_tokens=59
+2026/09/22 15:34:12 INFO upstream usage outcome=success latency_ms=787 questions=2 input_tokens=798 cached_tokens=512 output_tokens=61
+2026/09/22 15:34:12 INFO upstream usage outcome=success latency_ms=525 questions=1 input_tokens=726 cached_tokens=512 output_tokens=53
+2026/09/22 15:34:12 INFO upstream usage outcome=success latency_ms=993 questions=1 input_tokens=743 cached_tokens=512 output_tokens=53

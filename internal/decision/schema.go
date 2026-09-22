@@ -29,6 +29,7 @@ type Response struct {
 }
 type compiledQuestion struct {
 	ID           string            `json:"-"`
+	Key          string            `json:"id"`
 	Type         string            `json:"type"`
 	Instructions json.RawMessage   `json:"instructions"`
 	Criteria     any               `json:"criteria,omitempty"`
@@ -70,7 +71,7 @@ func compile(r Request) ([]compiledQuestion, error) {
 		if !description(q.Instructions, false) {
 			return fail()
 		}
-		c := compiledQuestion{ID: id, Type: q.Type, Instructions: q.Instructions}
+		c := compiledQuestion{ID: id, Key: fmt.Sprintf("q%d", len(out)), Type: q.Type, Instructions: q.Instructions}
 		switch q.Type {
 		case "choice":
 			var m map[string]json.RawMessage
@@ -84,12 +85,7 @@ func compile(r Request) ([]compiledQuestion, error) {
 				c.Labels = append(c.Labels, k)
 			}
 			sort.Strings(c.Labels)
-			// Preserve labels in input: null criteria rely on the label's semantics.
-			options := make([]any, 0, len(m))
-			for _, k := range c.Labels {
-				options = append(options, map[string]any{"label": k, "description": m[k]})
-			}
-			c.Criteria = options
+			c.Criteria = m
 		case "score":
 			var levels []json.RawMessage
 			if json.Unmarshal(q.Criteria, &levels) != nil || len(levels) < 2 || len(levels) > 10 {
@@ -109,7 +105,7 @@ func compile(r Request) ([]compiledQuestion, error) {
 				}
 				c.Legend[k] = s
 			}
-			c.Criteria = levels
+			c.Criteria = c.Legend
 		case "noul":
 			if len(q.Criteria) > 0 && string(q.Criteria) != "null" {
 				var m map[string]json.RawMessage
@@ -154,7 +150,7 @@ func confidence(p []float64, score bool) float64 {
 	}
 	return math.Max(0, 1-distance/uniform)
 }
-func decodeAnswers(content string, qs []compiledQuestion) (map[string]any, error) {
+func decodeOrderedAnswers(content string, qs []compiledQuestion) (map[string]any, error) {
 	var raw struct {
 		Answers []json.RawMessage `json:"answers"`
 	}
@@ -213,4 +209,70 @@ func decodeAnswers(content string, qs []compiledQuestion) (map[string]any, error
 		out[q.ID] = a
 	}
 	return out, nil
+}
+
+// Bind generated probabilities to explicit IDs before deriving public answers.
+// Reject missing/unknown IDs instead of silently assigning them by position.
+func decodeAnswers(content string, qs []compiledQuestion) (map[string]any, error) {
+	var envelope struct {
+		Answers map[string]json.RawMessage `json:"answers"`
+	}
+	if err := json.Unmarshal([]byte(content), &envelope); err != nil || len(envelope.Answers) != len(qs) {
+		return nil, fmt.Errorf("answer_keys_mismatch")
+	}
+	values := make([]json.RawMessage, len(qs))
+	for i, q := range qs {
+		raw, ok := envelope.Answers[q.Key]
+		if !ok {
+			return nil, fmt.Errorf("question_%d_missing", i)
+		}
+		if q.Type == "noul" {
+			values[i] = raw
+			continue
+		}
+		var probs map[string]json.RawMessage
+		if json.Unmarshal(raw, &probs) != nil || len(probs) != len(q.Labels) {
+			return nil, fmt.Errorf("question_%d_option_count_mismatch", i)
+		}
+		ordered := make([]json.RawMessage, len(q.Labels))
+		for j, label := range q.Labels {
+			v, ok := probs[label]
+			if !ok {
+				return nil, fmt.Errorf("question_%d_option_missing", i)
+			}
+			ordered[j] = v
+		}
+		values[i], _ = json.Marshal(ordered)
+	}
+	ordered, _ := json.Marshal(map[string]any{"answers": values})
+	return decodeOrderedAnswers(string(ordered), qs)
+}
+
+func outputSchema(qs []compiledQuestion) map[string]any {
+	object := func(props map[string]any, required []string) map[string]any {
+		return map[string]any{"type": "object", "properties": props, "required": required, "additionalProperties": false}
+	}
+	props := map[string]any{}
+	keys := []string{}
+	for _, q := range qs {
+		desc := string(q.Instructions)
+		var schema map[string]any
+		if q.Type == "noul" {
+			criteria, _ := json.Marshal(q.Criteria)
+			schema = map[string]any{"type": "number", "minimum": 0, "maximum": 1, "description": "Probability of yes/true. " + desc + " Criteria: " + string(criteria)}
+		} else {
+			levels := map[string]any{}
+			raw, _ := json.Marshal(q.Criteria)
+			var criteria map[string]json.RawMessage
+			_ = json.Unmarshal(raw, &criteria)
+			for _, label := range q.Labels {
+				levels[label] = map[string]any{"type": "number", "minimum": 0, "maximum": 1, "description": string(criteria[label])}
+			}
+			schema = object(levels, q.Labels)
+			schema["description"] = q.Type + ": " + desc + " Return probabilities summing to 1 across all keys."
+		}
+		props[q.Key] = schema
+		keys = append(keys, q.Key)
+	}
+	return object(map[string]any{"answers": object(props, keys)}, []string{"answers"})
 }

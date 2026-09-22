@@ -1,0 +1,2 @@
+2026/09/22 15:33:12 INFO listening addr=127.0.0.1:62576 upstream_model=deepseek-flash
+2026/09/22 15:33:13 INFO upstream usage outcome=success latency_ms=1033 questions=3 input_tokens=1049 cached_tokens=0 output_tokens=105

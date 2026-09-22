@@ -1,0 +1,46 @@
+{
+  "requests": 44,
+  "successful_requests": 44,
+  "judgments": 140,
+  "correct_judgments": 139,
+  "completed_judgments": 140,
+  "latency_ms": {
+    "p50": 886.95,
+    "p95": 1072.67
+  },
+  "usage": {
+    "input_tokens": 32802,
+    "output_tokens": 6140
+  },
+  "by_type": {
+    "choice": {
+      "correct": 36,
+      "total": 37
+    },
+    "score": {
+      "correct": 33,
+      "total": 33
+    },
+    "noul": {
+      "correct": 70,
+      "total": 70
+    }
+  },
+  "failures": [
+    {
+      "id": "quoted",
+      "status": 200,
+      "checks": [
+        {
+          "question": "department",
+          "type": "choice",
+          "expected": "sales",
+          "actual": "billing",
+          "pass": false
+        }
+      ]
+    }
+  ],
+  "usage_scope": "Successful Jev requests, no retries.",
+  "methodology": "Same frozen synthetic cases, thresholds, concurrency=3 for semantic/boundary, sequential batch/repeats as DeepSeek baseline. urllib.request with no explicit connection pool. Measured from same host at a different time."
+}
