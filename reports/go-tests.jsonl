@@ -1,0 +1,128 @@
+{"Time":"2026-09-22T15:14:47.270268+08:00","Action":"start","Package":"dsk-jev/cmd/server"}
+{"Time":"2026-09-22T15:14:47.270381+08:00","Action":"output","Package":"dsk-jev/cmd/server","Output":"?   \tdsk-jev/cmd/server\t[no test files]\n"}
+{"Time":"2026-09-22T15:14:47.270403+08:00","Action":"skip","Package":"dsk-jev/cmd/server","Elapsed":0}
+{"Time":"2026-09-22T15:14:48.28142+08:00","Action":"start","Package":"dsk-jev/internal/decision"}
+{"Time":"2026-09-22T15:14:49.08252+08:00","Action":"run","Package":"dsk-jev/internal/decision","Test":"TestCriteriaBoundaries"}
+{"Time":"2026-09-22T15:14:49.082675+08:00","Action":"output","Package":"dsk-jev/internal/decision","Test":"TestCriteriaBoundaries","Output":"=== RUN   TestCriteriaBoundaries\n"}
+{"Time":"2026-09-22T15:14:49.082786+08:00","Action":"run","Package":"dsk-jev/internal/decision","Test":"TestCriteriaBoundaries/choice_0"}
+{"Time":"2026-09-22T15:14:49.082809+08:00","Action":"output","Package":"dsk-jev/internal/decision","Test":"TestCriteriaBoundaries/choice_0","Output":"=== RUN   TestCriteriaBoundaries/choice_0\n"}
+{"Time":"2026-09-22T15:14:49.082954+08:00","Action":"output","Package":"dsk-jev/internal/decision","Test":"TestCriteriaBoundaries/choice_0","Output":"--- PASS: TestCriteriaBoundaries/choice_0 (0.00s)\n"}
+{"Time":"2026-09-22T15:14:49.082981+08:00","Action":"pass","Package":"dsk-jev/internal/decision","Test":"TestCriteriaBoundaries/choice_0","Elapsed":0}
+{"Time":"2026-09-22T15:14:49.083008+08:00","Action":"run","Package":"dsk-jev/internal/decision","Test":"TestCriteriaBoundaries/choice_1"}
+{"Time":"2026-09-22T15:14:49.083025+08:00","Action":"output","Package":"dsk-jev/internal/decision","Test":"TestCriteriaBoundaries/choice_1","Output":"=== RUN   TestCriteriaBoundaries/choice_1\n"}
+{"Time":"2026-09-22T15:14:49.083046+08:00","Action":"output","Package":"dsk-jev/internal/decision","Test":"TestCriteriaBoundaries/choice_1","Output":"--- PASS: TestCriteriaBoundaries/choice_1 (0.00s)\n"}
+{"Time":"2026-09-22T15:14:49.083064+08:00","Action":"pass","Package":"dsk-jev/internal/decision","Test":"TestCriteriaBoundaries/choice_1","Elapsed":0}
+{"Time":"2026-09-22T15:14:49.083082+08:00","Action":"run","Package":"dsk-jev/internal/decision","Test":"TestCriteriaBoundaries/choice_2"}
+{"Time":"2026-09-22T15:14:49.083097+08:00","Action":"output","Package":"dsk-jev/internal/decision","Test":"TestCriteriaBoundaries/choice_2","Output":"=== RUN   TestCriteriaBoundaries/choice_2\n"}
+{"Time":"2026-09-22T15:14:49.083116+08:00","Action":"output","Package":"dsk-jev/internal/decision","Test":"TestCriteriaBoundaries/choice_2","Output":"--- PASS: TestCriteriaBoundaries/choice_2 (0.00s)\n"}
+{"Time":"2026-09-22T15:14:49.083133+08:00","Action":"pass","Package":"dsk-jev/internal/decision","Test":"TestCriteriaBoundaries/choice_2","Elapsed":0}
+{"Time":"2026-09-22T15:14:49.083149+08:00","Action":"run","Package":"dsk-jev/internal/decision","Test":"TestCriteriaBoundaries/choice_255"}
+{"Time":"2026-09-22T15:14:49.083164+08:00","Action":"output","Package":"dsk-jev/internal/decision","Test":"TestCriteriaBoundaries/choice_255","Output":"=== RUN   TestCriteriaBoundaries/choice_255\n"}
+{"Time":"2026-09-22T15:14:49.083678+08:00","Action":"output","Package":"dsk-jev/internal/decision","Test":"TestCriteriaBoundaries/choice_255","Output":"--- PASS: TestCriteriaBoundaries/choice_255 (0.00s)\n"}
+{"Time":"2026-09-22T15:14:49.083702+08:00","Action":"pass","Package":"dsk-jev/internal/decision","Test":"TestCriteriaBoundaries/choice_255","Elapsed":0}
+{"Time":"2026-09-22T15:14:49.08372+08:00","Action":"run","Package":"dsk-jev/internal/decision","Test":"TestCriteriaBoundaries/choice_256"}
+{"Time":"2026-09-22T15:14:49.083735+08:00","Action":"output","Package":"dsk-jev/internal/decision","Test":"TestCriteriaBoundaries/choice_256","Output":"=== RUN   TestCriteriaBoundaries/choice_256\n"}
+{"Time":"2026-09-22T15:14:49.084019+08:00","Action":"output","Package":"dsk-jev/internal/decision","Test":"TestCriteriaBoundaries/choice_256","Output":"--- PASS: TestCriteriaBoundaries/choice_256 (0.00s)\n"}
+{"Time":"2026-09-22T15:14:49.084044+08:00","Action":"pass","Package":"dsk-jev/internal/decision","Test":"TestCriteriaBoundaries/choice_256","Elapsed":0}
+{"Time":"2026-09-22T15:14:49.08411+08:00","Action":"run","Package":"dsk-jev/internal/decision","Test":"TestCriteriaBoundaries/score_0"}
+{"Time":"2026-09-22T15:14:49.084129+08:00","Action":"output","Package":"dsk-jev/internal/decision","Test":"TestCriteriaBoundaries/score_0","Output":"=== RUN   TestCriteriaBoundaries/score_0\n"}
+{"Time":"2026-09-22T15:14:49.084164+08:00","Action":"output","Package":"dsk-jev/internal/decision","Test":"TestCriteriaBoundaries/score_0","Output":"--- PASS: TestCriteriaBoundaries/score_0 (0.00s)\n"}
+{"Time":"2026-09-22T15:14:49.084183+08:00","Action":"pass","Package":"dsk-jev/internal/decision","Test":"TestCriteriaBoundaries/score_0","Elapsed":0}
+{"Time":"2026-09-22T15:14:49.084201+08:00","Action":"run","Package":"dsk-jev/internal/decision","Test":"TestCriteriaBoundaries/score_1"}
+{"Time":"2026-09-22T15:14:49.084218+08:00","Action":"output","Package":"dsk-jev/internal/decision","Test":"TestCriteriaBoundaries/score_1","Output":"=== RUN   TestCriteriaBoundaries/score_1\n"}
+{"Time":"2026-09-22T15:14:49.084238+08:00","Action":"output","Package":"dsk-jev/internal/decision","Test":"TestCriteriaBoundaries/score_1","Output":"--- PASS: TestCriteriaBoundaries/score_1 (0.00s)\n"}
+{"Time":"2026-09-22T15:14:49.084255+08:00","Action":"pass","Package":"dsk-jev/internal/decision","Test":"TestCriteriaBoundaries/score_1","Elapsed":0}
+{"Time":"2026-09-22T15:14:49.084271+08:00","Action":"run","Package":"dsk-jev/internal/decision","Test":"TestCriteriaBoundaries/score_2"}
+{"Time":"2026-09-22T15:14:49.084287+08:00","Action":"output","Package":"dsk-jev/internal/decision","Test":"TestCriteriaBoundaries/score_2","Output":"=== RUN   TestCriteriaBoundaries/score_2\n"}
+{"Time":"2026-09-22T15:14:49.084306+08:00","Action":"output","Package":"dsk-jev/internal/decision","Test":"TestCriteriaBoundaries/score_2","Output":"--- PASS: TestCriteriaBoundaries/score_2 (0.00s)\n"}
+{"Time":"2026-09-22T15:14:49.084324+08:00","Action":"pass","Package":"dsk-jev/internal/decision","Test":"TestCriteriaBoundaries/score_2","Elapsed":0}
+{"Time":"2026-09-22T15:14:49.084342+08:00","Action":"run","Package":"dsk-jev/internal/decision","Test":"TestCriteriaBoundaries/score_10"}
+{"Time":"2026-09-22T15:14:49.08436+08:00","Action":"output","Package":"dsk-jev/internal/decision","Test":"TestCriteriaBoundaries/score_10","Output":"=== RUN   TestCriteriaBoundaries/score_10\n"}
+{"Time":"2026-09-22T15:14:49.084377+08:00","Action":"output","Package":"dsk-jev/internal/decision","Test":"TestCriteriaBoundaries/score_10","Output":"--- PASS: TestCriteriaBoundaries/score_10 (0.00s)\n"}
+{"Time":"2026-09-22T15:14:49.084394+08:00","Action":"pass","Package":"dsk-jev/internal/decision","Test":"TestCriteriaBoundaries/score_10","Elapsed":0}
+{"Time":"2026-09-22T15:14:49.084423+08:00","Action":"run","Package":"dsk-jev/internal/decision","Test":"TestCriteriaBoundaries/score_11"}
+{"Time":"2026-09-22T15:14:49.084448+08:00","Action":"output","Package":"dsk-jev/internal/decision","Test":"TestCriteriaBoundaries/score_11","Output":"=== RUN   TestCriteriaBoundaries/score_11\n"}
+{"Time":"2026-09-22T15:14:49.084473+08:00","Action":"output","Package":"dsk-jev/internal/decision","Test":"TestCriteriaBoundaries/score_11","Output":"--- PASS: TestCriteriaBoundaries/score_11 (0.00s)\n"}
+{"Time":"2026-09-22T15:14:49.084491+08:00","Action":"pass","Package":"dsk-jev/internal/decision","Test":"TestCriteriaBoundaries/score_11","Elapsed":0}
+{"Time":"2026-09-22T15:14:49.084513+08:00","Action":"output","Package":"dsk-jev/internal/decision","Test":"TestCriteriaBoundaries","Output":"--- PASS: TestCriteriaBoundaries (0.00s)\n"}
+{"Time":"2026-09-22T15:14:49.084531+08:00","Action":"pass","Package":"dsk-jev/internal/decision","Test":"TestCriteriaBoundaries","Elapsed":0}
+{"Time":"2026-09-22T15:14:49.084552+08:00","Action":"run","Package":"dsk-jev/internal/decision","Test":"TestRoutes"}
+{"Time":"2026-09-22T15:14:49.084572+08:00","Action":"output","Package":"dsk-jev/internal/decision","Test":"TestRoutes","Output":"=== RUN   TestRoutes\n"}
+{"Time":"2026-09-22T15:14:49.084616+08:00","Action":"run","Package":"dsk-jev/internal/decision","Test":"TestRoutes/GET/healthz"}
+{"Time":"2026-09-22T15:14:49.084644+08:00","Action":"output","Package":"dsk-jev/internal/decision","Test":"TestRoutes/GET/healthz","Output":"=== RUN   TestRoutes/GET/healthz\n"}
+{"Time":"2026-09-22T15:14:49.084667+08:00","Action":"output","Package":"dsk-jev/internal/decision","Test":"TestRoutes/GET/healthz","Output":"--- PASS: TestRoutes/GET/healthz (0.00s)\n"}
+{"Time":"2026-09-22T15:14:49.084686+08:00","Action":"pass","Package":"dsk-jev/internal/decision","Test":"TestRoutes/GET/healthz","Elapsed":0}
+{"Time":"2026-09-22T15:14:49.084705+08:00","Action":"run","Package":"dsk-jev/internal/decision","Test":"TestRoutes/GET/v1/systemone"}
+{"Time":"2026-09-22T15:14:49.084722+08:00","Action":"output","Package":"dsk-jev/internal/decision","Test":"TestRoutes/GET/v1/systemone","Output":"=== RUN   TestRoutes/GET/v1/systemone\n"}
+{"Time":"2026-09-22T15:14:49.084741+08:00","Action":"output","Package":"dsk-jev/internal/decision","Test":"TestRoutes/GET/v1/systemone","Output":"--- PASS: TestRoutes/GET/v1/systemone (0.00s)\n"}
+{"Time":"2026-09-22T15:14:49.084758+08:00","Action":"pass","Package":"dsk-jev/internal/decision","Test":"TestRoutes/GET/v1/systemone","Elapsed":0}
+{"Time":"2026-09-22T15:14:49.084776+08:00","Action":"run","Package":"dsk-jev/internal/decision","Test":"TestRoutes/POST/v1/models"}
+{"Time":"2026-09-22T15:14:49.084793+08:00","Action":"output","Package":"dsk-jev/internal/decision","Test":"TestRoutes/POST/v1/models","Output":"=== RUN   TestRoutes/POST/v1/models\n"}
+{"Time":"2026-09-22T15:14:49.084811+08:00","Action":"output","Package":"dsk-jev/internal/decision","Test":"TestRoutes/POST/v1/models","Output":"--- PASS: TestRoutes/POST/v1/models (0.00s)\n"}
+{"Time":"2026-09-22T15:14:49.084828+08:00","Action":"pass","Package":"dsk-jev/internal/decision","Test":"TestRoutes/POST/v1/models","Elapsed":0}
+{"Time":"2026-09-22T15:14:49.084858+08:00","Action":"run","Package":"dsk-jev/internal/decision","Test":"TestRoutes/GET/missing"}
+{"Time":"2026-09-22T15:14:49.084875+08:00","Action":"output","Package":"dsk-jev/internal/decision","Test":"TestRoutes/GET/missing","Output":"=== RUN   TestRoutes/GET/missing\n"}
+{"Time":"2026-09-22T15:14:49.084893+08:00","Action":"output","Package":"dsk-jev/internal/decision","Test":"TestRoutes/GET/missing","Output":"--- PASS: TestRoutes/GET/missing (0.00s)\n"}
+{"Time":"2026-09-22T15:14:49.084912+08:00","Action":"pass","Package":"dsk-jev/internal/decision","Test":"TestRoutes/GET/missing","Elapsed":0}
+{"Time":"2026-09-22T15:14:49.084929+08:00","Action":"output","Package":"dsk-jev/internal/decision","Test":"TestRoutes","Output":"--- PASS: TestRoutes (0.00s)\n"}
+{"Time":"2026-09-22T15:14:49.08495+08:00","Action":"pass","Package":"dsk-jev/internal/decision","Test":"TestRoutes","Elapsed":0}
+{"Time":"2026-09-22T15:14:49.084967+08:00","Action":"run","Package":"dsk-jev/internal/decision","Test":"TestStructuredCriteriaAndIDs"}
+{"Time":"2026-09-22T15:14:49.084983+08:00","Action":"output","Package":"dsk-jev/internal/decision","Test":"TestStructuredCriteriaAndIDs","Output":"=== RUN   TestStructuredCriteriaAndIDs\n"}
+{"Time":"2026-09-22T15:14:49.085001+08:00","Action":"output","Package":"dsk-jev/internal/decision","Test":"TestStructuredCriteriaAndIDs","Output":"--- PASS: TestStructuredCriteriaAndIDs (0.00s)\n"}
+{"Time":"2026-09-22T15:14:49.085018+08:00","Action":"pass","Package":"dsk-jev/internal/decision","Test":"TestStructuredCriteriaAndIDs","Elapsed":0}
+{"Time":"2026-09-22T15:14:49.085034+08:00","Action":"run","Package":"dsk-jev/internal/decision","Test":"TestOversizedRequest"}
+{"Time":"2026-09-22T15:14:49.08505+08:00","Action":"output","Package":"dsk-jev/internal/decision","Test":"TestOversizedRequest","Output":"=== RUN   TestOversizedRequest\n"}
+{"Time":"2026-09-22T15:14:49.112021+08:00","Action":"output","Package":"dsk-jev/internal/decision","Test":"TestOversizedRequest","Output":"--- PASS: TestOversizedRequest (0.03s)\n"}
+{"Time":"2026-09-22T15:14:49.112123+08:00","Action":"pass","Package":"dsk-jev/internal/decision","Test":"TestOversizedRequest","Elapsed":0.03}
+{"Time":"2026-09-22T15:14:49.112568+08:00","Action":"run","Package":"dsk-jev/internal/decision","Test":"TestRoundingAndTies"}
+{"Time":"2026-09-22T15:14:49.11259+08:00","Action":"output","Package":"dsk-jev/internal/decision","Test":"TestRoundingAndTies","Output":"=== RUN   TestRoundingAndTies\n"}
+{"Time":"2026-09-22T15:14:49.112607+08:00","Action":"output","Package":"dsk-jev/internal/decision","Test":"TestRoundingAndTies","Output":"--- PASS: TestRoundingAndTies (0.00s)\n"}
+{"Time":"2026-09-22T15:14:49.112622+08:00","Action":"pass","Package":"dsk-jev/internal/decision","Test":"TestRoundingAndTies","Elapsed":0}
+{"Time":"2026-09-22T15:14:49.112636+08:00","Action":"run","Package":"dsk-jev/internal/decision","Test":"TestEndToEnd"}
+{"Time":"2026-09-22T15:14:49.11267+08:00","Action":"output","Package":"dsk-jev/internal/decision","Test":"TestEndToEnd","Output":"=== RUN   TestEndToEnd\n"}
+{"Time":"2026-09-22T15:14:49.114038+08:00","Action":"output","Package":"dsk-jev/internal/decision","Test":"TestEndToEnd","Output":"2026/09/22 15:14:49 INFO decision completed latency_ms=1 questions=3 input_tokens=200 cached_tokens=0 output_tokens=25\n"}
+{"Time":"2026-09-22T15:14:49.114179+08:00","Action":"output","Package":"dsk-jev/internal/decision","Test":"TestEndToEnd","Output":"--- PASS: TestEndToEnd (0.00s)\n"}
+{"Time":"2026-09-22T15:14:49.114201+08:00","Action":"pass","Package":"dsk-jev/internal/decision","Test":"TestEndToEnd","Elapsed":0}
+{"Time":"2026-09-22T15:14:49.114218+08:00","Action":"run","Package":"dsk-jev/internal/decision","Test":"TestRejectInvalidRequestsBeforeUpstream"}
+{"Time":"2026-09-22T15:14:49.114231+08:00","Action":"output","Package":"dsk-jev/internal/decision","Test":"TestRejectInvalidRequestsBeforeUpstream","Output":"=== RUN   TestRejectInvalidRequestsBeforeUpstream\n"}
+{"Time":"2026-09-22T15:14:49.114307+08:00","Action":"output","Package":"dsk-jev/internal/decision","Test":"TestRejectInvalidRequestsBeforeUpstream","Output":"--- PASS: TestRejectInvalidRequestsBeforeUpstream (0.00s)\n"}
+{"Time":"2026-09-22T15:14:49.114321+08:00","Action":"pass","Package":"dsk-jev/internal/decision","Test":"TestRejectInvalidRequestsBeforeUpstream","Elapsed":0}
+{"Time":"2026-09-22T15:14:49.114334+08:00","Action":"run","Package":"dsk-jev/internal/decision","Test":"TestBadUpstream"}
+{"Time":"2026-09-22T15:14:49.114346+08:00","Action":"output","Package":"dsk-jev/internal/decision","Test":"TestBadUpstream","Output":"=== RUN   TestBadUpstream\n"}
+{"Time":"2026-09-22T15:14:49.114357+08:00","Action":"run","Package":"dsk-jev/internal/decision","Test":"TestBadUpstream/429secret"}
+{"Time":"2026-09-22T15:14:49.114368+08:00","Action":"output","Package":"dsk-jev/internal/decision","Test":"TestBadUpstream/429secret","Output":"=== RUN   TestBadUpstream/429secret\n"}
+{"Time":"2026-09-22T15:14:49.114718+08:00","Action":"output","Package":"dsk-jev/internal/decision","Test":"TestBadUpstream/429secret","Output":"--- PASS: TestBadUpstream/429secret (0.00s)\n"}
+{"Time":"2026-09-22T15:14:49.114733+08:00","Action":"pass","Package":"dsk-jev/internal/decision","Test":"TestBadUpstream/429secret","Elapsed":0}
+{"Time":"2026-09-22T15:14:49.114746+08:00","Action":"run","Package":"dsk-jev/internal/decision","Test":"TestBadUpstream/503secret"}
+{"Time":"2026-09-22T15:14:49.114756+08:00","Action":"output","Package":"dsk-jev/internal/decision","Test":"TestBadUpstream/503secret","Output":"=== RUN   TestBadUpstream/503secret\n"}
+{"Time":"2026-09-22T15:14:49.115146+08:00","Action":"output","Package":"dsk-jev/internal/decision","Test":"TestBadUpstream/503secret","Output":"--- PASS: TestBadUpstream/503secret (0.00s)\n"}
+{"Time":"2026-09-22T15:14:49.11516+08:00","Action":"pass","Package":"dsk-jev/internal/decision","Test":"TestBadUpstream/503secret","Elapsed":0}
+{"Time":"2026-09-22T15:14:49.115173+08:00","Action":"run","Package":"dsk-jev/internal/decision","Test":"TestBadUpstream/401secret"}
+{"Time":"2026-09-22T15:14:49.115184+08:00","Action":"output","Package":"dsk-jev/internal/decision","Test":"TestBadUpstream/401secret","Output":"=== RUN   TestBadUpstream/401secret\n"}
+{"Time":"2026-09-22T15:14:49.11551+08:00","Action":"output","Package":"dsk-jev/internal/decision","Test":"TestBadUpstream/401secret","Output":"--- PASS: TestBadUpstream/401secret (0.00s)\n"}
+{"Time":"2026-09-22T15:14:49.11553+08:00","Action":"pass","Package":"dsk-jev/internal/decision","Test":"TestBadUpstream/401secret","Elapsed":0}
+{"Time":"2026-09-22T15:14:49.115552+08:00","Action":"run","Package":"dsk-jev/internal/decision","Test":"TestBadUpstream/200{\"choices\":[{\"finish_reason\":\"length\",\"message\":{\"content\":\"{}\"}}]}"}
+{"Time":"2026-09-22T15:14:49.115566+08:00","Action":"output","Package":"dsk-jev/internal/decision","Test":"TestBadUpstream/200{\"choices\":[{\"finish_reason\":\"length\",\"message\":{\"content\":\"{}\"}}]}","Output":"=== RUN   TestBadUpstream/200{\"choices\":[{\"finish_reason\":\"length\",\"message\":{\"content\":\"{}\"}}]}\n"}
+{"Time":"2026-09-22T15:14:49.115893+08:00","Action":"output","Package":"dsk-jev/internal/decision","Test":"TestBadUpstream/200{\"choices\":[{\"finish_reason\":\"length\",\"message\":{\"content\":\"{}\"}}]}","Output":"--- PASS: TestBadUpstream/200{\"choices\":[{\"finish_reason\":\"length\",\"message\":{\"content\":\"{}\"}}]} (0.00s)\n"}
+{"Time":"2026-09-22T15:14:49.115925+08:00","Action":"pass","Package":"dsk-jev/internal/decision","Test":"TestBadUpstream/200{\"choices\":[{\"finish_reason\":\"length\",\"message\":{\"content\":\"{}\"}}]}","Elapsed":0}
+{"Time":"2026-09-22T15:14:49.115945+08:00","Action":"run","Package":"dsk-jev/internal/decision","Test":"TestBadUpstream/200{\"choices\":[{\"finish_reason\":\"stop\",\"message\":{\"content\":\"{\\\"answers\\\":[]}\"}}]}"}
+{"Time":"2026-09-22T15:14:49.115961+08:00","Action":"output","Package":"dsk-jev/internal/decision","Test":"TestBadUpstream/200{\"choices\":[{\"finish_reason\":\"stop\",\"message\":{\"content\":\"{\\\"answers\\\":[]}\"}}]}","Output":"=== RUN   TestBadUpstream/200{\"choices\":[{\"finish_reason\":\"stop\",\"message\":{\"content\":\"{\\\"answers\\\":[]}\"}}]}\n"}
+{"Time":"2026-09-22T15:14:49.116296+08:00","Action":"output","Package":"dsk-jev/internal/decision","Test":"TestBadUpstream/200{\"choices\":[{\"finish_reason\":\"stop\",\"message\":{\"content\":\"{\\\"answers\\\":[]}\"}}]}","Output":"--- PASS: TestBadUpstream/200{\"choices\":[{\"finish_reason\":\"stop\",\"message\":{\"content\":\"{\\\"answers\\\":[]}\"}}]} (0.00s)\n"}
+{"Time":"2026-09-22T15:14:49.116316+08:00","Action":"pass","Package":"dsk-jev/internal/decision","Test":"TestBadUpstream/200{\"choices\":[{\"finish_reason\":\"stop\",\"message\":{\"content\":\"{\\\"answers\\\":[]}\"}}]}","Elapsed":0}
+{"Time":"2026-09-22T15:14:49.116337+08:00","Action":"output","Package":"dsk-jev/internal/decision","Test":"TestBadUpstream","Output":"--- PASS: TestBadUpstream (0.00s)\n"}
+{"Time":"2026-09-22T15:14:49.11635+08:00","Action":"pass","Package":"dsk-jev/internal/decision","Test":"TestBadUpstream","Elapsed":0}
+{"Time":"2026-09-22T15:14:49.116363+08:00","Action":"run","Package":"dsk-jev/internal/decision","Test":"TestProbabilityValidation"}
+{"Time":"2026-09-22T15:14:49.116375+08:00","Action":"output","Package":"dsk-jev/internal/decision","Test":"TestProbabilityValidation","Output":"=== RUN   TestProbabilityValidation\n"}
+{"Time":"2026-09-22T15:14:49.116388+08:00","Action":"output","Package":"dsk-jev/internal/decision","Test":"TestProbabilityValidation","Output":"--- PASS: TestProbabilityValidation (0.00s)\n"}
+{"Time":"2026-09-22T15:14:49.116401+08:00","Action":"pass","Package":"dsk-jev/internal/decision","Test":"TestProbabilityValidation","Elapsed":0}
+{"Time":"2026-09-22T15:14:49.116412+08:00","Action":"run","Package":"dsk-jev/internal/decision","Test":"TestTimeout"}
+{"Time":"2026-09-22T15:14:49.116424+08:00","Action":"output","Package":"dsk-jev/internal/decision","Test":"TestTimeout","Output":"=== RUN   TestTimeout\n"}
+{"Time":"2026-09-22T15:14:49.137705+08:00","Action":"output","Package":"dsk-jev/internal/decision","Test":"TestTimeout","Output":"--- PASS: TestTimeout (0.02s)\n"}
+{"Time":"2026-09-22T15:14:49.137776+08:00","Action":"pass","Package":"dsk-jev/internal/decision","Test":"TestTimeout","Elapsed":0.02}
+{"Time":"2026-09-22T15:14:49.137789+08:00","Action":"run","Package":"dsk-jev/internal/decision","Test":"TestModels"}
+{"Time":"2026-09-22T15:14:49.137799+08:00","Action":"output","Package":"dsk-jev/internal/decision","Test":"TestModels","Output":"=== RUN   TestModels\n"}
+{"Time":"2026-09-22T15:14:49.13781+08:00","Action":"output","Package":"dsk-jev/internal/decision","Test":"TestModels","Output":"--- PASS: TestModels (0.00s)\n"}
+{"Time":"2026-09-22T15:14:49.137834+08:00","Action":"pass","Package":"dsk-jev/internal/decision","Test":"TestModels","Elapsed":0}
+{"Time":"2026-09-22T15:14:49.137844+08:00","Action":"output","Package":"dsk-jev/internal/decision","Output":"PASS\n"}
+{"Time":"2026-09-22T15:14:49.138475+08:00","Action":"output","Package":"dsk-jev/internal/decision","Output":"ok  \tdsk-jev/internal/decision\t0.856s\n"}
+{"Time":"2026-09-22T15:14:49.138515+08:00","Action":"pass","Package":"dsk-jev/internal/decision","Elapsed":0.857}

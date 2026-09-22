@@ -1,0 +1,280 @@
+{
+  "requests": 44,
+  "successful_requests": 30,
+  "judgments": 140,
+  "correct_judgments": 86,
+  "completed_judgments": 100,
+  "latency_ms": {
+    "p50": 694.1,
+    "p95": 1109.87
+  },
+  "usage": {
+    "input_tokens": 13256,
+    "output_tokens": 882
+  },
+  "by_type": {
+    "choice": {
+      "correct": 16,
+      "total": 23
+    },
+    "score": {
+      "correct": 19,
+      "total": 20
+    },
+    "noul": {
+      "correct": 51,
+      "total": 57
+    }
+  },
+  "failures": [
+    {
+      "id": "double_charge",
+      "status": 200,
+      "checks": [
+        {
+          "question": "refund",
+          "type": "noul",
+          "expected": false,
+          "actual": true,
+          "pass": false
+        }
+      ]
+    },
+    {
+      "id": "refund_yes",
+      "status": 502,
+      "checks": []
+    },
+    {
+      "id": "invoice",
+      "status": 200,
+      "checks": [
+        {
+          "question": "department",
+          "type": "choice",
+          "expected": "billing",
+          "actual": "technical",
+          "pass": false
+        }
+      ]
+    },
+    {
+      "id": "outage",
+      "status": 502,
+      "checks": []
+    },
+    {
+      "id": "bug",
+      "status": 502,
+      "checks": []
+    },
+    {
+      "id": "demo",
+      "status": 502,
+      "checks": []
+    },
+    {
+      "id": "sales_deadline",
+      "status": 502,
+      "checks": []
+    },
+    {
+      "id": "thanks",
+      "status": 502,
+      "checks": []
+    },
+    {
+      "id": "quoted",
+      "status": 200,
+      "checks": [
+        {
+          "question": "department",
+          "type": "choice",
+          "expected": "sales",
+          "actual": "other",
+          "pass": false
+        }
+      ]
+    },
+    {
+      "id": "conditional",
+      "status": 200,
+      "checks": [
+        {
+          "question": "department",
+          "type": "choice",
+          "expected": "billing",
+          "actual": "sales",
+          "pass": false
+        }
+      ]
+    },
+    {
+      "id": "retracted",
+      "status": 200,
+      "checks": [
+        {
+          "question": "department",
+          "type": "choice",
+          "expected": "billing",
+          "actual": "other",
+          "pass": false
+        }
+      ]
+    },
+    {
+      "id": "polite",
+      "status": 502,
+      "checks": []
+    },
+    {
+      "id": "no_urgency",
+      "status": 502,
+      "checks": []
+    },
+    {
+      "id": "urgent_refund",
+      "status": 502,
+      "checks": []
+    },
+    {
+      "id": "question_refund",
+      "status": 200,
+      "checks": [
+        {
+          "question": "department",
+          "type": "choice",
+          "expected": "billing",
+          "actual": "technical",
+          "pass": false
+        },
+        {
+          "question": "urgency",
+          "type": "score",
+          "expected": 0,
+          "actual": 1,
+          "pass": false
+        }
+      ]
+    },
+    {
+      "id": "policy",
+      "status": 200,
+      "checks": [
+        {
+          "question": "department",
+          "type": "choice",
+          "expected": "billing",
+          "actual": "sales",
+          "pass": false
+        }
+      ]
+    },
+    {
+      "id": "english",
+      "status": 502,
+      "checks": []
+    },
+    {
+      "id": "negated_deadline",
+      "status": 502,
+      "checks": []
+    },
+    {
+      "id": "injection",
+      "status": 502,
+      "checks": []
+    },
+    {
+      "id": "original_refund_regression",
+      "status": 200,
+      "checks": [
+        {
+          "question": "explicit_refund",
+          "type": "noul",
+          "expected": false,
+          "actual": true,
+          "pass": false
+        }
+      ]
+    },
+    {
+      "id": "choice_null",
+      "status": 200,
+      "checks": [
+        {
+          "question": "x",
+          "type": "choice",
+          "expected": "猫",
+          "actual": "狗",
+          "pass": false
+        }
+      ]
+    },
+    {
+      "id": "object_state",
+      "status": 502,
+      "checks": []
+    },
+    {
+      "id": "choice_255",
+      "status": 502,
+      "checks": []
+    },
+    {
+      "id": "repeat_1",
+      "status": 200,
+      "checks": [
+        {
+          "question": "explicit_refund",
+          "type": "noul",
+          "expected": false,
+          "actual": true,
+          "pass": false
+        }
+      ]
+    },
+    {
+      "id": "repeat_2",
+      "status": 200,
+      "checks": [
+        {
+          "question": "explicit_refund",
+          "type": "noul",
+          "expected": false,
+          "actual": true,
+          "pass": false
+        }
+      ]
+    },
+    {
+      "id": "repeat_4",
+      "status": 200,
+      "checks": [
+        {
+          "question": "explicit_refund",
+          "type": "noul",
+          "expected": false,
+          "actual": true,
+          "pass": false
+        }
+      ]
+    },
+    {
+      "id": "repeat_5",
+      "status": 200,
+      "checks": [
+        {
+          "question": "explicit_refund",
+          "type": "noul",
+          "expected": false,
+          "actual": true,
+          "pass": false
+        }
+      ]
+    }
+  ],
+  "successful_cached_input_tokens": 2816,
+  "usage_scope": "Successful requests only. Failed requests may have consumed upstream tokens; their usage is not recorded by current proxy.",
+  "methodology": "Hand-authored synthetic set; choice exact match, noul >=0.5, score rounded to nearest level. Semantic/boundary concurrency 3; repeats/batch sequential. No retries; no Jev comparison."
+}

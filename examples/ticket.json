@@ -1,0 +1,20 @@
+{
+  "model": "jev-latest",
+  "state": {"message": "你们重复扣了我的钱，请今天处理好！"},
+  "questions": {
+    "department": {
+      "type": "choice",
+      "instructions": "应该由哪个部门处理？",
+      "criteria": {"billing": "扣款、账单、退款", "technical": "软件故障", "sales": "购买咨询"}
+    },
+    "urgency": {
+      "type": "score",
+      "instructions": "用户表达的紧急程度？",
+      "criteria": ["没有处理期限", "希望尽快处理", "明确要求今天或立即处理"]
+    },
+    "explicit_refund": {
+      "type": "noul",
+      "instructions": "用户是否明确要求退钱或退款？"
+    }
+  }
+}
