@@ -35,7 +35,7 @@ threading.Thread(target=upstream.serve_forever, daemon=True).start()
 with socket.socket() as reservation:
     reservation.bind(("127.0.0.1", 0))
     port = reservation.getsockname()[1]
-env = dict(os.environ, PROXY_API_KEY="smoke-local", DEEPSEEK_API_KEY="smoke-upstream", DEEPSEEK_BASE_URL=f"http://127.0.0.1:{upstream.server_port}", LISTEN_ADDR=f"127.0.0.1:{port}", DEEPSEEK_MODEL="deepseek-flash")
+env = dict(os.environ, PROXY_API_KEY="smoke-local", DEEPSEEK_API_KEY="smoke-upstream", DEEPSEEK_BASE_URL=f"http://127.0.0.1:{upstream.server_port}", LISTEN_ADDR=f"127.0.0.1:{port}", DEEPSEEK_MODEL="deepseek-flash", OUTPUT_MODE="standard", PROMPT_MODE="standard", MAX_RETRIES="0", USAGE_LEDGER_PATH="")
 process = subprocess.Popen([os.environ.get('DSK_JEV_BINARY', str(ROOT / 'bin/dsk-jev'))], env=env)
 try:
     for _ in range(100):

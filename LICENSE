@@ -1,10 +1,6 @@
-The confidence formulas in internal/decision/schema.go are adapted from:
-https://github.com/typesafe-ai/system-one-adapter-python
-Original license and attribution follow. This does not imply endorsement.
-
 MIT License
 
-Copyright (c) 2026 TypeSafe AI
+Copyright (c) 2026 windy and dsk-jev contributors
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

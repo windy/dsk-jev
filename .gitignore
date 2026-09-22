@@ -2,3 +2,9 @@
 /bin/
 .venv/
 __pycache__/
+
+.env.*
+!.env.example
+/dist/
+*.pem
+.DS_Store

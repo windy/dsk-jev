@@ -1,0 +1,52 @@
+name: CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_call:
+permissions:
+  contents: read
+jobs:
+  test:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+      - uses: actions/setup-go@924ae3a1cded613372ab5595356fb5720e22ba16 # v6
+        with:
+          go-version-file: go.mod
+          cache: false
+      - uses: actions/setup-python@ece7cb06caefa5fff74198d8649806c4678c61a1 # v6
+        with:
+          python-version: '3.12'
+      - name: Formatting, vet, race tests and build
+        run: |
+          test -z "$(gofmt -l cmd internal)"
+          go vet ./...
+          go test -race ./...
+          go build -o bin/dsk-jev ./cmd/server
+      - name: Offline accounting and SDK checks
+        run: |
+          python -m pip install -r requirements-dev.txt
+          python -m unittest discover -s scripts -p 'test_accounting.py'
+          python scripts/sdk_smoke.py
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+      - name: Build and run without provider calls
+        run: |
+          docker build -t dsk-jev:ci .
+          docker run -d --name proxy --read-only --cap-drop ALL --security-opt no-new-privileges -p 127.0.0.1:18080:8080 -e PROXY_API_KEY=ci-local -e DEEPSEEK_API_KEY=ci-unused dsk-jev:ci
+          trap 'docker logs proxy; docker rm -f proxy' EXIT
+          for attempt in $(seq 1 30); do
+            if curl -fsS http://127.0.0.1:18080/healthz; then break; fi
+            sleep 1
+          done
+          curl -fsS http://127.0.0.1:18080/healthz
+          test "$(curl -s -o /dev/null -w '%{http_code}' http://127.0.0.1:18080/v1/models)" = 401
+          curl -fsS -H 'Authorization: Bearer ci-local' http://127.0.0.1:18080/v1/models
+          test "$(docker exec proxy id -u)" != 0

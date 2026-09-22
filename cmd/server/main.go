@@ -2,8 +2,8 @@ package main
 
 import (
 	"context"
-	"dsk-jev/internal/decision"
 	"errors"
+	"github.com/windy/dsk-jev/internal/decision"
 	"log/slog"
 	"net/http"
 	"net/url"
