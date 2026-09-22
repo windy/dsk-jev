@@ -1,0 +1,2771 @@
+[
+  {
+    "id": "bbh/logical_deduction_three_objects/29",
+    "group": "logical_deduction_three_objects",
+    "source": {
+      "revision": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "path": "bbh/logical_deduction_three_objects.json",
+      "index": 29
+    },
+    "request": {
+      "model": "jev-1.13.0",
+      "state": "The following paragraphs each describe a set of three objects arranged in a fixed order. The statements are logically consistent within each paragraph. On a shelf, there are three books: a purple book, a red book, and a yellow book. The purple book is to the right of the yellow book. The yellow book is to the right of the red book.\nOptions:\n(A) The purple book is the rightmost\n(B) The red book is the rightmost\n(C) The yellow book is the rightmost",
+      "questions": {
+        "answer": {
+          "type": "choice",
+          "instructions": "Answer the question in the state. Select the correct option.",
+          "criteria": {
+            "A": "The purple book is the rightmost",
+            "B": "The red book is the rightmost",
+            "C": "The yellow book is the rightmost"
+          }
+        }
+      }
+    },
+    "expected": {
+      "answer": "A"
+    }
+  },
+  {
+    "id": "bbh/sports_understanding/227",
+    "group": "sports_understanding",
+    "source": {
+      "revision": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "path": "bbh/sports_understanding.json",
+      "index": 227
+    },
+    "request": {
+      "model": "jev-1.13.0",
+      "state": "Is the following sentence plausible? \"Mario Gomez scored a reverse layup.\"",
+      "questions": {
+        "answer": {
+          "type": "choice",
+          "instructions": "Answer the question in the state. Select the correct option.",
+          "criteria": {
+            "yes": "yes",
+            "no": "no"
+          }
+        }
+      }
+    },
+    "expected": {
+      "answer": "no"
+    }
+  },
+  {
+    "id": "bbh/tracking_shuffled_objects_seven_objects/218",
+    "group": "tracking_shuffled_objects_seven_objects",
+    "source": {
+      "revision": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "path": "bbh/tracking_shuffled_objects_seven_objects.json",
+      "index": 218
+    },
+    "request": {
+      "model": "jev-1.13.0",
+      "state": "Alice, Bob, Claire, Dave, Eve, Fred, and Gertrude are holding a white elephant gift exchange. At the start of the event, they are each holding a present of a different color: Alice has a white present, Bob has a orange ball, Claire has a black ball, Dave has a pink ball, Eve has a purple present, Fred has a green present, and Gertrude has a brown present.\nAs the event progresses, pairs of people swap gifts. First, Fred and Eve swap their gifts. Then, Bob and Dave swap their gifts. Then, Dave and Alice swap their gifts. Then, Bob and Claire swap their gifts. Then, Fred and Eve swap their gifts. Then, Dave and Claire swap their gifts. Finally, Fred and Gertrude swap their gifts. At the end of the event, Dave has the\nOptions:\n(A) white present\n(B) orange ball\n(C) black ball\n(D) pink ball\n(E) purple present\n(F) green present\n(G) brown present",
+      "questions": {
+        "answer": {
+          "type": "choice",
+          "instructions": "Answer the question in the state. Select the correct option.",
+          "criteria": {
+            "A": "white present",
+            "B": "orange ball",
+            "C": "black ball",
+            "D": "pink ball",
+            "E": "purple present",
+            "F": "green present",
+            "G": "brown present"
+          }
+        }
+      }
+    },
+    "expected": {
+      "answer": "D"
+    }
+  },
+  {
+    "id": "bbh/tracking_shuffled_objects_seven_objects/247",
+    "group": "tracking_shuffled_objects_seven_objects",
+    "source": {
+      "revision": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "path": "bbh/tracking_shuffled_objects_seven_objects.json",
+      "index": 247
+    },
+    "request": {
+      "model": "jev-1.13.0",
+      "state": "Alice, Bob, Claire, Dave, Eve, Fred, and Gertrude are friends and avid readers who occasionally trade books. At the start of the semester, they each buy one new book: Alice gets The Great Gatsby, Bob gets Frankenstein, Claire gets Lolita, Dave gets Ulysses, Eve gets The Fellowship of the Ring, Fred gets Moby Dick, and Gertrude gets Catch-22.\nAs the semester proceeds, they start trading around the new books. First, Bob and Fred swap books. Then, Dave and Alice swap books. Then, Gertrude and Claire swap books. Then, Bob and Claire swap books. Then, Alice and Claire swap books. Then, Eve and Alice swap books. Finally, Alice and Gertrude swap books. At the end of the semester, Alice has\nOptions:\n(A) The Great Gatsby\n(B) Frankenstein\n(C) Lolita\n(D) Ulysses\n(E) The Fellowship of the Ring\n(F) Moby Dick\n(G) Catch-22",
+      "questions": {
+        "answer": {
+          "type": "choice",
+          "instructions": "Answer the question in the state. Select the correct option.",
+          "criteria": {
+            "A": "The Great Gatsby",
+            "B": "Frankenstein",
+            "C": "Lolita",
+            "D": "Ulysses",
+            "E": "The Fellowship of the Ring",
+            "F": "Moby Dick",
+            "G": "Catch-22"
+          }
+        }
+      }
+    },
+    "expected": {
+      "answer": "C"
+    }
+  },
+  {
+    "id": "bbh/causal_judgement/73",
+    "group": "causal_judgement",
+    "source": {
+      "revision": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "path": "bbh/causal_judgement.json",
+      "index": 73
+    },
+    "request": {
+      "model": "jev-1.13.0",
+      "state": "How would a typical person answer each of the following questions about causation?\nA lieutenant was talking with a sergeant. The lieutenant gave the order: 'Send your squad to the top of Thompson Hill. The sergeant said: 'If I send my squad to the top of Thompson Hill, we'll be taking the men out of the enemy's line of fire. They'll be rescued!'. The lieutenant answered: 'Look, I know that we'll be taking them out of the line of fire, and I know that some of them would have been killed otherwise. But I don't care at all about what happens to our soldiers. All I care about is taking control of Thompson Hill.' The squad was sent to the top of Thompson Hill. As expected, the soldiers were taken out of the enemy's line of fire, and they thereby escaped getting killed. Did the lieutenant intentionally take the soldiers out of the line of fire?\nOptions:\n- Yes\n- No",
+      "questions": {
+        "answer": {
+          "type": "choice",
+          "instructions": "Answer the question in the state. Select the correct option.",
+          "criteria": {
+            "Yes": "Yes",
+            "No": "No"
+          }
+        }
+      }
+    },
+    "expected": {
+      "answer": "No"
+    }
+  },
+  {
+    "id": "bbh/date_understanding/149",
+    "group": "date_understanding",
+    "source": {
+      "revision": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "path": "bbh/date_understanding.json",
+      "index": 149
+    },
+    "request": {
+      "model": "jev-1.13.0",
+      "state": "This is the last day of 1899. What is the date 10 days ago in MM/DD/YYYY?\nOptions:\n(A) 12/11/1899\n(B) 12/21/1887\n(C) 12/24/1899\n(D) 12/21/1899\n(E) 03/22/1900",
+      "questions": {
+        "answer": {
+          "type": "choice",
+          "instructions": "Answer the question in the state. Select the correct option.",
+          "criteria": {
+            "A": "12/11/1899",
+            "B": "12/21/1887",
+            "C": "12/24/1899",
+            "D": "12/21/1899",
+            "E": "03/22/1900"
+          }
+        }
+      }
+    },
+    "expected": {
+      "answer": "D"
+    }
+  },
+  {
+    "id": "bbh/date_understanding/28",
+    "group": "date_understanding",
+    "source": {
+      "revision": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "path": "bbh/date_understanding.json",
+      "index": 28
+    },
+    "request": {
+      "model": "jev-1.13.0",
+      "state": "Yesterday was April 30, 2021. What is the date one week ago from today in MM/DD/YYYY?\nOptions:\n(A) 05/15/2021\n(B) 04/23/2021\n(C) 04/15/2021\n(D) 06/05/2021\n(E) 04/19/2021\n(F) 04/24/2021",
+      "questions": {
+        "answer": {
+          "type": "choice",
+          "instructions": "Answer the question in the state. Select the correct option.",
+          "criteria": {
+            "A": "05/15/2021",
+            "B": "04/23/2021",
+            "C": "04/15/2021",
+            "D": "06/05/2021",
+            "E": "04/19/2021",
+            "F": "04/24/2021"
+          }
+        }
+      }
+    },
+    "expected": {
+      "answer": "F"
+    }
+  },
+  {
+    "id": "bbh/logical_deduction_three_objects/68",
+    "group": "logical_deduction_three_objects",
+    "source": {
+      "revision": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "path": "bbh/logical_deduction_three_objects.json",
+      "index": 68
+    },
+    "request": {
+      "model": "jev-1.13.0",
+      "state": "The following paragraphs each describe a set of three objects arranged in a fixed order. The statements are logically consistent within each paragraph. On a branch, there are three birds: a cardinal, a hawk, and a hummingbird. The hummingbird is to the right of the hawk. The cardinal is to the left of the hawk.\nOptions:\n(A) The cardinal is the rightmost\n(B) The hawk is the rightmost\n(C) The hummingbird is the rightmost",
+      "questions": {
+        "answer": {
+          "type": "choice",
+          "instructions": "Answer the question in the state. Select the correct option.",
+          "criteria": {
+            "A": "The cardinal is the rightmost",
+            "B": "The hawk is the rightmost",
+            "C": "The hummingbird is the rightmost"
+          }
+        }
+      }
+    },
+    "expected": {
+      "answer": "C"
+    }
+  },
+  {
+    "id": "bbh/boolean_expressions/45",
+    "group": "boolean_expressions",
+    "source": {
+      "revision": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "path": "bbh/boolean_expressions.json",
+      "index": 45
+    },
+    "request": {
+      "model": "jev-1.13.0",
+      "state": "( not False and False and False ) is",
+      "questions": {
+        "answer": {
+          "type": "choice",
+          "instructions": "Answer the question in the state. Select the correct option.",
+          "criteria": {
+            "True": "True",
+            "False": "False"
+          }
+        }
+      }
+    },
+    "expected": {
+      "answer": "False"
+    }
+  },
+  {
+    "id": "bbh/causal_judgement/55",
+    "group": "causal_judgement",
+    "source": {
+      "revision": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "path": "bbh/causal_judgement.json",
+      "index": 55
+    },
+    "request": {
+      "model": "jev-1.13.0",
+      "state": "How would a typical person answer each of the following questions about causation?\nA group of students who lived on the same floor of a dormitory obtained a copy of the final exam for their biology class. The students did not cheat on the test. One student, John Granger, went along with the group. Granger follows the local norm and does not cheat on the test. The biology class comprises 80 students and is graded on a curve such that 20 people will receive a grade of A, 20 a grade of B, 20 a grade of C, and 20 students will receive a D. A group of students who lived on the same floor of a dormitory obtained a copy of the final exam for their biology class. Granger's score was the 20th-highest score in the class, which means he was the last student to receive a grade of A. The 21st student was a pre-med student who received a B and, as a result, missed the GPA cutoff she needed to get into the medical school she was hoping for by .07 GPA points. Did Granger cause the student to fail to meet the medical school cutoff?\nOptions:\n- Yes\n- No",
+      "questions": {
+        "answer": {
+          "type": "choice",
+          "instructions": "Answer the question in the state. Select the correct option.",
+          "criteria": {
+            "Yes": "Yes",
+            "No": "No"
+          }
+        }
+      }
+    },
+    "expected": {
+      "answer": "Yes"
+    }
+  },
+  {
+    "id": "bbh/logical_deduction_three_objects/111",
+    "group": "logical_deduction_three_objects",
+    "source": {
+      "revision": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "path": "bbh/logical_deduction_three_objects.json",
+      "index": 111
+    },
+    "request": {
+      "model": "jev-1.13.0",
+      "state": "The following paragraphs each describe a set of three objects arranged in a fixed order. The statements are logically consistent within each paragraph. In a golf tournament, there were three golfers: Amy, Dan, and Mel. Mel finished above Amy. Dan finished below Amy.\nOptions:\n(A) Amy finished second\n(B) Dan finished second\n(C) Mel finished second",
+      "questions": {
+        "answer": {
+          "type": "choice",
+          "instructions": "Answer the question in the state. Select the correct option.",
+          "criteria": {
+            "A": "Amy finished second",
+            "B": "Dan finished second",
+            "C": "Mel finished second"
+          }
+        }
+      }
+    },
+    "expected": {
+      "answer": "A"
+    }
+  },
+  {
+    "id": "bbh/tracking_shuffled_objects_three_objects/77",
+    "group": "tracking_shuffled_objects_three_objects",
+    "source": {
+      "revision": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "path": "bbh/tracking_shuffled_objects_three_objects.json",
+      "index": 77
+    },
+    "request": {
+      "model": "jev-1.13.0",
+      "state": "Alice, Bob, and Claire are friends and avid readers who occasionally trade books. At the start of the semester, they each buy one new book: Alice gets The Odyssey, Bob gets The Fellowship of the Ring, and Claire gets Hound of the Baskervilles.\nAs the semester proceeds, they start trading around the new books. First, Bob and Alice swap books. Then, Claire and Bob swap books. Finally, Alice and Claire swap books. At the end of the semester, Bob has\nOptions:\n(A) The Odyssey\n(B) The Fellowship of the Ring\n(C) Hound of the Baskervilles",
+      "questions": {
+        "answer": {
+          "type": "choice",
+          "instructions": "Answer the question in the state. Select the correct option.",
+          "criteria": {
+            "A": "The Odyssey",
+            "B": "The Fellowship of the Ring",
+            "C": "Hound of the Baskervilles"
+          }
+        }
+      }
+    },
+    "expected": {
+      "answer": "C"
+    }
+  },
+  {
+    "id": "bbh/disambiguation_qa/52",
+    "group": "disambiguation_qa",
+    "source": {
+      "revision": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "path": "bbh/disambiguation_qa.json",
+      "index": 52
+    },
+    "request": {
+      "model": "jev-1.13.0",
+      "state": "In the following sentences, explain the antecedent of the pronoun (which thing the pronoun refers to), or state that it is ambiguous.\nSentence: The carpenter told the onlooker that he had been working on the house for three weeks.\nOptions:\n(A) The carpenter had been working on the house\n(B) The onlooker had been working on the house\n(C) Ambiguous",
+      "questions": {
+        "answer": {
+          "type": "choice",
+          "instructions": "Answer the question in the state. Select the correct option.",
+          "criteria": {
+            "A": "The carpenter had been working on the house",
+            "B": "The onlooker had been working on the house",
+            "C": "Ambiguous"
+          }
+        }
+      }
+    },
+    "expected": {
+      "answer": "A"
+    }
+  },
+  {
+    "id": "bbh/date_understanding/195",
+    "group": "date_understanding",
+    "source": {
+      "revision": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "path": "bbh/date_understanding.json",
+      "index": 195
+    },
+    "request": {
+      "model": "jev-1.13.0",
+      "state": "Yesterday, Jan 21, 2011, Jane ate 2 pizzas and 5 wings. What is the date today in MM/DD/YYYY?\nOptions:\n(A) 01/12/2011\n(B) 01/08/2011\n(C) 01/22/1990\n(D) 01/22/2011\n(E) 01/22/2086\n(F) 01/23/2011",
+      "questions": {
+        "answer": {
+          "type": "choice",
+          "instructions": "Answer the question in the state. Select the correct option.",
+          "criteria": {
+            "A": "01/12/2011",
+            "B": "01/08/2011",
+            "C": "01/22/1990",
+            "D": "01/22/2011",
+            "E": "01/22/2086",
+            "F": "01/23/2011"
+          }
+        }
+      }
+    },
+    "expected": {
+      "answer": "D"
+    }
+  },
+  {
+    "id": "bbh/logical_deduction_three_objects/245",
+    "group": "logical_deduction_three_objects",
+    "source": {
+      "revision": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "path": "bbh/logical_deduction_three_objects.json",
+      "index": 245
+    },
+    "request": {
+      "model": "jev-1.13.0",
+      "state": "The following paragraphs each describe a set of three objects arranged in a fixed order. The statements are logically consistent within each paragraph. On a shelf, there are three books: an orange book, a yellow book, and a blue book. The blue book is to the right of the yellow book. The orange book is the second from the left.\nOptions:\n(A) The orange book is the rightmost\n(B) The yellow book is the rightmost\n(C) The blue book is the rightmost",
+      "questions": {
+        "answer": {
+          "type": "choice",
+          "instructions": "Answer the question in the state. Select the correct option.",
+          "criteria": {
+            "A": "The orange book is the rightmost",
+            "B": "The yellow book is the rightmost",
+            "C": "The blue book is the rightmost"
+          }
+        }
+      }
+    },
+    "expected": {
+      "answer": "C"
+    }
+  },
+  {
+    "id": "bbh/logical_deduction_seven_objects/52",
+    "group": "logical_deduction_seven_objects",
+    "source": {
+      "revision": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "path": "bbh/logical_deduction_seven_objects.json",
+      "index": 52
+    },
+    "request": {
+      "model": "jev-1.13.0",
+      "state": "The following paragraphs each describe a set of seven objects arranged in a fixed order. The statements are logically consistent within each paragraph. In a golf tournament, there were seven golfers: Ana, Eve, Ada, Dan, Rob, Amy, and Joe. Dan finished third. Ana finished above Ada. Amy finished last. Dan finished below Rob. Eve finished below Ada. Rob finished below Joe.\nOptions:\n(A) Ana finished third-to-last\n(B) Eve finished third-to-last\n(C) Ada finished third-to-last\n(D) Dan finished third-to-last\n(E) Rob finished third-to-last\n(F) Amy finished third-to-last\n(G) Joe finished third-to-last",
+      "questions": {
+        "answer": {
+          "type": "choice",
+          "instructions": "Answer the question in the state. Select the correct option.",
+          "criteria": {
+            "A": "Ana finished third-to-last",
+            "B": "Eve finished third-to-last",
+            "C": "Ada finished third-to-last",
+            "D": "Dan finished third-to-last",
+            "E": "Rob finished third-to-last",
+            "F": "Amy finished third-to-last",
+            "G": "Joe finished third-to-last"
+          }
+        }
+      }
+    },
+    "expected": {
+      "answer": "C"
+    }
+  },
+  {
+    "id": "bbh/date_understanding/173",
+    "group": "date_understanding",
+    "source": {
+      "revision": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "path": "bbh/date_understanding.json",
+      "index": 173
+    },
+    "request": {
+      "model": "jev-1.13.0",
+      "state": "Jane visits the bookstore on the 16th of each month starting from the October of 2009. It is her 5th visit to the bookstore today. What is the date a month ago in MM/DD/YYYY?\nOptions:\n(A) 01/16/2010\n(B) 12/19/2009\n(C) 01/15/2010\n(D) 02/11/2010\n(E) 01/17/2010\n(F) 10/09/2009",
+      "questions": {
+        "answer": {
+          "type": "choice",
+          "instructions": "Answer the question in the state. Select the correct option.",
+          "criteria": {
+            "A": "01/16/2010",
+            "B": "12/19/2009",
+            "C": "01/15/2010",
+            "D": "02/11/2010",
+            "E": "01/17/2010",
+            "F": "10/09/2009"
+          }
+        }
+      }
+    },
+    "expected": {
+      "answer": "A"
+    }
+  },
+  {
+    "id": "bbh/tracking_shuffled_objects_three_objects/152",
+    "group": "tracking_shuffled_objects_three_objects",
+    "source": {
+      "revision": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "path": "bbh/tracking_shuffled_objects_three_objects.json",
+      "index": 152
+    },
+    "request": {
+      "model": "jev-1.13.0",
+      "state": "Alice, Bob, and Claire are holding a white elephant gift exchange. At the start of the event, they are each holding a present of a different color: Alice has a yellow present, Bob has a green present, and Claire has a purple present.\nAs the event progresses, pairs of people swap gifts. First, Bob and Alice swap their gifts. Then, Claire and Alice swap their gifts. Finally, Alice and Bob swap their gifts. At the end of the event, Claire has the\nOptions:\n(A) yellow present\n(B) green present\n(C) purple present",
+      "questions": {
+        "answer": {
+          "type": "choice",
+          "instructions": "Answer the question in the state. Select the correct option.",
+          "criteria": {
+            "A": "yellow present",
+            "B": "green present",
+            "C": "purple present"
+          }
+        }
+      }
+    },
+    "expected": {
+      "answer": "B"
+    }
+  },
+  {
+    "id": "bbh/sports_understanding/215",
+    "group": "sports_understanding",
+    "source": {
+      "revision": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "path": "bbh/sports_understanding.json",
+      "index": 215
+    },
+    "request": {
+      "model": "jev-1.13.0",
+      "state": "Is the following sentence plausible? \"Emmanuel Sanders got a base hit.\"",
+      "questions": {
+        "answer": {
+          "type": "choice",
+          "instructions": "Answer the question in the state. Select the correct option.",
+          "criteria": {
+            "yes": "yes",
+            "no": "no"
+          }
+        }
+      }
+    },
+    "expected": {
+      "answer": "no"
+    }
+  },
+  {
+    "id": "bbh/logical_deduction_three_objects/13",
+    "group": "logical_deduction_three_objects",
+    "source": {
+      "revision": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "path": "bbh/logical_deduction_three_objects.json",
+      "index": 13
+    },
+    "request": {
+      "model": "jev-1.13.0",
+      "state": "The following paragraphs each describe a set of three objects arranged in a fixed order. The statements are logically consistent within each paragraph. In an antique car show, there are three vehicles: a minivan, a bus, and a sedan. The minivan is newer than the sedan. The minivan is older than the bus.\nOptions:\n(A) The minivan is the second-newest\n(B) The bus is the second-newest\n(C) The sedan is the second-newest",
+      "questions": {
+        "answer": {
+          "type": "choice",
+          "instructions": "Answer the question in the state. Select the correct option.",
+          "criteria": {
+            "A": "The minivan is the second-newest",
+            "B": "The bus is the second-newest",
+            "C": "The sedan is the second-newest"
+          }
+        }
+      }
+    },
+    "expected": {
+      "answer": "A"
+    }
+  },
+  {
+    "id": "bbh/disambiguation_qa/57",
+    "group": "disambiguation_qa",
+    "source": {
+      "revision": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "path": "bbh/disambiguation_qa.json",
+      "index": 57
+    },
+    "request": {
+      "model": "jev-1.13.0",
+      "state": "In the following sentences, explain the antecedent of the pronoun (which thing the pronoun refers to), or state that it is ambiguous.\nSentence: The mechanic called to inform the customer that her car would be ready in the morning.\nOptions:\n(A) It was the mechanic's car\n(B) It was the customer's car\n(C) Ambiguous",
+      "questions": {
+        "answer": {
+          "type": "choice",
+          "instructions": "Answer the question in the state. Select the correct option.",
+          "criteria": {
+            "A": "It was the mechanic's car",
+            "B": "It was the customer's car",
+            "C": "Ambiguous"
+          }
+        }
+      }
+    },
+    "expected": {
+      "answer": "B"
+    }
+  },
+  {
+    "id": "bbh/date_understanding/0",
+    "group": "date_understanding",
+    "source": {
+      "revision": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "path": "bbh/date_understanding.json",
+      "index": 0
+    },
+    "request": {
+      "model": "jev-1.13.0",
+      "state": "Today is Christmas Eve of 1937. What is the date tomorrow in MM/DD/YYYY?\nOptions:\n(A) 12/11/1937\n(B) 12/25/1937\n(C) 01/04/1938\n(D) 12/04/1937\n(E) 12/25/2006\n(F) 07/25/1937",
+      "questions": {
+        "answer": {
+          "type": "choice",
+          "instructions": "Answer the question in the state. Select the correct option.",
+          "criteria": {
+            "A": "12/11/1937",
+            "B": "12/25/1937",
+            "C": "01/04/1938",
+            "D": "12/04/1937",
+            "E": "12/25/2006",
+            "F": "07/25/1937"
+          }
+        }
+      }
+    },
+    "expected": {
+      "answer": "B"
+    }
+  },
+  {
+    "id": "bbh/sports_understanding/131",
+    "group": "sports_understanding",
+    "source": {
+      "revision": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "path": "bbh/sports_understanding.json",
+      "index": 131
+    },
+    "request": {
+      "model": "jev-1.13.0",
+      "state": "Is the following sentence plausible? \"Neal Pionk shot from the six yard line.\"",
+      "questions": {
+        "answer": {
+          "type": "choice",
+          "instructions": "Answer the question in the state. Select the correct option.",
+          "criteria": {
+            "yes": "yes",
+            "no": "no"
+          }
+        }
+      }
+    },
+    "expected": {
+      "answer": "no"
+    }
+  },
+  {
+    "id": "bbh/tracking_shuffled_objects_seven_objects/206",
+    "group": "tracking_shuffled_objects_seven_objects",
+    "source": {
+      "revision": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "path": "bbh/tracking_shuffled_objects_seven_objects.json",
+      "index": 206
+    },
+    "request": {
+      "model": "jev-1.13.0",
+      "state": "Alice, Bob, Claire, Dave, Eve, Fred, and Gertrude are dancers at a square dance. At the start of a song, they each have a partner: Alice is dancing with Melissa, Bob is dancing with Jamie, Claire is dancing with Sam, Dave is dancing with Izzi, Eve is dancing with Karl, Fred is dancing with Ophelia, and Gertrude is dancing with Helga.\nThroughout the song, the dancers often trade partners. First, Dave and Gertrude switch partners. Then, Gertrude and Bob switch partners. Then, Dave and Eve switch partners. Then, Fred and Bob switch partners. Then, Alice and Claire switch partners. Then, Bob and Dave switch partners. Finally, Eve and Alice switch partners. At the end of the dance, Fred is dancing with\nOptions:\n(A) Melissa\n(B) Jamie\n(C) Sam\n(D) Izzi\n(E) Karl\n(F) Ophelia\n(G) Helga",
+      "questions": {
+        "answer": {
+          "type": "choice",
+          "instructions": "Answer the question in the state. Select the correct option.",
+          "criteria": {
+            "A": "Melissa",
+            "B": "Jamie",
+            "C": "Sam",
+            "D": "Izzi",
+            "E": "Karl",
+            "F": "Ophelia",
+            "G": "Helga"
+          }
+        }
+      }
+    },
+    "expected": {
+      "answer": "D"
+    }
+  },
+  {
+    "id": "bbh/logical_deduction_three_objects/128",
+    "group": "logical_deduction_three_objects",
+    "source": {
+      "revision": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "path": "bbh/logical_deduction_three_objects.json",
+      "index": 128
+    },
+    "request": {
+      "model": "jev-1.13.0",
+      "state": "The following paragraphs each describe a set of three objects arranged in a fixed order. The statements are logically consistent within each paragraph. On a branch, there are three birds: a crow, a falcon, and a raven. The crow is to the left of the raven. The falcon is to the right of the raven.\nOptions:\n(A) The crow is the leftmost\n(B) The falcon is the leftmost\n(C) The raven is the leftmost",
+      "questions": {
+        "answer": {
+          "type": "choice",
+          "instructions": "Answer the question in the state. Select the correct option.",
+          "criteria": {
+            "A": "The crow is the leftmost",
+            "B": "The falcon is the leftmost",
+            "C": "The raven is the leftmost"
+          }
+        }
+      }
+    },
+    "expected": {
+      "answer": "A"
+    }
+  },
+  {
+    "id": "bbh/sports_understanding/155",
+    "group": "sports_understanding",
+    "source": {
+      "revision": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "path": "bbh/sports_understanding.json",
+      "index": 155
+    },
+    "request": {
+      "model": "jev-1.13.0",
+      "state": "Is the following sentence plausible? \"Jonas Valanciunas beat the buzzer.\"",
+      "questions": {
+        "answer": {
+          "type": "choice",
+          "instructions": "Answer the question in the state. Select the correct option.",
+          "criteria": {
+            "yes": "yes",
+            "no": "no"
+          }
+        }
+      }
+    },
+    "expected": {
+      "answer": "yes"
+    }
+  },
+  {
+    "id": "bbh/disambiguation_qa/222",
+    "group": "disambiguation_qa",
+    "source": {
+      "revision": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "path": "bbh/disambiguation_qa.json",
+      "index": 222
+    },
+    "request": {
+      "model": "jev-1.13.0",
+      "state": "In the following sentences, explain the antecedent of the pronoun (which thing the pronoun refers to), or state that it is ambiguous.\nSentence: The customer asked the salesperson if he could send the prices of each product.\nOptions:\n(A) The customer would send the prices\n(B) The salesperson would send the prices\n(C) Ambiguous",
+      "questions": {
+        "answer": {
+          "type": "choice",
+          "instructions": "Answer the question in the state. Select the correct option.",
+          "criteria": {
+            "A": "The customer would send the prices",
+            "B": "The salesperson would send the prices",
+            "C": "Ambiguous"
+          }
+        }
+      }
+    },
+    "expected": {
+      "answer": "B"
+    }
+  },
+  {
+    "id": "bbh/tracking_shuffled_objects_seven_objects/29",
+    "group": "tracking_shuffled_objects_seven_objects",
+    "source": {
+      "revision": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "path": "bbh/tracking_shuffled_objects_seven_objects.json",
+      "index": 29
+    },
+    "request": {
+      "model": "jev-1.13.0",
+      "state": "Alice, Bob, Claire, Dave, Eve, Fred, and Gertrude are dancers at a square dance. At the start of a song, they each have a partner: Alice is dancing with Izzi, Bob is dancing with Jamie, Claire is dancing with Ophelia, Dave is dancing with Rodrigo, Eve is dancing with Patrick, Fred is dancing with Sam, and Gertrude is dancing with Lola.\nThroughout the song, the dancers often trade partners. First, Eve and Claire switch partners. Then, Fred and Gertrude switch partners. Then, Eve and Bob switch partners. Then, Eve and Alice switch partners. Then, Dave and Bob switch partners. Then, Dave and Eve switch partners. Finally, Alice and Dave switch partners. At the end of the dance, Bob is dancing with\nOptions:\n(A) Izzi\n(B) Jamie\n(C) Ophelia\n(D) Rodrigo\n(E) Patrick\n(F) Sam\n(G) Lola",
+      "questions": {
+        "answer": {
+          "type": "choice",
+          "instructions": "Answer the question in the state. Select the correct option.",
+          "criteria": {
+            "A": "Izzi",
+            "B": "Jamie",
+            "C": "Ophelia",
+            "D": "Rodrigo",
+            "E": "Patrick",
+            "F": "Sam",
+            "G": "Lola"
+          }
+        }
+      }
+    },
+    "expected": {
+      "answer": "D"
+    }
+  },
+  {
+    "id": "bbh/disambiguation_qa/124",
+    "group": "disambiguation_qa",
+    "source": {
+      "revision": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "path": "bbh/disambiguation_qa.json",
+      "index": 124
+    },
+    "request": {
+      "model": "jev-1.13.0",
+      "state": "In the following sentences, explain the antecedent of the pronoun (which thing the pronoun refers to), or state that it is ambiguous.\nSentence: My cousin called her boss for more information\nOptions:\n(A) They were my cousin's boss\n(B) They were the boss's boss\n(C) Ambiguous",
+      "questions": {
+        "answer": {
+          "type": "choice",
+          "instructions": "Answer the question in the state. Select the correct option.",
+          "criteria": {
+            "A": "They were my cousin's boss",
+            "B": "They were the boss's boss",
+            "C": "Ambiguous"
+          }
+        }
+      }
+    },
+    "expected": {
+      "answer": "A"
+    }
+  },
+  {
+    "id": "bbh/logical_deduction_three_objects/130",
+    "group": "logical_deduction_three_objects",
+    "source": {
+      "revision": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "path": "bbh/logical_deduction_three_objects.json",
+      "index": 130
+    },
+    "request": {
+      "model": "jev-1.13.0",
+      "state": "The following paragraphs each describe a set of three objects arranged in a fixed order. The statements are logically consistent within each paragraph. In an antique car show, there are three vehicles: a convertible, a motorcyle, and a truck. The motorcyle is newer than the convertible. The convertible is newer than the truck.\nOptions:\n(A) The convertible is the second-newest\n(B) The motorcyle is the second-newest\n(C) The truck is the second-newest",
+      "questions": {
+        "answer": {
+          "type": "choice",
+          "instructions": "Answer the question in the state. Select the correct option.",
+          "criteria": {
+            "A": "The convertible is the second-newest",
+            "B": "The motorcyle is the second-newest",
+            "C": "The truck is the second-newest"
+          }
+        }
+      }
+    },
+    "expected": {
+      "answer": "A"
+    }
+  },
+  {
+    "id": "bbh/boolean_expressions/32",
+    "group": "boolean_expressions",
+    "source": {
+      "revision": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "path": "bbh/boolean_expressions.json",
+      "index": 32
+    },
+    "request": {
+      "model": "jev-1.13.0",
+      "state": "( True ) and True or not True is",
+      "questions": {
+        "answer": {
+          "type": "choice",
+          "instructions": "Answer the question in the state. Select the correct option.",
+          "criteria": {
+            "True": "True",
+            "False": "False"
+          }
+        }
+      }
+    },
+    "expected": {
+      "answer": "True"
+    }
+  },
+  {
+    "id": "bbh/boolean_expressions/41",
+    "group": "boolean_expressions",
+    "source": {
+      "revision": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "path": "bbh/boolean_expressions.json",
+      "index": 41
+    },
+    "request": {
+      "model": "jev-1.13.0",
+      "state": "not not not ( False and True ) is",
+      "questions": {
+        "answer": {
+          "type": "choice",
+          "instructions": "Answer the question in the state. Select the correct option.",
+          "criteria": {
+            "True": "True",
+            "False": "False"
+          }
+        }
+      }
+    },
+    "expected": {
+      "answer": "True"
+    }
+  },
+  {
+    "id": "bbh/logical_deduction_seven_objects/130",
+    "group": "logical_deduction_seven_objects",
+    "source": {
+      "revision": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "path": "bbh/logical_deduction_seven_objects.json",
+      "index": 130
+    },
+    "request": {
+      "model": "jev-1.13.0",
+      "state": "The following paragraphs each describe a set of seven objects arranged in a fixed order. The statements are logically consistent within each paragraph. In a golf tournament, there were seven golfers: Eve, Mya, Rob, Ana, Ada, Mel, and Joe. Eve finished third. Mya finished above Joe. Mel finished above Ada. Mya finished above Rob. Mel finished below Joe. Mya finished second. Ada finished second-to-last.\nOptions:\n(A) Eve finished last\n(B) Mya finished last\n(C) Rob finished last\n(D) Ana finished last\n(E) Ada finished last\n(F) Mel finished last\n(G) Joe finished last",
+      "questions": {
+        "answer": {
+          "type": "choice",
+          "instructions": "Answer the question in the state. Select the correct option.",
+          "criteria": {
+            "A": "Eve finished last",
+            "B": "Mya finished last",
+            "C": "Rob finished last",
+            "D": "Ana finished last",
+            "E": "Ada finished last",
+            "F": "Mel finished last",
+            "G": "Joe finished last"
+          }
+        }
+      }
+    },
+    "expected": {
+      "answer": "C"
+    }
+  },
+  {
+    "id": "bbh/date_understanding/100",
+    "group": "date_understanding",
+    "source": {
+      "revision": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "path": "bbh/date_understanding.json",
+      "index": 100
+    },
+    "request": {
+      "model": "jev-1.13.0",
+      "state": "Jane was born on the last day of Feburary in 2001. Today is her 16-year-old birthday. What is the date one week from today in MM/DD/YYYY?\nOptions:\n(A) 03/08/2017\n(B) 03/07/2058\n(C) 03/07/2017\n(D) 03/07/2018\n(E) 03/07/1992\n(F) 03/15/2017",
+      "questions": {
+        "answer": {
+          "type": "choice",
+          "instructions": "Answer the question in the state. Select the correct option.",
+          "criteria": {
+            "A": "03/08/2017",
+            "B": "03/07/2058",
+            "C": "03/07/2017",
+            "D": "03/07/2018",
+            "E": "03/07/1992",
+            "F": "03/15/2017"
+          }
+        }
+      }
+    },
+    "expected": {
+      "answer": "C"
+    }
+  },
+  {
+    "id": "bbh/tracking_shuffled_objects_three_objects/48",
+    "group": "tracking_shuffled_objects_three_objects",
+    "source": {
+      "revision": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "path": "bbh/tracking_shuffled_objects_three_objects.json",
+      "index": 48
+    },
+    "request": {
+      "model": "jev-1.13.0",
+      "state": "Alice, Bob, and Claire are on the same team in a soccer match. At the start of the match, they are each assigned to a position: Alice is playing left midfielder, Bob is playing right midfielder, and Claire is playing goalkeeper.\nAs the game progresses, pairs of players occasionally swap positions. First, Bob and Alice trade positions. Then, Alice and Claire trade positions. Finally, Bob and Alice trade positions. At the end of the match, Claire is playing\nOptions:\n(A) left midfielder\n(B) right midfielder\n(C) goalkeeper",
+      "questions": {
+        "answer": {
+          "type": "choice",
+          "instructions": "Answer the question in the state. Select the correct option.",
+          "criteria": {
+            "A": "left midfielder",
+            "B": "right midfielder",
+            "C": "goalkeeper"
+          }
+        }
+      }
+    },
+    "expected": {
+      "answer": "B"
+    }
+  },
+  {
+    "id": "bbh/tracking_shuffled_objects_three_objects/181",
+    "group": "tracking_shuffled_objects_three_objects",
+    "source": {
+      "revision": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "path": "bbh/tracking_shuffled_objects_three_objects.json",
+      "index": 181
+    },
+    "request": {
+      "model": "jev-1.13.0",
+      "state": "Alice, Bob, and Claire are holding a white elephant gift exchange. At the start of the event, they are each holding a present of a different color: Alice has a green present, Bob has a white present, and Claire has a black ball.\nAs the event progresses, pairs of people swap gifts. First, Alice and Bob swap their gifts. Then, Claire and Bob swap their gifts. Finally, Bob and Alice swap their gifts. At the end of the event, Bob has the\nOptions:\n(A) green present\n(B) white present\n(C) black ball",
+      "questions": {
+        "answer": {
+          "type": "choice",
+          "instructions": "Answer the question in the state. Select the correct option.",
+          "criteria": {
+            "A": "green present",
+            "B": "white present",
+            "C": "black ball"
+          }
+        }
+      }
+    },
+    "expected": {
+      "answer": "B"
+    }
+  },
+  {
+    "id": "bbh/web_of_lies/53",
+    "group": "web_of_lies",
+    "source": {
+      "revision": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "path": "bbh/web_of_lies.json",
+      "index": 53
+    },
+    "request": {
+      "model": "jev-1.13.0",
+      "state": "Question: Bernita tells the truth. Michael says Bernita tells the truth. Fidel says Michael lies. Dallas says Fidel tells the truth. Millicent says Dallas lies. Does Millicent tell the truth?",
+      "questions": {
+        "answer": {
+          "type": "choice",
+          "instructions": "Answer the question in the state. Select the correct option.",
+          "criteria": {
+            "Yes": "Yes",
+            "No": "No"
+          }
+        }
+      }
+    },
+    "expected": {
+      "answer": "Yes"
+    }
+  },
+  {
+    "id": "bbh/causal_judgement/17",
+    "group": "causal_judgement",
+    "source": {
+      "revision": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "path": "bbh/causal_judgement.json",
+      "index": 17
+    },
+    "request": {
+      "model": "jev-1.13.0",
+      "state": "How would a typical person answer each of the following questions about causation?\nJoe was about to go pick up his child from a school in the suburbs. In the parking lot, he stopped to talk with friends. Because of this delay in picking up his son, Joe's neighbor, who waited 15 min for Joe to show up, took the child home in his car. On the way home, the neighbor's car was struck by a drunk driver. Joe's son, the only seriously hurt victim, received severe leg injuries. Joe's behavior stems from his talkativeness. He is the type of person who likes to talk to anybody, at any time. Sometimes his friends are bothered by this seemingly excessive talkativeness and they even complain about it occasionally. But, after they got to know him better, they realized that Joe's talkativeness was a basic trait of his personality. Thus, it was something he could not help, even when he tried hard. Did the neighbor cause injury to Joe's son?\nOptions:\n- Yes\n- No",
+      "questions": {
+        "answer": {
+          "type": "choice",
+          "instructions": "Answer the question in the state. Select the correct option.",
+          "criteria": {
+            "Yes": "Yes",
+            "No": "No"
+          }
+        }
+      }
+    },
+    "expected": {
+      "answer": "No"
+    }
+  },
+  {
+    "id": "bbh/web_of_lies/5",
+    "group": "web_of_lies",
+    "source": {
+      "revision": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "path": "bbh/web_of_lies.json",
+      "index": 5
+    },
+    "request": {
+      "model": "jev-1.13.0",
+      "state": "Question: Vernell tells the truth. Kandi says Vernell tells the truth. Alexis says Kandi tells the truth. Sima says Alexis lies. Phoebe says Sima tells the truth. Does Phoebe tell the truth?",
+      "questions": {
+        "answer": {
+          "type": "choice",
+          "instructions": "Answer the question in the state. Select the correct option.",
+          "criteria": {
+            "Yes": "Yes",
+            "No": "No"
+          }
+        }
+      }
+    },
+    "expected": {
+      "answer": "No"
+    }
+  },
+  {
+    "id": "bbh/tracking_shuffled_objects_seven_objects/145",
+    "group": "tracking_shuffled_objects_seven_objects",
+    "source": {
+      "revision": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "path": "bbh/tracking_shuffled_objects_seven_objects.json",
+      "index": 145
+    },
+    "request": {
+      "model": "jev-1.13.0",
+      "state": "Alice, Bob, Claire, Dave, Eve, Fred, and Gertrude are dancers at a square dance. At the start of a song, they each have a partner: Alice is dancing with Melissa, Bob is dancing with Rodrigo, Claire is dancing with Jamie, Dave is dancing with Helga, Eve is dancing with Ophelia, Fred is dancing with Izzi, and Gertrude is dancing with Patrick.\nThroughout the song, the dancers often trade partners. First, Fred and Eve switch partners. Then, Bob and Eve switch partners. Then, Fred and Dave switch partners. Then, Bob and Fred switch partners. Then, Bob and Gertrude switch partners. Then, Fred and Dave switch partners. Finally, Claire and Alice switch partners. At the end of the dance, Eve is dancing with\nOptions:\n(A) Melissa\n(B) Rodrigo\n(C) Jamie\n(D) Helga\n(E) Ophelia\n(F) Izzi\n(G) Patrick",
+      "questions": {
+        "answer": {
+          "type": "choice",
+          "instructions": "Answer the question in the state. Select the correct option.",
+          "criteria": {
+            "A": "Melissa",
+            "B": "Rodrigo",
+            "C": "Jamie",
+            "D": "Helga",
+            "E": "Ophelia",
+            "F": "Izzi",
+            "G": "Patrick"
+          }
+        }
+      }
+    },
+    "expected": {
+      "answer": "B"
+    }
+  },
+  {
+    "id": "bbh/logical_deduction_seven_objects/164",
+    "group": "logical_deduction_seven_objects",
+    "source": {
+      "revision": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "path": "bbh/logical_deduction_seven_objects.json",
+      "index": 164
+    },
+    "request": {
+      "model": "jev-1.13.0",
+      "state": "The following paragraphs each describe a set of seven objects arranged in a fixed order. The statements are logically consistent within each paragraph. In an antique car show, there are seven vehicles: a station wagon, a limousine, a truck, a minivan, a motorcyle, a hatchback, and a bus. The motorcyle is older than the truck. The station wagon is older than the hatchback. The motorcyle is newer than the hatchback. The bus is the second-newest. The minivan is the oldest. The limousine is older than the station wagon.\nOptions:\n(A) The station wagon is the third-oldest\n(B) The limousine is the third-oldest\n(C) The truck is the third-oldest\n(D) The minivan is the third-oldest\n(E) The motorcyle is the third-oldest\n(F) The hatchback is the third-oldest\n(G) The bus is the third-oldest",
+      "questions": {
+        "answer": {
+          "type": "choice",
+          "instructions": "Answer the question in the state. Select the correct option.",
+          "criteria": {
+            "A": "The station wagon is the third-oldest",
+            "B": "The limousine is the third-oldest",
+            "C": "The truck is the third-oldest",
+            "D": "The minivan is the third-oldest",
+            "E": "The motorcyle is the third-oldest",
+            "F": "The hatchback is the third-oldest",
+            "G": "The bus is the third-oldest"
+          }
+        }
+      }
+    },
+    "expected": {
+      "answer": "A"
+    }
+  },
+  {
+    "id": "bbh/logical_deduction_seven_objects/18",
+    "group": "logical_deduction_seven_objects",
+    "source": {
+      "revision": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "path": "bbh/logical_deduction_seven_objects.json",
+      "index": 18
+    },
+    "request": {
+      "model": "jev-1.13.0",
+      "state": "The following paragraphs each describe a set of seven objects arranged in a fixed order. The statements are logically consistent within each paragraph. In an antique car show, there are seven vehicles: a truck, a hatchback, a minivan, a bus, a tractor, a station wagon, and a convertible. The station wagon is the fourth-newest. The minivan is the third-newest. The tractor is the second-oldest. The convertible is older than the station wagon. The truck is newer than the bus. The hatchback is older than the convertible.\nOptions:\n(A) The truck is the third-oldest\n(B) The hatchback is the third-oldest\n(C) The minivan is the third-oldest\n(D) The bus is the third-oldest\n(E) The tractor is the third-oldest\n(F) The station wagon is the third-oldest\n(G) The convertible is the third-oldest",
+      "questions": {
+        "answer": {
+          "type": "choice",
+          "instructions": "Answer the question in the state. Select the correct option.",
+          "criteria": {
+            "A": "The truck is the third-oldest",
+            "B": "The hatchback is the third-oldest",
+            "C": "The minivan is the third-oldest",
+            "D": "The bus is the third-oldest",
+            "E": "The tractor is the third-oldest",
+            "F": "The station wagon is the third-oldest",
+            "G": "The convertible is the third-oldest"
+          }
+        }
+      }
+    },
+    "expected": {
+      "answer": "G"
+    }
+  },
+  {
+    "id": "bbh/tracking_shuffled_objects_seven_objects/234",
+    "group": "tracking_shuffled_objects_seven_objects",
+    "source": {
+      "revision": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "path": "bbh/tracking_shuffled_objects_seven_objects.json",
+      "index": 234
+    },
+    "request": {
+      "model": "jev-1.13.0",
+      "state": "Alice, Bob, Claire, Dave, Eve, Fred, and Gertrude are dancers at a square dance. At the start of a song, they each have a partner: Alice is dancing with Sam, Bob is dancing with Karl, Claire is dancing with Izzi, Dave is dancing with Jamie, Eve is dancing with Helga, Fred is dancing with Rodrigo, and Gertrude is dancing with Ophelia.\nThroughout the song, the dancers often trade partners. First, Claire and Eve switch partners. Then, Alice and Fred switch partners. Then, Gertrude and Dave switch partners. Then, Eve and Bob switch partners. Then, Eve and Fred switch partners. Then, Bob and Claire switch partners. Finally, Fred and Gertrude switch partners. At the end of the dance, Dave is dancing with\nOptions:\n(A) Sam\n(B) Karl\n(C) Izzi\n(D) Jamie\n(E) Helga\n(F) Rodrigo\n(G) Ophelia",
+      "questions": {
+        "answer": {
+          "type": "choice",
+          "instructions": "Answer the question in the state. Select the correct option.",
+          "criteria": {
+            "A": "Sam",
+            "B": "Karl",
+            "C": "Izzi",
+            "D": "Jamie",
+            "E": "Helga",
+            "F": "Rodrigo",
+            "G": "Ophelia"
+          }
+        }
+      }
+    },
+    "expected": {
+      "answer": "G"
+    }
+  },
+  {
+    "id": "bbh/tracking_shuffled_objects_three_objects/96",
+    "group": "tracking_shuffled_objects_three_objects",
+    "source": {
+      "revision": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "path": "bbh/tracking_shuffled_objects_three_objects.json",
+      "index": 96
+    },
+    "request": {
+      "model": "jev-1.13.0",
+      "state": "Alice, Bob, and Claire are friends and avid readers who occasionally trade books. At the start of the semester, they each buy one new book: Alice gets The Fellowship of the Ring, Bob gets Catch-22, and Claire gets Moby Dick.\nAs the semester proceeds, they start trading around the new books. First, Bob and Alice swap books. Then, Alice and Claire swap books. Finally, Bob and Claire swap books. At the end of the semester, Claire has\nOptions:\n(A) The Fellowship of the Ring\n(B) Catch-22\n(C) Moby Dick",
+      "questions": {
+        "answer": {
+          "type": "choice",
+          "instructions": "Answer the question in the state. Select the correct option.",
+          "criteria": {
+            "A": "The Fellowship of the Ring",
+            "B": "Catch-22",
+            "C": "Moby Dick"
+          }
+        }
+      }
+    },
+    "expected": {
+      "answer": "A"
+    }
+  },
+  {
+    "id": "bbh/web_of_lies/11",
+    "group": "web_of_lies",
+    "source": {
+      "revision": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "path": "bbh/web_of_lies.json",
+      "index": 11
+    },
+    "request": {
+      "model": "jev-1.13.0",
+      "state": "Question: Audrie lies. Conception says Audrie lies. Teressa says Conception tells the truth. Delfina says Teressa lies. Helene says Delfina tells the truth. Does Helene tell the truth?",
+      "questions": {
+        "answer": {
+          "type": "choice",
+          "instructions": "Answer the question in the state. Select the correct option.",
+          "criteria": {
+            "Yes": "Yes",
+            "No": "No"
+          }
+        }
+      }
+    },
+    "expected": {
+      "answer": "No"
+    }
+  },
+  {
+    "id": "bbh/logical_deduction_seven_objects/106",
+    "group": "logical_deduction_seven_objects",
+    "source": {
+      "revision": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "path": "bbh/logical_deduction_seven_objects.json",
+      "index": 106
+    },
+    "request": {
+      "model": "jev-1.13.0",
+      "state": "The following paragraphs each describe a set of seven objects arranged in a fixed order. The statements are logically consistent within each paragraph. On a shelf, there are seven books: a blue book, a yellow book, a brown book, a gray book, a green book, a purple book, and an orange book. The blue book is to the right of the brown book. The gray book is the rightmost. The purple book is to the left of the green book. The green book is to the left of the yellow book. The brown book is the second from the left. The purple book is to the right of the blue book.\nOptions:\n(A) The blue book is the second from the right\n(B) The yellow book is the second from the right\n(C) The brown book is the second from the right\n(D) The gray book is the second from the right\n(E) The green book is the second from the right\n(F) The purple book is the second from the right\n(G) The orange book is the second from the right",
+      "questions": {
+        "answer": {
+          "type": "choice",
+          "instructions": "Answer the question in the state. Select the correct option.",
+          "criteria": {
+            "A": "The blue book is the second from the right",
+            "B": "The yellow book is the second from the right",
+            "C": "The brown book is the second from the right",
+            "D": "The gray book is the second from the right",
+            "E": "The green book is the second from the right",
+            "F": "The purple book is the second from the right",
+            "G": "The orange book is the second from the right"
+          }
+        }
+      }
+    },
+    "expected": {
+      "answer": "B"
+    }
+  },
+  {
+    "id": "bbh/boolean_expressions/35",
+    "group": "boolean_expressions",
+    "source": {
+      "revision": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "path": "bbh/boolean_expressions.json",
+      "index": 35
+    },
+    "request": {
+      "model": "jev-1.13.0",
+      "state": "not True or not False and not False is",
+      "questions": {
+        "answer": {
+          "type": "choice",
+          "instructions": "Answer the question in the state. Select the correct option.",
+          "criteria": {
+            "True": "True",
+            "False": "False"
+          }
+        }
+      }
+    },
+    "expected": {
+      "answer": "True"
+    }
+  },
+  {
+    "id": "bbh/causal_judgement/167",
+    "group": "causal_judgement",
+    "source": {
+      "revision": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "path": "bbh/causal_judgement.json",
+      "index": 167
+    },
+    "request": {
+      "model": "jev-1.13.0",
+      "state": "How would a typical person answer each of the following questions about causation?\nJohn is standing near the tracks of a trolley. John notices that the brakes of the trolley have failed. Five workmen are working on the tracks with their backs turned. John sees that the runaway trolley is headed for the five workmen who will be killed if it proceeds on its present course. The only way to save these five workmen is to hit a switch that will turn the trolley onto the side tracks. Moreover, there is a dog on the tracks with its back turned. John knows that the five workmen and the dog will be saved if he hits the switch. John thinks 'I don't care at all about saving the dog. I just want to save the five workmen.' John decides to hit the switch. Sure enough, the trolley turns on the side tracks, the five workmen and the dog on the main tracks are saved. Did John intentionally save the dog?\nOptions:\n- Yes\n- No",
+      "questions": {
+        "answer": {
+          "type": "choice",
+          "instructions": "Answer the question in the state. Select the correct option.",
+          "criteria": {
+            "Yes": "Yes",
+            "No": "No"
+          }
+        }
+      }
+    },
+    "expected": {
+      "answer": "No"
+    }
+  },
+  {
+    "id": "bbh/logical_deduction_three_objects/97",
+    "group": "logical_deduction_three_objects",
+    "source": {
+      "revision": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "path": "bbh/logical_deduction_three_objects.json",
+      "index": 97
+    },
+    "request": {
+      "model": "jev-1.13.0",
+      "state": "The following paragraphs each describe a set of three objects arranged in a fixed order. The statements are logically consistent within each paragraph. A fruit stand sells three fruits: cantaloupes, oranges, and watermelons. The oranges are the most expensive. The cantaloupes are more expensive than the watermelons.\nOptions:\n(A) The cantaloupes are the second-most expensive\n(B) The oranges are the second-most expensive\n(C) The watermelons are the second-most expensive",
+      "questions": {
+        "answer": {
+          "type": "choice",
+          "instructions": "Answer the question in the state. Select the correct option.",
+          "criteria": {
+            "A": "The cantaloupes are the second-most expensive",
+            "B": "The oranges are the second-most expensive",
+            "C": "The watermelons are the second-most expensive"
+          }
+        }
+      }
+    },
+    "expected": {
+      "answer": "A"
+    }
+  },
+  {
+    "id": "bbh/sports_understanding/176",
+    "group": "sports_understanding",
+    "source": {
+      "revision": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "path": "bbh/sports_understanding.json",
+      "index": 176
+    },
+    "request": {
+      "model": "jev-1.13.0",
+      "state": "Is the following sentence plausible? \"Fred VanVleet passed the puck.\"",
+      "questions": {
+        "answer": {
+          "type": "choice",
+          "instructions": "Answer the question in the state. Select the correct option.",
+          "criteria": {
+            "yes": "yes",
+            "no": "no"
+          }
+        }
+      }
+    },
+    "expected": {
+      "answer": "no"
+    }
+  },
+  {
+    "id": "bbh/sports_understanding/66",
+    "group": "sports_understanding",
+    "source": {
+      "revision": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "path": "bbh/sports_understanding.json",
+      "index": 66
+    },
+    "request": {
+      "model": "jev-1.13.0",
+      "state": "Is the following sentence plausible? \"Juan Soto shot from beyond the arc.\"",
+      "questions": {
+        "answer": {
+          "type": "choice",
+          "instructions": "Answer the question in the state. Select the correct option.",
+          "criteria": {
+            "yes": "yes",
+            "no": "no"
+          }
+        }
+      }
+    },
+    "expected": {
+      "answer": "no"
+    }
+  },
+  {
+    "id": "bbh/date_understanding/142",
+    "group": "date_understanding",
+    "source": {
+      "revision": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "path": "bbh/date_understanding.json",
+      "index": 142
+    },
+    "request": {
+      "model": "jev-1.13.0",
+      "state": "It was Sept. 1st, 2021 a week ago. What is the date one week from today in MM/DD/YYYY?\nOptions:\n(A) 10/15/2020\n(B) 10/13/2021\n(C) 09/05/2021\n(D) 09/09/2021\n(E) 09/15/2021\n(F) 09/22/2021",
+      "questions": {
+        "answer": {
+          "type": "choice",
+          "instructions": "Answer the question in the state. Select the correct option.",
+          "criteria": {
+            "A": "10/15/2020",
+            "B": "10/13/2021",
+            "C": "09/05/2021",
+            "D": "09/09/2021",
+            "E": "09/15/2021",
+            "F": "09/22/2021"
+          }
+        }
+      }
+    },
+    "expected": {
+      "answer": "E"
+    }
+  },
+  {
+    "id": "bbh/boolean_expressions/160",
+    "group": "boolean_expressions",
+    "source": {
+      "revision": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "path": "bbh/boolean_expressions.json",
+      "index": 160
+    },
+    "request": {
+      "model": "jev-1.13.0",
+      "state": "not False and True or ( True ) is",
+      "questions": {
+        "answer": {
+          "type": "choice",
+          "instructions": "Answer the question in the state. Select the correct option.",
+          "criteria": {
+            "True": "True",
+            "False": "False"
+          }
+        }
+      }
+    },
+    "expected": {
+      "answer": "True"
+    }
+  },
+  {
+    "id": "bbh/date_understanding/83",
+    "group": "date_understanding",
+    "source": {
+      "revision": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "path": "bbh/date_understanding.json",
+      "index": 83
+    },
+    "request": {
+      "model": "jev-1.13.0",
+      "state": "On May 9th, 2017 Jane bought 40 eggs. She ate one per day. Today she ran out of eggs. What is the date yesterday in MM/DD/YYYY?\nOptions:\n(A) 07/18/2017\n(B) 06/17/2017\n(C) 06/17/2111\n(D) 07/13/2017\n(E) 06/26/2017\n(F) 06/25/2017",
+      "questions": {
+        "answer": {
+          "type": "choice",
+          "instructions": "Answer the question in the state. Select the correct option.",
+          "criteria": {
+            "A": "07/18/2017",
+            "B": "06/17/2017",
+            "C": "06/17/2111",
+            "D": "07/13/2017",
+            "E": "06/26/2017",
+            "F": "06/25/2017"
+          }
+        }
+      }
+    },
+    "expected": {
+      "answer": "B"
+    }
+  },
+  {
+    "id": "bbh/tracking_shuffled_objects_three_objects/189",
+    "group": "tracking_shuffled_objects_three_objects",
+    "source": {
+      "revision": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "path": "bbh/tracking_shuffled_objects_three_objects.json",
+      "index": 189
+    },
+    "request": {
+      "model": "jev-1.13.0",
+      "state": "Alice, Bob, and Claire are holding a white elephant gift exchange. At the start of the event, they are each holding a present of a different color: Alice has a orange ball, Bob has a black ball, and Claire has a green present.\nAs the event progresses, pairs of people swap gifts. First, Claire and Bob swap their gifts. Then, Bob and Alice swap their gifts. Finally, Bob and Claire swap their gifts. At the end of the event, Bob has the\nOptions:\n(A) orange ball\n(B) black ball\n(C) green present",
+      "questions": {
+        "answer": {
+          "type": "choice",
+          "instructions": "Answer the question in the state. Select the correct option.",
+          "criteria": {
+            "A": "orange ball",
+            "B": "black ball",
+            "C": "green present"
+          }
+        }
+      }
+    },
+    "expected": {
+      "answer": "B"
+    }
+  },
+  {
+    "id": "bbh/tracking_shuffled_objects_seven_objects/125",
+    "group": "tracking_shuffled_objects_seven_objects",
+    "source": {
+      "revision": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "path": "bbh/tracking_shuffled_objects_seven_objects.json",
+      "index": 125
+    },
+    "request": {
+      "model": "jev-1.13.0",
+      "state": "Alice, Bob, Claire, Dave, Eve, Fred, and Gertrude are dancers at a square dance. At the start of a song, they each have a partner: Alice is dancing with Lola, Bob is dancing with Sam, Claire is dancing with Helga, Dave is dancing with Ophelia, Eve is dancing with Melissa, Fred is dancing with Rodrigo, and Gertrude is dancing with Karl.\nThroughout the song, the dancers often trade partners. First, Eve and Claire switch partners. Then, Dave and Fred switch partners. Then, Alice and Claire switch partners. Then, Gertrude and Eve switch partners. Then, Alice and Bob switch partners. Then, Dave and Eve switch partners. Finally, Fred and Gertrude switch partners. At the end of the dance, Dave is dancing with\nOptions:\n(A) Lola\n(B) Sam\n(C) Helga\n(D) Ophelia\n(E) Melissa\n(F) Rodrigo\n(G) Karl",
+      "questions": {
+        "answer": {
+          "type": "choice",
+          "instructions": "Answer the question in the state. Select the correct option.",
+          "criteria": {
+            "A": "Lola",
+            "B": "Sam",
+            "C": "Helga",
+            "D": "Ophelia",
+            "E": "Melissa",
+            "F": "Rodrigo",
+            "G": "Karl"
+          }
+        }
+      }
+    },
+    "expected": {
+      "answer": "G"
+    }
+  },
+  {
+    "id": "bbh/logical_deduction_seven_objects/21",
+    "group": "logical_deduction_seven_objects",
+    "source": {
+      "revision": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "path": "bbh/logical_deduction_seven_objects.json",
+      "index": 21
+    },
+    "request": {
+      "model": "jev-1.13.0",
+      "state": "The following paragraphs each describe a set of seven objects arranged in a fixed order. The statements are logically consistent within each paragraph. On a branch, there are seven birds: a hawk, a hummingbird, a quail, an owl, a crow, a robin, and a cardinal. The cardinal is the second from the right. The hawk is the rightmost. The owl is to the left of the hummingbird. The robin is to the left of the quail. The owl is to the right of the crow. The robin is the fourth from the left.\nOptions:\n(A) The hawk is the third from the right\n(B) The hummingbird is the third from the right\n(C) The quail is the third from the right\n(D) The owl is the third from the right\n(E) The crow is the third from the right\n(F) The robin is the third from the right\n(G) The cardinal is the third from the right",
+      "questions": {
+        "answer": {
+          "type": "choice",
+          "instructions": "Answer the question in the state. Select the correct option.",
+          "criteria": {
+            "A": "The hawk is the third from the right",
+            "B": "The hummingbird is the third from the right",
+            "C": "The quail is the third from the right",
+            "D": "The owl is the third from the right",
+            "E": "The crow is the third from the right",
+            "F": "The robin is the third from the right",
+            "G": "The cardinal is the third from the right"
+          }
+        }
+      }
+    },
+    "expected": {
+      "answer": "C"
+    }
+  },
+  {
+    "id": "bbh/causal_judgement/107",
+    "group": "causal_judgement",
+    "source": {
+      "revision": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "path": "bbh/causal_judgement.json",
+      "index": 107
+    },
+    "request": {
+      "model": "jev-1.13.0",
+      "state": "How would a typical person answer each of the following questions about causation?\nJoe was about to go pick up his child from a school in the suburbs. In the parking lot, he stopped to help a person who was injured while exercising. Because of this delay in picking up his son, Joe's neighbor, who waited 15 min for Joe to show up, took the child home in his car. On the way home, the neighbor's car was struck by a drunk driver. Joe's son, the only seriously hurt victim, received severe leg injuries. Joe's behavior was due to his generosity. Joe is the type of person who wants to do good things for others in need. Sometimes his friends are bothered by his seemingly excessive generosity and they even complain about it occasionally. But, after they got to know him better, they realized his generosity was a basic trait of his personality. Thus, it was something he could not help, even when he tried hard. Did the drunk driver cause injury to Joe's son?\nOptions:\n- Yes\n- No",
+      "questions": {
+        "answer": {
+          "type": "choice",
+          "instructions": "Answer the question in the state. Select the correct option.",
+          "criteria": {
+            "Yes": "Yes",
+            "No": "No"
+          }
+        }
+      }
+    },
+    "expected": {
+      "answer": "Yes"
+    }
+  },
+  {
+    "id": "bbh/date_understanding/248",
+    "group": "date_understanding",
+    "source": {
+      "revision": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "path": "bbh/date_understanding.json",
+      "index": 248
+    },
+    "request": {
+      "model": "jev-1.13.0",
+      "state": "Yesterday, Jan 21, 2011, Jane ate 2 pizzas and 5 wings. What is the date one year ago from today in MM/DD/YYYY?\nOptions:\n(A) 01/21/2010\n(B) 01/08/2010\n(C) 10/29/2009\n(D) 02/05/2010\n(E) 01/23/2010\n(F) 01/22/2010",
+      "questions": {
+        "answer": {
+          "type": "choice",
+          "instructions": "Answer the question in the state. Select the correct option.",
+          "criteria": {
+            "A": "01/21/2010",
+            "B": "01/08/2010",
+            "C": "10/29/2009",
+            "D": "02/05/2010",
+            "E": "01/23/2010",
+            "F": "01/22/2010"
+          }
+        }
+      }
+    },
+    "expected": {
+      "answer": "F"
+    }
+  },
+  {
+    "id": "bbh/boolean_expressions/107",
+    "group": "boolean_expressions",
+    "source": {
+      "revision": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "path": "bbh/boolean_expressions.json",
+      "index": 107
+    },
+    "request": {
+      "model": "jev-1.13.0",
+      "state": "( True or not not not False ) is",
+      "questions": {
+        "answer": {
+          "type": "choice",
+          "instructions": "Answer the question in the state. Select the correct option.",
+          "criteria": {
+            "True": "True",
+            "False": "False"
+          }
+        }
+      }
+    },
+    "expected": {
+      "answer": "True"
+    }
+  },
+  {
+    "id": "bbh/disambiguation_qa/78",
+    "group": "disambiguation_qa",
+    "source": {
+      "revision": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "path": "bbh/disambiguation_qa.json",
+      "index": 78
+    },
+    "request": {
+      "model": "jev-1.13.0",
+      "state": "In the following sentences, explain the antecedent of the pronoun (which thing the pronoun refers to), or state that it is ambiguous.\nSentence: The librarian helped the CEO to find the book because they asked.\nOptions:\n(A) The librarian asked\n(B) The CEO asked\n(C) Ambiguous",
+      "questions": {
+        "answer": {
+          "type": "choice",
+          "instructions": "Answer the question in the state. Select the correct option.",
+          "criteria": {
+            "A": "The librarian asked",
+            "B": "The CEO asked",
+            "C": "Ambiguous"
+          }
+        }
+      }
+    },
+    "expected": {
+      "answer": "B"
+    }
+  },
+  {
+    "id": "bbh/causal_judgement/161",
+    "group": "causal_judgement",
+    "source": {
+      "revision": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "path": "bbh/causal_judgement.json",
+      "index": 161
+    },
+    "request": {
+      "model": "jev-1.13.0",
+      "state": "How would a typical person answer each of the following questions about causation?\nJim, Carol, Bob, and Nancy are researchers in a remote area, and they have a limited supply of electricity. Because of their limited supply, the electricity only comes on in the evenings from 8-9 PM, and they have to restrict who can use power on certain days. If two people turn on their lamps at the same time, the breaker will fail. The breaker will not fail if fewer people turn on their lamps at the same time. Jim, Carol, Bob, and Nancy are all allowed to use their lamps on Thursdays. This Thursday Jim turns on his lamp at 8 PM. Just then, Carol also turns on her lamp. Since two people turned on their lamps at the same time, the circuit breaker failed. Did Jim turning on his lamp at 8 PM cause the circuit breaker to fail?\nOptions:\n- Yes\n- No",
+      "questions": {
+        "answer": {
+          "type": "choice",
+          "instructions": "Answer the question in the state. Select the correct option.",
+          "criteria": {
+            "Yes": "Yes",
+            "No": "No"
+          }
+        }
+      }
+    },
+    "expected": {
+      "answer": "No"
+    }
+  },
+  {
+    "id": "bbh/tracking_shuffled_objects_seven_objects/122",
+    "group": "tracking_shuffled_objects_seven_objects",
+    "source": {
+      "revision": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "path": "bbh/tracking_shuffled_objects_seven_objects.json",
+      "index": 122
+    },
+    "request": {
+      "model": "jev-1.13.0",
+      "state": "Alice, Bob, Claire, Dave, Eve, Fred, and Gertrude are playing a game. At the start of the game, they are each holding a ball: Alice has a orange ball, Bob has a pink ball, Claire has a brown ball, Dave has a green ball, Eve has a yellow ball, Fred has a red ball, and Gertrude has a blue ball.\nAs the game progresses, pairs of players trade balls. First, Bob and Gertrude swap balls. Then, Dave and Bob swap balls. Then, Eve and Gertrude swap balls. Then, Bob and Alice swap balls. Then, Eve and Fred swap balls. Then, Claire and Dave swap balls. Finally, Gertrude and Fred swap balls. At the end of the game, Alice has the\nOptions:\n(A) orange ball\n(B) pink ball\n(C) brown ball\n(D) green ball\n(E) yellow ball\n(F) red ball\n(G) blue ball",
+      "questions": {
+        "answer": {
+          "type": "choice",
+          "instructions": "Answer the question in the state. Select the correct option.",
+          "criteria": {
+            "A": "orange ball",
+            "B": "pink ball",
+            "C": "brown ball",
+            "D": "green ball",
+            "E": "yellow ball",
+            "F": "red ball",
+            "G": "blue ball"
+          }
+        }
+      }
+    },
+    "expected": {
+      "answer": "D"
+    }
+  },
+  {
+    "id": "bbh/causal_judgement/81",
+    "group": "causal_judgement",
+    "source": {
+      "revision": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "path": "bbh/causal_judgement.json",
+      "index": 81
+    },
+    "request": {
+      "model": "jev-1.13.0",
+      "state": "How would a typical person answer each of the following questions about causation?\nTom has a huge garden and loves flowers. He employed two gardeners who take care of the plants on his 30 flower beds: Alex and Benni. Both can independently decide on their working hours and arrange who cares for which flower beds. Alex and Benni are very reliable and Tom is satisfied with their work. Nevertheless he wants to optimize the plant growth. Since Tom has read in a magazine that plants grow better when they are fertilized, he decides to let Alex and Benni fertilize his plants. The magazine recommends the use of the chemicals A X200R or B Y33R, since both are especially effective. However, Tom also read that it can damage plants when they are exposed to multiple different types of chemicals. Tom therefore decides that he only wants to use one fertilizer. He goes for A X200R. When Tom meets Alex in the garden shortly afterwards, he instructs him to buy the chemical A X200R and to use only this fertilizer. He also explicitly instructs him to tell Benni to only use A X200R. Alex volunteers to buy several bottles of this chemical for Benni and himself and to tell Benni about Tom's instruction. After a few weeks, Tom goes for a walk in his garden. He realizes that some of his plants are much prettier and bigger than before. However, he also realizes that some of his plants have lost their beautiful color and are dried up. That makes Tom very sad and reflective. He wonders whether the drying of his plants might have something to do with the fertilization. He wants to investigate this matter and talks to Alex and Benni. After some interrogation, Alex finally confesses that he had told Benni that Tom wanted them to buy and use the chemical B Y33R instead of A X200R. He wanted Benni to use the wrong fertilizer and to get fired because he wanted to have more working hours to earn more money. He himself only used A X200R. Benni tells Tom that Alex had told him that they were only supposed to use B Y33R. He therefore only used B Y33R without knowing that Tom actually intended both gardeners to use A X200R. Tom realizes that the plants dried up in the flower beds on which both A X200R and B Y33R were applied by the gardeners. Did the fertilization by Alex cause the plant to dry out?\nOptions:\n- Yes\n- No",
+      "questions": {
+        "answer": {
+          "type": "choice",
+          "instructions": "Answer the question in the state. Select the correct option.",
+          "criteria": {
+            "Yes": "Yes",
+            "No": "No"
+          }
+        }
+      }
+    },
+    "expected": {
+      "answer": "No"
+    }
+  },
+  {
+    "id": "bbh/tracking_shuffled_objects_three_objects/140",
+    "group": "tracking_shuffled_objects_three_objects",
+    "source": {
+      "revision": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "path": "bbh/tracking_shuffled_objects_three_objects.json",
+      "index": 140
+    },
+    "request": {
+      "model": "jev-1.13.0",
+      "state": "Alice, Bob, and Claire are friends and avid readers who occasionally trade books. At the start of the semester, they each buy one new book: Alice gets Frankenstein, Bob gets The Odyssey, and Claire gets The Great Gatsby.\nAs the semester proceeds, they start trading around the new books. First, Alice and Claire swap books. Then, Alice and Bob swap books. Finally, Alice and Claire swap books. At the end of the semester, Alice has\nOptions:\n(A) Frankenstein\n(B) The Odyssey\n(C) The Great Gatsby",
+      "questions": {
+        "answer": {
+          "type": "choice",
+          "instructions": "Answer the question in the state. Select the correct option.",
+          "criteria": {
+            "A": "Frankenstein",
+            "B": "The Odyssey",
+            "C": "The Great Gatsby"
+          }
+        }
+      }
+    },
+    "expected": {
+      "answer": "A"
+    }
+  },
+  {
+    "id": "bbh/logical_deduction_three_objects/2",
+    "group": "logical_deduction_three_objects",
+    "source": {
+      "revision": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "path": "bbh/logical_deduction_three_objects.json",
+      "index": 2
+    },
+    "request": {
+      "model": "jev-1.13.0",
+      "state": "The following paragraphs each describe a set of three objects arranged in a fixed order. The statements are logically consistent within each paragraph. On a shelf, there are three books: a blue book, an orange book, and a red book. The blue book is the rightmost. The orange book is the leftmost.\nOptions:\n(A) The blue book is the second from the left\n(B) The orange book is the second from the left\n(C) The red book is the second from the left",
+      "questions": {
+        "answer": {
+          "type": "choice",
+          "instructions": "Answer the question in the state. Select the correct option.",
+          "criteria": {
+            "A": "The blue book is the second from the left",
+            "B": "The orange book is the second from the left",
+            "C": "The red book is the second from the left"
+          }
+        }
+      }
+    },
+    "expected": {
+      "answer": "C"
+    }
+  },
+  {
+    "id": "bbh/tracking_shuffled_objects_seven_objects/223",
+    "group": "tracking_shuffled_objects_seven_objects",
+    "source": {
+      "revision": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "path": "bbh/tracking_shuffled_objects_seven_objects.json",
+      "index": 223
+    },
+    "request": {
+      "model": "jev-1.13.0",
+      "state": "Alice, Bob, Claire, Dave, Eve, Fred, and Gertrude are dancers at a square dance. At the start of a song, they each have a partner: Alice is dancing with Lola, Bob is dancing with Melissa, Claire is dancing with Helga, Dave is dancing with Izzi, Eve is dancing with Rodrigo, Fred is dancing with Sam, and Gertrude is dancing with Patrick.\nThroughout the song, the dancers often trade partners. First, Eve and Bob switch partners. Then, Eve and Fred switch partners. Then, Claire and Alice switch partners. Then, Eve and Alice switch partners. Then, Alice and Gertrude switch partners. Then, Dave and Eve switch partners. Finally, Gertrude and Alice switch partners. At the end of the dance, Claire is dancing with\nOptions:\n(A) Lola\n(B) Melissa\n(C) Helga\n(D) Izzi\n(E) Rodrigo\n(F) Sam\n(G) Patrick",
+      "questions": {
+        "answer": {
+          "type": "choice",
+          "instructions": "Answer the question in the state. Select the correct option.",
+          "criteria": {
+            "A": "Lola",
+            "B": "Melissa",
+            "C": "Helga",
+            "D": "Izzi",
+            "E": "Rodrigo",
+            "F": "Sam",
+            "G": "Patrick"
+          }
+        }
+      }
+    },
+    "expected": {
+      "answer": "A"
+    }
+  },
+  {
+    "id": "bbh/sports_understanding/211",
+    "group": "sports_understanding",
+    "source": {
+      "revision": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "path": "bbh/sports_understanding.json",
+      "index": 211
+    },
+    "request": {
+      "model": "jev-1.13.0",
+      "state": "Is the following sentence plausible? \"Juan Mata scored a bicycle kick in the Champions League Final.\"",
+      "questions": {
+        "answer": {
+          "type": "choice",
+          "instructions": "Answer the question in the state. Select the correct option.",
+          "criteria": {
+            "yes": "yes",
+            "no": "no"
+          }
+        }
+      }
+    },
+    "expected": {
+      "answer": "yes"
+    }
+  },
+  {
+    "id": "bbh/web_of_lies/4",
+    "group": "web_of_lies",
+    "source": {
+      "revision": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "path": "bbh/web_of_lies.json",
+      "index": 4
+    },
+    "request": {
+      "model": "jev-1.13.0",
+      "state": "Question: Tamika lies. Raymond says Tamika tells the truth. Willian says Raymond tells the truth. Shaunda says Willian lies. Elanor says Shaunda tells the truth. Does Elanor tell the truth?",
+      "questions": {
+        "answer": {
+          "type": "choice",
+          "instructions": "Answer the question in the state. Select the correct option.",
+          "criteria": {
+            "Yes": "Yes",
+            "No": "No"
+          }
+        }
+      }
+    },
+    "expected": {
+      "answer": "Yes"
+    }
+  },
+  {
+    "id": "bbh/causal_judgement/1",
+    "group": "causal_judgement",
+    "source": {
+      "revision": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "path": "bbh/causal_judgement.json",
+      "index": 1
+    },
+    "request": {
+      "model": "jev-1.13.0",
+      "state": "How would a typical person answer each of the following questions about causation?\nLong ago, when John was only 17 years old, he got a job working for a large manufacturing company. He started out working on an assembly line for minimum wage, but after a few years at the company, he was given a choice between two line manager positions. He could stay in the woodwork division, which is where he was currently working. Or he could move to the plastics division. John was unsure what to do because he liked working in the woodwork division, but he also thought it might be worth trying something different. He finally decided to switch to the plastics division and try something new. For the last 30 years, John has worked as a production line supervisor in the plastics division. After the first year there, the plastics division was moved to a different building with more space. Unfortunately, through the many years he worked there, John was exposed to asbestos, a highly carcinogenic substance. Most of the plastics division was quite safe, but the small part in which John worked was exposed to asbestos fibers. And now, although John has never smoked a cigarette in his life and otherwise lives a healthy lifestyle, he has a highly progressed and incurable case of lung cancer at the age of 50. John had seen three cancer specialists, all of whom confirmed the worst: that, except for pain, John's cancer was untreatable and he was absolutely certain to die from it very soon (the doctors estimated no more than 2 months). Yesterday, while John was in the hospital for a routine medical appointment, a new nurse accidentally administered the wrong medication to him. John was allergic to the drug and he immediately went into shock and experienced cardiac arrest (a heart attack). Doctors attempted to resuscitate him but he died minutes after the medication was administered. Did John's job cause his premature death?\nOptions:\n- Yes\n- No",
+      "questions": {
+        "answer": {
+          "type": "choice",
+          "instructions": "Answer the question in the state. Select the correct option.",
+          "criteria": {
+            "Yes": "Yes",
+            "No": "No"
+          }
+        }
+      }
+    },
+    "expected": {
+      "answer": "No"
+    }
+  },
+  {
+    "id": "bbh/causal_judgement/88",
+    "group": "causal_judgement",
+    "source": {
+      "revision": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "path": "bbh/causal_judgement.json",
+      "index": 88
+    },
+    "request": {
+      "model": "jev-1.13.0",
+      "state": "How would a typical person answer each of the following questions about causation?\nTom works for a demolition company, and today he is demolishing a building by implosion. The building will implode automatically at 5:00 PM if either the safety switch is off or knob A is switched on. At 4:00 PM, the safety switch is off, and knob A is off. At that time, Tom checks to see if knob A is on, and he sees that it's off. So, he changes the position of knob A to the on position. Because the building will implode if either the safety switch is off or knob A is switched on, the building implodes at 5:00 PM. Did the building implode because Tom changed the position of knob A?\nOptions:\n- Yes\n- No",
+      "questions": {
+        "answer": {
+          "type": "choice",
+          "instructions": "Answer the question in the state. Select the correct option.",
+          "criteria": {
+            "Yes": "Yes",
+            "No": "No"
+          }
+        }
+      }
+    },
+    "expected": {
+      "answer": "No"
+    }
+  },
+  {
+    "id": "bbh/web_of_lies/145",
+    "group": "web_of_lies",
+    "source": {
+      "revision": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "path": "bbh/web_of_lies.json",
+      "index": 145
+    },
+    "request": {
+      "model": "jev-1.13.0",
+      "state": "Question: Bernita tells the truth. Ka says Bernita lies. Yoland says Ka lies. Gwenn says Yoland lies. Fidel says Gwenn lies. Does Fidel tell the truth?",
+      "questions": {
+        "answer": {
+          "type": "choice",
+          "instructions": "Answer the question in the state. Select the correct option.",
+          "criteria": {
+            "Yes": "Yes",
+            "No": "No"
+          }
+        }
+      }
+    },
+    "expected": {
+      "answer": "Yes"
+    }
+  },
+  {
+    "id": "bbh/logical_deduction_seven_objects/135",
+    "group": "logical_deduction_seven_objects",
+    "source": {
+      "revision": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "path": "bbh/logical_deduction_seven_objects.json",
+      "index": 135
+    },
+    "request": {
+      "model": "jev-1.13.0",
+      "state": "The following paragraphs each describe a set of seven objects arranged in a fixed order. The statements are logically consistent within each paragraph. A fruit stand sells seven fruits: loquats, watermelons, oranges, kiwis, apples, plums, and peaches. The plums are the cheapest. The watermelons are the third-most expensive. The apples are more expensive than the oranges. The kiwis are the most expensive. The apples are less expensive than the peaches. The loquats are the third-cheapest.\nOptions:\n(A) The loquats are the most expensive\n(B) The watermelons are the most expensive\n(C) The oranges are the most expensive\n(D) The kiwis are the most expensive\n(E) The apples are the most expensive\n(F) The plums are the most expensive\n(G) The peaches are the most expensive",
+      "questions": {
+        "answer": {
+          "type": "choice",
+          "instructions": "Answer the question in the state. Select the correct option.",
+          "criteria": {
+            "A": "The loquats are the most expensive",
+            "B": "The watermelons are the most expensive",
+            "C": "The oranges are the most expensive",
+            "D": "The kiwis are the most expensive",
+            "E": "The apples are the most expensive",
+            "F": "The plums are the most expensive",
+            "G": "The peaches are the most expensive"
+          }
+        }
+      }
+    },
+    "expected": {
+      "answer": "D"
+    }
+  },
+  {
+    "id": "bbh/tracking_shuffled_objects_three_objects/187",
+    "group": "tracking_shuffled_objects_three_objects",
+    "source": {
+      "revision": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "path": "bbh/tracking_shuffled_objects_three_objects.json",
+      "index": 187
+    },
+    "request": {
+      "model": "jev-1.13.0",
+      "state": "Alice, Bob, and Claire are friends and avid readers who occasionally trade books. At the start of the semester, they each buy one new book: Alice gets Ulysses, Bob gets The Fellowship of the Ring, and Claire gets The Pearl.\nAs the semester proceeds, they start trading around the new books. First, Alice and Claire swap books. Then, Bob and Claire swap books. Finally, Alice and Bob swap books. At the end of the semester, Bob has\nOptions:\n(A) Ulysses\n(B) The Fellowship of the Ring\n(C) The Pearl",
+      "questions": {
+        "answer": {
+          "type": "choice",
+          "instructions": "Answer the question in the state. Select the correct option.",
+          "criteria": {
+            "A": "Ulysses",
+            "B": "The Fellowship of the Ring",
+            "C": "The Pearl"
+          }
+        }
+      }
+    },
+    "expected": {
+      "answer": "C"
+    }
+  },
+  {
+    "id": "bbh/disambiguation_qa/154",
+    "group": "disambiguation_qa",
+    "source": {
+      "revision": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "path": "bbh/disambiguation_qa.json",
+      "index": 154
+    },
+    "request": {
+      "model": "jev-1.13.0",
+      "state": "In the following sentences, explain the antecedent of the pronoun (which thing the pronoun refers to), or state that it is ambiguous.\nSentence: The manager sent a message to the secretary, but they didn't reply yet.\nOptions:\n(A) The secretary didn't reply yet\n(B) The manager didn't reply yet\n(C) Ambiguous",
+      "questions": {
+        "answer": {
+          "type": "choice",
+          "instructions": "Answer the question in the state. Select the correct option.",
+          "criteria": {
+            "A": "The secretary didn't reply yet",
+            "B": "The manager didn't reply yet",
+            "C": "Ambiguous"
+          }
+        }
+      }
+    },
+    "expected": {
+      "answer": "A"
+    }
+  },
+  {
+    "id": "bbh/web_of_lies/24",
+    "group": "web_of_lies",
+    "source": {
+      "revision": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "path": "bbh/web_of_lies.json",
+      "index": 24
+    },
+    "request": {
+      "model": "jev-1.13.0",
+      "state": "Question: Delfina tells the truth. Fletcher says Delfina lies. Amberly says Fletcher lies. Audrie says Amberly tells the truth. Lorine says Audrie tells the truth. Does Lorine tell the truth?",
+      "questions": {
+        "answer": {
+          "type": "choice",
+          "instructions": "Answer the question in the state. Select the correct option.",
+          "criteria": {
+            "Yes": "Yes",
+            "No": "No"
+          }
+        }
+      }
+    },
+    "expected": {
+      "answer": "Yes"
+    }
+  },
+  {
+    "id": "bbh/boolean_expressions/157",
+    "group": "boolean_expressions",
+    "source": {
+      "revision": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "path": "bbh/boolean_expressions.json",
+      "index": 157
+    },
+    "request": {
+      "model": "jev-1.13.0",
+      "state": "( not not True ) or not False is",
+      "questions": {
+        "answer": {
+          "type": "choice",
+          "instructions": "Answer the question in the state. Select the correct option.",
+          "criteria": {
+            "True": "True",
+            "False": "False"
+          }
+        }
+      }
+    },
+    "expected": {
+      "answer": "True"
+    }
+  },
+  {
+    "id": "bbh/causal_judgement/181",
+    "group": "causal_judgement",
+    "source": {
+      "revision": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "path": "bbh/causal_judgement.json",
+      "index": 181
+    },
+    "request": {
+      "model": "jev-1.13.0",
+      "state": "How would a typical person answer each of the following questions about causation?\nAlice and Zoe work for the same company. They work in different rooms, and both of them sometimes need to access the central computer of the company. Unbeknownst to everybody, if two people are logged in to the central computer at the same time, some work emails containing important customer information are immediately deleted from the central computer. In order to make sure that one person is always available to answer incoming phone calls, the company issued the following official policy: Alice is the only one permitted to log in to the central computer in the mornings, whereas Zoe is the only one permitted to log in to the central computer in the afternoons. One day, violating the official policy, Zoe logs in to the central computer at 9 am. The same day, Alice also logs in at 9 am. Immediately, some work emails containing important customer information are deleted from the central computer. Did Zoe cause some work emails containing important customer information to be deleted from the central computer?\nOptions:\n- Yes\n- No",
+      "questions": {
+        "answer": {
+          "type": "choice",
+          "instructions": "Answer the question in the state. Select the correct option.",
+          "criteria": {
+            "Yes": "Yes",
+            "No": "No"
+          }
+        }
+      }
+    },
+    "expected": {
+      "answer": "Yes"
+    }
+  },
+  {
+    "id": "bbh/web_of_lies/175",
+    "group": "web_of_lies",
+    "source": {
+      "revision": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "path": "bbh/web_of_lies.json",
+      "index": 175
+    },
+    "request": {
+      "model": "jev-1.13.0",
+      "state": "Question: Sherrie lies. Gwenn says Sherrie lies. Sima says Gwenn lies. Tamika says Sima tells the truth. Millicent says Tamika tells the truth. Does Millicent tell the truth?",
+      "questions": {
+        "answer": {
+          "type": "choice",
+          "instructions": "Answer the question in the state. Select the correct option.",
+          "criteria": {
+            "Yes": "Yes",
+            "No": "No"
+          }
+        }
+      }
+    },
+    "expected": {
+      "answer": "No"
+    }
+  },
+  {
+    "id": "bbh/boolean_expressions/83",
+    "group": "boolean_expressions",
+    "source": {
+      "revision": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "path": "bbh/boolean_expressions.json",
+      "index": 83
+    },
+    "request": {
+      "model": "jev-1.13.0",
+      "state": "True or ( True or not False ) is",
+      "questions": {
+        "answer": {
+          "type": "choice",
+          "instructions": "Answer the question in the state. Select the correct option.",
+          "criteria": {
+            "True": "True",
+            "False": "False"
+          }
+        }
+      }
+    },
+    "expected": {
+      "answer": "True"
+    }
+  },
+  {
+    "id": "bbh/boolean_expressions/236",
+    "group": "boolean_expressions",
+    "source": {
+      "revision": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "path": "bbh/boolean_expressions.json",
+      "index": 236
+    },
+    "request": {
+      "model": "jev-1.13.0",
+      "state": "not ( False ) or not not False is",
+      "questions": {
+        "answer": {
+          "type": "choice",
+          "instructions": "Answer the question in the state. Select the correct option.",
+          "criteria": {
+            "True": "True",
+            "False": "False"
+          }
+        }
+      }
+    },
+    "expected": {
+      "answer": "True"
+    }
+  },
+  {
+    "id": "bbh/logical_deduction_seven_objects/213",
+    "group": "logical_deduction_seven_objects",
+    "source": {
+      "revision": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "path": "bbh/logical_deduction_seven_objects.json",
+      "index": 213
+    },
+    "request": {
+      "model": "jev-1.13.0",
+      "state": "The following paragraphs each describe a set of seven objects arranged in a fixed order. The statements are logically consistent within each paragraph. A fruit stand sells seven fruits: watermelons, oranges, mangoes, cantaloupes, kiwis, pears, and peaches. The pears are the second-cheapest. The peaches are more expensive than the cantaloupes. The peaches are less expensive than the mangoes. The cantaloupes are more expensive than the kiwis. The oranges are the fourth-most expensive. The watermelons are the second-most expensive.\nOptions:\n(A) The watermelons are the second-cheapest\n(B) The oranges are the second-cheapest\n(C) The mangoes are the second-cheapest\n(D) The cantaloupes are the second-cheapest\n(E) The kiwis are the second-cheapest\n(F) The pears are the second-cheapest\n(G) The peaches are the second-cheapest",
+      "questions": {
+        "answer": {
+          "type": "choice",
+          "instructions": "Answer the question in the state. Select the correct option.",
+          "criteria": {
+            "A": "The watermelons are the second-cheapest",
+            "B": "The oranges are the second-cheapest",
+            "C": "The mangoes are the second-cheapest",
+            "D": "The cantaloupes are the second-cheapest",
+            "E": "The kiwis are the second-cheapest",
+            "F": "The pears are the second-cheapest",
+            "G": "The peaches are the second-cheapest"
+          }
+        }
+      }
+    },
+    "expected": {
+      "answer": "F"
+    }
+  },
+  {
+    "id": "bbh/web_of_lies/182",
+    "group": "web_of_lies",
+    "source": {
+      "revision": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "path": "bbh/web_of_lies.json",
+      "index": 182
+    },
+    "request": {
+      "model": "jev-1.13.0",
+      "state": "Question: Shaunda lies. Fletcher says Shaunda lies. Jaymie says Fletcher lies. Millie says Jaymie lies. Gwenn says Millie tells the truth. Does Gwenn tell the truth?",
+      "questions": {
+        "answer": {
+          "type": "choice",
+          "instructions": "Answer the question in the state. Select the correct option.",
+          "criteria": {
+            "Yes": "Yes",
+            "No": "No"
+          }
+        }
+      }
+    },
+    "expected": {
+      "answer": "Yes"
+    }
+  },
+  {
+    "id": "bbh/tracking_shuffled_objects_three_objects/118",
+    "group": "tracking_shuffled_objects_three_objects",
+    "source": {
+      "revision": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "path": "bbh/tracking_shuffled_objects_three_objects.json",
+      "index": 118
+    },
+    "request": {
+      "model": "jev-1.13.0",
+      "state": "Alice, Bob, and Claire are dancers at a square dance. At the start of a song, they each have a partner: Alice is dancing with Patrick, Bob is dancing with Izzi, and Claire is dancing with Karl.\nThroughout the song, the dancers often trade partners. First, Claire and Bob switch partners. Then, Alice and Bob switch partners. Finally, Bob and Claire switch partners. At the end of the dance, Alice is dancing with\nOptions:\n(A) Patrick\n(B) Izzi\n(C) Karl",
+      "questions": {
+        "answer": {
+          "type": "choice",
+          "instructions": "Answer the question in the state. Select the correct option.",
+          "criteria": {
+            "A": "Patrick",
+            "B": "Izzi",
+            "C": "Karl"
+          }
+        }
+      }
+    },
+    "expected": {
+      "answer": "C"
+    }
+  },
+  {
+    "id": "bbh/sports_understanding/96",
+    "group": "sports_understanding",
+    "source": {
+      "revision": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "path": "bbh/sports_understanding.json",
+      "index": 96
+    },
+    "request": {
+      "model": "jev-1.13.0",
+      "state": "Is the following sentence plausible? \"Walker Buehler earned a trip to the penalty box.\"",
+      "questions": {
+        "answer": {
+          "type": "choice",
+          "instructions": "Answer the question in the state. Select the correct option.",
+          "criteria": {
+            "yes": "yes",
+            "no": "no"
+          }
+        }
+      }
+    },
+    "expected": {
+      "answer": "no"
+    }
+  },
+  {
+    "id": "bbh/logical_deduction_seven_objects/124",
+    "group": "logical_deduction_seven_objects",
+    "source": {
+      "revision": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "path": "bbh/logical_deduction_seven_objects.json",
+      "index": 124
+    },
+    "request": {
+      "model": "jev-1.13.0",
+      "state": "The following paragraphs each describe a set of seven objects arranged in a fixed order. The statements are logically consistent within each paragraph. In a golf tournament, there were seven golfers: Joe, Eli, Ada, Mel, Eve, Rob, and Ana. Joe finished first. Mel finished second-to-last. Rob finished above Eve. Mel finished above Eli. Rob finished below Ada. Eve finished fourth.\nOptions:\n(A) Joe finished first\n(B) Eli finished first\n(C) Ada finished first\n(D) Mel finished first\n(E) Eve finished first\n(F) Rob finished first\n(G) Ana finished first",
+      "questions": {
+        "answer": {
+          "type": "choice",
+          "instructions": "Answer the question in the state. Select the correct option.",
+          "criteria": {
+            "A": "Joe finished first",
+            "B": "Eli finished first",
+            "C": "Ada finished first",
+            "D": "Mel finished first",
+            "E": "Eve finished first",
+            "F": "Rob finished first",
+            "G": "Ana finished first"
+          }
+        }
+      }
+    },
+    "expected": {
+      "answer": "A"
+    }
+  },
+  {
+    "id": "bbh/tracking_shuffled_objects_seven_objects/202",
+    "group": "tracking_shuffled_objects_seven_objects",
+    "source": {
+      "revision": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "path": "bbh/tracking_shuffled_objects_seven_objects.json",
+      "index": 202
+    },
+    "request": {
+      "model": "jev-1.13.0",
+      "state": "Alice, Bob, Claire, Dave, Eve, Fred, and Gertrude are playing a game. At the start of the game, they are each holding a ball: Alice has a purple ball, Bob has a black ball, Claire has a pink ball, Dave has a white ball, Eve has a green ball, Fred has a brown ball, and Gertrude has a red ball.\nAs the game progresses, pairs of players trade balls. First, Eve and Claire swap balls. Then, Bob and Gertrude swap balls. Then, Alice and Dave swap balls. Then, Fred and Claire swap balls. Then, Gertrude and Claire swap balls. Then, Dave and Alice swap balls. Finally, Eve and Alice swap balls. At the end of the game, Dave has the\nOptions:\n(A) purple ball\n(B) black ball\n(C) pink ball\n(D) white ball\n(E) green ball\n(F) brown ball\n(G) red ball",
+      "questions": {
+        "answer": {
+          "type": "choice",
+          "instructions": "Answer the question in the state. Select the correct option.",
+          "criteria": {
+            "A": "purple ball",
+            "B": "black ball",
+            "C": "pink ball",
+            "D": "white ball",
+            "E": "green ball",
+            "F": "brown ball",
+            "G": "red ball"
+          }
+        }
+      }
+    },
+    "expected": {
+      "answer": "D"
+    }
+  },
+  {
+    "id": "bbh/disambiguation_qa/62",
+    "group": "disambiguation_qa",
+    "source": {
+      "revision": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "path": "bbh/disambiguation_qa.json",
+      "index": 62
+    },
+    "request": {
+      "model": "jev-1.13.0",
+      "state": "In the following sentences, explain the antecedent of the pronoun (which thing the pronoun refers to), or state that it is ambiguous.\nSentence: The customer and the chef discuss her culinary training.\nOptions:\n(A) It is the customer's culinary training\n(B) It is the chef's culinary training\n(C) Ambiguous",
+      "questions": {
+        "answer": {
+          "type": "choice",
+          "instructions": "Answer the question in the state. Select the correct option.",
+          "criteria": {
+            "A": "It is the customer's culinary training",
+            "B": "It is the chef's culinary training",
+            "C": "Ambiguous"
+          }
+        }
+      }
+    },
+    "expected": {
+      "answer": "B"
+    }
+  },
+  {
+    "id": "bbh/logical_deduction_seven_objects/121",
+    "group": "logical_deduction_seven_objects",
+    "source": {
+      "revision": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "path": "bbh/logical_deduction_seven_objects.json",
+      "index": 121
+    },
+    "request": {
+      "model": "jev-1.13.0",
+      "state": "The following paragraphs each describe a set of seven objects arranged in a fixed order. The statements are logically consistent within each paragraph. In a golf tournament, there were seven golfers: Joe, Dan, Ada, Amy, Rob, Mya, and Mel. Ada finished below Amy. Joe finished below Dan. Dan finished below Ada. Mel finished third-to-last. Amy finished third. Rob finished below Mya.\nOptions:\n(A) Joe finished third-to-last\n(B) Dan finished third-to-last\n(C) Ada finished third-to-last\n(D) Amy finished third-to-last\n(E) Rob finished third-to-last\n(F) Mya finished third-to-last\n(G) Mel finished third-to-last",
+      "questions": {
+        "answer": {
+          "type": "choice",
+          "instructions": "Answer the question in the state. Select the correct option.",
+          "criteria": {
+            "A": "Joe finished third-to-last",
+            "B": "Dan finished third-to-last",
+            "C": "Ada finished third-to-last",
+            "D": "Amy finished third-to-last",
+            "E": "Rob finished third-to-last",
+            "F": "Mya finished third-to-last",
+            "G": "Mel finished third-to-last"
+          }
+        }
+      }
+    },
+    "expected": {
+      "answer": "G"
+    }
+  },
+  {
+    "id": "bbh/logical_deduction_three_objects/67",
+    "group": "logical_deduction_three_objects",
+    "source": {
+      "revision": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "path": "bbh/logical_deduction_three_objects.json",
+      "index": 67
+    },
+    "request": {
+      "model": "jev-1.13.0",
+      "state": "The following paragraphs each describe a set of three objects arranged in a fixed order. The statements are logically consistent within each paragraph. In a golf tournament, there were three golfers: Eli, Mya, and Eve. Eve finished below Eli. Eve finished above Mya.\nOptions:\n(A) Eli finished first\n(B) Mya finished first\n(C) Eve finished first",
+      "questions": {
+        "answer": {
+          "type": "choice",
+          "instructions": "Answer the question in the state. Select the correct option.",
+          "criteria": {
+            "A": "Eli finished first",
+            "B": "Mya finished first",
+            "C": "Eve finished first"
+          }
+        }
+      }
+    },
+    "expected": {
+      "answer": "A"
+    }
+  },
+  {
+    "id": "bbh/sports_understanding/2",
+    "group": "sports_understanding",
+    "source": {
+      "revision": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "path": "bbh/sports_understanding.json",
+      "index": 2
+    },
+    "request": {
+      "model": "jev-1.13.0",
+      "state": "Is the following sentence plausible? \"Marcelo got on the end of a through ball.\"",
+      "questions": {
+        "answer": {
+          "type": "choice",
+          "instructions": "Answer the question in the state. Select the correct option.",
+          "criteria": {
+            "yes": "yes",
+            "no": "no"
+          }
+        }
+      }
+    },
+    "expected": {
+      "answer": "yes"
+    }
+  },
+  {
+    "id": "bbh/disambiguation_qa/21",
+    "group": "disambiguation_qa",
+    "source": {
+      "revision": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "path": "bbh/disambiguation_qa.json",
+      "index": 21
+    },
+    "request": {
+      "model": "jev-1.13.0",
+      "state": "In the following sentences, explain the antecedent of the pronoun (which thing the pronoun refers to), or state that it is ambiguous.\nSentence: The taxpayer met with the accountant to find out if they could help with tax preparation.\nOptions:\n(A) The taxpayer could help\n(B) The accountant could help\n(C) Ambiguous",
+      "questions": {
+        "answer": {
+          "type": "choice",
+          "instructions": "Answer the question in the state. Select the correct option.",
+          "criteria": {
+            "A": "The taxpayer could help",
+            "B": "The accountant could help",
+            "C": "Ambiguous"
+          }
+        }
+      }
+    },
+    "expected": {
+      "answer": "B"
+    }
+  },
+  {
+    "id": "bbh/date_understanding/120",
+    "group": "date_understanding",
+    "source": {
+      "revision": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "path": "bbh/date_understanding.json",
+      "index": 120
+    },
+    "request": {
+      "model": "jev-1.13.0",
+      "state": "Today's meeting is rescheduled to 11 am tomorrow, 10/16/1924. What is the date tomorrow in MM/DD/YYYY?\nOptions:\n(A) 10/16/1924\n(B) 07/16/1925\n(C) 10/17/1924\n(D) 10/15/1924\n(E) 10/16/1922\n(F) 10/16/2010",
+      "questions": {
+        "answer": {
+          "type": "choice",
+          "instructions": "Answer the question in the state. Select the correct option.",
+          "criteria": {
+            "A": "10/16/1924",
+            "B": "07/16/1925",
+            "C": "10/17/1924",
+            "D": "10/15/1924",
+            "E": "10/16/1922",
+            "F": "10/16/2010"
+          }
+        }
+      }
+    },
+    "expected": {
+      "answer": "A"
+    }
+  },
+  {
+    "id": "bbh/tracking_shuffled_objects_three_objects/155",
+    "group": "tracking_shuffled_objects_three_objects",
+    "source": {
+      "revision": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "path": "bbh/tracking_shuffled_objects_three_objects.json",
+      "index": 155
+    },
+    "request": {
+      "model": "jev-1.13.0",
+      "state": "Alice, Bob, and Claire are on the same team in a soccer match. At the start of the match, they are each assigned to a position: Alice is playing cheerleader, Bob is playing right winger, and Claire is playing goalkeeper.\nAs the game progresses, pairs of players occasionally swap positions. First, Alice and Claire trade positions. Then, Bob and Alice trade positions. Finally, Claire and Bob trade positions. At the end of the match, Claire is playing\nOptions:\n(A) cheerleader\n(B) right winger\n(C) goalkeeper",
+      "questions": {
+        "answer": {
+          "type": "choice",
+          "instructions": "Answer the question in the state. Select the correct option.",
+          "criteria": {
+            "A": "cheerleader",
+            "B": "right winger",
+            "C": "goalkeeper"
+          }
+        }
+      }
+    },
+    "expected": {
+      "answer": "C"
+    }
+  },
+  {
+    "id": "bbh/boolean_expressions/115",
+    "group": "boolean_expressions",
+    "source": {
+      "revision": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "path": "bbh/boolean_expressions.json",
+      "index": 115
+    },
+    "request": {
+      "model": "jev-1.13.0",
+      "state": "not ( True or False ) or True is",
+      "questions": {
+        "answer": {
+          "type": "choice",
+          "instructions": "Answer the question in the state. Select the correct option.",
+          "criteria": {
+            "True": "True",
+            "False": "False"
+          }
+        }
+      }
+    },
+    "expected": {
+      "answer": "True"
+    }
+  },
+  {
+    "id": "bbh/disambiguation_qa/223",
+    "group": "disambiguation_qa",
+    "source": {
+      "revision": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "path": "bbh/disambiguation_qa.json",
+      "index": 223
+    },
+    "request": {
+      "model": "jev-1.13.0",
+      "state": "In the following sentences, explain the antecedent of the pronoun (which thing the pronoun refers to), or state that it is ambiguous.\nSentence: The worker told the pedestrian that he was repairing the sidewalk as quickly as possible.\nOptions:\n(A) The worker was repairing\n(B) The pedestrian was repairing\n(C) Ambiguous",
+      "questions": {
+        "answer": {
+          "type": "choice",
+          "instructions": "Answer the question in the state. Select the correct option.",
+          "criteria": {
+            "A": "The worker was repairing",
+            "B": "The pedestrian was repairing",
+            "C": "Ambiguous"
+          }
+        }
+      }
+    },
+    "expected": {
+      "answer": "A"
+    }
+  },
+  {
+    "id": "bbh/web_of_lies/149",
+    "group": "web_of_lies",
+    "source": {
+      "revision": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "path": "bbh/web_of_lies.json",
+      "index": 149
+    },
+    "request": {
+      "model": "jev-1.13.0",
+      "state": "Question: Teressa tells the truth. Lorine says Teressa lies. Antwan says Lorine tells the truth. Fidel says Antwan tells the truth. Phoebe says Fidel lies. Does Phoebe tell the truth?",
+      "questions": {
+        "answer": {
+          "type": "choice",
+          "instructions": "Answer the question in the state. Select the correct option.",
+          "criteria": {
+            "Yes": "Yes",
+            "No": "No"
+          }
+        }
+      }
+    },
+    "expected": {
+      "answer": "Yes"
+    }
+  },
+  {
+    "id": "bbh/web_of_lies/69",
+    "group": "web_of_lies",
+    "source": {
+      "revision": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "path": "bbh/web_of_lies.json",
+      "index": 69
+    },
+    "request": {
+      "model": "jev-1.13.0",
+      "state": "Question: Phoebe tells the truth. Jamey says Phoebe lies. Audrie says Jamey tells the truth. Michaela says Audrie lies. Vina says Michaela lies. Does Vina tell the truth?",
+      "questions": {
+        "answer": {
+          "type": "choice",
+          "instructions": "Answer the question in the state. Select the correct option.",
+          "criteria": {
+            "Yes": "Yes",
+            "No": "No"
+          }
+        }
+      }
+    },
+    "expected": {
+      "answer": "No"
+    }
+  },
+  {
+    "id": "bbh/disambiguation_qa/25",
+    "group": "disambiguation_qa",
+    "source": {
+      "revision": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "path": "bbh/disambiguation_qa.json",
+      "index": 25
+    },
+    "request": {
+      "model": "jev-1.13.0",
+      "state": "In the following sentences, explain the antecedent of the pronoun (which thing the pronoun refers to), or state that it is ambiguous.\nSentence: The technician told the customer that she had completed the repair.\nOptions:\n(A) The technician completed the repair\n(B) The customer completed the repair\n(C) Ambiguous",
+      "questions": {
+        "answer": {
+          "type": "choice",
+          "instructions": "Answer the question in the state. Select the correct option.",
+          "criteria": {
+            "A": "The technician completed the repair",
+            "B": "The customer completed the repair",
+            "C": "Ambiguous"
+          }
+        }
+      }
+    },
+    "expected": {
+      "answer": "A"
+    }
+  },
+  {
+    "id": "bbh/sports_understanding/90",
+    "group": "sports_understanding",
+    "source": {
+      "revision": "9ee07bd481feebf959a6b59d61ea57bdcf30964d",
+      "path": "bbh/sports_understanding.json",
+      "index": 90
+    },
+    "request": {
+      "model": "jev-1.13.0",
+      "state": "Is the following sentence plausible? \"Mike Trout eurostepped to the basket.\"",
+      "questions": {
+        "answer": {
+          "type": "choice",
+          "instructions": "Answer the question in the state. Select the correct option.",
+          "criteria": {
+            "yes": "yes",
+            "no": "no"
+          }
+        }
+      }
+    },
+    "expected": {
+      "answer": "no"
+    }
+  }
+]

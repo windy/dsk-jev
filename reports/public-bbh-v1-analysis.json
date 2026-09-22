@@ -1,0 +1,81 @@
+{
+  "overall": {
+    "both_correct": 168,
+    "deepseek_only": 9,
+    "jev_only": 106,
+    "both_wrong": 17,
+    "mcnemar_exact_two_sided_p": 3.6931569697983546e-22
+  },
+  "by_task": {
+    "boolean_expressions": {
+      "both_correct": 25,
+      "deepseek_only": 0,
+      "jev_only": 5,
+      "both_wrong": 0,
+      "mcnemar_exact_two_sided_p": 0.0625
+    },
+    "causal_judgement": {
+      "both_correct": 11,
+      "deepseek_only": 4,
+      "jev_only": 7,
+      "both_wrong": 8,
+      "mcnemar_exact_two_sided_p": 0.548828125
+    },
+    "date_understanding": {
+      "both_correct": 19,
+      "deepseek_only": 1,
+      "jev_only": 7,
+      "both_wrong": 3,
+      "mcnemar_exact_two_sided_p": 0.0703125
+    },
+    "disambiguation_qa": {
+      "both_correct": 15,
+      "deepseek_only": 2,
+      "jev_only": 10,
+      "both_wrong": 3,
+      "mcnemar_exact_two_sided_p": 0.03857421875
+    },
+    "logical_deduction_seven_objects": {
+      "both_correct": 16,
+      "deepseek_only": 1,
+      "jev_only": 13,
+      "both_wrong": 0,
+      "mcnemar_exact_two_sided_p": 0.0018310546875
+    },
+    "logical_deduction_three_objects": {
+      "both_correct": 28,
+      "deepseek_only": 0,
+      "jev_only": 2,
+      "both_wrong": 0,
+      "mcnemar_exact_two_sided_p": 0.5
+    },
+    "sports_understanding": {
+      "both_correct": 22,
+      "deepseek_only": 1,
+      "jev_only": 4,
+      "both_wrong": 3,
+      "mcnemar_exact_two_sided_p": 0.375
+    },
+    "tracking_shuffled_objects_seven_objects": {
+      "both_correct": 2,
+      "deepseek_only": 0,
+      "jev_only": 28,
+      "both_wrong": 0,
+      "mcnemar_exact_two_sided_p": 7.450580596923828e-09
+    },
+    "tracking_shuffled_objects_three_objects": {
+      "both_correct": 13,
+      "deepseek_only": 0,
+      "jev_only": 17,
+      "both_wrong": 0,
+      "mcnemar_exact_two_sided_p": 1.52587890625e-05
+    },
+    "web_of_lies": {
+      "both_correct": 17,
+      "deepseek_only": 0,
+      "jev_only": 13,
+      "both_wrong": 0,
+      "mcnemar_exact_two_sided_p": 0.000244140625
+    }
+  }
+}

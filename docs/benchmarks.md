@@ -1,6 +1,24 @@
 # Benchmarks and limitations
 
-These are small, hand-authored synthetic evaluations from September 22, 2026, not independent production or blind benchmarks. The regression set was used during development; the historical holdout has since been inspected. Network timing and provider cache state vary. Do not combine measurements from different runs into a single winning claim.
+The original evaluations are small, hand-authored synthetic tests from September 22, 2026. A separate author-published BBH subset has now been added; neither suite represents production traffic. The regression set was used during development; the historical holdout has since been inspected. Network timing and provider cache state vary. Do not combine measurements from different runs into a single winning claim.
+
+## New: public BBH reasoning subset
+
+**400 original questions** sampled reproducibly from the [BBH authors' release](https://github.com/suzgunmirac/BIG-Bench-Hard): 300 evaluation questions and 100 reserved development questions. Ten selected tasks contribute 30 evaluation questions each. Same original text/options, zero-shot choice adaptation, standard proxy output with DeepSeek thinking disabled; Jev pinned to `jev-1.13.0`.
+
+| Metric | Jev | dsk-jev / DeepSeek |
+|---|---:|---:|
+| Accuracy | **274/300 (91.3%)** | 177/300 (59.0%) |
+| Successful requests | 300/300 | 300/300 |
+| End-to-end P50 / P95 | **353 / 548 ms** | 700 / 993 ms |
+| Estimated USD / 1,000 requests | **$0.0191** | $0.1975 peak / $0.0988 offpeak |
+| Tracking shuffled objects, seven objects | **30/30** | 2/30 |
+| Logical deduction, seven objects | **29/30** | 17/30 |
+| Date understanding | **26/30** | 20/30 |
+
+**The current proxy configuration substantially trails Jev on this subset.** This is a selected diagnostic sample, not the full BBH leaderboard, an official Jev evaluation or a production workload distribution. Training exposure to these public questions is unknown. Results do not establish DeepSeek's capability ceiling. All failures count; cases were not reselected after observing results. This inspected evaluation now serves as a regression baseline.
+
+[All 10 task results](../reports/public-bbh-v1-analysis.md) · [Latency and costs](../reports/public-bbh-v1.md) · [Dataset and reproduction](../evals/public-bbh/README.md) · [Source research](benchmark-sources.md)
 
 ## Default-mode paired text comparison
 

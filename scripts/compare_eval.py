@@ -61,7 +61,7 @@ def main():
     cases_bytes=cases_path.read_bytes();cases=json.loads(cases_bytes)
     local=secrets.token_urlsafe(24)
     with socket.socket() as sock: sock.bind(('127.0.0.1',0));port=sock.getsockname()[1]
-    env=dict(os.environ,PROXY_API_KEY=local,LISTEN_ADDR=f'127.0.0.1:{port}',MAX_RETRIES='3',UPSTREAM_TIMEOUT='30s',PROMPT_MODE='standard',USAGE_LEDGER_PATH=str(ledger_path),DEEPSEEK_BASE_URL='https://api.deepseek.com/beta',DEEPSEEK_MODEL='deepseek-flash')
+    env=dict(os.environ,PROXY_API_KEY=local,LISTEN_ADDR=f'127.0.0.1:{port}',MAX_RETRIES='3',UPSTREAM_TIMEOUT='30s',PROMPT_MODE='standard',OUTPUT_MODE='standard',USAGE_LEDGER_PATH=str(ledger_path),DEEPSEEK_BASE_URL='https://api.deepseek.com/beta',DEEPSEEK_MODEL='deepseek-flash')
     log=open(reports/f'{prefix}-server.log','w')
     proc=subprocess.Popen([os.environ.get('DSK_JEV_BINARY',str(ROOT/'bin/dsk-jev'))],env=env,stdout=subprocess.DEVNULL,stderr=log)
     conns={'jev':http.client.HTTPSConnection('api.typesafe.ai',timeout=30),'deepseek':http.client.HTTPConnection('127.0.0.1',port,timeout=35)}
@@ -116,7 +116,7 @@ def main():
         (reports/f'{prefix}-jev-usage.jsonl').write_text(''.join(json.dumps(e,ensure_ascii=False)+'\n' for e in jev_events))
     ds_events=[json.loads(line) for line in ledger_path.read_text().splitlines()]
     summary={'started_at':started,'finished_at':dt.datetime.now(dt.timezone.utc).isoformat(),'cases_sha256':hashlib.sha256(cases_bytes).hexdigest(),'pricing':PRICING,
-        'methodology':'Frozen synthetic regression set (previously used for tuning), sequential paired calls with alternating order, persistent connections, same host/time window, max3 retries/30s upstream budget. DeepSeek includes local proxy overhead. Warm cache not flushed; results are not cold-start or load-test measurements. Peak/offpeak are cost scenarios, not actual debit. All attempts including failures billed when usage is available.'}
+        'methodology':os.environ.get('EVAL_DATASET_DESCRIPTION', 'Frozen synthetic regression set (previously used for tuning)') + '; sequential paired calls with alternating order, persistent connections, same host/time window, max3 retries/30s upstream budget. DeepSeek includes local proxy overhead. Warm cache not flushed; results are not cold-start or load-test measurements. Peak/offpeak are cost scenarios, not actual debit. All attempts including failures billed when usage is available.'}
     for provider,events in [('jev',jev_events),('deepseek',ds_events)]:
         pr=[r for r in rows if r['provider']==provider]
         summary[provider]=summarize(pr,events,provider)
@@ -153,7 +153,7 @@ def main():
     lines=['# Jev / DeepSeek paired comparison','',summary['methodology'],'',f"UTC: {started} — {summary['finished_at']}",'', '| Metric | Jev | DeepSeek standard |','|---|---:|---:|']
     j,d=summary['jev'],summary['deepseek']
     for label,a,b in [('Successful requests',f"{j['successful_requests']}/{j['requests']}",f"{d['successful_requests']}/{d['requests']}"),('Correct judgments',f"{j['correct_judgments']}/{j['judgments']}",f"{d['correct_judgments']}/{d['judgments']}"),('P50 ms',j['latency_ms']['all_requests']['p50'],d['latency_ms']['all_requests']['p50']),('P95 ms',j['latency_ms']['all_requests']['p95'],d['latency_ms']['all_requests']['p95']),('Upstream attempts',j['upstream_attempts'],d['upstream_attempts']),('Estimated USD (DeepSeek peak)',j['cost']['jev']['total_estimated_usd'],d['cost']['deepseek_peak']['total_estimated_usd']),('Estimated USD (DeepSeek offpeak)',j['cost']['jev']['total_estimated_usd'],d['cost']['deepseek_offpeak']['total_estimated_usd']),('USD / 1k requests (peak)',j['cost']['jev']['usd_per_1000_requests'],d['cost']['deepseek_peak']['usd_per_1000_requests']),('USD / 1k correct judgments (peak)',j['cost']['jev']['usd_per_1000_correct_judgments'],d['cost']['deepseek_peak']['usd_per_1000_correct_judgments'])]:lines.append(f'| {label} | {a} | {b} |')
-    lines += ['', 'Accuracy is on this small, hand-authored regression set only. HTTP success does not imply a correct judgment. Full results contain all failures and answers; ledgers contain each attempt and cache usage. Missing usage produces a null total, not zero cost.','', '[Jev prices](https://docs.typesafe.ai/models) · [DeepSeek prices](https://api-docs.deepseek.com/quick_start/pricing/)']
+    lines += ['', 'Accuracy applies only to the selected dataset and protocol. HTTP success does not imply a correct judgment. Full results contain all failures and answers; ledgers contain each attempt and cache usage. Missing usage produces a null total, not zero cost.','', '[Jev prices](https://docs.typesafe.ai/models) · [DeepSeek prices](https://api-docs.deepseek.com/quick_start/pricing/)']
     (reports/f'{prefix}.md').write_text('\n'.join(lines)+'\n')
     print(json.dumps({p:{k:v for k,v in summary[p].items() if k!='by_group'} for p in ('jev','deepseek')},indent=2))
 if __name__=='__main__':main()
